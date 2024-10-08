@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coffee Shop</title>
+    <link rel="icon" href="./assets/images/logo.webp" type="image/x-icon" />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -11,8 +12,9 @@
       <div class="container">
         <div class="navbar__content">
           <div class="nav__links">
-            <img src="./images/logo.webp" alt="logo" />
+            <img src="./assets/images/logo.webp" alt="logo" />
             <ul>
+              <li><a href="">Home</a></li>
               <li><a href="">Products</a></li>
               <li><a href="">Price</a></li>
               <li><a href="">About us</a></li>
@@ -45,50 +47,34 @@
     </section>
     <section id="coffee__types" class="coffee__container">
       <div class="container">
-        <div class="coffee__wrapper">
+        <div class="coffee__wrapper"></div>
+        <div class="coffee__cards">
+          <div class="coffee__card">
+            <div class="coffee__img">
+              <img src="./assets/images/coldcoffee.png" alt="cold coffee" />
+              <div class="coffee_txt">
+                <span> Cold coffee</span>
+              </div>
+            </div>
           </div>
-          <div class="coffee__cards">
-            <div class="coffee__card">
-              <div class="coffee__img">
-                
-                <img
-                  src="images/coldcoffee.png"
-                  alt="cold coffee"
-                />
-                <div class="coffee_txt">
-                  <span> Cold coffee</span>
-                </div>
+          <div class="coffee__card">
+            <div class="coffee__img">
+              <img src="./assets/images/hotcoffe.png" alt="hot coffee" />
+              <div class="coffee_txt">
+                <span> Hot coffee</span>
               </div>
-             
-              
             </div>
-            <div class="coffee__card">
-              <div class="coffee__img">
-                <img
-                  src="images/hotcoffe.png"
-                  alt="hot coffee"
-                />
-                <div class="coffee_txt">
-                  <span> Hot coffee</span>
-                </div>
+          </div>
+          <div class="coffee__card">
+            <div class="coffee__img">
+              <img src="./assets/images/cupcoffee.png" alt="cup coffee" />
+              <div class="coffee_txt">
+                <span> Cup coffee</span>
               </div>
-              
             </div>
-            <div class="coffee__card">
-              <div class="coffee__img">
-                <img
-                  src="images/cupcoffee.png"
-                  alt="cup coffee"
-                />
-                <div class="coffee_txt">
-                  <span> Cup coffee</span>
-                </div>
-              </div>
-             
-           
           </div>
         </div>
-     
+      </div>
     </section>
   </body>
 </html>
