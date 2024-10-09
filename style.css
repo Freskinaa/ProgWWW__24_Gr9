@@ -137,11 +137,11 @@ body {
   width: 100%;
 }
 
-.coffee__cards .coffee__card {
+.coffee_cards .coffee_card {
   width: 100%;
 }
 
-.coffee__card .coffee__img {
+.coffee_card .coffee_img {
   width: 100%;
   text-align: center;
   transition: all 0.3s ease-in-out;
@@ -151,7 +151,7 @@ body {
   transform: translateY(-2px);
 }
 
-.coffee__card .coffee__img img {
+.coffee_card .coffee_img img {
   width: 20%;
   margin: 0 auto;
   display: block;
@@ -174,6 +174,75 @@ body {
   padding: 20px 0;
   background-color: var(--base-white);
 }
+<<<<<<< Updated upstream
+=======
+
+.coffeetypes__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  overflow-x: hidden;
+ 
+}
+
+.coffeetypes__text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  padding: 10px 0;
+  color: var(--second-dark);
+}
+
+.coffeetypes__cards {
+  display: grid;
+  grid-template-columns: auto auto auto;
+ gap: 30px;
+  padding-top: 50px;
+}
+
+.coffeetypes_cards .coffeetypes_card {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--base-gray);
+ 
+}
+
+.coffeetypes_card .coffeetypes_img {
+  width: 100%;
+  text-align: center;
+}
+
+.coffeetypes_card .coffeetypes_img img {
+  width: 100%;
+  margin: 0 auto; 
+  display: block; 
+  padding-bottom: 30px;
+
+}
+.coffeetypes__content{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+ 
+}
+.coffeetypes__content h4{
+  color: var(--second-dark);
+  font-size: 24px;
+  padding-bottom: 15px;
+}
+
+.coffeetypes__content p{
+  font-size: 16px;
+  color: var(--dark-brown);
+
+}
+
+>>>>>>> Stashed changes
 
 .coffeetypes__wrapper {
   display: flex;
@@ -269,4 +338,8 @@ body {
 
 .btn__group button:hover {
   background-color: var(--second-dark);
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes
