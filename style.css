@@ -7,10 +7,10 @@
 }
 :root {
   --base-brown: #d4a373;
-  --base-lightbrown: #f1d1b5; 
-  --dark-brown: #85593d; 
-  --light2-brown: #f6e3d7; 
-  --second-dark:#563926;
+  --base-lightbrown: #f1d1b5;
+  --dark-brown: #85593d;
+  --light2-brown: #f6e3d7;
+  --second-dark: #563926;
   --base-white: #ffffff;
   --base-black: #000000;
   --base-blue: #0068b1;
@@ -79,7 +79,6 @@ body {
   color: var(--second-dark);
 }
 
-
 .hero__section {
   background-image: url(./assets/images/coffee1.jpg);
   background-size: cover;
@@ -99,10 +98,9 @@ body {
   justify-content: space-between;
   flex-direction: column;
   max-width: 600px;
-  background: rgba(255, 255, 255, 0.85); 
+  background: rgba(255, 255, 255, 0.85);
   padding: 40px;
   border-radius: 10px;
-  
 }
 
 .hero__text h1 {
@@ -131,48 +129,45 @@ body {
   justify-content: center;
   max-width: 100%;
   overflow-x: hidden;
- 
 }
 
-.coffee__cards{
+.coffee__cards {
   display: grid;
   grid-template-columns: auto auto auto;
   width: 100%;
-
 }
- 
 
 .coffee__cards .coffee__card {
   width: 100%;
-  overflow: hidden;
- 
 }
 
 .coffee__card .coffee__img {
   width: 100%;
   text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.coffee__card .coffee__img:hover {
+  transform: translateY(-2px);
 }
 
 .coffee__card .coffee__img img {
   width: 20%;
-  margin: 0 auto; 
-  display: block; 
+  margin: 0 auto;
+  display: block;
   padding-bottom: 10px;
-
 }
 
 .coffee_txt {
   display: flex;
   align-items: center;
-  justify-content: center; 
-
+  justify-content: center;
 }
 
 .coffee_txt span {
   font-size: 16px;
   font-weight: 600;
   color: var(--base-white);
- 
 }
 
 .coffeetypes__container {
@@ -187,10 +182,9 @@ body {
   justify-content: center;
   max-width: 100%;
   overflow-x: hidden;
- 
 }
 
-.coffeetypes__text{
+.coffeetypes__text {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -211,7 +205,11 @@ body {
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid var(--second-dark);
- 
+  transition: all 0.3s ease-in-out;
+}
+
+.coffeetypes__cards .coffeetypes__card:hover {
+  transform: scale(0.95);
 }
 
 .coffeetypes__card .coffeetypes__img {
@@ -221,42 +219,32 @@ body {
 
 .coffeetypes__card .coffeetypes__img img {
   width: 100%;
-  margin: 0 auto; 
-  display: block; 
+  margin: 0 auto;
+  display: block;
   padding-bottom: 30px;
-
 }
-.coffeetypes__content{
+.coffeetypes__content {
   text-align: center;
   align-items: center;
   justify-content: center;
   padding: 10px 10px;
- 
 }
-.coffeetypes__content h4{
+.coffeetypes__content h4 {
   color: var(--second-dark);
   font-size: 24px;
   padding-bottom: 15px;
 }
 
-.coffeetypes__content p{
+.coffeetypes__content p {
   font-size: 16px;
   color: var(--dark-brown);
-
 }
-
-
-
-
-
-
-
 
 .btn_group button.large-btn {
   background-color: #f4c79a;
   color: var(--base-white);
   padding: 12px 30px;
-  border-color: #f4c79a ;
+  border-color: #f4c79a;
   font-size: 18px;
   border-radius: 10px;
   transition: background-color 0.4s ease-in-out;
@@ -265,7 +253,7 @@ body {
 
 .btn_group button.large-btn:hover {
   background-color: var(--second-dark);
-  transform: scale(1.05);
+  transform: scale(1.05);
 }
 .btn__group button {
   background-color: var(--dark-brown);
@@ -281,5 +269,4 @@ body {
 
 .btn__group button:hover {
   background-color: var(--second-dark);
- 
 }
