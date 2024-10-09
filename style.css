@@ -309,25 +309,16 @@ body {
 .footer {
   background-color: var(--dark-brown);
   color: var(--base-white);
-  padding: 40px 0;
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
-.footer__subscribe {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.footer__subscribe h3,
-.footer__contact h3,
-.footer__links h3,
-.footer__about h3 {
-  margin-bottom: 10px;
-}
-
 .footer__columns {
   display: flex;
+  margin-left: 70px;
   justify-content: space-around;
-  flex-wrap: wrap;
+
 }
 
 .footer__contact,
@@ -336,21 +327,19 @@ body {
   flex: 1;
   min-width: 250px;
   margin: 10px;
+  margin-left: 70px;
 }
 
-.subscribe-btn {
-  padding: 10px 20px;
-  background-color: rgba(189, 150, 103, 0.8);
-  color: var(--base-white);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.footer_icon {
+  margin-right: 25px;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.subscribe-btn:hover {
-  background-color: rgba(189, 150, 103, 1);
+.footer_icon img {
+  width: 150px;
 }
+
 
 .footer__links ul,
 .footer__about ul {
