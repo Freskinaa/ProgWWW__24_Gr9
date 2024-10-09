@@ -36,43 +36,46 @@ body {
   width: 90%;
   margin: 0 auto;
 }
-
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   padding: 10px 0;
-  background-color:rgba(189, 150, 103, 0.759);
+  background-color: rgba(189, 150, 103, 0.85);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
 }
 
 .navbar__content {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 20px;
 }
 
 .nav__links {
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 40px;
 }
 
 .nav__links img {
-  width: 50px;
+  width: 40px;
 }
 
 .nav__links ul {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 30px;
 }
 
 .nav__links ul li a {
   text-decoration: none;
   color: var(--base-white);
   font-weight: 700;
+  font-size: 16px;
   transition: color 0.3s ease;
 }
 
@@ -129,12 +132,19 @@ body {
   justify-content: center;
   padding: 20px;
 }
+.coffee__wrapper h2{
+  font-size: 35px;
+  color: var(--dark-brown);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
 
 .coffee__cards {
   display: flex;
-  gap: 20px;
+  gap: 60px;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 40px;
 }
 
 .coffee__card {
@@ -143,33 +153,29 @@ body {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   background-color: var(--base-white);
   text-align: center;
-  width: 300px;
-  height: 400px;
+  width: 190px; 
+  height: 220px; 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
 .coffee__card:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .coffee_img img {
-  max-width: 50%;
-  max-height: 50%;
+  max-width: 100%; 
+  max-height: 70%;
   object-fit: contain;
 }
 
 .coffee_txt {
   opacity: 0;
-  /* position: relative; */
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
   color: var(--base-white);
-  padding: 5px;
-  font-size: 12px;
+  font-size: 14px;
   transition: opacity 0.3s ease;
 }
 
@@ -193,7 +199,7 @@ body {
 }
 
 .coffeetypes__text {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
   color: var(--dark-brown); 
   text-align: center;
@@ -278,4 +284,92 @@ body {
 
 .btn__group button:hover {
   background-color: var(--second-dark);
+}
+.icons-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 0;
+  background-color: #f3f0e7;
+}
+
+.icon-card {
+  text-align: center;
+  width: 250px;
+}
+
+.icon-card img {
+  max-width: 100px;
+  margin-bottom: 15px;
+}
+
+.icon-card p {
+  font-size: 16px;
+  color: #333;
+}
+.footer {
+  background-color: var(--dark-brown);
+  color: var(--base-white);
+  padding: 40px 0;
+}
+
+.footer__subscribe {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.footer__subscribe h3,
+.footer__contact h3,
+.footer__links h3,
+.footer__about h3 {
+  margin-bottom: 10px;
+}
+
+.footer__columns {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer__contact,
+.footer__links,
+.footer__about {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+}
+
+.subscribe-btn {
+  padding: 10px 20px;
+  background-color: rgba(189, 150, 103, 0.8);
+  color: var(--base-white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe-btn:hover {
+  background-color: rgba(189, 150, 103, 1);
+}
+
+.footer__links ul,
+.footer__about ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer__links li,
+.footer__about li {
+  margin-bottom: 5px;
+}
+
+.footer__links a,
+.footer__about a {
+  color: var(--base-white);
+  text-decoration: none;
+}
+
+.footer__links a:hover,
+.footer__about a:hover {
+  text-decoration: underline;
 }
