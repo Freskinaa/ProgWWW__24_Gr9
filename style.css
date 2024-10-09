@@ -175,6 +175,76 @@ body {
  
 }
 
+.coffeetypes__container {
+  padding: 20px 0;
+  background-color: var(--base-white);
+}
+
+.coffeetypes__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  overflow-x: hidden;
+ 
+}
+
+.coffeetypes__text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  padding: 10px 0;
+  color: var(--second-dark);
+}
+
+.coffeetypes__cards {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.coffeetypes__cards .coffeetypes__card {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--second-dark);
+ 
+}
+
+.coffeetypes__card .coffeetypes__img {
+  width: 100%;
+  text-align: center;
+}
+
+.coffeetypes__card .coffeetypes__img img {
+  width: 100%;
+  margin: 0 auto; 
+  display: block; 
+  padding-bottom: 30px;
+
+}
+.coffeetypes__content{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px;
+ 
+}
+.coffeetypes__content h4{
+  color: var(--second-dark);
+  font-size: 24px;
+  padding-bottom: 15px;
+}
+
+.coffeetypes__content p{
+  font-size: 16px;
+  color: var(--dark-brown);
+
+}
+
 
 
 
