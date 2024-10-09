@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 :root {
   --base-brown: #d4a373;
   --base-lightbrown: #f1d1b5;
@@ -42,7 +43,7 @@ body {
   left: 0;
   right: 0;
   padding: 10px 0;
-  background-color: #ac7451;
+  background-color:rgba(189, 150, 103, 0.759);
 }
 
 .navbar__content {
@@ -80,7 +81,7 @@ body {
 }
 
 .hero__section {
-  background-image: url(./assets/images/coffee1.jpg);
+  background-image: url(./assets/images/back1.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -116,7 +117,6 @@ body {
   font-weight: 300;
   margin-bottom: 30px;
 }
-
 .coffee__container {
   padding: 20px 0;
   background-color: var(--dark-brown);
@@ -127,122 +127,69 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 100%;
-  overflow-x: hidden;
 }
 
 .coffee__cards {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  width: 100%;
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+  justify-content: center;
+  overflow-x: hidden;
 }
 
-.coffee_cards .coffee_card {
-  width: 100%;
-}
-
-.coffee_card .coffee_img {
-  width: 100%;
+.coffee__card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  background-color: var(--base-white);
   text-align: center;
-  transition: all 0.3s ease-in-out;
+  width: 150px; /* Slightly larger card size */
+  height: 150px;
 }
 
-.coffee__card .coffee__img:hover {
-  transform: translateY(-2px);
+.coffee__card:hover {
+  transform: scale(1.1);
 }
 
-.coffee_card .coffee_img img {
-  width: 20%;
-  margin: 0 auto;
+.coffee_img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px; /* Set a height for the image container */
+  margin-bottom: 10px; /* Add spacing between image and text */
+}
+
+.coffee_img img {
+  max-width: 100%; /* Ensure the image never exceeds the container width */
+  max-height: 100%; /* Ensure the image never exceeds the container height */
+  object-fit: contain; /* Make sure the image scales without getting cropped */
   display: block;
-  padding-bottom: 10px;
 }
 
 .coffee_txt {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: var(--base-white);
+  padding: 5px;
+  font-size: 14px;
+  transition: opacity 0.3s ease;
 }
 
-.coffee_txt span {
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--base-white);
+.coffee__card:hover .coffee_txt {
+  opacity: 1;
 }
+
 
 .coffeetypes__container {
   padding: 20px 0;
-  background-color: var(--base-white);
+  background-color: var(--bg-lightgray);
 }
-<<<<<<< Updated upstream
-=======
-
-.coffeetypes__wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 100%;
-  overflow-x: hidden;
- 
-}
-
-.coffeetypes__text{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 26px;
-  padding: 10px 0;
-  color: var(--second-dark);
-}
-
-.coffeetypes__cards {
-  display: grid;
-  grid-template-columns: auto auto auto;
- gap: 30px;
-  padding-top: 50px;
-}
-
-.coffeetypes_cards .coffeetypes_card {
-  width: 100%;
-  border-radius: 10px;
-  overflow: hidden;
-  border: 1px solid var(--base-gray);
- 
-}
-
-.coffeetypes_card .coffeetypes_img {
-  width: 100%;
-  text-align: center;
-}
-
-.coffeetypes_card .coffeetypes_img img {
-  width: 100%;
-  margin: 0 auto; 
-  display: block; 
-  padding-bottom: 30px;
-
-}
-.coffeetypes__content{
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 20px;
- 
-}
-.coffeetypes__content h4{
-  color: var(--second-dark);
-  font-size: 24px;
-  padding-bottom: 15px;
-}
-
-.coffeetypes__content p{
-  font-size: 16px;
-  color: var(--dark-brown);
-
-}
-
->>>>>>> Stashed changes
 
 .coffeetypes__wrapper {
   display: flex;
@@ -254,66 +201,66 @@ body {
 }
 
 .coffeetypes__text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 26px;
-  padding: 10px 0;
-  color: var(--second-dark);
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--dark-brown); 
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 .coffeetypes__cards {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 20px;
-  padding-top: 20px;
+  display: flex;
+  gap: 30px; 
+  padding: 20px 0;
+  justify-content: center;
+  flex-wrap: wrap; 
 }
 
-.coffeetypes__cards .coffeetypes__card {
-  width: 100%;
+.coffeetypes__card {
+  position: relative;
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid var(--second-dark);
   transition: all 0.3s ease-in-out;
-}
-
-.coffeetypes__cards .coffeetypes__card:hover {
-  transform: scale(0.95);
-}
-
-.coffeetypes__card .coffeetypes__img {
-  width: 100%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  background-color: var(--base-white);
   text-align: center;
+  width: 300px;
+  height: 400px;
+}
+
+.coffeetypes__card .coffeetypes__content {
+  opacity: 0; 
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--base-white);
+  padding: 15px;
+  transition: opacity 0.3s ease;
+}
+
+.coffeetypes__card:hover .coffeetypes__content {
+  opacity: 1; /* Hover text appears */
+}
+
+.coffeetypes__card:hover {
+  transform: scale(1.05);
 }
 
 .coffeetypes__card .coffeetypes__img img {
   width: 100%;
-  margin: 0 auto;
+  height: auto;
   display: block;
-  padding-bottom: 30px;
-}
-.coffeetypes__content {
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 10px;
-}
-.coffeetypes__content h4 {
-  color: var(--second-dark);
-  font-size: 24px;
-  padding-bottom: 15px;
-}
-
-.coffeetypes__content p {
-  font-size: 16px;
-  color: var(--dark-brown);
+  object-fit: cover; /* Ensures image fits well */
+  padding-bottom: 20px;
 }
 
 .btn_group button.large-btn {
-  background-color: #f4c79a;
+  background-color: rgba(189, 150, 103, 0.759);
   color: var(--base-white);
   padding: 12px 30px;
-  border-color: #f4c79a;
+  border-color: rgba(189, 150, 103, 0.759);
   font-size: 18px;
   border-radius: 10px;
   transition: background-color 0.4s ease-in-out;
@@ -324,6 +271,7 @@ body {
   background-color: var(--second-dark);
   transform: scale(1.05);
 }
+
 .btn__group button {
   background-color: var(--dark-brown);
   color: var(--base-white);
@@ -338,8 +286,4 @@ body {
 
 .btn__group button:hover {
   background-color: var(--second-dark);
-<<<<<<< Updated upstream
 }
-=======
-}
->>>>>>> Stashed changes
