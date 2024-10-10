@@ -26,6 +26,7 @@
   --bg-blue: #b7ecec;
   --bg-dark: #192733;
   --bg-lightgray: #f6f9fc;
+  --bg-lightbrwon: #bd9667d9;
 }
 
 body {
@@ -42,7 +43,7 @@ body {
   left: 0;
   right: 0;
   padding: 10px 0;
-  background-color: rgba(189, 150, 103, 0.85);
+  background-color: var(--bg-lightbrwon);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   z-index: 1000;
 }
@@ -120,69 +121,61 @@ body {
   font-weight: 300;
   margin-bottom: 30px;
 }
-.coffee__container {
-  padding: 40px 0;
-  background-color: var(--dark-brown);
+.coffee__container { 
+  background-color: var(--second-dark); 
+  padding: 20px;
 }
 
 .coffee__wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-.coffee__wrapper h2{
-  font-size: 35px;
-  color: #564a24;
-  font-weight: 700;
-  margin-bottom: 20px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ max-width: 100%;
+ overflow-x: hidden;
 }
 
 .coffee__cards {
-  display: flex;
-  gap: 60px;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 40px;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-around; 
+ width: 100%;
+ gap: 20px; 
 }
 
 .coffee__card {
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-  background-color: var(--base-white);
-  text-align: center;
-  width: 190px; 
-  height: 220px; 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+ width: auto;
+ background: none; 
+ text-align: center;
 }
 
-.coffee__card:hover {
-  transform: scale(1.05);
+.coffee__img {
+ width: auto;
+ text-align: center;
+ transition: all 0.3s ease-in-out;
 }
 
-.coffee_img img {
-  max-width: 100%; 
-  max-height: 70%;
-  object-fit: contain;
+.coffee__img:hover {
+ transform: translateY(-2px);
+}
+
+.coffee__img img {
+ width: 50px;
+ margin: 0 auto;
+ padding-bottom: 10px;
 }
 
 .coffee_txt {
-  opacity: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: var(--base-white);
-  font-size: 14px;
-  transition: opacity 0.3s ease;
+ display: flex;
+ align-items: center;
+ justify-content: center;
 }
 
-.coffee__card:hover .coffee_txt {
-  opacity: 1;
+.coffee_txt span {
+ font-size: 16px;
+ font-weight: 600;
+ color: var(--base-white);
 }
-
 
 .coffeetypes__container {
   padding: 20px 0;
