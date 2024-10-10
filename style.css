@@ -109,14 +109,14 @@ body {
 
 .hero__text h1 {
   font-size: 48px;
-  color: var(--dark-brown);
+  color: #564a24;
   font-weight: 700;
   margin-bottom: 20px;
 }
 
 .hero__text p {
   font-size: 18px;
-  color: var(--dark-brown);
+  color: #564a24;
   font-weight: 300;
   margin-bottom: 30px;
 }
@@ -134,7 +134,7 @@ body {
 }
 .coffee__wrapper h2{
   font-size: 35px;
-  color: var(--dark-brown);
+  color: #564a24;
   font-weight: 700;
   margin-bottom: 20px;
 }
@@ -201,7 +201,7 @@ body {
 .coffeetypes__text {
   font-size: 25px;
   font-weight: bold;
-  color: var(--dark-brown); 
+  color: #564a24; 
   text-align: center;
   padding-bottom: 20px;
 }
@@ -362,3 +362,55 @@ body {
 .footer__about a:hover {
   text-decoration: underline;
 }
+
+
+.container1 {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 20px;
+}
+
+.left-side {
+  width: 40%; 
+}
+
+.left-side img {
+  width: 70%;
+  height: 80%;
+  margin-left: 90px;
+  margin-top: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.right-side {
+  width: 55%; 
+  padding: 20px;
+}
+
+.right-side h1 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #564a24;
+  margin-bottom: 10px;
+}
+
+.right-side p {
+  font-size: 16px; 
+  color: #333;
+  margin-bottom: 20px;
+}
+
+
+
+.right-side img:hover {
+  background-color: #FF9900;
+}
+
+.right-side p:last-child {
+  font-size: 14px;
+  color: #666;
+  margin-top: 20px;
+}
+
