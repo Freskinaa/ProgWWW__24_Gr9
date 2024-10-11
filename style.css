@@ -25,6 +25,7 @@
   --bg-yellow: #fef4ea;
   --bg-blue: #b7ecec;
   --bg-dark: #192733;
+  --black-hover:#00000099;
   --bg-lightgray: #f6f9fc;
   --bg-lightbrwon: #bd9667d9;
 }
@@ -89,11 +90,10 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 90vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 70px;
   padding: 0 20px;
 }
 
@@ -218,6 +218,9 @@ body {
   width: 300px;
   height: 400px;
 }
+.coffeetypes__img{
+  width: 100%;
+}
 
 .coffeetypes__card .coffeetypes__content {
   opacity: 0; 
@@ -225,12 +228,26 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: var(--black-hover);
   color: var(--base-white);
   padding: 15px;
   transition: opacity 0.3s ease;
 }
+.coffeetypes__content h3{
+  padding-bottom: 10px ;
+}
 
+.shop{
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.shop span{
+  font-size: 24px;
+  font-weight: 600;
+}
 .coffeetypes__card:hover .coffeetypes__content {
   opacity: 1;
 }
@@ -244,7 +261,7 @@ body {
   height: auto;
   display: block;
   object-fit: cover; 
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .btn_group button.large-btn {
@@ -265,7 +282,6 @@ body {
 
 .btn__group button {
   background-color: var(--dark-brown);
-  color: var(--base-white);
   border-radius: 8px;
   border: none;
   padding: 8px 20px;
@@ -273,6 +289,10 @@ body {
   font-size: 16px;
   transition: background-color 0.4s ease-in-out;
   cursor: pointer;
+}
+.btn__group button a{
+  color: var(--base-white);
+  text-decoration: none;
 }
 
 .btn__group button:hover {
@@ -291,7 +311,7 @@ body {
 }
 
 .icon-card img {
-  max-width: 100px;
+  width: 40%;
   margin-bottom: 15px;
 }
 
