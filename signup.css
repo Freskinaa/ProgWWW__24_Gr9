@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --base-brown: #d4a373;
+  --base-lightbrown: #f1d1b5;
+  --dark-brown: #85593d;
+  --light2-brown: #f6e3d7;
+  --second-dark: #563926;
+  --base-white: #ffffff;
+  --base-black: #000000;
+  --base-blue: #0068b1;
+  --base-orange: #ff5c35;
+  --base-darkorange: #e04826;
+  --base-lightorange: #ffebe6;
+  --base-gray: #b6c7d6;
+  --second-black: #213343;
+  --second-blue: #213343;
+  --second-gray: #516f90;
+  --bg-yellow: #fef4ea;
+  --bg-blue: #b7ecec;
+  --bg-dark: #192733;
+  --black-hover: #00000099;
+  --bg-lightgray: #f6f9fc;
+  --bg-lightbrwon: #bd9667d9;
+  --cherry: #7e092a;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.signup__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  opacity: 0.8999;
+  height: 100vh;
+  min-height: 100vh;
+}
+
+.signup__image {
+  max-height: 100%;
+  height: 100%;
+  background-image: url(./assets/images/coffeeshop.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.signup__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.backTOlogin {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  font-size: 16px;
+  padding-left: 240px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  gap: 10px;
+}
+
+.signup__text span {
+  font-size: 65px;
+  color: var(--dark-brown);
+  font-weight: 800;
+  padding-bottom: 20px;
+}
+.signup__text p {
+  font-size: 16px;
+  color: var(--base-brown);
+  font-weight: 530;
+  padding-bottom: 20px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 0;
+}
+.inputs input {
+  border-radius: 10px;
+  border: 2px solid var(--base-brown);
+  padding: 8px 12px;
+  height: 40px;
+  width: 460px;
+}
+.firstNlastN {
+  display: block;
+}
+.firstNlastN input {
+  gap: 20px;
+  margin-bottom: 15px;
+}
+.access__inputGroup {
+  width: 65%;
+}
+.access__inputGroup h3 {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  color: var(--dark-brown);
+  width: 15%;
+}
+.gender {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+input[type="radio"],
+label {
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  height: 1.2rem;
+  width: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.sign__up {
+  display: flex;
+  align-items: normal;
+  justify-content: space-between;
+  width: 40%;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.backTOhome {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.backTOhome a {
+  text-decoration: none;
+  font-size: 16px;
+  color: var(--cherry);
+  font-weight: bold;
+  padding-bottom: 40px;
+}
+
+.btn__group button {
+  background-color: var(--dark-brown);
+  color: var(--base-white);
+  padding: 12px 100px;
+  border: 1px solid var(--dark-brown);
+  font-size: 18px;
+  border-radius: 15px;
+  transition: background-color 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.btn__group :hover {
+  background-color: var(--second-dark);
+  transform: scale(1.05);
+}
