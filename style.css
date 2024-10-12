@@ -90,7 +90,26 @@ body {
   position: relative;
 }
 
-
+.nav__links ul li a:hover{
+  color: var(--dark-brown2);
+ }
+ 
+ .nav__links ul li a::after {
+   content: "";
+   position: absolute;
+   width: 0;
+   height: 3px; 
+   background-color: var(--second-dark); 
+   left: 0;
+   bottom: -2px; 
+   transition: width 0.3s ease;
+   border-radius: 10px;
+ }
+ 
+ 
+ .nav__links ul li a:hover::after {
+   width: 100%;
+ }
 
 
 
