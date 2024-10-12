@@ -10,6 +10,7 @@
   --base-brown: #d4a373;
   --base-lightbrown: #f1d1b5;
   --dark-brown: #85593d;
+  --dark-brown2: #916143;
   --light2-brown: #f6e3d7;
   --second-dark: #563926;
   --base-white: #ffffff;
@@ -72,9 +73,12 @@ body {
 
 .nav__links ul {
   list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 30px;
+  padding: 0;
+  display: flex; 
+}
+
+.nav__links ul li {
+  margin: 0 15px; 
 }
 
 .nav__links ul li a {
@@ -82,14 +86,14 @@ body {
   text-decoration: none;
   font-weight: bold;
   font-size: 16px;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 10px 0; 
+  position: relative;
 }
 
-.nav__links ul li a:hover {
-  color: var(--second-dark);
-}
+
+
+
+
 .btn__group button {
   padding: 10px 15px;
   border: none;
