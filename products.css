@@ -119,15 +119,37 @@ body {
     max-width: 100%;
     overflow-x: hidden;
   }
+  .coffeetypes__header {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 20px; 
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 20px;
+  }
   
   .coffeetypes__text {
     font-size: 25px;
     font-weight: bold;
     color: #564a24;
-    text-align: center;
-    padding-top: 100px;
-    padding-bottom: 20px;
+    text-align: center; 
   }
+  
+  .coffeetypes__search {
+    position: relative;
+    text-align: right;
+  }
+  
+  .coffeetypes__search input {
+    padding: 12px;
+    border: 2px solid var(--base-brown);
+    border-radius: 8px;
+    font-size: 16px;
+    width: 250px;
+  }
+  
+  
   
   .coffeetypes__cards {
     display: flex;

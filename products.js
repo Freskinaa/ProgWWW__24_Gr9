@@ -55,3 +55,57 @@ document.getElementById("backBtn").addEventListener("click", function () {
 
   document.getElementById("viewMoreBtn").style.display = "inline-block";
 });
+
+
+
+const productNames = [
+  "Americano",
+  "Cappuccino",
+  "Macchiato",
+  "Iced Mocha",
+  "Frappe",
+  "Cold brew",
+  "Breve",
+  "Turkish Coffee",
+  "Cortado",
+  "Dalgona",
+  "Dirty Chai",
+  "Mazagran"
+];
+
+const searchInput = document.getElementById('searchInput');
+const datalist = document.getElementById('productSuggestions');
+const coffeeCards = document.querySelectorAll('.coffeetypes__card');
+
+
+function updateSuggestions() {
+  const query = searchInput.value.toLowerCase();
+  datalist.innerHTML = '';
+
+  productNames.forEach(name => {
+    if (name.toLowerCase().includes(query)) {
+      const option = document.createElement('option');
+      option.value = name;
+      datalist.appendChild(option);
+    }
+  });
+}
+
+function filterProducts() {
+  const query = searchInput.value.toLowerCase();
+
+  coffeeCards.forEach(card => {
+    const productName = card.querySelector('h3').textContent.toLowerCase();
+    if (productName.includes(query) || query === '') {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+
+searchInput.addEventListener('input', () => {
+  updateSuggestions();
+  filterProducts();
+});
