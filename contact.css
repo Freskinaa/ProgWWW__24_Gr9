@@ -88,8 +88,9 @@ background: radial-gradient(circle, rgba(242,242,242,1) 0%, rgba(236,207,180,1) 
 }
 
 .team-section h2 {
-    font-size: 2rem; 
+    font-size: 30px; 
     margin-bottom: 1em;
+    font-weight:900;
     color: var(--dark-brown);
 }
 
@@ -125,7 +126,8 @@ background: radial-gradient(circle, rgba(242,242,242,1) 0%, rgba(236,207,180,1) 
 
 .card-content h3 {
     font-family: 'Playfair Display', serif;
-    color: var(--primary-color);
+    color: var(--dark-brown);
+    font-weight: 600;
     font-size: 1.4rem;
 }
 
