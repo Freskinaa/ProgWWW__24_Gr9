@@ -77,7 +77,6 @@ const searchInput = document.getElementById('searchInput');
 const datalist = document.getElementById('productSuggestions');
 const coffeeCards = document.querySelectorAll('.coffeetypes__card');
 
-
 function updateSuggestions() {
   const query = searchInput.value.toLowerCase();
   datalist.innerHTML = '';
@@ -93,17 +92,29 @@ function updateSuggestions() {
 
 function filterProducts() {
   const query = searchInput.value.toLowerCase();
+  let hasResults = false; 
 
   coffeeCards.forEach(card => {
     const productName = card.querySelector('h3').textContent.toLowerCase();
     if (productName.includes(query) || query === '') {
       card.style.display = 'block';
+      hasResults = true; 
     } else {
       card.style.display = 'none';
     }
   });
-}
 
+  const noResultsDiv = document.querySelector('.no-results');
+  if (hasResults) {
+    noResultsDiv.style.display = 'none';
+    document.getElementById("viewMoreBtn").style.display = "none"; 
+    document.getElementById("backBtn").style.display = "none"; // Hide back button
+  } else {
+    noResultsDiv.style.display = 'block';
+    document.getElementById("viewMoreBtn").style.display = "none"; // Hide view more button
+    document.getElementById("backBtn").style.display = "none"; // Hide back button
+  }
+}
 
 searchInput.addEventListener('input', () => {
   updateSuggestions();

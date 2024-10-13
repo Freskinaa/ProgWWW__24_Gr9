@@ -29,6 +29,7 @@
   --black-hover: #00000099;
   --bg-lightgray: #f6f9fc;
   --bg-lightbrwon: #bd9667d9;
+  --cherry: #7e092a;
 }
 
 body {
@@ -148,6 +149,16 @@ body {
     font-size: 16px;
     width: 250px;
   }
+  .no-results {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 510;
+    color: var(--cherry); 
+    margin-top: 40px;
+  }
+  
   
   
   
