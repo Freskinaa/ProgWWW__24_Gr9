@@ -13,6 +13,7 @@
   --dark-brown2: #916143;
   --light2-brown: #f6e3d7;
   --second-dark: #563926;
+  --second-dark2: #2c1e14;
   --base-white: #ffffff;
   --base-black: #000000;
   --base-blue: #0068b1;
@@ -387,8 +388,8 @@ body {
   overflow-x: hidden;
 }
 .reviews__text {
-  padding-bottom: 40px;
-  color: var(--second-dark);
+  padding-bottom: 50px;
+  color: var(--second-dark2);
   font-size: 20px;
 }
 
@@ -398,6 +399,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
 }
 
 .reviews__card {
@@ -406,7 +408,6 @@ body {
   border-radius: 15px;
   padding: 20px;
   margin: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
 }
 .reviews__card:hover {
@@ -432,7 +433,7 @@ body {
 .user-name {
   font-weight: bold;
   padding: 8px 0;
-  color: var(--second-dark);
+  color: var(--second-dark2);
 }
 
 .user-comment {
@@ -443,7 +444,7 @@ body {
 .carousel-indicators {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .indicator {
@@ -578,19 +579,4 @@ body {
   background-color: #333;
   transform: translateY(20px);
   animation: move 2s infinite;
-}
-
-@keyframes move {
-  from {
-    transform: translateX(0px);
-  }
-  to {
-    transform: translateX(300px);
-  }
-}
-
-.offer-text {
-  text-align: center;
-  margin-top: 5px;
-  font-weight: 650;
 }
