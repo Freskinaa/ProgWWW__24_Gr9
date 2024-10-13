@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --base-brown: #d4a373;
+  --base-lightbrown: #f1d1b5;
+  --dark-brown: #85593d;
+  --dark-brown2: #916143;
+  --light2-brown: #f6e3d7;
+  --second-dark: #563926;
+  --second-dark2: #2c1e14;
+  --base-white: #ffffff;
+  --base-black: #000000;
+  --base-blue: #0068b1;
+  --base-orange: #ff5c35;
+  --base-darkorange: #e04826;
+  --base-lightorange: #ffebe6;
+  --base-gray: #b6c7d6;
+  --second-black: #213343;
+  --second-blue: #213343;
+  --second-gray: #516f90;
+  --bg-yellow: #fef4ea;
+  --bg-blue: #b7ecec;
+  --bg-dark: #192733;
+  --black-hover: #00000099;
+  --bg-lightgray: #f6f9fc;
+  --bg-lightbrwon: #bd9667d9;
+  --base-brownlig: #ab9e97;
+  --base-brownlig2: #dccec7;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 0;
+  background-color: rgba(255, 250, 240, 0.75);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav__links img {
+  width: 40px;
+}
+
+.nav__links ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.nav__links ul li {
+  margin: 0 15px;
+}
+
+.nav__links ul li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 0;
+  position: relative;
+}
+
+.nav__links ul li a:hover {
+  color: var(--dark-brown2);
+}
+
+.nav__links ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: var(--second-dark);
+  left: 0;
+  bottom: -2px;
+  transition: width 0.3s ease;
+  border-radius: 10px;
+}
+
+.nav__links ul li a:hover::after {
+  width: 100%;
+}
+
+.btn__group button {
+  padding: 10px 15px;
+  border: none;
+  background-color: var(--second-dark);
+  color: var(--bg-lightbrwon);
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.btn__group button:hover {
+  background-color: var(--bg-lightbrwon);
+  transform: scale(1.05);
+}
+
+.btn__group a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.btn__group {
+  display: flex;
+  gap: 15px;
+}
+.btn_group button.large-btn {
+    background-color: var(--dark-brown);
+    color: var(--base-white);
+    padding: 12px 30px;
+    border-color: var(--dark-brown);
+    font-size: 18px;
+    border-radius: 10px;
+    transition: background-color 0.4s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .btn_group button.large-btn:hover {
+    background-color: var(--second-dark);
+    transform: scale(1.05);
+  }
+  
+  .btn__group button {
+    background-color: var(--dark-brown);
+    border-radius: 8px;
+    border: none;
+    padding: 8px 20px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.4s ease-in-out;
+    cursor: pointer;
+  }
+  .btn__group button a {
+    color: var(--base-white);
+    text-decoration: none;
+  }
+  
+  .btn__group button:hover {
+    background-color: var(--second-dark);
+  }
