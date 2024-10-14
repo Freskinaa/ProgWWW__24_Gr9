@@ -35,19 +35,24 @@
 }
 body {
   font-family: "Lexend Deca", sans-serif;
-  background-color: var(--base-lightbeige);
-  color: var(--dark-brown);
-  line-height: 1.6;
+  background-color: #f5e0cc;
+  color: var(--dark-brown2);
+  line-height: 1.8;
+  font-size: 16px;
+  margin: 0;
 }
+
 h1, h2, h3, h4 {
   color: var(--dark-brown2);
   font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 
 p {
   color: var(--second-dark2);
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
+
 
 
 .container {
@@ -219,10 +224,13 @@ p {
   height: 150px;
   border-radius: 50%;
 }
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
 
-h1 {
-  font-size: 2.5rem;
-  margin: 10px 0;
+p {
+  font-size: 1.1rem;
 }
 .intro-grid {
   display: flex;
@@ -254,20 +262,27 @@ h1 {
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
-
 .quick-facts p {
-  font-size: 1.1rem;
-  margin-bottom: 5px;
+  font-size: 1.2rem;
+  color: var(--second-dark);
+  margin-bottom: 8px;
+  font-weight: 300;
 }
 
 .right-side {
   width: 35%;
 }
 
+.right-side img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
 .profile-pic {
   width: 100%;
   height: 250px;
   border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .details {
@@ -277,81 +292,17 @@ h1 {
 }
 
 .intro-section {
-  padding: 50px;
-  background-color: #e6caad;
-  border-radius: 15px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  padding: 60px;
+  background: radial-gradient(circle at top left, var(--base-brownlig), var(--base-lightbrown));
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
   max-width: 1200px;
-  margin: 20px auto;
-}
-
-
-.testimonials {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 50px;
-  margin-bottom: 25px;
-}
-
-.testimonial-item {
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
-  text-align: center;
+  margin: 40px auto;
   transition: transform 0.3s ease;
 }
 
-.testimonial-item:hover {
-  transform: scale(1.05);
-}
-
-.testimonial-item p {
-  font-size: 1rem;
-  color: var(--dark-brown);
-}
-
-
-.team-section {
-  padding: 20px;
-  text-align: center;
-  background-image: url("./assets/images/bgcontact.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.team-section h2 {
-  font-size: 30px;
-  margin-bottom: 1em;
-  font-weight: 900;
-  color: var(--dark-brown);
-}
-
-.team-cards {
-  display: flex;
-  justify-content: center;
-  gap: 1em;
-}
-
-.team-card {
-  background-color: var(--base-white);
-  border-radius: 8px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  width: 260px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.team-card:hover {
-  transform: scale(1.1);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-}
-
-.team-card img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
+.intro-section:hover {
+  transform: translateY(-5px);
 }
 .intro-grid {
   display: grid;
@@ -372,14 +323,82 @@ h1 {
 }
 
 
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin: 50px 0;
+}
+.testimonial-item {
+  padding: 30px;
+  background-color: var(--light2-brown);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-item p {
+  font-size: 1.1rem;
+  color: var(--dark-brown2);
+  margin-bottom: 15px;
+}
+
+.team-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #f5e0cc;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+}
+
+.team-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: var(--dark-brown);
+}
+
+.team-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+.team-card {
+  background-color: var(--base-white);
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.team-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+
 .home-button {
   margin-top: 70px;
   background-color: var(--dark-brown);
   color: var(--base-white);
-  padding: 8px 16px;
-  border-radius: 20px;
+  padding: 10px 20px;
+  border-radius: 25px;
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 1rem;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
