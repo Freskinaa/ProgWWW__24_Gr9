@@ -32,6 +32,12 @@
   --bg-lightbrwon: #bd9667d9;
   --base-brownlig: #ab9e97;
   --base-brownlig2: #dccec7;
+  --base-lightbeige: #faf2e4;
+  --primary-color: #e48c2a;
+  --accent-color: #d4721d;
+  --text-color: #4b2e2b;
+  --cherry:rgb(90, 10, 10);
+
 }
 
 body {
@@ -391,6 +397,7 @@ body {
   padding-bottom: 50px;
   color: var(--second-dark2);
   font-size: 20px;
+  text-shadow: 2px 2px 4px var(--dark-brown2);
 }
 
 .reviews__cards {

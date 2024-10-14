@@ -106,11 +106,11 @@ function filterProducts() {
   if (hasResults) {
     noResultsDiv.style.display = "none";
     document.getElementById("viewMoreBtn").style.display = "none";
-    document.getElementById("backBtn").style.display = "none"; // Hide back button
+    document.getElementById("backBtn").style.display = "none"; 
   } else {
     noResultsDiv.style.display = "block";
-    document.getElementById("viewMoreBtn").style.display = "none"; // Hide view more button
-    document.getElementById("backBtn").style.display = "none"; // Hide back button
+    document.getElementById("viewMoreBtn").style.display = "none"; 
+    document.getElementById("backBtn").style.display = "none"; 
   }
 }
 
