@@ -1,9 +1,8 @@
-
 body {
-  background-color: #845d45;
+  background-color: #514442;
+  color: #F0EDE5;
+  animation: backgroundFade 6s ease-in-out infinite alternate;
 }
-
-
 .hero {
   display: flex;
   justify-content: center;
@@ -11,17 +10,16 @@ body {
   text-align: center;
   padding: 100px;
   border-radius: 15px;
-  margin-top: 120px;
-  margin-bottom: 70px;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin: 120px 50px;
   overflow: hidden;
-  background: rgb(242, 242, 242);
+  background: rgb(255, 255, 255);
   background: radial-gradient(
     circle,
-    rgba(242, 242, 242, 1) 0%,
-    rgba(236, 207, 180, 1) 88%
+    rgba(255, 255, 255, 1) 0%,
+    rgba(236, 211, 186, 1) 88%
   );
+  animation: fadeIn 1.5s ease-out;
+  position: relative;
 }
 
 .hero::before {
@@ -30,9 +28,10 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  filter: blur(5px);
+  background: rgba(0, 0, 0, 0.05);
   z-index: 1;
-  transition: transform 0.3s ease;
+  filter: blur(5px);
+  transition: transform 0.4s ease;
 }
 
 .hero:hover::before {
@@ -40,56 +39,82 @@ body {
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   z-index: 2;
+  color: #4A3C3A;
+  animation: textGlow 2.5s infinite ease-in-out;
 }
 
 .hero p {
   font-size: 1.2rem;
   z-index: 2;
-}
-.team-section {
-  padding: 20px;
-  text-align: center;
-  background-image: url("./assets/images/bgcontact.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  color: #6F5F5C;
+  animation: slideIn 1.2s ease-out;
 }
 
-.team-section h2 {
-  font-size: 30px;
-  margin-bottom: 1em;
-  font-weight: 900;
-  color: var(--dark-brown);
-}
-
-.team-cards {
-  display: flex;
-  justify-content: center;
-  gap: 1em;
-}
-
-.team-card {
-  background-color: var(--base-white);
-  border-radius: 8px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  width: 260px;
+.location-card {
+  background-color: #efe0d0;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  padding: 25px;
+  text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  animation: bounceIn 1s ease-out;
 }
 
-.team-card:hover {
-  transform: scale(1.1);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+.location-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
 }
 
-.team-card img {
+.location-card img {
   width: 100%;
-  height: 250px;
+  max-width: 300px;
   object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  transition: transform 0.4s ease;
 }
 
+.location-card:hover img {
+  transform: scale(1.05) rotate(-2deg);
+}
+
+.card-content h3 {
+  font-size: 28px;
+  color: #6F5F5C;
+  margin-bottom: 10px;
+  animation: textBounce 1s infinite ease-in-out;
+}
+
+.location-card:hover h3 {
+  color: #C98474;
+}
+
+.card-content p {
+  font-size: 18px;
+  color: #7D6F61;
+  margin: 10px 0;
+  animation: slideDown 1s ease-in;
+}
+  
+  .card-content p {
+    font-size: 18px;
+    color: #7d6f61;
+    margin: 10px 0;
+  }
+  
+  .card-content p:nth-of-type(2) {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .card-content p:nth-of-type(3) {
+    font-size: 16px;
+  }
 .card-content {
   padding: 1em;
 }
@@ -100,11 +125,6 @@ body {
   font-size: 1.4rem;
 }
 
-.card-content p {
-  color: var(--text-color);
-  font-size: 0.9rem;
-}
-
 .contact-section {
   padding: 3em 0;
   background-color: var(--base-lightbeige);
@@ -112,9 +132,10 @@ body {
 }
 
 .contact-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1em;
-  color: var(--dark-brown);
+  font-size: 2.5rem;
+  margin-bottom: 1.5em;
+  color: #4A3C3A;
+  animation: pulse 3s infinite ease-in-out;
 }
 
 .contact-section p {
@@ -203,4 +224,141 @@ body {
 .home-button:hover {
   background-color: var(--base-brown);
   transform: scale(1.05);
+}
+.location-section {
+  padding: 50px 0;
+  background-color: #f4ebde;
+  text-align: center;
+}
+
+.location-section h2 {
+  font-size: 36px;
+  color: #4b3832;
+  margin-bottom: 30px;
+}
+
+.location-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.location-card {
+  background-color: #efefef;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  padding: 20px;
+  text-align: left;
+}
+
+.location-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.card-content h3 {
+  font-size: 28px;
+  color: #4b3832;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 18px;
+  color: #7d6f61;
+  margin: 5px 0;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes textGlow {
+  0% {
+    text-shadow: 0 0 10px #FFD700;
+  }
+  50% {
+    text-shadow: 0 0 20px #FFB600;
+  }
+  100% {
+    text-shadow: 0 0 10px #FFD700;
+  }
+}
+
+@keyframes textBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes backgroundFade {
+  0% {
+    background-color: #4A3C3A;
+  }
+  100% {
+    background-color: #6F5F5C;
+  }
 }
