@@ -329,11 +329,14 @@ body {
   border-radius: 10px;
   transition: background-color 0.4s ease-in-out;
   cursor: pointer;
+  box-shadow: 4px 4px 5px var(--bg-lightbrown);
+
 }
 
 .btn_group button.large-btn:hover {
   background-color: var(--second-dark);
   transform: scale(1.05);
+  box-shadow: 3px 3px 4px var(--base-brown);
 }
 
 .btn__group button {
@@ -345,6 +348,7 @@ body {
   font-size: 16px;
   transition: background-color 0.4s ease-in-out;
   cursor: pointer;
+  box-shadow: 3px 3px 4px var(--bg-lightbrown);
 }
 .btn__group button a {
   color: var(--base-white);
@@ -353,6 +357,7 @@ body {
 
 .btn__group button:hover {
   background-color: var(--second-dark);
+  box-shadow: 3px 3px 4px var(--base-brown);
 }
 .order__btn button {
   color: var(--base-white);
