@@ -402,7 +402,6 @@ body {
   padding-bottom: 50px;
   color: var(--second-dark2);
   font-size: 20px;
-  text-shadow: 2px 2px 4px var(--dark-brown2);
 }
 
 .reviews__cards {
@@ -411,7 +410,6 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
 }
 
 .reviews__card {
@@ -427,13 +425,12 @@ body {
 }
 
 .reviews__img {
-  border-radius: 50%;
   overflow: hidden;
 }
 .reviews__img img {
   width: 80%;
   height: 150px;
-  border-radius: 50%;
+  border-radius: 55px;
   object-fit: cover;
 }
 
