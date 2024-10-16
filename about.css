@@ -73,6 +73,7 @@ body {
   width: 100%;
   margin: 0 auto;
   padding: 100px 20px 60px; 
+  height: 90vh;
   text-align: center;
   animation: fadeIn 1s ease forwards; 
 }
@@ -106,7 +107,7 @@ body {
   margin: 20px 0;
   animation-delay: 0.6s; 
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
-               0 0 20px rgba(255, 255, 255, 0.6);
+              0 0 20px rgba(255, 255, 255, 0.6);
 }
 
 .welcome-section h3 {
@@ -211,18 +212,22 @@ body {
   overflow-x: auto; 
   max-width: 100%; 
 }
-
 .reviews__card {
-  display: none;
+  display: flex; 
   background-color: var(--base-white);
   border-radius: 15px;
   padding: 20px;
-  flex: 0 0 calc(33.33% - 20px);
-  transition: transform 0.3s;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   max-width: 280px;
+  transition: transform 0.3s;
 }
 
-
+#reviews {
+  background-color: #e0e7ff; /* Ngjyra e re për seksionin e reviews */
+  padding: 60px 20px; /* Shtojmë padding për hapësirë të barabartë */
+}
 .reviews__card:hover {
   transform: scale(1.05);
 }
@@ -282,12 +287,10 @@ body {
         }
 
         .banner {
-            background-color: #111;
+            background-color:var(--second-dark2);
             padding: 50px 20px;
             position: relative;
             color: #f3f0e7;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
-            0 0 20px rgba(255, 255, 255, 0.6);
         }
 
         .banner h1 {

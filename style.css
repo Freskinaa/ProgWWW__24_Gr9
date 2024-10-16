@@ -36,8 +36,6 @@
   --accent-color: #d4721d;
   --text-color: #4b2e2b;
   --cherry: rgb(90, 10, 10);
-
-
 }
 
 body {
@@ -330,7 +328,6 @@ body {
   transition: background-color 0.4s ease-in-out;
   cursor: pointer;
   box-shadow: 4px 4px 5px var(--bg-lightbrown);
-
 }
 
 .btn_group button.large-btn:hover {
@@ -470,8 +467,8 @@ body {
   background-color: black;
 }
 .footer {
-  background-color: #5b402d;  
-  color: #eaeaea;  
+  background-color: #5b402d;
+  color: #eaeaea;
   padding: 50px 20px;
 }
 
@@ -492,7 +489,7 @@ body {
 .footer-column h3 {
   font-size: 1.4rem;
   margin-bottom: 15px;
-  color: #eaeaea;  
+  color: #eaeaea;
   position: relative;
 }
 
@@ -535,8 +532,8 @@ body {
   width: 140px;
   transition: transform 0.3s ease, opacity 0.3s ease;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(228, 222, 208, 0.5);  
-  animation: glow 2s infinite alternate;  
+  box-shadow: 0 0 15px rgba(228, 222, 208, 0.5);
+  animation: glow 2s infinite alternate;
 }
 
 .footer-logo img:hover {
@@ -547,10 +544,8 @@ body {
 .footer-bottom {
   text-align: center;
   padding-top: 20px;
-  border-top: 3px solid #261d0d;  
-  
+  border-top: 3px solid #261d0d;
 }
-
 
 .footer-bottom p {
   font-size: 0.9rem;
