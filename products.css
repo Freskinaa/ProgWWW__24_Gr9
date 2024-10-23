@@ -142,6 +142,59 @@
   font-weight: bold; 
 }
 
+.filter-options {
+  position: relative;
+  width: 80%;
+}
+
+.filter-button {
+  background-color:var(--base-brown);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filter-button:hover {
+  background-color: var(--dark-brown);
+}
+
+.dropdown {
+  position: absolute;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1;
+  display: none; 
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  opacity: 0;
+  visibility: hidden; 
+}
+
+.filter-options:hover #filterDropdown {
+  display: block; 
+  opacity: 1;
+  visibility: visible; 
+}
+
+.dropdown-button {
+  background-color: transparent;
+  color: #333;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-button:hover {
+  background-color: #e0e0e0;
+}
 
 .order__btn button {
   color: var(--base-white);

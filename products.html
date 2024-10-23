@@ -44,11 +44,22 @@
               <datalist id="productSuggestions"></datalist>
             </div>
           </div>
+     <div class="filter-options">
+    <button id="filterButton" class="filter-button">Filter</button>
+    <div id="filterDropdown" class="dropdown hidden">
+        <button id="filterHot" class="dropdown-button">Hot Coffee</button>
+        <button id="filterCold" class="dropdown-button">Cold Coffee</button>
+        <button id="filterAll" class="dropdown-button">All</button>
+    </div>
+</div>
+
+          
+          
           <div class="no-results" style="display: none">
             No products matching your search were found.
           </div>
 
-          <div class="coffeetypes__cards add">
+          <div class="coffeetypes__cards add hot">
             <div class="coffeetypes__card">
               <div class="coffeetypes__img">
                 <img src="./assets/images/americane.jpg" alt="Americano" />
@@ -68,7 +79,7 @@
                 </div>
               </div>
             </div>
-            <div class="coffeetypes__card add">
+            <div class="coffeetypes__card add hot">
               <div class="coffeetypes__img">
                 <img src="./assets/images/capuccino.jpg" alt="Cappuccino" />
               </div>
@@ -87,7 +98,7 @@
                 </div>
               </div>
             </div>
-            <div class="coffeetypes__card add">
+            <div class="coffeetypes__card add hot">
               <div class="coffeetypes__img">
                 <img src="./assets/images/machiato.jpg" alt="Macchiato" />
               </div>
@@ -105,7 +116,7 @@
                 </div>
               </div>
             </div>
-            <div class="coffeetypes__card add">
+            <div class="coffeetypes__card add cold">
               <div class="coffeetypes__img">
                 <img src="./assets/images/icedmochaa.jpg" alt="icedmocha" />
               </div>
@@ -123,7 +134,7 @@
                 </div>
               </div>
             </div>
-            <div class="coffeetypes__card add">
+            <div class="coffeetypes__card add cold">
               <div class="coffeetypes__img">
                 <img src="./assets/images/frappe.jpg" alt="Frappe" />
               </div>
@@ -141,7 +152,7 @@
                 </div>
               </div>
             </div>
-            <div class="coffeetypes__card add">
+            <div class="coffeetypes__card add cold">
               <div class="coffeetypes__img">
                 <img src="./assets/images/coldbrew.jpg" alt="coldbrew" />
               </div>
@@ -160,7 +171,7 @@
                 </div>
               </div>
             </div>
-            <div class="coffeetypes__card hidden">
+            <div class="coffeetypes__card hidden hot">
               <div class="coffeetypes__img">
                 <img src="/assets/images/brave.jpg" alt="Breve" />
               </div>
@@ -178,7 +189,7 @@
                 </div>
               </div>
             </div>
-            <div class="coffeetypes__card hidden">
+            <div class="coffeetypes__card hidden hot">
               <div class="coffeetypes__img">
                 <img src="./assets/images/turkish.jpg" alt="Turkish" />
               </div>
@@ -196,7 +207,7 @@
                 </div>
               </div>
             </div>
-            <div class="coffeetypes__card hidden">
+            <div class="coffeetypes__card hidden hot">
               <div class="coffeetypes__img">
                 <img src="./assets/images/cortado.jpg" alt="Cortado" />
               </div>
@@ -215,7 +226,7 @@
                 </div>
               </div>
             </div>
-            <div class="coffeetypes__card hidden">
+            <div class="coffeetypes__card hidden cold">
               <div class="coffeetypes__img">
                 <img src="./assets/images/dalgona.jpg" alt="dalgona" />
               </div>
@@ -234,7 +245,7 @@
                 </div>
               </div>
             </div>
-            <div class="coffeetypes__card hidden">
+            <div class="coffeetypes__card hidden hot">
               <div class="coffeetypes__img">
                 <img src="./assets/images/dirtychai.jpg" alt="dirtychai" />
               </div>
@@ -252,7 +263,7 @@
                 </div>
               </div>
             </div>
-            <div class="coffeetypes__card hidden">
+            <div class="coffeetypes__card hidden cold">
               <div class="coffeetypes__img">
                 <img src="./assets/images/mazagran.jpg" alt="mazagran" />
               </div>

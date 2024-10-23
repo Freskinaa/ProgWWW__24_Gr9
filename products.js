@@ -1,60 +1,4 @@
-// let currentStartIndex = 0;
-// document.getElementById("viewMoreBtn").addEventListener("click", function () {
-//   const allCards = document.querySelectorAll(".coffeetypes__card");
 
-//   for (
-//     let i = currentStartIndex;
-//     i < currentStartIndex + 6 && i < allCards.length;
-//     i++
-//   ) {
-//     allCards[i].classList.add("hidden");
-//     allCards[i].classList.remove("add");
-//   }
-
-//   currentStartIndex += 6;
-
-//   for (
-//     let i = currentStartIndex;
-//     i < currentStartIndex + 6 && i < allCards.length;
-//     i++
-//   ) {
-//     allCards[i].classList.remove("hidden");
-//     allCards[i].classList.add("add");
-//   }
-
-//   if (currentStartIndex + 6 >= allCards.length) {
-//     this.style.display = "none";
-//   }
-
-//   document.getElementById("backBtn").style.display = "inline-block";
-// });
-
-// document.getElementById("backBtn").addEventListener("click", function () {
-//   const allCards = document.querySelectorAll(".coffeetypes__card");
-
-//   for (let i = currentStartIndex - 6; i < currentStartIndex && i >= 0; i++) {
-//     allCards[i].classList.remove("hidden");
-//     allCards[i].classList.add("add");
-//   }
-
-//   for (
-//     let i = currentStartIndex;
-//     i < currentStartIndex + 6 && i < allCards.length;
-//     i++
-//   ) {
-//     allCards[i].classList.add("hidden");
-//     allCards[i].classList.remove("add");
-//   }
-
-//   currentStartIndex -= 6;
-
-//   if (currentStartIndex <= 0) {
-//     currentStartIndex = 0;
-//     this.style.display = "none";
-//   }
-
-//   document.getElementById("viewMoreBtn").style.display = "inline-block";
-// });
 let currentPage = 1;
 const itemsPerPage = 6;
 
@@ -158,4 +102,68 @@ function filterProducts() {
 searchInput.addEventListener("input", () => {
   updateSuggestions();
   filterProducts();
+});
+
+let selectedFilter = 'all'; 
+function filterProducts() {
+  const query = searchInput.value.toLowerCase();
+  let hasResults = false;
+
+  coffeeCards.forEach((card) => {
+    const productName = card.querySelector("h3").textContent.toLowerCase();
+    const isHot = card.classList.contains('hot'); 
+    const isCold = card.classList.contains('cold'); 
+
+    const matchesQuery = productName.includes(query) || query === "";
+    const matchesFilter = (selectedFilter === 'all') ||
+                          (selectedFilter === 'hot' && isHot) ||
+                          (selectedFilter === 'cold' && isCold);
+
+    if (matchesQuery && matchesFilter) {
+      card.style.display = "block";
+      hasResults = true;
+    } else {
+      card.style.display = "none";
+    }
+  });
+
+  const noResultsDiv = document.querySelector(".no-results");
+  if (hasResults) {
+    noResultsDiv.style.display = "none";
+    document.getElementById("viewMoreBtn").style.display = "none";
+    document.getElementById("backBtn").style.display = "none"; 
+  } else {
+    noResultsDiv.style.display = "block";
+    document.getElementById("viewMoreBtn").style.display = "none"; 
+    document.getElementById("backBtn").style.display = "none"; 
+  }
+}
+
+
+document.getElementById("filterHot").addEventListener("click", () => {
+  selectedFilter = 'hot';
+  filterProducts();
+
+  
+  document.getElementById("filterHot").classList.add("active");
+  document.getElementById("filterCold").classList.remove("active");
+});
+
+document.getElementById("filterCold").addEventListener("click", () => {
+  selectedFilter = 'cold';
+  filterProducts();
+
+ 
+  document.getElementById("filterCold").classList.add("active");
+  document.getElementById("filterHot").classList.remove("active");
+});
+
+
+document.getElementById("filterAll").addEventListener("click", () => {
+  selectedFilter = 'all';
+  filterProducts();
+
+
+  document.getElementById("filterHot").classList.remove("active");
+  document.getElementById("filterCold").classList.remove("active");
 });
