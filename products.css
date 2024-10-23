@@ -113,27 +113,35 @@
 .hidden {
   display: none;
 }
-.view-more {
-  text-align: right;
-  margin-top: 20px;
-  width: 80%;
+
+.pagination {
+  display: flex;
+  justify-content: end;
+  align-items: end; 
+  margin: 20px 0; 
 }
 
-.view-more p {
-  color: var(--base-brown);
-  border: none;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+.page-number {
+  margin: 0 5px; 
+  padding: 10px 15px; 
+  background-color: #f0f0f0; 
+  border: 1px solid #ccc; 
   border-radius: 5px;
   cursor: pointer;
-  font-weight: 600;
-  padding-bottom: 40px;
+  transition: background-color 0.3s, color 0.3s; 
 }
 
-.view-more p:hover {
-  color: var(--second-dark);
+.page-number:hover {
+  background-color: var( --dark-brown); 
+  color: white; 
 }
+
+.page-number.active {
+  background-color: var(--second-dark);
+  color: white;
+  font-weight: bold; 
+}
+
 
 .order__btn button {
   color: var(--base-white);
