@@ -167,3 +167,5 @@ document.getElementById("filterAll").addEventListener("click", () => {
   document.getElementById("filterHot").classList.remove("active");
   document.getElementById("filterCold").classList.remove("active");
 });
+
+
