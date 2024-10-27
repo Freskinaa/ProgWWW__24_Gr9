@@ -32,42 +32,42 @@
 
     <section id="ordernow" class="order_now">
       <div class="container">
-        <div class="header">
-          <h2>Order Summary</h2>
-        </div>
-        <div class="card_container">
-          <h3>Select Coffee Type</h3>
-          <select id="coffee-type"></select>
+          <div class="header">
+              <h2>Order Summary</h2>
+          </div>
+          <div class="card_container">
+              <h3>Select Coffee Type</h3>
+              <select id="coffee-type">
+                  <option value="espresso">Espresso</option>
+                  <option value="latte">Latte</option>
+                  <option value="cappuccino">Cappuccino</option>
+              </select>
 
-          <h3>Choose Quantity</h3>
-          <input type="number" min="1" value="1" id="quantity" />
+              <h3>Choose Quantity</h3>
+              <input type="number" min="1" value="1" id="quantity" onchange="updateTotalCost()" />
 
-          <h3>Payment Method</h3>
-          <select id="payment-method">
-            <option value="credit-card">Credit Card</option>
-            <option value="paypal">PayPal</option>
-            <option value="cash-on-delivery">Cash on Delivery</option>
-          </select>
+              <h3>Payment Method</h3>
+              <select id="payment-method">
+                  <option value="credit-card">Credit Card</option>
+                  <option value="paypal">PayPal</option>
+                  <option value="cash-on-delivery">Cash on Delivery</option>
+              </select>
 
-          <h3>Delivery Location</h3>
-          <input
-            type="text"
-            id="address"
-            placeholder="Enter your delivery address"
-          />
+              <h3>Delivery Location</h3>
+              <input type="text" id="address" placeholder="Enter your delivery address" />
 
-          <h3>Pickup or Delivery</h3>
-          <select id="delivery-method">
-            <option value="pickup">Pickup</option>
-            <option value="delivery">Delivery</option>
-          </select>
+              <h3>Pickup or Delivery</h3>
+              <select id="delivery-method">
+                  <option value="pickup">Pickup</option>
+                  <option value="delivery">Delivery</option>
+              </select>
 
-          <h3>Total Cost: $1.00</h3>
+              <h3>Total Cost: <span id="total-cost">$1.00</span></h3>
 
-          <button onclick="confirmOrder()">Confirm Order</button>
-        </div>
+              <button onclick="confirmOrder()">Confirm Order</button>
+          </div>
       </div>
-    </section>
+  </section>
 
     <script src="./order.js"></script>
   </body>
