@@ -1,4 +1,3 @@
-
 const productNames = [
   "Americano",
   "Cappuccino",
@@ -12,37 +11,49 @@ const productNames = [
   "Dalgona",
   "Dirty Chai",
   "Mazagran",
+  "Doppio",
+  "Arabica",
+  "Galão",
+  "Bulletproof",
+  "Café au Lait",
+  "Affogato",
+  "Ristretto",
+  "Shakerato",
 ];
 
 const coffeePrices = {
-  espresso: 3.00,
-  latte: 4.00,
-  cappuccino: 3.50,
-  americano: 5.00,
-  IcedMocha: 4.00,
-  frappe: 2.50,
-  coldBrew: 3.00,
+  espresso: 3.0,
+  latte: 4.0,
+  cappuccino: 3.5,
+  americano: 5.0,
+  icedMocha: 4.0,
+  frappe: 2.5,
+  coldBrew: 3.0,
   breve: 2.75,
-  TurkishCoffee: 2.50,
-  cortado: 3.50,
-  dalgona: 3.50,
-  dirtychai: 4.50,
-  mazagran: 2.80,
-  flatWhite: 2.50,
-  dopio: 1.50,
-  arabica: 2.50,
-  galao: 2.00,
+  turkishCoffee: 2.5,
+  cortado: 3.5,
+  dalgona: 3.5,
+  dirtyChai: 4.5,
+  mazagran: 2.8,
+  dopio: 1.5,
+  arabica: 2.5,
+  gelao: 2.0,
   mocha: 4.5,
   macchiato: 3.75,
   affogato: 3.25,
-  nitroColdBrew: 4.00,
-  IrishCoffee: 2.75,
-  decaf: 3.00
+  nitroColdBrew: 4.0,
+  irishCoffee: 2.75,
+  decaf: 3.0,
+  flatWhite: 2.5,
+  bulletproof: 2.2,
+  cafeAuLait: 1.5,
+  ristretto: 3.2,
+  shakerato: 1.9,
 };
+
 
 function animateTotalCost(target, start, end, duration) {
   let startTime = null;
-
 
   function step(timestamp) {
     if (!startTime) startTime = timestamp;
@@ -65,7 +76,12 @@ function updateTotalCost() {
   const totalCost = (coffeePrices[coffeeType] * quantity).toFixed(2);
   const totalCostElement = document.getElementById("total-cost");
 
-  animateTotalCost(totalCostElement, parseFloat(totalCostElement.innerText.slice(1)) || 0, parseFloat(totalCost), 400);
+  animateTotalCost(
+    totalCostElement,
+    parseFloat(totalCostElement.innerText.slice(1)) || 0,
+    parseFloat(totalCost),
+    400
+  );
 }
 
 function confirmOrder() {
@@ -86,4 +102,6 @@ function confirmOrder() {
 }
 
 document.getElementById("quantity").addEventListener("input", updateTotalCost);
-document.getElementById("coffee-type").addEventListener("change", updateTotalCost);
+document
+  .getElementById("coffee-type")
+  .addEventListener("change", updateTotalCost);
