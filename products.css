@@ -1,0 +1,257 @@
+.coffeetypes__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.coffeetypes__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 20px;
+}
+
+.coffeetypes__text {
+  font-size: 25px;
+  font-weight: bold;
+  color: #564a24;
+  text-align: center;
+}
+
+.coffeetypes__search {
+  position: relative;
+  text-align: right;
+}
+
+.coffeetypes__search input {
+  padding: 12px;
+  border: 2px solid var(--base-brown);
+  border-radius: 8px;
+  font-size: 16px;
+  width: 250px;
+}
+.no-results {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 510;
+  color: var(--cherry);
+  margin-top: 40px;
+}
+
+.coffeetypes__cards {
+  display: flex;
+  gap: 30px;
+  padding: 20px 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.coffeetypes__card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  background-color: var(--base-white);
+  text-align: center;
+  width: 300px;
+  height: 400px;
+}
+.coffeetypes__img {
+  width: 100%;
+}
+
+.coffeetypes__card .coffeetypes__content {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--black-hover);
+  color: var(--base-white);
+  padding: 15px;
+  transition: opacity 0.3s ease;
+}
+.coffeetypes__content h3 {
+  padding-bottom: 10px;
+}
+
+.shop {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.shop span {
+  font-size: 24px;
+  font-weight: 600;
+}
+.coffeetypes__card:hover .coffeetypes__content {
+  opacity: 1;
+}
+
+.coffeetypes__card:hover {
+  transform: scale(1.05);
+}
+
+.coffeetypes__card .coffeetypes__img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  padding-bottom: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.pagination {
+  display: flex;
+  justify-content: end;
+  align-items: end; 
+  margin: 20px 0; 
+}
+
+.page-number {
+  margin: 0 5px; 
+  padding: 10px 15px; 
+  background-color: #f0f0f0; 
+  border: 1px solid #ccc; 
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+.page-number:hover {
+  background-color: var( --dark-brown); 
+  color: white; 
+}
+
+.page-number.active {
+  background-color: var(--second-dark);
+  color: white;
+  font-weight: bold; 
+}
+
+.filter-options {
+  position: relative;
+  width: 80%;
+}
+
+.filter-button {
+  background-color:var(--base-brown);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filter-button:hover {
+  background-color: var(--dark-brown);
+}
+
+.dropdown {
+  position: absolute;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1;
+  display: none; 
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  opacity: 0;
+  visibility: hidden; 
+}
+
+.filter-options:hover #filterDropdown {
+  display: block; 
+  opacity: 1;
+  visibility: visible; 
+}
+
+.dropdown-button {
+  background-color: transparent;
+  color: #333;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-button:hover {
+  background-color: #e0e0e0;
+}
+
+.order__btn button {
+  color: var(--base-white);
+}
+
+.nutrition__container {
+  padding: 60px 50px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nutrition__title {
+  text-align: center;
+  margin-bottom: 60px;
+
+}
+.nutrition__title h2{
+ color: var(--second-dark);
+  font-size: 50px;
+  text-shadow: 2px 2px 0 var(--base-brown);
+}
+
+.nutrition__table {
+  width: 100%;
+  border-collapse: collapse; 
+}
+
+.nutrition__table th,
+.nutrition__table td {
+  padding: 10px;
+  text-align: left; 
+}
+
+.nutrition__table th {
+  background-color: var(--base-brown);
+  color: white;
+}
+
+.nutrition__table tr:nth-child(even) {
+  background-color: #f2f2f2; 
+}
+
+.nutrition__table tr:hover {
+  background-color: #e0e0e0; 
+}
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.nutrition__table {
+  animation: slideIn 0.5s ease-out forwards;
+}

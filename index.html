@@ -1,11 +1,429 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Shop</title>
+    <link rel="icon" href="./assets/images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar__content">
+          <div class="nav__links">
+            <img src="./assets/images/logo.png" alt="logo" />
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="./products.html">Products</a></li>
+              <li><a href="">Prices</a></li>
+              <li><a href="./about.html">About us</a></li>
+              <li><a href="./contact.html">Contact us</a></li>
+            </ul>
+          </div>
+          <div class="btn__group">
+            <button><a href="./login.html">Log in</a></button>
+            <button><a href="./signup.html">Sign up</a></button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section id="hero" class="hero__section">
+      <div class="container">
+        <div class="hero__wrapper">
+          <div class="hero__text">
+            <h1>Time to discover coffee house</h1>
+            <p>
+              Discover the rich, bold flavors of our premium coffee blends,
+              crafted to perfection for your enjoyment.
+            </p>
+            <div class="btn_group">
+              <button class="large-btn btn-orange">Learn more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="coffee_types">
+      <div class="coffee__container">
+        <div class="coffee__wrapper">
+          <div class="coffee__cards">
+            <div class="coffee__card">
+              <div class="coffee__img">
+                <img src="./assets/images/coldcoffee.png" alt="cold coffee" />
+                <div class="coffee_txt">
+                  <span>Cold coffee</span>
+                </div>
+              </div>
+            </div>
+            <div class="coffee__card">
+              <div class="coffee__img">
+                <img src="./assets/images/hotcoffe.png" alt="hot coffee" />
+                <div class="coffee_txt">
+                  <span>Hot coffee</span>
+                </div>
+              </div>
+            </div>
+            <div class="coffee__card">
+              <div class="coffee__img">
+                <img src="./assets/images/cupcoffee.png" alt="cup coffee" />
+                <div class="coffee_txt">
+                  <span>Cup coffee</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="coffeetypes" class="coffeetypes__container">
+      <div class="container">
+        <div class="coffeetypes__wrapper">
+          <div class="coffeetypes__text">
+            <h2>Coffee Types</h2>
+          </div>
+          <div class="coffeetypes__cards">
+            <div class="coffeetypes__card">
+              <div class="coffeetypes__img">
+                <img src="./assets/images/americane.jpg" alt="Americano" />
+              </div>
+              <div class="coffeetypes__content">
+                <h3>Americano</h3>
+                <p>
+                  Caffè americano, also known as americano or American, is a
+                  type of coffee drink prepared by diluting an espresso shot
+                  with hot water.
+                </p>
+                <div class="shop">
+                  <span>1$</span>
+                  <div class="btn__group order__btn">
+                    <a href="./order.html">
+                      <button >Order now</button>
+                    </a>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="coffeetypes__card">
+              <div class="coffeetypes__img">
+                <img src="./assets/images/capuccino.jpg" alt="Cappuccino" />
+              </div>
+              <div class="coffeetypes__content">
+                <h3>Cappuccino</h3>
+                <p>
+                  Cappuccino is an espresso-based coffee drink that is
+                  traditionally prepared with steamed milk including a layer of
+                  milk foam.
+                </p>
+                <div class="shop">
+                  <span>1$</span>
+                  <div class="btn__group order__btn">
+                    <a href="./order.html">
+                      <button>Order now</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="coffeetypes__card">
+              <div class="coffeetypes__img">
+                <img src="./assets/images/machiato.jpg" alt="Macchiato" />
+              </div>
+              <div class="coffeetypes__content">
+                <h3>Macchiato</h3>
+                <p>
+                  Macchiato, sometimes called espresso macchiato and often
+                  shortened to just macchiato in English.
+                </p>
+                <div class="shop">
+                  <span>1$</span>
+                  <div class="btn__group order__btn">
+                    <a href="./order.html">
+                      <button>Order now</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="coffeetypes__card">
+              <div class="coffeetypes__img">
+                <img src="./assets/images/icedmochaa.jpg" alt="icedmocha" />
+              </div>
+              <div class="coffeetypes__content">
+                <h3>Iced Mocha</h3>
+                <p>
+                  When you order an iced mocha coffee, you'll receive a decadent
+                  beverage consisting of mocha sauce, espresso, milk, and ice.
+                </p>
+                <div class="shop">
+                  <span>1$</span>
+                  <div class="btn__group order__btn">
+                    <a href="./order.html">
+                      <button>Order now</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="coffeetypes__card">
+              <div class="coffeetypes__img">
+                <img src="./assets/images/frappe.jpg" alt="Frappe" />
+              </div>
+              <div class="coffeetypes__content">
+                <h3>Frappe</h3>
+                <p>
+                  If you're a fan of having your coffee blended into a frothy, a
+                  frappe might just be the perfect choice for you.
+                </p>
+                <div class="shop">
+                  <span>1$</span>
+                  <div class="btn__group order__btn">
+                    <a href="./order.html">
+                      <button>Order now</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="coffeetypes__card">
+              <div class="coffeetypes__img">
+                <img src="./assets/images/coldbrew.jpg" alt="coldbrew" />
+              </div>
+              <div class="coffeetypes__content">
+                <h3>Cold brew</h3>
+                <p>
+                  Cold brew also called cold water extraction or cold
+                  pressing.We're huge fans of cold brew as a fantastic variant
+                  of iced coffee.
+                </p>
+                <div class="shop">
+                  <span>1$</span>
+                  <div class="btn__group order__btn">
+                    <a href="./order.html">
+                      <button>Order now</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="icons-section">
+      <div class="icon-card">
+        <img src="./assets/images/image1.png" alt="Customers' Satisfaction" />
+        <p>
+          We prioritize our customers' satisfaction by ensuring every experience
+          is exceptional
+        </p>
+      </div>
+      <div class="icon-card">
+        <img src="./assets/images/image2.webp" alt="Best Quality in Town" />
+        <p>
+          We pride ourselves on delivering the best quality coffee in town,
+          ensuring every cup is a delightful experience for our valued
+          customers.
+        </p>
+      </div>
+      <div class="icon-card">
+        <img src="./assets/images/image3.png" alt="Community" />
+        <p>
+          We're committed to delighting our customers with kindness and
+          exceptional service
+        </p>
+      </div>
+    </section>
+
+    <section class="coffee-deal">
+      <div class="container1">
+        <div class="left-side">
+          <div class="border-animation">
+            <img src="./assets/images/kafe1.jpg" alt="Coffee Image" />
+          </div>
+        </div>
+        <div class="right-side">
+          <h1>Coffee Deal 3$</h1>
+          <p>Medium Coffee Hot or Iced + Chocolate</p>
+          <p>
+            Excludes espresso and cold brew beverages. Participation may vary.
+            Limited time offer. Cannot be combined with other offers. Terms
+            apply.
+          </p>
+          <div class="offer-line"></div>
+          <p class="offer-text">The offer is valid until: 24.01.2025</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="reviews__container">
+      <div class="container">
+        <div class="reviews__wrapper">
+          <div class="reviews__text">
+            <h2>What our customers think about us</h2>
+          </div>
+          <div class="reviews__cards">
+            <div class="reviews__card">
+              <div class="reviews__img">
+                <img src="./assets/images/reviews1.jpg" alt="reviews1" />
+              </div>
+              <div class="reviews__user">
+                <p class="user-name">John Doe</p>
+                <p class="user-comment">
+                  "Best coffee I've ever had! Rich, smooth, and energizing!"
+                </p>
+              </div>
+            </div>
+
+            <div class="reviews__card">
+              <div class="reviews__img">
+                <img src="./assets/images/reviews2.jpg" alt="reviews" />
+              </div>
+              <div class="reviews__user">
+                <p class="user-name">Jane Smith</p>
+                <p class="user-comment">
+                  "A perfect start to my day! The aroma is delightful!"
+                </p>
+              </div>
+            </div>
+
+            <div class="reviews__card">
+              <div class="reviews__img">
+                <img src="./assets/images/reviews3.jpg" alt="reviews" />
+              </div>
+              <div class="reviews__user">
+                <p class="user-name">Alice Brown</p>
+                <p class="user-comment">
+                  "Strong and flavorful! My favorite coffee shop!"
+                </p>
+              </div>
+            </div>
+
+            <div class="reviews__card">
+              <div class="reviews__img">
+                <img src="./assets/images/reviews4.webp" alt="reviews" />
+              </div>
+              <div class="reviews__user">
+                <p class="user-name">Liam Anderson</p>
+                <p class="user-comment">
+                  "Exceptional service! The coffee quality is unmatched."
+                </p>
+              </div>
+            </div>
+
+            <div class="reviews__card">
+              <div class="reviews__img">
+                <img src="./assets/images/reviews5.jpg" alt="reviews" />
+              </div>
+              <div class="reviews__user">
+                <p class="user-name">Sophia Martinez</p>
+                <p class="user-comment">
+                  "The cozy atmosphere makes it my favorite place to relax."
+                </p>
+              </div>
+            </div>
+
+            <div class="reviews__card">
+              <div class="reviews__img">
+                <img src="./assets/images/reviews6.jpg" alt="reviews" />
+              </div>
+              <div class="reviews__user">
+                <p class="user-name">William Brown</p>
+                <p class="user-comment">
+                  "The taste and aroma are out of this world! Highly recommend."
+                </p>
+              </div>
+            </div>
+
+            <div class="reviews__card">
+              <div class="reviews__img">
+                <img src="./assets/images/reviews7.jpg" alt="reviews" />
+              </div>
+              <div class="reviews__user">
+                <p class="user-name">Emma Clark</p>
+                <p class="user-comment">
+                  "Amazing coffee and great customer service every time!"
+                </p>
+              </div>
+            </div>
+
+            <div class="reviews__card">
+              <div class="reviews__img">
+                <img src="./assets/images/reviews8.jpg" alt="reviews" />
+              </div>
+              <div class="reviews__user">
+                <p class="user-name">Noah Wilson</p>
+                <p class="user-comment">
+                  "I love the variety of flavors. Each cup is unique and
+                  delicious."
+                </p>
+              </div>
+            </div>
+
+            <div class="reviews__card">
+              <div class="reviews__img">
+                <img src="./assets/images/review9.jpg" alt="reviews" />
+              </div>
+              <div class="reviews__user">
+                <p class="user-name">Mia Johnson</p>
+                <p class="user-comment">
+                  "Simply the best coffee in town. The baristas are super
+                  friendly too!"
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-indicators">
+            <span class="indicator" data-index="0"></span>
+            <span class="indicator" data-index="1"></span>
+            <span class="indicator" data-index="2"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <p>
+            Email:
+            <a href="mailto:infocofffee@gmail.com">infocofffee@gmail.com</a>
+          </p>
+          <p>Phone: <a href="tel:+38344555666">+38344555666</a></p>
+        </div>
+        <div class="footer-column">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Shipping & Returns</a></li>
+            <li><a href="#">Frequently Asked Questions</a></li>
+            <li><a href="#">Manage Subscriptions</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>About Us</h3>
+          <ul>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Story</a></li>
+            <li><a href="#">Success Stories</a></li>
+            <li><a href="#">Locations</a></li>
+          </ul>
+        </div>
+        <div class="footer-logo">
+          <img src="./assets/images/m.png" alt="Footer Logo" />
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Coffee Co. All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <script src="reviews.js"></script>
+  </body>
 </html>
