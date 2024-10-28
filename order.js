@@ -1,4 +1,3 @@
-
 const productNames = [
   "Americano",
   "Cappuccino",
@@ -49,5 +48,5 @@ function confirmOrder() {
     `;
 
   alert(`Order confirmed!\n\n${orderDetails}`);
-  window.location.href = "thankyou.html";
+  window.location.href = "index.html";
 }

@@ -1,194 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
-    <link rel="stylesheet" href="./about.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./about.css" />
+    <link rel="stylesheet" href="./style.css" />
     <link rel="icon" href="./assets/images/logo.webp" type="image/x-icon" />
-</head>
-<body>
-  <nav class="navbar">
-    <div class="container">
-      <div class="navbar__content">
-        <div class="nav__links">
-          <img src="./assets/images/logo.webp" alt="logo" />
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="./products.html">Products</a></li>
-            <li><a href="">Price</a></li>
-            <li><a href="./about.html">About us</a></li>
-            <li><a href="./contact.html">Contact us</a></li>
-          </ul>
-        </div>
-        <div class="btn__group">
-          <button><a href="./login.html">Log in</a></button>
-          <button><a href="./signup.html">Sign up</a></button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <section id="welcome">
-    <div class="main-container">
-      <div class="content-section">
-        <div class="welcome-section">
-          <h1>About Our Coffee Shop</h1>
-          <h2>Founded in 2012</h2>
-          <h3>Our Mission</h3>
-          <p class="coming-soon">Our mission is to deliver exceptional coffee experiences while supporting sustainability. We partner with small, ethical farms that practice fair trade, ensuring that our beans are of the highest quality and that the farmers are treated fairly.</p>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar__content">
+          <div class="nav__links">
+            <img src="./assets/images/logo.webp" alt="logo" />
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="./products.html">Products</a></li>
+              <li><a href="">Price</a></li>
+              <li><a href="./about.html">About us</a></li>
+              <li><a href="./contact.html">Contact us</a></li>
+            </ul>
+          </div>
+          <div class="btn__group">
+            <button><a href="./login.html">Log in</a></button>
+            <button><a href="./signup.html">Sign up</a></button>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  
+    </nav>
 
+    <section id="welcome">
+      <div class="main-container">
+        <div class="content-section">
+          <div class="welcome-section">
+            <h1>About Our Coffee Shop</h1>
+            <h2>Founded in 2012</h2>
+            <h3>Our Mission</h3>
+            <p class="coming-soon">
+              Our mission is to deliver exceptional coffee experiences while
+              supporting sustainability. We partner with small, ethical farms
+              that practice fair trade, ensuring that our beans are of the
+              highest quality and that the farmers are treated fairly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <header class="banner">
-    <h1>SEE YOU AT  COFFEE</h1>
-    <h2>Enjoy the Best Brews and Sweet Treats in Town!</h2>
-    <button class="early-bird-button" id="reserveBtn">RESERVE A TABLE</button>
-</header>
-<section class="intro">
-  <p>Explore the world of artisan coffee and delicious pastries. With sunny vibes and the finest espresso, our café is the perfect spot to unwind and recharge.</p>
-<h1>Take a look at our Coffee Shop</h1>
-<br>
-<hr>
-  <div class="gallery">
-      <div class="gallery-item"><img src="./assets/images/shop.jpg" alt="Cinque Terre"></div>
-      <div class="gallery-item"><img src="./assets/images/shop1.jpg" alt="Forest"></div>
-      <div class="gallery-item"><img src="./assets/images/shop2.jpg" alt="Northern Lights"></div>
-      <div class="gallery-item"><img src="./assets/images/shop4.jpg" alt="Mountains"></div>
-      <div class="gallery-item"><img src="./assets/images/shop5.jpg" alt="Cinque Terre"></div>
-      <div class="gallery-item"><img src="./assets/images/shop6.jpg" alt="Forest"></div>
-  </div>
-<br>
+    <header class="banner">
+      <h1>SEE YOU AT COFFEE</h1>
+      <h2>Enjoy the Best Brews and Sweet Treats in Town!</h2>
+      <button class="early-bird-button" id="reserveBtn">RESERVE A TABLE</button>
+    </header>
+    <section class="intro">
+      <p>
+        Explore the world of artisan coffee and delicious pastries. With sunny
+        vibes and the finest espresso, our café is the perfect spot to unwind
+        and recharge.
+      </p>
+      <h1>Take a look at our Coffee Shop</h1>
+      <br />
+      <hr />
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="./assets/images/shop.jpg" alt="Cinque Terre" />
+        </div>
+        <div class="gallery-item">
+          <img src="./assets/images/shop1.jpg" alt="Forest" />
+        </div>
+        <div class="gallery-item">
+          <img src="./assets/images/shop2.jpg" alt="Northern Lights" />
+        </div>
+        <div class="gallery-item">
+          <img src="./assets/images/shop4.jpg" alt="Mountains" />
+        </div>
+        <div class="gallery-item">
+          <img src="./assets/images/shop5.jpg" alt="Cinque Terre" />
+        </div>
+        <div class="gallery-item">
+          <img src="./assets/images/shop6.jpg" alt="Forest" />
+        </div>
+      </div>
+      <br />
 
-  <div class="popup" id="popupModal">
-      <div class="popup-content">
+      <div class="popup" id="popupModal">
+        <div class="popup-content">
           <h2>Reserve a Table</h2>
           <form id="reserveForm">
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" required>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
 
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
 
-              <label for="date">Date:</label>
-              <input type="date" id="date" name="date" required>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required />
 
-              <label for="time">Time:</label>
-              <input type="time" id="time" name="time" required>
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required />
 
-              <label for="guests">Number of Guests:</label>
-              <input type="number" id="guests" name="guests" min="1" required>
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" required />
 
-              <button type="submit" class="coffee-btn">Submit</button>
+            <button type="submit" class="coffee-btn">Submit</button>
           </form>
           <button class="popup-close" id="closePopup">Close</button>
+        </div>
       </div>
-  </div>
-</section>
+    </section>
 
-<section class="reviews__container">
-  <div class="reviews__wrapper">
-      <h2 >Meet Our Team</h2>
-      <div class="reviews__cards">
+    <section class="reviews__container">
+      <div class="reviews__wrapper">
+        <h2>Meet Our Team</h2>
+        <div class="reviews__cards">
           <div class="reviews__card">
-              <div class="reviews__img">
-                  <img src="./assets/images/puntori1.avif" alt="Joana Doe">
+            <div class="reviews__img">
+              <img src="./assets/images/puntori1.avif" alt="Joana Doe" />
+            </div>
+            <div class="reviews__user">
+              <div class="user-name">Joana Doe</div>
+              <div class="user-comment">
+                “Head Barista & Coffee Expert. With 15 years of experience,
+                Joana crafts unique blends and leads the team.”
               </div>
-              <div class="reviews__user">
-                  <div class="user-name">Joana Doe</div>
-                  <div class="user-comment">“Head Barista & Coffee Expert. With 15 years of experience, Joana crafts unique blends and leads the team.”</div>
-              </div>
+            </div>
           </div>
 
           <div class="reviews__card">
-              <div class="reviews__img">
-                  <img src="./assets/images/puntori2.avif" alt="Mark Smith">
+            <div class="reviews__img">
+              <img src="./assets/images/puntori2.avif" alt="Mark Smith" />
+            </div>
+            <div class="reviews__user">
+              <div class="user-name">Mark Smith</div>
+              <div class="user-comment">
+                “Barista & Latte Art Specialist. Mark is passionate about
+                creating beautiful latte art that adds a personal touch to every
+                cup.”
               </div>
-              <div class="reviews__user">
-                  <div class="user-name">Mark Smith</div>
-                  <div class="user-comment">“Barista & Latte Art Specialist. Mark is passionate about creating beautiful latte art that adds a personal touch to every cup.”</div>
-              </div>
+            </div>
           </div>
 
           <div class="reviews__card">
-              <div class="reviews__img">
-                  <img src="./assets/images/puntori3.avif" alt="Linda Johnson">
+            <div class="reviews__img">
+              <img src="./assets/images/puntori3.avif" alt="Linda Johnson" />
+            </div>
+            <div class="reviews__user">
+              <div class="user-name">Linda Johnson</div>
+              <div class="user-comment">
+                “Head Chef & Pastry Artist. Linda creates delicious pastries and
+                treats that perfectly complement our coffee.”
               </div>
-              <div class="reviews__user">
-                  <div class="user-name">Linda Johnson</div>
-                  <div class="user-comment">“Head Chef & Pastry Artist. Linda creates delicious pastries and treats that perfectly complement our coffee.”</div>
-              </div>
+            </div>
           </div>
 
           <div class="reviews__card">
-              <div class="reviews__img">
-                  <img src="./assets/images/puntori1.avif" alt="Michael Brown">
+            <div class="reviews__img">
+              <img src="./assets/images/puntori1.avif" alt="Michael Brown" />
+            </div>
+            <div class="reviews__user">
+              <div class="user-name">Michael Brown</div>
+              <div class="user-comment">
+                “Coffee Roaster. Michael sources and roasts our coffee beans to
+                perfection, ensuring every cup is exceptional.”
               </div>
-              <div class="reviews__user">
-                  <div class="user-name">Michael Brown</div>
-                  <div class="user-comment">“Coffee Roaster. Michael sources and roasts our coffee beans to perfection, ensuring every cup is exceptional.”</div>
-              </div>
+            </div>
           </div>
 
           <div class="reviews__card">
-              <div class="reviews__img">
-                  <img src="./assets/images/puntori1.avif" alt="Sarah Lee">
+            <div class="reviews__img">
+              <img src="./assets/images/puntori1.avif" alt="Sarah Lee" />
+            </div>
+            <div class="reviews__user">
+              <div class="user-name">Sarah Lee</div>
+              <div class="user-comment">
+                “Customer Service Manager. Sarah ensures every customer leaves
+                with a smile, providing friendly and efficient service.”
               </div>
-              <div class="reviews__user">
-                  <div class="user-name">Sarah Lee</div>
-                  <div class="user-comment">“Customer Service Manager. Sarah ensures every customer leaves with a smile, providing friendly and efficient service.”</div>
-              </div>
+            </div>
           </div>
 
           <div class="reviews__card">
-              <div class="reviews__img">
-                  <img src="./assets/images/puntori1.avif" alt="David Wilson">
+            <div class="reviews__img">
+              <img src="./assets/images/puntori1.avif" alt="David Wilson" />
+            </div>
+            <div class="reviews__user">
+              <div class="user-name">David Wilson</div>
+              <div class="user-comment">
+                “Social Media Manager. David keeps our customers updated with
+                the latest news, specials, and events.”
               </div>
-              <div class="reviews__user">
-                  <div class="user-name">David Wilson</div>
-                  <div class="user-comment">“Social Media Manager. David keeps our customers updated with the latest news, specials, and events.”</div>
-              </div>
+            </div>
           </div>
 
           <div class="reviews__card">
-              <div class="reviews__img">
-                  <img src="./assets/images/puntori1.avif" alt="Olivia Green">
+            <div class="reviews__img">
+              <img src="./assets/images/puntori1.avif" alt="Olivia Green" />
+            </div>
+            <div class="reviews__user">
+              <div class="user-name">Olivia Green</div>
+              <div class="user-comment">
+                “Event Coordinator. Olivia organizes events and workshops,
+                creating a vibrant community around our coffee shop.”
               </div>
-              <div class="reviews__user">
-                  <div class="user-name">Olivia Green</div>
-                  <div class="user-comment">“Event Coordinator. Olivia organizes events and workshops, creating a vibrant community around our coffee shop.”</div>
-              </div>
+            </div>
           </div>
 
           <div class="reviews__card">
-              <div class="reviews__img">
-                  <img src="./assets/images/puntori1.avif" alt="James Taylor">
+            <div class="reviews__img">
+              <img src="./assets/images/puntori1.avif" alt="James Taylor" />
+            </div>
+            <div class="reviews__user">
+              <div class="user-name">James Taylor</div>
+              <div class="user-comment">
+                “Maintenance & Operations. James keeps everything running
+                smoothly behind the scenes, ensuring the best experience for our
+                customers.”
               </div>
-              <div class="reviews__user">
-                  <div class="user-name">James Taylor</div>
-                  <div class="user-comment">“Maintenance & Operations. James keeps everything running smoothly behind the scenes, ensuring the best experience for our customers.”</div>
-              </div>
+            </div>
           </div>
-      </div>
+        </div>
 
-      <div class="carousel-indicators">
+        <div class="carousel-indicators">
           <div class="indicator active"></div>
           <div class="indicator"></div>
           <div class="indicator"></div>
+        </div>
+        <a href="./index.html" class="home-button">Back to Homepage</a>
       </div>
-      <a href="./index.html" class="home-button">Back to Homepage</a>
-  </div>
-
-</section>
-<footer>
-  <p>Come visit us for a delightful coffee experience. See you soon!</p>
-</footer>
-<script src="about.js"></script>
-
-</body>
+    </section>
+    <footer>
+      <p>Come visit us for a delightful coffee experience. See you soon!</p>
+    </footer>
+    <script src="about.js"></script>
+  </body>
 </html>
