@@ -1,4 +1,3 @@
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,6 +7,36 @@ body {
     line-height: 1.6;
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes buttonHover {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
 .hero {
     background-color: #f7f0e6;
@@ -17,8 +46,10 @@ body {
     background-image: url('coffee-background.jpg');
     color: #ffffff;
     position: relative;
+    animation: fadeIn 1s ease-in-out;
 }
-.hero::before{
+
+.hero::before {
     content: "";
     position: absolute;
     top: 0;
@@ -27,11 +58,13 @@ body {
     bottom: 0;
     background: rgba(101,67,33,0.6);
 }
+
 .hero h1 {
     font-size: 3rem;
     color: #ffffff;
     position: relative;
     z-index: 1;
+    animation: fadeIn 1.2s ease-in-out;
 }
 
 .hero p {
@@ -40,19 +73,21 @@ body {
     position: relative;
     z-index: 1;
     margin-top: 0.5rem;
+    animation: fadeIn 1.4s ease-in-out;
 }
 
 .story-content {
     padding: 2rem;
     max-width: 800px;
-    margin: auto;
     margin: 2rem auto;
     border-radius: 8px;
-    box-shadow: 0px4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    animation: slideInFromLeft 1s ease;
 }
 
 .story-section {
     margin-bottom: 2rem;
+    animation: fadeIn 1s ease;
 }
 
 .story-section h2 {
@@ -60,11 +95,13 @@ body {
     color: #654321;
     margin-bottom: 0.5rem;
     text-align: center;
+    animation: fadeIn 1.1s ease;
 }
 
 .story-section p {
     line-height: 1.6;
     text-align: justify;
+    animation: fadeIn 1.2s ease;
 }
 
 .button {
@@ -75,12 +112,13 @@ body {
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
     margin-top: 1.5rem;
 }
 
 .button:hover {
     background-color: #5a3f2c;
+    animation: buttonHover 0.3s forwards;
 }
 
 .video-section {
@@ -88,12 +126,14 @@ body {
     padding: 3rem 1rem;
     background-color: #f7f0e6;
     border-top: 2px solid #d4c4b1;
+    animation: fadeIn 1s ease;
 }
 
 .video-section h2 {
     font-size: 2.5rem;
     color: #654321;
     margin-bottom: 1rem;
+    animation: fadeIn 1.1s ease;
 }
 
 .video-container {
@@ -103,17 +143,11 @@ body {
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.3s ease;
 }
 
 .video-container video {
     width: 100%;
     height: auto;
     border-radius: 10px;
-}
-
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #f8f1e4;
-    color: #7a7a7a;
 }
