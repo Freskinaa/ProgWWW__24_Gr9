@@ -47,17 +47,6 @@ body {
 }
 
 
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 10px 0;
-  background-color: rgba(255, 250, 240, 0.75);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-}
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -225,8 +214,8 @@ body {
 }
 
 #reviews {
-  background-color: #e0e7ff; /* Ngjyra e re për seksionin e reviews */
-  padding: 60px 20px; /* Shtojmë padding për hapësirë të barabartë */
+  background-color: #e0e7ff; 
+  padding: 60px 20px; 
 }
 .reviews__card:hover {
   transform: scale(1.05);
@@ -449,12 +438,6 @@ body {
         }
 
 
-footer {
-  padding: 20px;
-  background-color: #111;
-  color: var(--base-white);
-  text-align: center;
-}
 
 .home-button {
   margin-top: 70px;
