@@ -1,138 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meet Our Team & Contact Us</title>
     <link rel="stylesheet" href="./contact.css" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="icon" href="./assets/images/logo2.png" type="image/x-icon" />
-  </head>
-  <body>
+</head>
+<body>
     <nav class="navbar">
-      <div class="container">
-          <div class="navbar__content">
-              <div class="nav__links">
-                  <img src="./assets/images/logo2.png" alt="logo" />
-                  <ul>
-                      <li><a href="/">Home</a></li>
-                      <li><a href="./products.html">Products</a></li>
-                      <li><a href="#">Price</a></li>
-                      <li><a href="./about.html">About Us</a></li>
-                      <li><a href="./contact.html">Contact Us</a></li>
-                  </ul>
-              </div>
-              <div class="btn__group">
-                  <button><a href="./login.html">Log In</a></button>
-                  <button><a href="./signup.html">Sign Up</a></button>
-              </div>
-          </div>
-      </div>
-  </nav>
-  
-  <section class="location-section">
-      <div class="container">
-        <div class="text">
-          <h2>Visit Our Coffee Shop</h2>
+        <div class="container">
+            <div class="navbar__content">
+                <div class="nav__links">
+                    <img src="./assets/images/logo2.png" alt="logo" />
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="./products.html">Products</a></li>
+                        <li><a href="#">Price</a></li>
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="btn__group">
+                    <button><a href="./login.html">Log In</a></button>
+                    <button><a href="./signup.html">Sign Up</a></button>
+                </div>
+            </div>
         </div>
-          <div class="location-details">
-              <div class="location">
-                  <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d23473.343417201075!2d21.153345599999998!3d42.657796700000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ssq!2s!4v1728985624032!5m2!1ssq!2s"
-                      width="600"
-                      height="450"
-                      style="border: 0"
-                      allowfullscreen
-                      loading="lazy"
-                      referrerpolicy="no-referrer-when-downgrade"
-                  ></iframe>
-              </div>
-              <div class="location-card">
-                  <div class="card-content">
-                      <h3>Our Location</h3>
-                      <p>123 Brew Street, Coffee Town</p>
-                      <p>Opening Hours: 8 AM - 8 PM</p>
-                      <p>Phone: +38344565858</p>
-                      <p>Email: info@coffeeshop.com</p>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
-  
-    <section class="contact-section">
-      <div class="container">
-        <h2>Contact Us</h2>
-        <p>We’d <span class="heart">♡</span> to help!</p>
-        <form class="contact-form">
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Email" required />
-          <textarea placeholder="Message" rows="5" required></textarea>
-          <button type="submit">Send</button>
-        </form>
-        <div class="contact-info">
-          <p>
-            <img src="./assets/images/phone.png" alt="Phone Icon" /> Coffee Shop
-          </p>
-          <p>Kosovo</p>
-          <p>
-            <img src="./assets/images/email.png" alt="Email Icon" />
-            +38344555666
-          </p>
-          <p>
-            <img src="./assets/images/@icon.png" alt="Email Icon" />
-            infocoffee@gmail.com
-          </p>
+    </nav>
+
+    <section class="feedback-section">
+      <div class="feedback-container">
+        <div class="feedback-content">
+          <h2>Where did you hear about us?</h2>
+          <form class="feedback-form" id="feedbackForm">
+            <label>
+              <input type="radio" name="source" value="social-media" required />
+              Instagram or Facebook
+            </label>
+            <label>
+              <input type="radio" name="source" value="email" />
+              Email or newsletter
+            </label>
+            <label>
+              <input type="radio" name="source" value="search-engine" />
+              Search engine
+            </label>
+            <label>
+              <input type="radio" name="source" value="word-of-mouth" />
+              Word of mouth
+            </label>
+            <label>
+              <input type="radio" name="source" value="podcast" />
+              Podcast
+            </label>
+            <label>
+              <input type="radio" name="source" value="other" />
+              Other
+            </label>
+            <textarea name="comments" placeholder="Leave a comment" class="comment-box"></textarea>
+            <button type="submit" class="submit-button">Submit</button>
+          </form>
+          <div id="confirmationMessage" style="display:none; margin-top: 1rem; color: green;"></div>
         </div>
-        <a href="./index.html" class="home-button">Back to Homepage</a>
+        <div class="feedback-image">
+          <img src="./assets/images/feedback.jpg" alt="User engagement" />
+        </div>
       </div>
     </section>
-    
+  
+    <section class="location-section">
+        <div class="container">
+            <div class="text">
+                <h2>Visit Our Coffee Shop</h2>
+                <h3>Look at our location details:</h3>
+            </div>
+            <div class="location-details">
+                <div class="location">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d23473.343417201075!2d21.153345599999998!3d42.657796700000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ssq!2s!4v1728985624032!5m2!1ssq!2s"
+                        width="600"
+                        height="450"
+                        style="border: 0"
+                        allowfullscreen
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+                <div class="location-card">
+                    <div class="card-content">
+                        <h3>Our Location</h3>
+                        <p>123 Brew Street, Coffee Town</p>
+                        <p>Opening Hours: 8 AM - 8 PM</p>
+                        <p>Phone: +38344565858</p>
+                        <p>Email: info@coffeeshop.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    <section class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>We’d <span class="heart">♡</span> to help!</p>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required />
+                <input type="email" placeholder="Email" required />
+                <textarea placeholder="Message" rows="5" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            
+            <div class="contact-info">
+                <p>
+                    <img src="./assets/images/phone.png" alt="Phone Icon" /> Coffee Shop
+                </p>
+                <p>Kosovo</p>
+                <p>
+                    <img src="./assets/images/email.png" alt="Email Icon" />
+                    +38344555666
+                </p>
+                <p>
+                    <img src="./assets/images/@icon.png" alt="Email Icon" />
+                    infocoffee@gmail.com
+                </p>
+            </div>
+            <a href="./index.html" class="home-button">Back to Homepage</a>
+        </div>
+    </section>
+  
+
     <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-column">
-          <h3>Contact Us</h3>
-          <p>
-            Email:
-            <a href="mailto:infocofffee@gmail.com">infocofffee@gmail.com</a>
-          </p>
-          <p>Phone: <a href="tel:+38344555666">+38344555666</a></p>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>
+                    Email:
+                    <a href="mailto:infocofffee@gmail.com">infocofffee@gmail.com</a>
+                </p>
+                <p>Phone: <a href="tel:+38344555666">+38344555666</a></p>
+            </div>
+            <div class="footer-column">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Frequently Asked Questions</a></li>
+                    <li><a href="#">Manage Subscriptions</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Story</a></li>
+                    <li><a href="#">Success Stories</a></li>
+                    <li><a href="#">Locations</a></li>
+                </ul>
+            </div>
+            <div class="footer-logo">
+                <img src="./assets/images/logo2.png" alt="Footer Logo" />
+            </div>
         </div>
-        <div class="footer-column">
-          <h3>Support</h3>
-          <ul>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Shipping & Returns</a></li>
-            <li><a href="#">Frequently Asked Questions</a></li>
-            <li><a href="#">Manage Subscriptions</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h3>About Us</h3>
-          <ul>
-            <li><a href="#">Jobs</a></li>
-            <li><a href="#">Story</a></li>
-            <li><a href="#">Success Stories</a></li>
-            <li><a href="#">Locations</a></li>
-          </ul>
-        </div>
-        <div class="footer-logo">
-          <img src="./assets/images/logo2.png" alt="Footer Logo" />
-        </div>
-      </div>
 
-
-      <div class="social-links">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-      </div>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
     
-      <div class="footer-bottom">
-        <p>&copy; 2024 Coffee Co. All Rights Reserved</p>
-      </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Coffee Co. All Rights Reserved</p>
+        </div>
     </footer>
-    
-  </body>
+    <script src="contact.js"></script>
+</body>
 </html>
