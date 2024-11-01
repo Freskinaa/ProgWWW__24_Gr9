@@ -31,3 +31,4 @@ reserveBtn.addEventListener('click', () => {
 closePopupBtn.addEventListener('click', () => {
     popupModal.style.display = 'none';
 });
+

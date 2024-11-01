@@ -28,23 +28,7 @@
   --base-brownlig2: #dccec7;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Lexend Deca', sans-serif;
-}
 
-body {
-  background-color: #f3f0e7; 
-  color: var(--base-black);
-  font-size: 16px;
-  display: flex;
-  flex-direction: column; 
-  justify-content: flex-start; 
-  height: auto; 
-  margin: 0;
-}
 
 
 @keyframes fadeIn {
@@ -517,12 +501,9 @@ body {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
-
-@media (max-width: 768px) {
-  .video-section h2 {
-      font-size: 2rem;
-  }
-  .welcome-text {
-      font-size: 1rem;
-  }
+.highlight {
+  background-color: #eadfd0fe; 
+  
+  border-radius: 5px;
+  display: inline-block; 
 }

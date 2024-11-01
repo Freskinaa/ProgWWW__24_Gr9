@@ -51,7 +51,6 @@ const coffeePrices = {
   shakerato: 1.9,
 };
 
-
 function animateTotalCost(target, start, end, duration) {
   let startTime = null;
 
@@ -73,6 +72,12 @@ function animateTotalCost(target, start, end, duration) {
 function updateTotalCost() {
   const coffeeType = document.getElementById("coffee-type").value;
   const quantity = parseInt(document.getElementById("quantity").value, 10) || 1;
+
+  if (quantity > 1000) {
+    alert(`Sasia e porosisë prej ${quantity} është mbi 1000. Ju lutemi zgjidhni një sasi më të vogël.`);
+    return;
+  }
+
   const totalCost = (coffeePrices[coffeeType] * quantity).toFixed(2);
   const totalCostElement = document.getElementById("total-cost");
 
