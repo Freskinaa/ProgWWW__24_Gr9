@@ -31,3 +31,32 @@ reserveBtn.addEventListener("click", () => {
 closePopupBtn.addEventListener("click", () => {
   popupModal.style.display = "none";
 });
+
+
+
+//slideshow
+const slides = document.querySelector(".slides");
+const slide = document.querySelectorAll(".slide");
+const prev = document.getElementById("prev");
+const next = document.getElementById("next");
+
+let currentIndex1 = 0;
+
+function showSlide(index) {
+  if (index >= slide.length) {
+    currentIndex1 = 0;
+  } else if (index < 0) {
+    currentIndex1 = slide.length - 1;
+  }
+  slides.style.transform = `translateX(-${currentIndex1 * 100}%)`;
+}
+
+next.addEventListener("click", () => {
+  currentIndex1++;
+  showSlide(currentIndex1);
+});
+
+prev.addEventListener("click", () => {
+  currentIndex1--;
+  showSlide(currentIndex1);
+});

@@ -38,14 +38,16 @@
     transform: translateY(0);
   }
 }
-
+body {
+  background-color: #f3f0e7;
+}
 .main-container {
   width: 100%;
-  margin: 0 auto;
   padding: 100px 20px 60px;
-  height: 90vh;
+  height: 100vh;
   text-align: center;
   animation: fadeIn 1s ease forwards;
+  background-color: #f3f0e7;
 }
 
 .welcome-section h1,
@@ -309,34 +311,66 @@ header {
   font-size: 30px;
   color: #35291d;
 }
-.gallery {
-  display: flex;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-behavior: smooth;
-  padding: 20px 0;
-  gap: 20px;
-  background-color: #f3f0e7;
-  align-items: flex-start;
-  max-height: 500px;
-  margin-bottom: 20px;
-  border: 1px solid #ddd;
-}
-
-.gallery-item {
-  min-width: 300px;
+.slideshow-gallery {
+  max-width: 600px;
   height: 400px;
-  flex: 0 0 auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  background-color: #f3f0e7;
 }
 
-.gallery-item img {
+.slides {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  display: flex;
+}
+
+.slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
+  transition: transform 0.5s ease;
 }
+
+.slide:hover img {
+  transform: scale(1.05);
+}
+
+.control-btn {
+  top: 100%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.control-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.control-btn:focus {
+  outline: none;
+}
+
+#prev.control-btn {
+  left: 10px; 
+}
+
+#next.control-btn {
+  right: 10px; 
+}
+
+
 .popup {
   display: none;
   position: fixed;
