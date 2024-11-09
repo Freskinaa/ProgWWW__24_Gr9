@@ -58,7 +58,7 @@ signInForm.addEventListener("submit", (e) => {
 
   if (user) {
     if (user.password === password) {
-      alert(`Welcome back, ${user.name}!`);
+ 
 
       window.location.href = "index.html";
     } else {

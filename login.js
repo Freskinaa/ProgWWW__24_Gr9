@@ -67,10 +67,8 @@ signInForm.addEventListener('submit', (e) => {
     if (user) {
       
         if (user.password === password && user.email ===email) {
-           
-            alert(`Welcome back, ${user.name}!`);
-           
-            window.location.href = "index.html"; 
+     
+           window.location.href = "index.html"; 
         } else {
             
             alert("Invalid email or password. Please try again.");
