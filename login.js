@@ -75,6 +75,10 @@ signInForm.addEventListener('submit', (e) => {
         alert("Invalid email or password. Please try again.");
     }
 });
+if (user.profilePic) {
+    profilePic.src = user.profilePic;  // Load the profile picture from localStorage if available
+  }
+  
 
 
 

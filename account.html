@@ -27,8 +27,34 @@
     </nav>
 
     <div id="userInfo">
-      <h2>Welcome, <span id="userName"></span></h2>
-      <p>Email: <span id="userEmail"></span></p>
+      <div id="userInfoContent">
+        <div id="profilePicContainer">
+          <img
+            id="profilePic"
+            src="./assets/images/profileicon.webp"
+            alt="Profile Picture"
+            class="profile-icon"
+          />
+        </div>
+        <div>
+          <h2>Welcome, <span id="userName"></span></h2>
+        </div>
+      </div>
+
+      <div id="userDetails">
+        <p>Email: <span id="userEmail"></span></p>
+        <p>
+          Password: <span id="userPassword" style="display: none">******</span>
+          <button id="togglePassword">Show</button>
+        </p>
+      </div>
+
+      <input
+        type="file"
+        id="profilePicInput"
+        accept="image/*"
+        style="display: none"
+      />
       <button id="logoutBtn">Logout</button>
     </div>
 
