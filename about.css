@@ -63,48 +63,6 @@ body {
 
 .welcome-section h1 {
   font-size: 64px;
-  color: var(--base-black);
-  text-transform: uppercase;
-  font-weight: 700;
-  animation-delay: 0.4s;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-    0 0 20px rgba(255, 255, 255, 0.6);
-}
-
-.welcome-section h2 {
-  font-size: 32px;
-  color: var(--base-black);
-  text-transform: uppercase;
-  font-weight: 600;
-  margin: 20px 0;
-  animation-delay: 0.6s;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-    0 0 20px rgba(255, 255, 255, 0.6);
-}
-
-.welcome-section h3 {
-  font-size: 28px;
-  color: var(--base-black);
-  text-transform: uppercase;
-  font-weight: 500;
-  margin: 20px 0;
-  animation-delay: 0.8s;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-    0 0 20px rgba(255, 255, 255, 0.6);
-}
-
-.coming-soon {
-  font-size: 24px;
-  color: var(--dark-brown2);
-  font-weight: 700;
-  margin-top: 30px;
-  text-transform: uppercase;
-  animation-delay: 1s;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-    0 0 20px rgba(255, 255, 255, 0.6);
-}
-.welcome-section h1 {
-  font-size: 64px;
   color: #4b3d2b;
   text-transform: uppercase;
   font-weight: 700;

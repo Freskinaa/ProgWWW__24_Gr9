@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const quantityInput = document.querySelector('.quantity input');
     const increaseBtn = document.querySelector('.quantity-btn:nth-child(3)');
     const decreaseBtn = document.querySelector('.quantity-btn:nth-child(1)');
-    const addToCartBtn = document.querySelector('.add-to-cart');
-    const modal = document.getElementById('purchase-modal');
+    const addToCartBtn = document.getElementById('add-to-cart');
+    const purchaseModal = document.getElementById('purchase-modal');
     const closeModalBtn = document.getElementById('close-modal');
     const confirmPurchaseBtn = document.getElementById('confirm-purchase');
     let currentQuantity = 1;
@@ -40,11 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     addToCartBtn.addEventListener('click', () => {
-        modal.style.display = 'flex';
+        purchaseModal.style.display = 'flex';
     });
 
     closeModalBtn.addEventListener('click', () => {
-        modal.style.display = 'none';
+        purchaseModal.style.display = 'none';
     });
 
     confirmPurchaseBtn.addEventListener('click', () => {
@@ -59,7 +59,39 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         alert(`Thank you, ${name}! Your purchase of $${totalAmount.toFixed(2)} with ${paymentMethod} has been confirmed.`);
-        modal.style.display = 'none';
+        purchaseModal.style.display = 'none';
+    });
+
+    const openGiftCardModalBtn = document.getElementById('openModalBtn');
+    const giftCardModal = document.getElementById('giftCardModal');
+    const closeGiftCardModalBtn = document.querySelector('.close');
+
+    openGiftCardModalBtn.addEventListener('click', () => {
+        giftCardModal.style.display = 'block';
+        purchaseModal.style.display = 'none';
+    });
+
+    closeGiftCardModalBtn.addEventListener('click', () => {
+        giftCardModal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (e) => {
+        if (e.target === giftCardModal) {
+            giftCardModal.style.display = 'none';
+        }
+    });
+
+    const giftCardForm = document.getElementById('gift-card-form');
+    giftCardForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const cardType = document.getElementById('gift-card-type').value;
+        const amount = document.getElementById('amount').value;
+        const recipientName = document.getElementById('recipient-name').value;
+        const giftMessage = document.getElementById('gift-message').value;
+
+        alert(`Your order for a ${cardType} gift card of $${amount} to ${recipientName} is confirmed!`);
+        giftCardModal.style.display = 'none';
     });
 
     updateTotalPrice();
