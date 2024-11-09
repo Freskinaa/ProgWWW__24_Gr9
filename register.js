@@ -26,11 +26,15 @@ signUpForm.addEventListener("submit", (e) => {
     return;
   }
 
-  const user = { name, email, password };
-
   const users = JSON.parse(localStorage.getItem("users")) || [];
 
-  users.push(user);
+  if (users.find((u) => u.email === email)) {
+    alert("An account with this email already exists.");
+    return;
+  }
+
+  const newUser = { name, email, password };
+  users.push(newUser);
 
   localStorage.setItem("users", JSON.stringify(users));
 
@@ -53,12 +57,11 @@ signInForm.addEventListener("submit", (e) => {
   }
 
   const users = JSON.parse(localStorage.getItem("users")) || [];
-
-  const user = users.find((user) => user.email === email);
+  const user = users.find((u) => u.email === email);
 
   if (user) {
     if (user.password === password) {
- 
+      localStorage.setItem("loggedInUser", JSON.stringify(user));
 
       window.location.href = "index.html";
     } else {

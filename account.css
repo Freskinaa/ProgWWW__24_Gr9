@@ -1,26 +1,26 @@
 #userInfo {
-    font-family: Arial, sans-serif;
-    margin: 60px 0;
-    padding: 15px;
-    background-color: #f4f4f4;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  margin: 60px 0;
+  padding: 15px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 #userInfo h2 {
-    margin-top: 60px;
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 10px;
+  margin-top: 60px;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
 }
 
 #userName {
-    color: #007bff; /* Blue color for the username */
-    font-weight: bold; /* Make the username bold */
-    font-size: 26px; /* Larger font size for the username */
+  color: #007bff;
+  font-weight: bold;
+  font-size: 26px;
 }
 
 #userEmail {
-    color: #666; /* Lighter color for the email */
-    font-size: 18px;
+  color: #666;
+  font-size: 18px;
 }
