@@ -59,15 +59,12 @@ signInForm.addEventListener('submit', (e) => {
 
 
     const users = JSON.parse(localStorage.getItem('users')) || [];
-
-
-   
     const user = users.find(user => user.email === email);
 
     if (user) {
       
         if (user.password === password && user.email ===email) {
-     
+            localStorage.setItem('loggedInUser', JSON.stringify(user));
            window.location.href = "index.html"; 
         } else {
             
@@ -78,3 +75,11 @@ signInForm.addEventListener('submit', (e) => {
         alert("Invalid email or password. Please try again.");
     }
 });
+if (user.profilePic) {
+    profilePic.src = user.profilePic;  // Load the profile picture from localStorage if available
+  }
+  
+
+
+
+

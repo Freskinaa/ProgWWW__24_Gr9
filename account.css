@@ -1,0 +1,117 @@
+#userInfo {
+  font-family: "Arial", sans-serif;
+  margin-top: 150px;
+  margin-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  background-color: #d7ccc8;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  color: #3e2723;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#userInfoContent {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  flex-direction: column;
+}
+
+.profile-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 1px solid #3e2723;
+  object-fit: cover;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-icon:hover {
+  transform: scale(1.1);
+}
+
+#userInfo h2 {
+  font-size: 30px;
+  color: #3e2723;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+#userDetails {
+  margin-top: 0;
+  text-align: left;
+}
+
+#userDetails p {
+  font-size: 18px;
+  color: #3e2723;
+  margin-top: 15px;
+}
+
+#userDetails p span {
+  color: #8d6e63;
+  font-weight: 500;
+}
+
+#userName,
+#userEmail,
+#userPassword {
+  color: #3e2723;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+#togglePassword {
+  background: none;
+  color: #3e2723;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+#togglePassword:hover {
+  color: #000;
+}
+
+#logoutBtn {
+  margin-top: 30px;
+  padding: 8px 20px;
+  background-color: #765a4f;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+#logoutBtn:hover {
+  background-color: #5d4037;
+  transform: scale(1.05);
+}
+
+input[type="file"] {
+  display: none;
+}
+
+#profilePicContainer {
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+input[type="file"]:focus {
+  outline: none;
+}
