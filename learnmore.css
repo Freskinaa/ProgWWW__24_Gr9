@@ -149,3 +149,20 @@ body {
     height: auto;
     border-radius: 10px;
 }
+
+#highlightCanvas {
+    height: 40px;
+    border: none;
+    display: block;
+    margin: 0 auto;
+}
+
+.menu-container {
+    text-align: center;
+    position: relative;
+}
+
+#menuTitle {
+    font-size: 24px;
+    color: #3F2616;
+}
