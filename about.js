@@ -31,32 +31,28 @@ reserveBtn.addEventListener("click", () => {
 closePopupBtn.addEventListener("click", () => {
   popupModal.style.display = "none";
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const images = document.querySelectorAll(".slidecard .img");
+  const dots = document.querySelectorAll(".dots-container .dot");
+  let currentIndex = 0;
 
+  function showSlide(index) {
+    images.forEach((img, idx) => {
+      img.style.display = (idx === index) ? 'block' : 'none';
+    });
 
+    dots.forEach((dot, idx) => {
+      dot.classList.toggle("active", idx === index);
+    });
 
-//slideshow
-const slides = document.querySelector(".slides");
-const slide = document.querySelectorAll(".slide");
-const prev = document.getElementById("prev");
-const next = document.getElementById("next");
-
-let currentIndex1 = 0;
-
-function showSlide(index) {
-  if (index >= slide.length) {
-    currentIndex1 = 0;
-  } else if (index < 0) {
-    currentIndex1 = slide.length - 1;
+    currentIndex = index;
   }
-  slides.style.transform = `translateX(-${currentIndex1 * 100}%)`;
-}
 
-next.addEventListener("click", () => {
-  currentIndex1++;
-  showSlide(currentIndex1);
-});
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      showSlide(index);
+    });
+  });
 
-prev.addEventListener("click", () => {
-  currentIndex1--;
-  showSlide(currentIndex1);
+  showSlide(currentIndex);
 });

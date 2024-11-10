@@ -498,6 +498,68 @@
         </div>
       </div>
     </section>
+    <section id="customised-drink">
+      <div class="customize-drink-container">
+        <h2>Want to Customize Your Drink?</h2>
+        <button id="open-form">Order Now</button>
+    
+        <div id="customize-form-container" class="customize-form-container">
+          <h2>Customize Your Drink</h2>
+          <form id="customize-drink-form">
+            <label for="drink-type">Choose your drink:</label>
+            <select id="drink-type">
+              <option value="espresso" data-price="3.0">Espresso</option>
+              <option value="latte" data-price="4.0">Latte</option>
+              <option value="cappuccino" data-price="3.5">Cappuccino</option>
+              <option value="mocha" data-price="4.5">Mocha</option>
+            </select>
+    
+            <label>Select temperature:</label>
+            <div class="form-group">
+              <input type="radio" id="hot" name="temperature" value="hot">
+              <label for="hot">Hot</label>
+            </div>
+            <div class="form-group">
+              <input type="radio" id="cold" name="temperature" value="cold">
+              <label for="cold">Cold</label>
+            </div>
+    
+            <label>Add flavor:</label>
+            <div class="form-group">
+              <input type="checkbox" id="vanilla" value="vanilla">
+              <label for="vanilla">Vanilla</label>
+            </div>
+            <div class="form-group">
+              <input type="checkbox" id="caramel" value="caramel">
+              <label for="caramel">Caramel</label>
+            </div>
+    
+            <label for="milk">Choose your milk:</label>
+            <select id="milk-type">
+              <option value="regular">Regular</option>
+              <option value="almond">Almond</option>
+              <option value="soy">Soy</option>
+            </select>
+    
+            <label>Extras:</label>
+            <div class="form-group">
+              <input type="checkbox" id="sugar" value="sugar">
+              <label for="sugar">Sugar</label>
+            </div>
+            <div class="form-group">
+              <input type="checkbox" id="honey" value="honey">
+              <label for="honey">Honey</label>
+            </div>
+    
+            <div id="total-price">Total: $3.00</div>
+    
+            <button type="submit">Customize Drink</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    
+    
     <section id="nutrition" class="nutrition__container">
       <div class="container">
         <div class="nutrition__title">
