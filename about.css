@@ -266,7 +266,7 @@ header {
   transform: translateY(20px);
   animation: fadeIn 1s ease forwards;
   animation-delay: 0.2s;
-  text-shadow: 0 0 30px rgba(75, 61, 43, 0.8), 0 0 20px rgba(255, 255, 255, 0.5);
+  text-shadow:  rgba(255, 255, 255, 0.5);
  
 }
 
@@ -284,6 +284,7 @@ header {
 .slidecard {
   display: flex;
   width: 100%;
+  animation: fadeIn 1s ease;
 }
 
 .img {
@@ -301,10 +302,6 @@ header {
   border-radius: 15px;
   box-shadow: #4a3a2a;
 }
-.img:hover {
-  transform: scale(1.05);
-}
-
 .dots-container {
   position: absolute;
   bottom: 15px;
