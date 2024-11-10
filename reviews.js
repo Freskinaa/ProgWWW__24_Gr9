@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const indicators = document.querySelectorAll(".indicator");
   const cards = document.querySelectorAll(".reviews__card");
+  const leftArrow = document.querySelector(".left-arrow");
+  const rightArrow = document.querySelector(".right-arrow");
   const cardsPerPage = 3;
   let currentPage = 0;
 
@@ -23,6 +25,18 @@ document.addEventListener("DOMContentLoaded", () => {
     indicator.addEventListener("click", () => {
       showCards(index);
     });
+  });
+
+  leftArrow.addEventListener("click", () => {
+    if (currentPage > 0) {
+      showCards(currentPage - 1);
+    }
+  });
+
+  rightArrow.addEventListener("click", () => {
+    if (currentPage < indicators.length - 1) {
+      showCards(currentPage + 1);
+    }
   });
 
   showCards(currentPage);
