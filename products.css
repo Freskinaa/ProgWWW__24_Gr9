@@ -254,17 +254,17 @@
 
 .nutrition__table {
   animation: slideIn 0.5s ease-out forwards;
+
 }
 .customize-drink-container {
   background-color: #fff;
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
+  max-width: 500px;
   text-align: center;
   margin: 0 auto;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: slideIn 0.5s ease-out;
 }
 
 .customize-drink-container:hover {
@@ -280,6 +280,8 @@ h2 {
 
 #customize-form-container {
   display: block;
+  margin-top: 50px;
+
   background-color: #f9f9f9;
   padding: 20px;
   border-radius: 8px;
@@ -287,6 +289,8 @@ h2 {
 }
 
 form {
+  margin-top: 50px;
+
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -298,7 +302,7 @@ label {
 }
 
 select, input {
-  padding: 8px;
+  padding: 10px;
   margin-top: 5px;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -343,15 +347,4 @@ button[type="submit"]:hover {
 
 button:focus {
   outline: none;
-}
-
-@keyframes slideIn {
-  from {
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
