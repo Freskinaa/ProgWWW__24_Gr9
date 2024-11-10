@@ -1,33 +1,87 @@
 #userInfo {
-  font-family: "Arial", sans-serif;
-  margin-top: 150px;
-  margin-bottom: 80px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 90px auto;
   padding: 30px;
-  background-color: #d7ccc8;
+  background-color: #2e1d17;
   border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  max-width: 600px;
-  color: #3e2723;
+  max-width: 1100px;
+  color: #efebe9;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
+.allprofile {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+}
+
 #userInfoContent {
+  background-color: #543b31;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+#userInfoContent h2 {
+  font-size: 28px;
+  color: #ffe0b2;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#userDetails span {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+#userDetails {
+  background-color: #543b31;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+#userDetails .detail-row {
   display: flex;
   align-items: center;
-  text-align: left;
-  flex-direction: column;
+  margin-top: 20px;
+}
+
+#userDetails label {
+  flex: 1;
+  color: #ffccbc;
+}
+
+#userDetails span {
+  flex: 2;
+  padding: 8px 10px;
+  background-color: #4e342e;
+  color: #ffebee;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.edit-btn {
+  background: none;
+  color: #ffe0b2;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.edit-btn:hover {
+  color: #bcaaa4;
 }
 
 .profile-icon {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  border: 1px solid #3e2723;
+  border: 3px solid #bcaaa4;
   object-fit: cover;
   margin-bottom: 15px;
   cursor: pointer;
@@ -38,80 +92,55 @@
   transform: scale(1.1);
 }
 
-#userInfo h2 {
-  font-size: 30px;
-  color: #3e2723;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-#userDetails {
-  margin-top: 0;
-  text-align: left;
-}
-
-#userDetails p {
-  font-size: 18px;
-  color: #3e2723;
+#userDetails label {
+  display: block;
+  color: #ffccbc;
   margin-top: 15px;
 }
 
-#userDetails p span {
-  color: #8d6e63;
-  font-weight: 500;
-}
-
-#userName,
-#userEmail,
-#userPassword {
-  color: #3e2723;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 1.5;
+#userDetails input {
+  padding: 8px;
+  width: 250px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px;
+  font-size: 16px;
+  background-color: #4e342e;
+  color: #ffebee;
 }
 
 #togglePassword {
   background: none;
-  color: #3e2723;
+  color: #bcaaa4;
   border: none;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   text-decoration: underline;
   font-weight: 500;
+  margin-left: 10px;
 }
 
 #togglePassword:hover {
-  color: #000;
+  color: #ffe0b2;
 }
 
-#logoutBtn {
-  margin-top: 30px;
-  padding: 8px 20px;
-  background-color: #765a4f;
-  color: #fff;
+#saveChangesBtn, #logoutBtn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #a1887f;
+  color: #ffffff;
   border: none;
   border-radius: 10px;
   cursor: pointer;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
-#logoutBtn:hover {
-  background-color: #5d4037;
-  transform: scale(1.05);
+#saveChangesBtn:hover, #logoutBtn:hover {
+  background-color: #8d6e63;
 }
 
-input[type="file"] {
-  display: none;
-}
-
-#profilePicContainer {
-  display: inline-block;
-  cursor: pointer;
-  margin-top: 20px;
-}
-
-input[type="file"]:focus {
-  outline: none;
+#logoutBtn {
+  margin-top: 10px;
 }

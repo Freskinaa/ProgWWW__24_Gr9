@@ -3,10 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My account</title>
-    <link rel="icon" href="./assets/images/cojlogo.png" type="image/x-icon" />
+    <title>My Account</title>
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./account.css" />
+    <link rel="stylesheet" href="account.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
   </head>
   <body>
     <nav class="navbar">
@@ -20,6 +23,7 @@
               <li><a href="./gift.html">Gift cards</a></li>
               <li><a href="./about.html">About us</a></li>
               <li><a href="./contact.html">Contact us</a></li>
+              <li id="accountLink"><a href="account.html">My Account</a></li>
             </ul>
           </div>
         </div>
@@ -27,35 +31,41 @@
     </nav>
 
     <div id="userInfo">
-      <div id="userInfoContent">
-        <div id="profilePicContainer">
-          <img
-            id="profilePic"
-            src="./assets/images/profileicon.webp"
-            alt="Profile Picture"
-            class="profile-icon"
-          />
+      <div class="allprofile">
+        <div id="userInfoContent">
+          <div id="profilePicContainer">
+            <img
+              id="profilePic"
+              src="./assets/images/profileicon.webp"
+              alt="Profile Picture"
+              class="profile-icon"
+            />
+          </div>
+          <h2>
+            Welcome, <em><span id="userName"></span></em>
+          </h2>
         </div>
-        <div>
-          <h2>Welcome, <span id="userName"></span></h2>
+        <div id="userDetails">
+          <span>Profile Details</span>
+
+          <div class="detail-row">
+            <label>Email:</label>
+            <span id="userEmailDisplay"></span>
+            <button id="editEmailBtn" class="edit-btn">Edit</button>
+          </div>
+
+          <div class="detail-row">
+            <label>Password:</label>
+            <span id="userPasswordDisplay"></span>
+            <button id="editPasswordBtn" class="edit-btn">Edit</button>
+          </div>
+
+          <div class="savelogout">
+            <button id="saveChangesBtn">Save Changes</button>
+            <button id="logoutBtn">Logout</button>
+          </div>
         </div>
       </div>
-
-      <div id="userDetails">
-        <p>Email: <span id="userEmail"></span></p>
-        <p>
-          Password: <span id="userPassword" style="display: none">******</span>
-          <button id="togglePassword">Show</button>
-        </p>
-      </div>
-
-      <input
-        type="file"
-        id="profilePicInput"
-        accept="image/*"
-        style="display: none"
-      />
-      <button id="logoutBtn">Logout</button>
     </div>
 
     <script src="account.js"></script>

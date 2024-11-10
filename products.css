@@ -257,103 +257,215 @@
   animation: slideIn 0.5s ease-out forwards;
 
 }
+
+
+#customized-drink {
+  padding: 50px 0;
+  background-color: #f4f4f4;
+}
+
 .customize-drink-container {
   background-color: #fff;
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 500px;
+  max-width: 800px;
   text-align: center;
   margin: 0 auto;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.customize-drink-container:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
 }
 
 h2 {
   margin-bottom: 20px;
-  color: #333;
+  color: #3e2a47;
   font-family: 'Arial', sans-serif;
-}
-#customize-form-container {
-  display: block;
-  margin: 50px auto;
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
-  width: 90%;
-  max-width: 600px;
-  animation: fadeIn 0.8s ease-in-out;
+  font-size: 1.8em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-form {
+.customization-options {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-label {
-  font-weight: bold;
-  color: #564a24;
-  animation: fadeInUp 1s ease;
-}
-
-select, input[type="text"], input[type="email"], input[type="number"] {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-input[type="radio"], input[type="checkbox"] {
-  margin-right: 10px;
-}
-
-.form-group {
-  display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
   gap: 10px;
 }
 
-#total-price {
-  margin-top: 20px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #333;
-  animation: fadeInUp 1s ease;
+.option {
+  background-color: #9c7b5f;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  color: #fff;
+  font-size: 1.1em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  width: 150px;
 }
 
-button[type="submit"] {
+.option:hover {
+  background-color: #7e5b3c;
+  transform: scale(1.05);
+}
+
+.drink-container {
+  height: 250px;
+  width: 300px;
+  border: 2px dashed #b0977d;
   margin-top: 20px;
-  padding: 12px;
-  background-color: #564a24;
+  padding: 20px;
+  background-color: #f4f1e4;
+  text-align: center;
+  border-radius: 8px;
+}
+
+#drink-customization {
+  margin-top: 20px;
+  font-size: 18px;
+  padding: 10px;
+  background-color: #e2d9c3;
+  border-radius: 5px;
+  min-height: 50px;
+}
+
+button {
+  background-color: #4CAF50;
   color: white;
+  padding: 12px 30px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  margin-top: 30px;
   transition: background-color 0.3s ease;
-  animation: fadeInUp 1s ease;
 }
 
-button[type="submit"]:hover {
-  background-color: #46341b;
+button:hover {
+  background-color: #45a049;
 }
 
 button:focus {
   outline: none;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+#order-button {
+  background-color: #b07548;
+  margin-top: 30px;
+  display: block;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+#order-button:hover {
+  background-color: #8c5b3b;
+}
+
+#order-summary {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #3e2a47;
+  font-weight: bold;
+}
+
+.user-info {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.user-info input {
+  padding: 10px;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#drink-customization p {
+  font-size: 16px;
+  padding: 5px;
+  margin: 5px;
+  background-color: #e2d9c3;
+  border-radius: 5px;
+}
+
+.drink-container {
+  min-height: 200px;
+  max-width: 500px;
+  border: 2px dashed #b0977d;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f4f1e4;
+  text-align: center;
+  border-radius: 8px;
+}
+
+#order-modal .modal-content {
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:focus {
+  outline: none;
 }
