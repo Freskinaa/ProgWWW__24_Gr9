@@ -490,3 +490,34 @@ header {
 #reserveForm label {
   color: var(--dark-brown2);
 }
+#certifications {
+  padding: 20px;
+  text-align: center;
+  background-color: #d0c9c0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #f4eded;
+  text-align: left;
+}
+
+th {
+  background-color: var(--base-brownlig);
+  color: white;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+  padding-bottom: 70px;
+}
