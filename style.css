@@ -38,6 +38,43 @@
   --text-color: #4b2e2b;
   --cherry: rgb(90, 10, 10);
 }
+#coffee {
+  position: relative;
+}
+
+#coffee-cup {
+  width: 35px;
+  position: relative;
+}
+.coffee-svg .steam {
+  animation: float 3s ease-in-out infinite;
+}
+.coffee__img {
+  align-items: center;
+  overflow: hidden;
+}
+
+.coffee_txt1 {
+  margin-top: -25px; 
+  font-size: 16px; 
+  color: white;
+  font-weight: bolder;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-10px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
 body {
   font-family: "Lexend Deca", sans-serif;
@@ -321,26 +358,41 @@ body {
   object-fit: cover;
   padding-bottom: 10px;
 }
-
 .btn_group button.large-btn {
   background-color: var(--dark-brown);
   padding: 12px 30px;
   border-radius: 10px;
   transition: 0.4s ease-in-out;
-
-  text-decoration: none;
   cursor: pointer;
-}
-.btn_group button.large-btn a {
+  position: relative;
   color: var(--base-white);
   font-size: 18px;
   text-decoration: none;
+  
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3), 
+              inset 0 -4px 8px rgba(0, 0, 0, 0.2), 
+              inset 0 4px 6px rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
 }
 
 .btn_group button.large-btn:hover {
   background-color: var(--second-dark);
-  transform: scale(1.05);
-  box-shadow: 3px 3px 4px var(--base-brown);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 
+              inset 0 -6px 10px rgba(0, 0, 0, 0.3), 
+              inset 0 6px 8px rgba(255, 255, 255, 0.2);
+}
+
+.btn_group button.large-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 
+              inset 0 -2px 5px rgba(0, 0, 0, 0.2), 
+              inset 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.btn_group button.large-btn a {
+  color: var(--base-white);
+  text-decoration: none;
 }
 
 .btn__group button {
@@ -565,21 +617,24 @@ body {
   min-width: 220px;
   margin: 0 20px;
 }
+.footer-column p{
+  color: #eadfd0fe;
+}
 
 .footer-column h3 {
   font-size: 1.5rem;
   margin-bottom: 20px;
   color: #eadfd0fe;
   position: relative;
-  font-weight: bold;
 }
 
 .footer-column h3::after {
-  content: "";
   width: 110px;
   height: 2.5px;
   background-color: #382a20;
   position: absolute;
+  text-decoration: underline;
+
   left: 0;
   bottom: -5px;
 }
@@ -596,6 +651,7 @@ body {
 .footer-column a {
   color: #eadfd0fe;
   text-decoration: none;
+  
   font-size: 1rem;
   transition: color 0.3s ease, transform 0.2s;
 }
@@ -789,13 +845,12 @@ body {
   50% {
     transform: translateY(-3px);
   }
-}
-.coffee-mug {
+}.coffee-mug {
   background: #3F2616;
   position: relative;
   margin: 50px 60px 50px 10px; 
-  width: 50px; /* Smaller size */
-  height: 50px; /* Smaller size */
+  width: 50px; 
+  height: 50px; 
   border-radius: 50%;
   box-shadow: 0 0 0 6px #442918,
               0 0 0 15px #3C2415,
@@ -806,8 +861,13 @@ body {
               40px 70px 0 -5px #3C2415,
               0px 90px 0 -30px #3C2415,
               5px 110px 0 -40px #3C2415;
+  transform: scale(1.1); /* Përdor scale për ta bërë pak më të madh filxhanin */
+  transition: transform 0.3s ease-in-out;
 }
 
+.coffee-mug:hover {
+  transform: translateY(-10px) rotate(10deg) scale(1.2); /* Lëviz, rrotullohet dhe zmadhohet kur kalohet miu mbi të */
+}
 
 .coffee-mug::before {
   content: '';
@@ -819,10 +879,8 @@ body {
   right: -35px;
   border-radius: 5px;
   box-shadow: inset 0px 20px 0 0px #EFF0D1;
-  transform: rotate(45deg);
+  transform: rotate(45deg) skewX(10deg); 
 }
-
-
 .coffee-mug::after {
   content: '';
   width: 10px;
@@ -842,14 +900,15 @@ body {
   animation: rings 3s ease-out infinite;
 }
 
-
 @keyframes rings {
   to {
-      width: 60px;
-      height: 60px; 
-      opacity: 0;
+    width: 60px;
+    height: 60px; 
+    opacity: 0;
+    transform: scale(1.5); 
   }
 }
+
 
 
 .coffee-mug::after {

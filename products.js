@@ -122,3 +122,53 @@ document.querySelectorAll(".page-number").forEach((number) => {
 });
 
 showPage(1);
+
+
+//drag and drop
+function finalizeOrder() {
+  var drink = document.getElementById('drink-customization').innerHTML;
+  var modal = document.getElementById("order-modal");
+  
+  if (drink.trim() === "") {
+    alert("Please select your drink options.");
+  } else {
+    document.getElementById("order-summary").innerHTML = `<p><strong>Drink Customization:</strong> ${drink}</p>`;
+    modal.style.display = "block";
+  }
+}
+
+function closeModal() {
+  var modal = document.getElementById("order-modal");
+  modal.style.display = "none";
+}
+
+function submitOrder() {
+  var name = document.getElementById("user-name").value;
+  var location = document.getElementById("location").value;
+  var phone = document.getElementById("phone").value;
+
+  if (name && location && phone) {
+    alert(`Order placed successfully!\nName: ${name}\nLocation: ${location}\nPhone: ${phone}`);
+    closeModal();
+  } else {
+    alert("Please fill in all the fields.");
+  }
+}
+
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  var draggedElement = document.getElementById(data);
+  
+  var newElement = document.createElement("p");
+  newElement.textContent = draggedElement.textContent;
+  document.getElementById("drink-customization").appendChild(newElement);
+}
