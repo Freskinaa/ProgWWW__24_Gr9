@@ -15,38 +15,70 @@
 .allprofile {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 40px; 
+  gap: 40px;
 }
 
 #userInfoContent {
   background-color: #543b31;
   border-radius: 20px;
-  height: auto;
   padding: 30px;
-  height: auto;
 }
 
 #userInfoContent h2 {
   font-size: 28px;
-  color: #ffe0b2; 
+  color: #ffe0b2;
   font-weight: bold;
   margin-bottom: 10px;
-  text-align: center; 
-  color: white;
+  text-align: center;
 }
-#userDetails span{
+
+#userDetails span {
   font-size: 40px;
   font-weight: 700;
 }
+
 #userDetails {
   background-color: #543b31;
   border-radius: 20px;
   padding: 30px;
 }
 
+#userDetails .detail-row {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#userDetails label {
+  flex: 1;
+  color: #ffccbc;
+}
+
+#userDetails span {
+  flex: 2;
+  padding: 8px 10px;
+  background-color: #4e342e;
+  color: #ffebee;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.edit-btn {
+  background: none;
+  color: #ffe0b2;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.edit-btn:hover {
+  color: #bcaaa4;
+}
 
 .profile-icon {
-  width: 100px; 
+  width: 100px;
   height: 100px;
   border-radius: 50%;
   border: 3px solid #bcaaa4;
@@ -67,8 +99,8 @@
 }
 
 #userDetails input {
-  padding: 10px;
-  width: 100%;
+  padding: 8px;
+  width: 250px;
   border: none;
   border-radius: 5px;
   margin-top: 5px;

@@ -8,69 +8,69 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (user) {
     const userNameElement = document.getElementById("userName");
-    const userEmailElement = document.getElementById("userEmail");
-    const userPasswordElement = document.getElementById("userPassword");
+    const userEmailDisplay = document.getElementById("userEmailDisplay");
+    const userPasswordDisplay = document.getElementById("userPasswordDisplay");
+    const editEmailBtn = document.getElementById("editEmailBtn");
+    const editPasswordBtn = document.getElementById("editPasswordBtn");
+    const passwordIcon = document.getElementById("passwordIcon");
 
-    if (userNameElement && userEmailElement && userPasswordElement) {
-      userNameElement.textContent = user.name;
-      userEmailElement.textContent = user.email;
-      userPasswordElement.textContent = user.password;
-    }
+    userNameElement.textContent = user.name;
+    userEmailDisplay.textContent = user.email;
+    userPasswordDisplay.textContent = "••••••••"; 
+
+ 
+    editEmailBtn.addEventListener("click", function () {
+      const isEditing = userEmailDisplay.isContentEditable;
+      if (isEditing) {
+        user.email = userEmailDisplay.textContent;
+        localStorage.setItem("loggedInUser", JSON.stringify(user));
+        editEmailBtn.textContent = "Edit";
+        userEmailDisplay.contentEditable = "false";
+      } else {
+        userEmailDisplay.contentEditable = "true";
+        userEmailDisplay.focus();
+        editEmailBtn.textContent = "Save";
+      }
+    });
+
+
+    editPasswordBtn.addEventListener("click", function () {
+      const isEditing = userPasswordDisplay.isContentEditable;
+      if (isEditing) {
+        user.password = userPasswordDisplay.textContent;
+        localStorage.setItem("loggedInUser", JSON.stringify(user));
+        editPasswordBtn.textContent = "Edit";
+        userPasswordDisplay.contentEditable = "false";
+        userPasswordDisplay.textContent = "••••••••"; 
+      } else {
+        userPasswordDisplay.contentEditable = "true";
+        userPasswordDisplay.focus();
+        editPasswordBtn.textContent = "Save";
+        userPasswordDisplay.textContent = ""; 
+      }
+    });
+    
+
+
 
     const logoutBtn = document.getElementById("logoutBtn");
-    if (logoutBtn) {
-      logoutBtn.addEventListener("click", function () {
-        if (profilePic.src) {
-          user.profilePic = profilePic.src;
-          localStorage.setItem("loggedInUser", JSON.stringify(user));
-        }
+    logoutBtn.addEventListener("click", function () {
+      localStorage.removeItem("loggedInUser");
+      window.location.href = "index.html";
+    });
 
-        localStorage.removeItem("loggedInUser");
-        window.location.href = "index.html";
-      });
-    }
+  
+    const saveChangesBtn = document.getElementById("saveChangesBtn");
+    saveChangesBtn.addEventListener("click", function () {
+      const updatedEmail = userEmailDisplay.textContent;
+      const updatedPassword = userPasswordDisplay.textContent;
 
-    const togglePasswordBtn = document.getElementById("togglePassword");
-    if (togglePasswordBtn) {
-      togglePasswordBtn.addEventListener("click", function () {
-        const passwordElement = document.getElementById("userPassword");
-        if (passwordElement.style.display === "none") {
-          passwordElement.style.display = "inline";
-          togglePasswordBtn.textContent = "Hide";
-        } else {
-          passwordElement.style.display = "none";
-          togglePasswordBtn.textContent = "Show";
-        }
-      });
-    }
+      user.email = updatedEmail;
+      user.password = updatedPassword;
 
-    const profilePicContainer = document.getElementById("profilePicContainer");
-    const profilePicInput = document.getElementById("profilePicInput");
-    const profilePic = document.getElementById("profilePic");
+      localStorage.setItem("loggedInUser", JSON.stringify(user));
 
-    if (user.profilePic) {
-      profilePic.src = user.profilePic;
-    }
-
-    if (profilePicContainer && profilePicInput) {
-      profilePicContainer.addEventListener("click", function () {
-        profilePicInput.click();
-      });
-
-      profilePicInput.addEventListener("change", function (e) {
-        const file = e.target.files[0];
-        if (file) {
-          const reader = new FileReader();
-          reader.onload = function (event) {
-            const imgSrc = event.target.result;
-            profilePic.src = imgSrc;
-
-            user.profilePic = imgSrc;
-            localStorage.setItem("loggedInUser", JSON.stringify(user));
-          };
-          reader.readAsDataURL(file);
-        }
-      });
-    }
+      alert("Your changes have been saved!");
+    });
   }
 });

@@ -76,7 +76,7 @@ signInForm.addEventListener('submit', (e) => {
     }
 });
 if (user.profilePic) {
-    profilePic.src = user.profilePic;  // Load the profile picture from localStorage if available
+    profilePic.src = user.profilePic; 
   }
   
 
