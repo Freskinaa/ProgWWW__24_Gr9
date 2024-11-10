@@ -21,6 +21,7 @@
   font-weight: bold;
   color: #564a24;
   text-align: center;
+  margin-top: 40px;
 }
 
 .coffeetypes__search {
@@ -254,4 +255,105 @@
 
 .nutrition__table {
   animation: slideIn 0.5s ease-out forwards;
+
+}
+.customize-drink-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  text-align: center;
+  margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.customize-drink-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+}
+#customize-form-container {
+  display: block;
+  margin: 50px auto;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+  color: #564a24;
+  animation: fadeInUp 1s ease;
+}
+
+select, input[type="text"], input[type="email"], input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#total-price {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  animation: fadeInUp 1s ease;
+}
+
+button[type="submit"] {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #564a24;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  animation: fadeInUp 1s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #46341b;
+}
+
+button:focus {
+  outline: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }

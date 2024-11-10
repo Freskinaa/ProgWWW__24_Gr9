@@ -63,48 +63,6 @@ body {
 
 .welcome-section h1 {
   font-size: 64px;
-  color: var(--base-black);
-  text-transform: uppercase;
-  font-weight: 700;
-  animation-delay: 0.4s;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-    0 0 20px rgba(255, 255, 255, 0.6);
-}
-
-.welcome-section h2 {
-  font-size: 32px;
-  color: var(--base-black);
-  text-transform: uppercase;
-  font-weight: 600;
-  margin: 20px 0;
-  animation-delay: 0.6s;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-    0 0 20px rgba(255, 255, 255, 0.6);
-}
-
-.welcome-section h3 {
-  font-size: 28px;
-  color: var(--base-black);
-  text-transform: uppercase;
-  font-weight: 500;
-  margin: 20px 0;
-  animation-delay: 0.8s;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-    0 0 20px rgba(255, 255, 255, 0.6);
-}
-
-.coming-soon {
-  font-size: 24px;
-  color: var(--dark-brown2);
-  font-weight: 700;
-  margin-top: 30px;
-  text-transform: uppercase;
-  animation-delay: 1s;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-    0 0 20px rgba(255, 255, 255, 0.6);
-}
-.welcome-section h1 {
-  font-size: 64px;
   color: #4b3d2b;
   text-transform: uppercase;
   font-weight: 700;
@@ -292,83 +250,82 @@ header {
   background-color: #9f7575;
 }
 
-.intro {
-  padding: 40px 20px;
-  font-size: 1.2rem;
-  color: #f3f0e7;
-  background-color: #f3f0e7;
-  background-color: var(--base-brownlig2);
+.texti {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.texti h1 {
+  font-size: 35px;
+  font-weight: bolder;
   text-align: center;
-}
-.intro p {
   margin-top: 10px;
-  font-weight: 300;
-  color: #35291d;
+  color: #2c1e14;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.2s;
+  text-shadow:  rgba(255, 255, 255, 0.5);
+ 
 }
-.intro h1 {
-  margin-top: 10px;
-  font-weight: 300;
-  font-size: 30px;
-  color: #35291d;
-}
-.slideshow-gallery {
-  max-width: 600px;
+
+.slideshow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   height: 400px;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  margin: 0 auto;
-  background-color: #f3f0e7;
+  width: 80%;
+  margin: auto;
+  
 }
 
-.slides {
+.slidecard {
   display: flex;
-  transition: transform 0.8s ease-in-out;
+  width: 100%;
+  animation: fadeIn 1s ease;
 }
 
-.slide {
-  min-width: 100%;
-  display: flex;
+.img {
+  width: 450px;
+  margin-left: 260px;
+  height: 380px;
+  border-radius: 15px;
+  display: none;
 }
 
-.slide img {
+.img img {
   width: 100%;
   height: 100%;
-  object-fit: fill;
-  transition: transform 0.5s ease;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: #4a3a2a;
+}
+.dots-container {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
 }
 
-.slide:hover img {
-  transform: scale(1.05);
-}
-
-.control-btn {
-  top: 100%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  border: none;
-  color: white;
-  font-size: 2rem;
-  padding: 10px;
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 15px;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.5;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-.control-btn:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+.dot.active {
+  opacity: 1;
 }
 
-.control-btn:focus {
-  outline: none;
-}
 
-#prev.control-btn {
-  left: 10px; 
-}
-
-#next.control-btn {
-  right: 10px; 
-}
 
 
 .popup {
@@ -529,4 +486,35 @@ header {
 }
 #reserveForm label {
   color: var(--dark-brown2);
+}
+#certifications {
+  padding: 20px;
+  text-align: center;
+  background-color: #d0c9c0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #f4eded;
+  text-align: left;
+}
+
+th {
+  background-color: var(--base-brownlig);
+  color: white;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+  padding-bottom: 70px;
 }

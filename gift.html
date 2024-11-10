@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./gift.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./assets/images/cojlogo.png" type="image/x-icon" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+          <div class="navbar__content">
+            <div class="nav__links">
+              <img src="./assets/images/cojlogo.png" alt="logo" />
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="./products.html">Products</a></li>
+                <li><a href="./gift.html">Gift cards</a></li>
+                <li><a href="./about.html">About us</a></li>
+                <li><a href="./contact.html">Contact us</a></li>
+              </ul>
+            </div>
+            <div class="btn__group">
+              <button><a href="./login.html">Log in</a></button>
+              <button><a href="./signup.html">Sign up</a></button>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <section id="gift-info">
+        <div class="gift-info">
+          <div class="gift-section">
+            <div class="gift-section">
+        <h1>Why Choose a Gift Card?</h1>
+        <br>
+        <h2>Get information about our gift cards</h2>
+        <br>
+        <h3>Gift cards are the perfect choice when you're looking for a versatile and thoughtful present. Whether it's for a birthday, anniversary, or just to show you care, a gift card allows the recipient to choose what they want from our exclusive collection.</h3>
+       
+      </div>
+    </div>    </div>
+    </section> 
+
+      <section id="gift-card">
+        <div class="voucher">
+            <div class="voucher-image">
+                <img src="./assets/images/giftvoucher.jpg" alt="Voucher Logo">
+            </div>
+            <div class="voucher-content">
+                <div class="voucher-details">
+                    <h1>Gift Voucher</h1>
+                    <p class="tax-included">Tax included.</p>
+    
+                    <div class="denominations">
+                        <button class="denomination active">$25.00</button>
+                        <button class="denomination">$50.00</button>
+                        <button class="denomination">$100.00</button>
+                        <button class="denomination">$200.00</button>
+                    </div>
+    
+                    <div class="quantity">
+                        <button class="quantity-btn">-</button>
+                        <input type="number" value="1" min="1" readonly>
+                        <button class="quantity-btn">+</button>
+                    </div>
+    <br>
+                    <button id="add-to-cart" class="add-to-cart">Purchase</button>
+    
+                    <p class="gift-description">Give the Gift of Choice.</p>
+                    <p class="gift-support">
+                        Supports our charity’s soulful community development work.
+                        Connecting people in a ‘deadly’ way.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+      <section id="modal">
+      <div id="purchase-modal" class="modal">
+        <div class="modal-content">
+            <h2>Complete Your Purchase</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="payment-method">Payment Method:</label>
+            <select id="payment-method">
+                <option value="Credit Card">Credit Card</option>
+                <option value="PayPal">PayPal</option>
+            </select>
+            <button id="confirm-purchase" class="confirm-btn">Confirm Purchase</button>
+            <button id="close-modal" class="close-btn">Cancel</button>
+        </div>
+    </div>
+</section>
+
+<section class="gift-occasion">
+  <h2>Perfect for Any Occasion</h2>
+  <p>From birthdays to holidays, give the gift of choice!</p>
+  <div class="occasion-options">
+    <div class="occasion-item">
+      <img src="./assets/images/birthdaygift.jpg" alt="Birthday Gift">
+      <p>Birthday voucher</p>
+    </div>
+    <div class="occasion-item">
+      <img src="./assets/images/holidaygift.jpg" alt="Holiday Gift">
+      <p>Holiday voucher</p>
+    </div>
+    <div class="occasion-item">
+      <img src="./assets/images/celebrationgift.jpg" alt="Celebration Gift">
+      <p>Celebration voucher</p>
+    </div>
+  </div>
+</section> 
+<section id="gift-card-types">
+ 
+  <h2>Explore Our Gift Card Types</h2>
+  <p>Choose your perfect gift card type and surprise someone special today!</p>
+  <br>
+  <div class="gift-card-img">
+    <img src="/assets/images/gift1.png" alt="Gift">
+    
+      </div>
+  <button id="openModalBtn">Choose Your Gift Card</button>
+
+  <div id="giftCardModal" class="modal">
+      <div class="modal-content1"> 
+          <span class="close">&times;</span>
+          <h3>Select a Gift Card</h3>
+          <form id="gift-card-form">
+              <div class="form-group">
+                  <label for="gift-card-type">Choose a Gift Card Type:</label>
+                  <select id="gift-card-type" name="gift-card-type" required>
+                      <option value="Holiday">Holiday Card</option>
+                      <option value="Birthday">Birthday Card</option>
+                      <option value="Celebration">Celebration Card</option>
+                  </select>
+              </div>
+
+              <div class="form-group">
+                  <label for="amount">Enter Amount:</label>
+                  <input type="number" id="amount" name="amount" min="1" max="1000" step="1" placeholder="$50" required>
+              </div>
+
+              <div class="form-group">
+                  <label for="recipient-name">Recipient's Name:</label>
+                  <input type="text" id="recipient-name" name="recipient-name" pattern="[A-Za-z\s]+" placeholder="John Doe" required>
+              </div>
+
+              <div class="form-group">
+                  <label for="gift-message">Add a Gift Message (Optional):</label>
+                  <textarea id="gift-message" name="gift-message" rows="4" placeholder="Enter your personalized message here..."></textarea>
+              </div>
+
+              <div class="form-group">
+                  <button type="submit">Proceed to Checkout</button>
+              </div>
+          </form>
+    </div>
+  </div>
+</section>
+
+<section id="gift-card-stats">
+  <h2>Annual Gift Card Usage</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Year</th>
+        <th>Total Gift Cards Issued</th>
+        <th>Total Redemptions</th>
+        <th>Percentage Used</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2023</td>
+        <td>5,000</td>
+        <td>4,200</td>
+        <td>84%</td>
+      </tr>
+      <tr>
+        <td>2022</td>
+        <td>4,300</td>
+        <td>3,800</td>
+        <td>88%</td>
+      </tr>
+      <tr>
+        <td>2021</td>
+        <td>3,800</td>
+        <td>3,300</td>
+        <td>87%</td>
+      </tr>
+      <tr>
+        <td>2020</td>
+        <td>3,500</td>
+        <td>3,000</td>
+        <td>86%</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <p>
+        Email:
+        <a href="mailto:infocofffee@gmail.com">infocofffee@gmail.com</a>
+      </p>
+      <p>Phone: <a href="tel:+38344555666">+38344555666</a></p>
+    </div>
+    <div class="footer-column">
+      <h3>Support</h3>
+      <ul>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Shipping & Returns</a></li>
+        <li><a href="#">Frequently Asked Questions</a></li>
+        <li><a href="#">Manage Subscriptions</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>About Us</h3>
+      <ul>
+        <li><a href="#">Jobs</a></li>
+        <li><a href="#">Story</a></li>
+        <li><a href="#">Success Stories</a></li>
+        <li><a href="#">Locations</a></li>
+      </ul>
+    </div>
+    <div class="footer-logo">
+      <img src="./assets/images/logo2.png" alt="Footer Logo" />
+    </div>
+  </div>
+
+  <div class="social-links">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2024 Coffee Co. All Rights Reserved</p>
+  </div>
+</footer>
+    <script src="gift.js"></script>
+</body>
+</html>
