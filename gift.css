@@ -1,11 +1,12 @@
 .gift-info {
     width: 100%;
-    padding: 100px 20px 60px;
+    padding: 70px 20px 60px;
     text-align: center;
-    height: 100vh;
+    height: 110vh;
     animation: fadeIn 1s ease forwards;
     background-color: #483b32;
     overflow: hidden;
+
 }
 
 .gift-info h1, .gift-info h2, .gift-info h3 {
