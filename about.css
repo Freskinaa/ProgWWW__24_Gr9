@@ -110,102 +110,6 @@ body {
   }
 }
 
-.reviews__container {
-  background-color: #f3f0e7;
-}
-
-.reviews__wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 100%;
-  padding: 60px 20px;
-  overflow-x: hidden;
-}
-
-.reviews__text {
-  padding-bottom: 50px;
-  color: var(--second-dark2);
-  font-size: 40px;
-  text-align: center;
-}
-
-.reviews__cards {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  gap: 30px;
-  overflow-x: auto;
-  max-width: 100%;
-}
-.reviews__card {
-  display: flex;
-  background-color: var(--base-white);
-  border-radius: 15px;
-  padding: 20px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 280px;
-  transition: transform 0.3s;
-}
-
-#reviews {
-  background-color: #e0e7ff;
-  padding: 60px 20px;
-}
-.reviews__card:hover {
-  transform: scale(1.05);
-}
-
-.reviews__img img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.reviews__img {
-  overflow: hidden;
-}
-
-.reviews__user {
-  margin-top: 10px;
-  text-align: center;
-}
-
-.user-name {
-  font-weight: bold;
-  padding: 8px 0;
-  color: var(--second-dark2);
-}
-
-.user-comment {
-  font-style: italic;
-  padding-bottom: 20px;
-  color: var(--second-dark);
-}
-
-.carousel-indicators {
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-}
-
-.indicator {
-  width: 10px;
-  height: 10px;
-  background-color: gray;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.indicator.active {
-  background-color: black;
-}
-
 header {
   background-color: #f3f0e7;
   text-align: center;
@@ -266,8 +170,7 @@ header {
   transform: translateY(20px);
   animation: fadeIn 1s ease forwards;
   animation-delay: 0.2s;
-  text-shadow:  rgba(255, 255, 255, 0.5);
- 
+  text-shadow: rgba(255, 255, 255, 0.5);
 }
 
 .slideshow-container {
@@ -278,7 +181,6 @@ header {
   height: 400px;
   width: 80%;
   margin: auto;
-  
 }
 
 .slidecard {
@@ -324,9 +226,6 @@ header {
 .dot.active {
   opacity: 1;
 }
-
-
-
 
 .popup {
   display: none;
@@ -492,14 +391,20 @@ header {
   text-align: center;
   background-color: #d0c9c0;
 }
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
+#certifications h2 {
+  margin: 20px 0;
+  padding-top: 10px;
+  color: var(--second-dark);
 }
 
-th, td {
+table {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 40px auto;
+}
+
+th,
+td {
   padding: 12px;
   border: 1px solid #f4eded;
   text-align: left;
@@ -517,4 +422,93 @@ tbody tr:nth-child(even) {
 tbody tr:hover {
   background-color: #f1f1f1;
   padding-bottom: 70px;
+}
+.texti {
+  margin-top: 20px;
+
+  color: var(--second-dark2);
+}
+.texti h1 {
+  color: var(--second-dark);
+}
+
+.slideshow-container {
+  height: 70vh;
+  margin-bottom: 40px;
+}
+/* }
+.gallery {
+  --s: 220px;
+  --g: 12px;
+  display: grid;
+  grid: auto-flow var(--s) / repeat(2, var(--s));
+  gap: var(--g);
+  margin-bottom: 90px;
+}
+
+.gallery > img {
+  width: 100%;
+  aspect-ratio: 1;
+  cursor: pointer;
+  filter: grayscale();
+  z-index: 0;
+  transition: 0.25s, z-index 0s 0.25s;
+}
+.gallery > img:hover {
+  width: calc(200% + var(--g));
+  filter: grayscale(0);
+  z-index: 1;
+  --_c: 50%;
+  transition: 0.4s, z-index 0s;
+}
+.gallery > img:nth-child(1) {
+  clip-path: circle(var(--_c, 55% at 70% 70%));
+  place-self: start;
+}
+.gallery > img:nth-child(2) {
+  clip-path: circle(var(--_c, 55% at 30% 70%));
+  place-self: start end;
+}
+.gallery > img:nth-child(3) {
+  clip-path: circle(var(--_c, 55% at 70% 30%));
+  place-self: end start;
+}
+.gallery > img:nth-child(4) {
+  clip-path: circle(var(--_c, 55% at 30% 30%));
+  place-self: end;
+} */
+
+.gallery {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: rotate 35s linear infinite;
+  margin-bottom: 30px;
+}
+
+@keyframes rotate {
+  from {
+    transform: perspective(1200px) rotateY(0deg);
+  }
+
+  to {
+    transform: perspective(1200px) rotateY(360deg);
+  }
+}
+
+.gallery span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(380px);
+}
+
+.gallery span img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

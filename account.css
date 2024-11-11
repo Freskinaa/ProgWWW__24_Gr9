@@ -19,17 +19,19 @@
 }
 
 #userInfoContent {
-  background-color: #543b31;
+  background-image: url(./assets/gif/cm1.gif);
   border-radius: 20px;
   padding: 30px;
+  height: 400px;
 }
 
 #userInfoContent h2 {
   font-size: 28px;
-  color: #ffe0b2;
+  color: white;
   font-weight: bold;
   margin-bottom: 10px;
   text-align: center;
+ 
 }
 
 #userDetails span {
