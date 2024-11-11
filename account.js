@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     userNameElement.textContent = user.name;
     userEmailDisplay.textContent = user.email;
     userPasswordDisplay.textContent = "••••••••"; 
+    userNameDisplay.textContent = user.name; 
 
  
     editEmailBtn.addEventListener("click", function () {
@@ -64,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
     saveChangesBtn.addEventListener("click", function () {
       const updatedEmail = userEmailDisplay.textContent;
       const updatedPassword = userPasswordDisplay.textContent;
-
+  user.name = updatedName;
       user.email = updatedEmail;
       user.password = updatedPassword;
 
