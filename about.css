@@ -424,15 +424,19 @@ tbody tr:hover {
   padding-bottom: 70px;
 }
 .texti {
-  margin: 40px 0;
+  margin-top: 20px;
+
   color: var(--second-dark2);
 }
 .texti h1 {
-  padding-bottom: 35px;
+  color: var(--second-dark);
 }
+
 .slideshow-container {
   height: 70vh;
+  margin-bottom: 40px;
 }
+/* }
 .gallery {
   --s: 220px;
   --g: 12px;
@@ -472,4 +476,39 @@ tbody tr:hover {
 .gallery > img:nth-child(4) {
   clip-path: circle(var(--_c, 55% at 30% 30%));
   place-self: end;
+} */
+
+.gallery {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: rotate 35s linear infinite;
+  margin-bottom: 30px;
+}
+
+@keyframes rotate {
+  from {
+    transform: perspective(1200px) rotateY(0deg);
+  }
+
+  to {
+    transform: perspective(1200px) rotateY(360deg);
+  }
+}
+
+.gallery span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(380px);
+}
+
+.gallery span img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
