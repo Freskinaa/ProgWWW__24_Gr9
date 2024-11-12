@@ -1,4 +1,4 @@
-@ -1,33 +1,33 @@
+
 const cards = document.querySelectorAll('.reviews__card');
 const indicators = document.querySelectorAll('.indicator');
 let currentIndex = 0;
