@@ -1,43 +1,34 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const indicators = document.querySelectorAll(".indicator");
-  const cards = document.querySelectorAll(".reviews__card");
-  const leftArrow = document.querySelector(".left-arrow");
-  const rightArrow = document.querySelector(".right-arrow");
-  const cardsPerPage = 3;
-  let currentPage = 0;
+@ -1,33 +1,33 @@
+const cards = document.querySelectorAll('.reviews__card');
+const indicators = document.querySelectorAll('.indicator');
+let currentIndex = 0;
 
-  function showCards(page) {
-    cards.forEach((card, index) => {
-      card.style.display =
-        index >= page * cardsPerPage && index < (page + 1) * cardsPerPage
-          ? "block"
-          : "none";
+function showCards(index) {
+    cards.forEach((card, i) => {
+        card.style.display = (i >= index && i < index + 3) ? 'block' : 'none'; 
     });
-
-    indicators.forEach((indicator, index) => {
-      indicator.classList.toggle("active", index === page);
+    indicators.forEach((indicator, i) => {
+        indicator.classList.toggle('active', i === Math.floor(index / 3)); 
     });
+}
 
-    currentPage = page;
-  }
+showCards(currentIndex);
 
-  indicators.forEach((indicator, index) => {
-    indicator.addEventListener("click", () => {
-      showCards(index);
+indicators.forEach((indicator, i) => {
+    indicator.addEventListener('click', () => {
+        currentIndex = i * 3; 
+        showCards(currentIndex);
     });
-  });
+});
 
-  leftArrow.addEventListener("click", () => {
-    if (currentPage > 0) {
-      showCards(currentPage - 1);
-    }
-  });
+const reserveBtn = document.getElementById('reserveBtn');
+const popupModal = document.getElementById('popupModal');
+const closePopupBtn = document.getElementById('closePopup');
 
-  rightArrow.addEventListener("click", () => {
-    if (currentPage < indicators.length - 1) {
-      showCards(currentPage + 1);
-    }
-  });
+reserveBtn.addEventListener('click', () => {
+    popupModal.style.display = 'flex';
+});
 
-  showCards(currentPage);
+closePopupBtn.addEventListener('click', () => {
+    popupModal.style.display = 'none';
 });
