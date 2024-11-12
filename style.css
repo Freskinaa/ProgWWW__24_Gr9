@@ -151,9 +151,12 @@ body {
 }
 
 .nav__links ul li a.active {
-  background-color: #a5e887;
+  background-color: var(--base-lightbrown);
   color: #000;
+  transform: scale(1.05);
 }
+
+
 
 .nav__links ul li a:hover {
   background-color: var(--base-lightbrown);
