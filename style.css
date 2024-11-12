@@ -38,6 +38,15 @@
   --text-color: #4b2e2b;
   --cherry: rgb(90, 10, 10);
 }
+/* body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3,h4,h5,h6,p,a {
+  font-family: 'Poppins', sans-serif;
+} */
+
+
 #coffee {
   position: relative;
 }
@@ -588,11 +597,11 @@ body {
   color: var(--base-white);
   transform: translateY(-50%) scale(1.1);
 }
-
 .footer {
-  background-color: #63402c;
-  padding: 40px 20px;
-  font-family: Arial, sans-serif;
+  background-color: #3e2723;
+  padding: 50px 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #f8f3e2;
 }
 
 .footer-container {
@@ -607,29 +616,31 @@ body {
 
 .footer-column {
   flex: 1;
-  min-width: 220px;
+  min-width: 250px;
   margin: 0 20px;
 }
+
 .footer-column p {
-  color: #eadfd0fe;
+  color: #f8f3e2;
+  line-height: 1.6;
 }
 
 .footer-column h3 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  color: #eadfd0fe;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #f8f3e2;
+  font-weight: 600;
   position: relative;
 }
 
 .footer-column h3::after {
-  width: 110px;
-  height: 2.5px;
-  background-color: #382a20;
+  content: "";
+  width: 120px;
+  height: 3px;
+  background-color: #ffcc80;
   position: absolute;
-  text-decoration: underline;
-
-  left: 0;
   bottom: -5px;
+  left: 0;
 }
 
 .footer-column ul {
@@ -638,19 +649,18 @@ body {
 }
 
 .footer-column li {
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 }
 
 .footer-column a {
-  color: #eadfd0fe;
+  color: #f8f3e2;
   text-decoration: none;
-
   font-size: 1rem;
   transition: color 0.3s ease, transform 0.2s;
 }
 
 .footer-column a:hover {
-  color: #754d2e;
+  color: #ffcc80;
   text-decoration: underline;
   transform: scale(1.05);
 }
@@ -686,7 +696,7 @@ body {
 
 .footer-bottom p {
   font-size: 0.9rem;
-  color: #eadfd0fe;
+  color: #f8f3e2;
 }
 
 .social-links {
@@ -697,7 +707,7 @@ body {
 }
 
 .social-links a {
-  color: #eadfd0fe;
+  color: #f8f3e2;
   font-size: 1.3rem;
   transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -717,10 +727,10 @@ body {
 
 .left-side .border-animation {
   overflow: hidden;
-  border: 2px solid #c79a63;
+  border: 2px solid #533c21;
   border-radius: 8px;
   animation: borderGlow 3s ease-in-out infinite alternate;
-  width: 250px;
+  width: 290px;
   height: 350px;
   margin: 0 auto;
 }
@@ -728,10 +738,6 @@ body {
 .left-side img {
   width: 100%;
   height: 350px;
-}
-
-.left-side:hover img {
-  transform: scale(1.05);
 }
 
 .right-side {

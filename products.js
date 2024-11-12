@@ -90,22 +90,24 @@ document.getElementById("filterHot").addEventListener("click", () => {
   if (selectedFilter === 'hot') {
     selectedFilter = 'all';
     document.getElementById("filterHot").classList.remove("active");
-    document.getElementById("filterCold").classList.remove("active");
   } else {
     selectedFilter = 'hot';
     document.getElementById("filterHot").classList.add("active");
     document.getElementById("filterCold").classList.remove("active");
   }
-  
   filterProducts();
 });
 
 document.getElementById("filterCold").addEventListener("click", () => {
-  selectedFilter = 'cold';
+  if (selectedFilter === 'cold') {
+    selectedFilter = 'all';
+    document.getElementById("filterCold").classList.remove("active");
+  } else {
+    selectedFilter = 'cold';
+    document.getElementById("filterCold").classList.add("active");
+    document.getElementById("filterHot").classList.remove("active");
+  }
   filterProducts();
-  
-  document.getElementById("filterCold").classList.add("active");
-  document.getElementById("filterHot").classList.remove("active");
 });
 
 document.getElementById("filterAll").addEventListener("click", () => {

@@ -146,6 +146,8 @@
 .filter-options {
   position: relative;
   width: 80%;
+  
+  margin-left: -20px;
 }
 
 .filter-button {
@@ -169,6 +171,8 @@
   border-radius: 5px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   padding: 10px;
+  
+  margin-left: -40px;
   z-index: 1;
   display: none; 
   transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -189,8 +193,10 @@
   padding: 8px 12px;
   cursor: pointer;
   width: 100%;
+  
   text-align: left;
   transition: background-color 0.3s ease;
+  
 }
 
 .dropdown-button:hover {
@@ -448,4 +454,11 @@ button:hover {
 
 button:focus {
   outline: none;
+}
+#filterButton{
+  padding: 10px 30px;
+  border-radius: 5px;
+  margin-left: -40px;
+  color: white;
+  border: none;
 }
