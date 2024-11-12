@@ -55,8 +55,8 @@
 }
 
 .coffee_txt1 {
-  margin-top: -25px; 
-  font-size: 16px; 
+  margin-top: -25px;
+  font-size: 16px;
   color: white;
   font-weight: bolder;
 }
@@ -366,26 +366,24 @@ body {
   color: var(--base-white);
   font-size: 18px;
   text-decoration: none;
-  
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3), 
-              inset 0 -4px 8px rgba(0, 0, 0, 0.2), 
-              inset 0 4px 6px rgba(255, 255, 255, 0.1);
+
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3), inset 0 -4px 8px rgba(0, 0, 0, 0.2),
+    inset 0 4px 6px rgba(255, 255, 255, 0.1);
   transform: translateY(-2px);
 }
 
 .btn_group button.large-btn:hover {
   background-color: var(--second-dark);
   transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 
-              inset 0 -6px 10px rgba(0, 0, 0, 0.3), 
-              inset 0 6px 8px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4),
+    inset 0 -6px 10px rgba(0, 0, 0, 0.3),
+    inset 0 6px 8px rgba(255, 255, 255, 0.2);
 }
 
 .btn_group button.large-btn:active {
   transform: translateY(0);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 
-              inset 0 -2px 5px rgba(0, 0, 0, 0.2), 
-              inset 0 2px 4px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), inset 0 -2px 5px rgba(0, 0, 0, 0.2),
+    inset 0 2px 4px rgba(255, 255, 255, 0.1);
 }
 
 .btn_group button.large-btn a {
@@ -441,6 +439,7 @@ body {
   background-color: #f3f0e7;
   padding: 60px 0;
   overflow: hidden;
+  position: relative;
 }
 
 .reviews__wrapper {
@@ -493,51 +492,18 @@ body {
 }
 
 .reviews__card:hover {
-  transform: scale(1.05) rotate(1deg);
+  transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 .reviews__img {
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  border-radius: 30px;
+  border-radius: 50%;
   margin: 20px auto;
-  width: 80%; 
-  height: 120px; 
+  width: 80%;
+  height: auto;
   animation: fadeIn 1s ease;
 }
 
@@ -546,12 +512,7 @@ body {
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
-  margin-left: 0; 
-}
-
-
-.reviews__card:hover .reviews__img img {
-  transform: scale(1.1) rotate(3deg);
+  margin-left: 0;
 }
 
 .reviews__user {
@@ -594,6 +555,40 @@ body {
   transform: scale(1.2);
 }
 
+.arrow {
+  font-size: 24px;
+  color: var(--second-dark2);
+  background-color: var(--base-white);
+  border: 2px solid var(--second-dark2);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  position: absolute;
+  top: 50%;
+
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.left-arrow {
+  left: 110px;
+}
+
+.right-arrow {
+  right: 110px;
+}
+
+.arrow:hover {
+  background-color: var(--second-dark2);
+  color: var(--base-white);
+  transform: translateY(-50%) scale(1.1);
+}
+
 .footer {
   background-color: #63402c;
   padding: 40px 20px;
@@ -615,7 +610,7 @@ body {
   min-width: 220px;
   margin: 0 20px;
 }
-.footer-column p{
+.footer-column p {
   color: #eadfd0fe;
 }
 
@@ -649,7 +644,7 @@ body {
 .footer-column a {
   color: #eadfd0fe;
   text-decoration: none;
-  
+
   font-size: 1rem;
   transition: color 0.3s ease, transform 0.2s;
 }
@@ -711,7 +706,6 @@ body {
   color: #ffbb88;
   transform: scale(1.1);
 }
-
 
 .both {
   display: grid;
@@ -843,49 +837,45 @@ body {
   50% {
     transform: translateY(-3px);
   }
-}.coffee-mug {
-  background: #3F2616;
+}
+.coffee-mug {
+  background: #3f2616;
   position: relative;
-  margin: 50px 60px 50px 10px; 
-  width: 50px; 
-  height: 50px; 
+  margin: 50px 60px 50px 10px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  box-shadow: 0 0 0 6px #442918,
-              0 0 0 15px #3C2415,
-              0 0 0 25px #E4E6B2,
-              0 0 0 40px #EFF0D1,
-              0 50px 0 -15px #3C2415,
-              40px 30px 0 -15px #3C2415,
-              40px 70px 0 -5px #3C2415,
-              0px 90px 0 -30px #3C2415,
-              5px 110px 0 -40px #3C2415;
-  transform: scale(1.1); /* Përdor scale për ta bërë pak më të madh filxhanin */
+  box-shadow: 0 0 0 6px #442918, 0 0 0 15px #3c2415, 0 0 0 25px #e4e6b2,
+    0 0 0 40px #eff0d1, 0 50px 0 -15px #3c2415, 40px 30px 0 -15px #3c2415,
+    40px 70px 0 -5px #3c2415, 0px 90px 0 -30px #3c2415,
+    5px 110px 0 -40px #3c2415;
+  transform: scale(1.1); 
   transition: transform 0.3s ease-in-out;
 }
 
 .coffee-mug:hover {
-  transform: translateY(-10px) rotate(10deg) scale(1.2); /* Lëviz, rrotullohet dhe zmadhohet kur kalohet miu mbi të */
+  transform: translateY(-10px) rotate(10deg) scale(1.2); 
 }
 
 .coffee-mug::before {
-  content: '';
+  content: "";
   position: absolute;
-  background: #EFF0D1;
-  height: 40px; 
+  background: #eff0d1;
+  height: 40px;
   width: 30px;
   top: -40px;
   right: -35px;
   border-radius: 5px;
-  box-shadow: inset 0px 20px 0 0px #EFF0D1;
-  transform: rotate(45deg) skewX(10deg); 
+  box-shadow: inset 0px 20px 0 0px #eff0d1;
+  transform: rotate(45deg) skewX(10deg);
 }
 .coffee-mug::after {
-  content: '';
+  content: "";
   width: 10px;
-  height: 10px; 
+  height: 10px;
   border-radius: 50%;
   position: absolute;
-  border: 2px solid #77665C;
+  border: 2px solid #77665c;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -901,26 +891,23 @@ body {
 @keyframes rings {
   to {
     width: 60px;
-    height: 60px; 
+    height: 60px;
     opacity: 0;
-    transform: scale(1.5); 
+    transform: scale(1.5);
   }
 }
 
-
-
 .coffee-mug::after {
-  content: '';
+  content: "";
   position: absolute;
   top: -20px;
   left: 50%;
   width: 8px;
   height: 8px;
-  background: #D3D3D3;
+  background: #d3d3d3;
   border-radius: 50%;
   animation: steam 2s ease-in-out infinite;
 }
-
 
 @keyframes steam {
   0% {
@@ -930,5 +917,37 @@ body {
   100% {
     transform: translateX(-50%) translateY(-20px);
     opacity: 0;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
