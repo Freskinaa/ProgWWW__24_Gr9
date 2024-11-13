@@ -13,18 +13,23 @@
       <div class="container">
         <div class="navbar__content">
           <div class="nav__links">
-            <img src="./assets/images/cojlogo.png" alt="logo" />
+            <img src="./assets/images/logoo.png" alt="logo" />
             <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="./products.html">Products</a></li>
-              <li><a href="./gift.html">Gift cards</a></li>
-              <li><a href="./about.html">About us</a></li>
-              <li><a href="./contact.html">Contact us</a></li>
+              <li><a href="/" class="nav-link">Home</a></li>
+              <li>
+                <a href="/products.html" class="nav-link active">Products</a>
+              </li>
+              <li><a href="/gift.html" class="nav-link">Gift cards</a></li>
+              <li><a href="/about.html" class="nav-link">About us</a></li>
+              <li><a href="/contact.html" class="nav-link">Contact us</a></li>
+              <li id="accountLink">
+                <a href="account.html" class="nav-link">My Account</a>
+              </li>
             </ul>
           </div>
           <div class="btn__group">
             <button><a href="./login.html">Log in</a></button>
-            <button><a href="./signup.html">Sign up</a></button>
+            <button><a href="./register.html">Sign up</a></button>
           </div>
         </div>
       </div>
@@ -32,108 +37,116 @@
 
     <section id="ordernow" class="order_now">
       <div class="container">
-          <div class="header">
-              <h2>Order Summary</h2>
-          </div>
-          <div class="card_container">
-              <h3>Select Coffee Type</h3>
-              <select id="coffee-type">
-                <option value="espresso">Espresso</option>
-                <option value="latte">Latte</option>
-                <option value="cappuccino">Cappuccino</option>
-                <option value="americano">Americano</option>
-                <option value="IcedMocha">Iced Mocha</option>
-                <option value="frappe">Frappe</option>
-                <option value="coldBrew">Cold Brew</option>
-                <option value="breve">Breve</option>
-                <option value="TurkishCoffee">Turkish Coffee</option>
-                <option value="cortado">Cortado</option>
-                <option value="dalgona">Dalgona</option>
-                <option value="dirtychai">Dirty Chai</option>
-                <option value="mazagran">Mazagran</option>
-                <option value="flatWhite">Flat White</option>
-                <option value="dopio">Dopio</option>
-                <option value="arabica">Arabica</option>
-                <option value="galao">Galao</option>
-                <option value="mocha">Mocha</option>
-                <option value="macchiato">Macchiato</option>
-                <option value="affogato">Affogato</option>
-                <option value="nitroColdBrew">Nitro Cold Brew</option>
-                <option value="IrishCoffee">Irish Coffee</option>
-                <option value="decaf">Decaf</option>
-              </select>
-              
+        <div class="header">
+          <h2>Order Summary</h2>
+        </div>
+        <div class="card_container">
+          <h3>Select Coffee Type</h3>
+          <select id="coffee-type">
+            <option value="espresso">Espresso</option>
+            <option value="latte">Latte</option>
+            <option value="cappuccino">Cappuccino</option>
+            <option value="americano">Americano</option>
+            <option value="IcedMocha">Iced Mocha</option>
+            <option value="frappe">Frappe</option>
+            <option value="coldBrew">Cold Brew</option>
+            <option value="breve">Breve</option>
+            <option value="TurkishCoffee">Turkish Coffee</option>
+            <option value="cortado">Cortado</option>
+            <option value="dalgona">Dalgona</option>
+            <option value="dirtychai">Dirty Chai</option>
+            <option value="mazagran">Mazagran</option>
+            <option value="flatWhite">Flat White</option>
+            <option value="dopio">Dopio</option>
+            <option value="arabica">Arabica</option>
+            <option value="galao">Galao</option>
+            <option value="mocha">Mocha</option>
+            <option value="macchiato">Macchiato</option>
+            <option value="affogato">Affogato</option>
+            <option value="nitroColdBrew">Nitro Cold Brew</option>
+            <option value="IrishCoffee">Irish Coffee</option>
+            <option value="decaf">Decaf</option>
+          </select>
 
-              <h3>Choose Quantity</h3>
-              <input type="number" min="1" value="1" id="quantity" onchange="updateTotalCost()" />
+          <h3>Choose Quantity</h3>
+          <input
+            type="number"
+            min="1"
+            value="1"
+            id="quantity"
+            onchange="updateTotalCost()"
+          />
 
-              <h3>Payment Method</h3>
-              <select id="payment-method">
-                  <option value="credit-card">Credit Card</option>
-                  <option value="paypal">PayPal</option>
-                  <option value="cash-on-delivery">Cash on Delivery</option>
-              </select>
+          <h3>Payment Method</h3>
+          <select id="payment-method">
+            <option value="credit-card">Credit Card</option>
+            <option value="paypal">PayPal</option>
+            <option value="cash-on-delivery">Cash on Delivery</option>
+          </select>
 
-              <h3>Delivery Location</h3>
-              <input type="text" id="address" placeholder="Enter your delivery address" />
+          <h3>Delivery Location</h3>
+          <input
+            type="text"
+            id="address"
+            placeholder="Enter your delivery address"
+          />
 
-              <h3>Pickup or Delivery</h3>
-              <select id="delivery-method">
-                  <option value="pickup">Pickup</option>
-                  <option value="delivery">Delivery</option>
-              </select>
+          <h3>Pickup or Delivery</h3>
+          <select id="delivery-method">
+            <option value="pickup">Pickup</option>
+            <option value="delivery">Delivery</option>
+          </select>
 
-              <h3>Total Cost: <span id="total-cost">$1.00</span></h3>
+          <h3>Total Cost: <span id="total-cost">$1.00</span></h3>
 
-              <button onclick="confirmOrder()">Confirm Order</button>
-          </div>
+          <button onclick="confirmOrder()">Confirm Order</button>
+        </div>
       </div>
-  </section>
+    </section>
 
-
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-column">
-        <h3>Contact Us</h3>
-        <p>
-          Email:
-          <a href="mailto:infocofffee@gmail.com">infocofffee@gmail.com</a>
-        </p>
-        <p>Phone: <a href="tel:+38344555666">+38344555666</a></p>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <p>
+            Email:
+            <a href="mailto:infocofffee@gmail.com">infocofffee@gmail.com</a>
+          </p>
+          <p>Phone: <a href="tel:+38344555666">+38344555666</a></p>
+        </div>
+        <div class="footer-column">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Shipping & Returns</a></li>
+            <li><a href="#">Frequently Asked Questions</a></li>
+            <li><a href="#">Manage Subscriptions</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>About Us</h3>
+          <ul>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Story</a></li>
+            <li><a href="#">Success Stories</a></li>
+            <li><a href="#">Locations</a></li>
+          </ul>
+        </div>
+        <div class="coffee-mug"></div>
       </div>
-      <div class="footer-column">
-        <h3>Support</h3>
-        <ul>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Shipping & Returns</a></li>
-          <li><a href="#">Frequently Asked Questions</a></li>
-          <li><a href="#">Manage Subscriptions</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h3>About Us</h3>
-        <ul>
-          <li><a href="#">Jobs</a></li>
-          <li><a href="#">Story</a></li>
-          <li><a href="#">Success Stories</a></li>
-          <li><a href="#">Locations</a></li>
-        </ul>
-      </div>
-      <div class="coffee-mug"></div>
-    </div>
 
-    <div class="social-links">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-linkedin-in"></i></a>
-    </div>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
 
-    <div class="footer-bottom">
-      <p>&copy; 2024 Coffee Co. All Rights Reserved</p>
-    </div>
-  </footer>
-  
+      <div class="footer-bottom">
+        <p>&copy; 2024 Coffee Co. All Rights Reserved</p>
+      </div>
+    </footer>
+    <script src="./account.js"></script>
     <script src="./order.js"></script>
   </body>
 </html>

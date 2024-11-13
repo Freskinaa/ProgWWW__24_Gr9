@@ -1,43 +1,33 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const indicators = document.querySelectorAll(".indicator");
-  const cards = document.querySelectorAll(".reviews__card");
-  const leftArrow = document.querySelector(".left-arrow");
-  const rightArrow = document.querySelector(".right-arrow");
-  const cardsPerPage = 3;
-  let currentPage = 0;
+const cards = document.querySelectorAll(".reviews__card");
+const indicators = document.querySelectorAll(".indicator");
+let currentIndex = 0;
 
-  function showCards(page) {
-    cards.forEach((card, index) => {
-      card.style.display =
-        index >= page * cardsPerPage && index < (page + 1) * cardsPerPage
-          ? "block"
-          : "none";
-    });
-
-    indicators.forEach((indicator, index) => {
-      indicator.classList.toggle("active", index === page);
-    });
-
-    currentPage = page;
-  }
-
-  indicators.forEach((indicator, index) => {
-    indicator.addEventListener("click", () => {
-      showCards(index);
-    });
+function showCards(index) {
+  cards.forEach((card, i) => {
+    card.style.display = i >= index && i < index + 3 ? "block" : "none";
   });
-
-  leftArrow.addEventListener("click", () => {
-    if (currentPage > 0) {
-      showCards(currentPage - 1);
-    }
+  indicators.forEach((indicator, i) => {
+    indicator.classList.toggle("active", i === Math.floor(index / 3));
   });
+}
 
-  rightArrow.addEventListener("click", () => {
-    if (currentPage < indicators.length - 1) {
-      showCards(currentPage + 1);
-    }
+showCards(currentIndex);
+
+indicators.forEach((indicator, i) => {
+  indicator.addEventListener("click", () => {
+    currentIndex = i * 3;
+    showCards(currentIndex);
   });
+});
 
-  showCards(currentPage);
+const reserveBtn = document.getElementById("reserveBtn");
+const popupModal = document.getElementById("popupModal");
+const closePopupBtn = document.getElementById("closePopup");
+
+reserveBtn.addEventListener("click", () => {
+  popupModal.style.display = "flex";
+});
+
+closePopupBtn.addEventListener("click", () => {
+  popupModal.style.display = "none";
 });

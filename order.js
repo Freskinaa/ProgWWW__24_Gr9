@@ -74,7 +74,9 @@ function updateTotalCost() {
   const quantity = parseInt(document.getElementById("quantity").value, 10) || 1;
 
   if (quantity > 1000) {
-    alert(`Sasia e porosisë prej ${quantity} është mbi 1000. Ju lutemi zgjidhni një sasi më të vogël.`);
+    alert(
+      `Sasia e porosisë prej ${quantity} është mbi 1000. Ju lutemi zgjidhni një sasi më të vogël.`
+    );
     return;
   }
 

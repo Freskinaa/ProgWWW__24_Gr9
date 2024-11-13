@@ -13,18 +13,23 @@
       <div class="container">
         <div class="navbar__content">
           <div class="nav__links">
-            <img src="./assets/images/cojlogo.png" alt="logo" />
+            <img src="./assets/images/logoo.png" alt="logo" />
             <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="./products.html">Products</a></li>
-              <li><a href="./gift.html">Gift cards</a></li>
-              <li><a href="./about.html">About us</a></li>
-              <li><a href="./contact.html">Contact us</a></li>
+              <li><a href="/" class="nav-link">Home</a></li>
+              <li>
+                <a href="/products.html" class="nav-link active">Products</a>
+              </li>
+              <li><a href="/gift.html" class="nav-link">Gift cards</a></li>
+              <li><a href="/about.html" class="nav-link">About us</a></li>
+              <li><a href="/contact.html" class="nav-link">Contact us</a></li>
+              <li id="accountLink">
+                <a href="account.html" class="nav-link">My Account</a>
+              </li>
             </ul>
           </div>
           <div class="btn__group">
             <button><a href="./login.html">Log in</a></button>
-            <button><a href="./signup.html">Sign up</a></button>
+            <button><a href="./register.html">Sign up</a></button>
           </div>
         </div>
       </div>
@@ -386,10 +391,7 @@
             </div>
             <div class="coffeetypes__card hidden hot">
               <div class="coffeetypes__img">
-                <img
-                  src="./assets/images/bulletproof.jpg"
-                  alt="bulletproof"
-                />
+                <img src="./assets/images/bulletproof.jpg" alt="bulletproof" />
               </div>
               <div class="coffeetypes__content">
                 <h3>Bulletproof</h3>
@@ -501,55 +503,99 @@
     <section id="customized-drink">
       <div class="customize-drink-container">
         <h2>Want to Customize Your Drink?</h2>
-    
+
         <div class="customization-options">
-          <div class="option" draggable="true" id="espresso" ondragstart="drag(event)">
+          <div
+            class="option"
+            draggable="true"
+            id="espresso"
+            ondragstart="drag(event)"
+          >
             <p>Espresso</p>
           </div>
-          <div class="option" draggable="true" id="latte" ondragstart="drag(event)">
+          <div
+            class="option"
+            draggable="true"
+            id="latte"
+            ondragstart="drag(event)"
+          >
             <p>Latte</p>
           </div>
-          <div class="option" draggable="true" id="mocha" ondragstart="drag(event)">
+          <div
+            class="option"
+            draggable="true"
+            id="mocha"
+            ondragstart="drag(event)"
+          >
             <p>Mocha</p>
           </div>
-          <div class="option" draggable="true" id="almond" ondragstart="drag(event)">
+          <div
+            class="option"
+            draggable="true"
+            id="almond"
+            ondragstart="drag(event)"
+          >
             <p>Almond Milk</p>
           </div>
-          <div class="option" draggable="true" id="caramel" ondragstart="drag(event)">
+          <div
+            class="option"
+            draggable="true"
+            id="caramel"
+            ondragstart="drag(event)"
+          >
             <p>Caramel</p>
           </div>
         </div>
-    
-        <div class="drink-container" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+        <div
+          class="drink-container"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        >
           <p>Drop your choices here!</p>
           <div id="drink-customization"></div>
         </div>
-    
-        <button id="order-button" onclick="finalizeOrder()">Finalize Order</button>
+
+        <button id="order-button" onclick="finalizeOrder()">
+          Finalize Order
+        </button>
       </div>
     </section>
-    
+
     <div id="order-modal" class="modal">
       <div class="modal-content">
         <span class="close-btn" onclick="closeModal()">&times;</span>
         <h2>Order Summary</h2>
         <div id="order-summary"></div>
-    
+
         <label for="user-name">Your Name:</label>
-        <input type="text" id="user-name" placeholder="Enter your name" required>
-    
+        <input
+          type="text"
+          id="user-name"
+          placeholder="Enter your name"
+          required
+        />
+
         <label for="location">Your Location:</label>
-        <input type="text" id="location" placeholder="Enter your location" required>
-    
+        <input
+          type="text"
+          id="location"
+          placeholder="Enter your location"
+          required
+        />
+
         <label for="phone">Your Phone Number:</label>
-        <input type="text" id="phone" placeholder="Enter your phone number" required>
-        
+        <input
+          type="text"
+          id="phone"
+          placeholder="Enter your phone number"
+          required
+        />
+
         <button onclick="submitOrder()">Submit</button>
       </div>
     </div>
-    
-    
-    
+
     <section id="nutrition" class="nutrition__container">
       <div class="container">
         <div class="nutrition__title">
@@ -655,7 +701,6 @@
       </div>
     </section>
 
-
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-column">
@@ -684,11 +729,8 @@
             <li><a href="#">Locations</a></li>
           </ul>
         </div>
-        <div class="footer-logo">
-          <img src="./assets/images/logo2.png" alt="Footer Logo" />
-        </div>
+        <div class="coffee-mug"></div>
       </div>
-
 
       <div class="social-links">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -696,12 +738,13 @@
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-linkedin-in"></i></a>
       </div>
-    
+
       <div class="footer-bottom">
         <p>&copy; 2024 Coffee Co. All Rights Reserved</p>
       </div>
     </footer>
-    
+
+    <script src="./account.js"></script>
     <script src="./products.js"></script>
   </body>
 </html>
