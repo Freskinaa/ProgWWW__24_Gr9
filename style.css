@@ -93,11 +93,6 @@ body {
   width: 90%;
   margin: 0 auto;
 }
-.container {
-  width: 90%;
-  margin: 0 auto;
-}
-
 .navbar {
   position: fixed;
   top: 0;
@@ -150,11 +145,13 @@ body {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.nav__links ul li a.active {
+
+.nav-link.active {
   background-color: var(--base-lightbrown);
-  color: #000;
+  color: var(--second-dark);
   transform: scale(1.05);
 }
+
 
 
 
