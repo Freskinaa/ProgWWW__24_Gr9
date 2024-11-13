@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meet Our Team & Contact Us</title>
@@ -8,53 +8,57 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="icon" href="./assets/images/cojlogo.png" type="image/x-icon" />
     <style>
-     @font-face {
-    font-family: 'CustomFont';
-    src: url('./assets/fonts/CustomFont-Regular.woff2') format('woff2'),
-         url('./assets/fonts/CustomFont-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+      @font-face {
+        font-family: "CustomFont";
+        src: url("./assets/fonts/CustomFont-Regular.woff2") format("woff2"),
+          url("./assets/fonts/CustomFont-Regular.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
 
-body {
-    font-family: 'CustomFont', Arial, sans-serif;
-}
+      body {
+        font-family: "CustomFont", Arial, sans-serif;
+      }
 
-.feedback-section h2 {
-    font-size: 24px;
-    color: #333;
-}
+      .feedback-section h2 {
+        font-size: 24px;
+        color: #333;
+      }
 
-.submit-button {
-    color: white;
-}
+      .submit-button {
+        color: white;
+      }
 
-.submit-button:hover {
-    background-color: #55442d;
-}
-
-  </style>
-</head>
-<body>
+      .submit-button:hover {
+        background-color: #55442d;
+      }
+    </style>
+  </head>
+  <body>
     <nav class="navbar">
-        <div class="container">
-            <div class="navbar__content">
-                <div class="nav__links">
-                    <img src="./assets/images/cojlogo.png" alt="logo" />
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="./products.html">Products</a></li>
-                        <li><a href="/gift.html">Gift cards</a></li>
-                        <li><a href="./about.html">About Us</a></li>
-                        <li><a href="./contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="btn__group">
-                    <button><a href="./login.html">Log In</a></button>
-                    <button><a href="./signup.html">Sign Up</a></button>
-                </div>
-            </div>
+      <div class="container">
+        <div class="navbar__content">
+          <div class="nav__links">
+            <img src="./assets/images/logoo.png" alt="logo" />
+            <ul>
+              <li><a href="/" class="nav-link">Home</a></li>
+              <li><a href="/products.html" class="nav-link">Products</a></li>
+              <li><a href="/gift.html" class="nav-link">Gift cards</a></li>
+              <li><a href="/about.html" class="nav-link">About us</a></li>
+              <li>
+                <a href="/contact.html" class="nav-link active">Contact us</a>
+              </li>
+              <li id="accountLink">
+                <a href="account.html" class="nav-link">My Account</a>
+              </li>
+            </ul>
+          </div>
+          <div class="btn__group">
+            <button><a href="./login.html">Log in</a></button>
+            <button><a href="./register.html">Sign up</a></button>
+          </div>
         </div>
+      </div>
     </nav>
 
     <article class="feedback-section">
@@ -86,10 +90,17 @@ body {
               <input type="radio" name="source" value="other" />
               Other
             </label>
-            <textarea name="comments" placeholder="Leave a comment" class="comment-box"></textarea>
+            <textarea
+              name="comments"
+              placeholder="Leave a comment"
+              class="comment-box"
+            ></textarea>
             <button type="submit" class="submit-button">Submit</button>
           </form>
-          <div id="confirmationMessage" style="display:none; margin-top: 1rem; color:pink;"></div>
+          <div
+            id="confirmationMessage"
+            style="display: none; margin-top: 1rem; color: pink"
+          ></div>
         </div>
         <div class="feedback-image">
           <img src="./assets/images/feedback.jpg" alt="User engagement" />
@@ -101,85 +112,91 @@ body {
       <h2>Our Location</h2>
       <p><strong>Address:</strong> 123 Coffee Lane, Pristina, Kosovo</p>
       <p><strong>Working Hours:</strong> Monday–Friday, 8AM–5PM</p>
-      <p><strong>Contact:</strong> infocoffee@gmail.com | +383 44 555 666 </p>
-      <p><strong>Reviews:</strong> <a href="#">18 Google reviews</a> ★★★★★ 4.9</p>
-      
+      <p><strong>Contact:</strong> infocoffee@gmail.com | +383 44 555 666</p>
+      <p>
+        <strong>Reviews:</strong> <a href="#">18 Google reviews</a> ★★★★★ 4.9
+      </p>
+
       <div class="map-container">
-          <iframe src="https://www.google.com/maps/embed?..." allowfullscreen></iframe>
+        <iframe
+          src="https://www.google.com/maps/embed?..."
+          allowfullscreen
+        ></iframe>
       </div>
-  </article>
+    </article>
 
     <section class="contact-section">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>We’d <span class="heart">♡</span> to help!</p>
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" required />
-                <input type="email" placeholder="Email" required />
-                <textarea placeholder="Message" rows="5" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-            
-            <div class="contact-info">
-                <p>
-                    <img src="./assets/images/phone.png" alt="Phone Icon" /> Coffee Shop
-                </p>
-                <p>Kosovo</p>
-                <p>
-                    <img src="./assets/images/email.png" alt="Email Icon" />
-                    +38344555666
-                </p>
-                <p>
-                    <img src="./assets/images/@icon.png" alt="Email Icon" />
-                    infocoffee@gmail.com
-                </p>
-            </div>
-            <a href="./index.html" class="home-button">Back to Homepage</a>
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>We’d <span class="heart">♡</span> to help!</p>
+        <form class="contact-form">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Email" required />
+          <textarea placeholder="Message" rows="5" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+
+        <div class="contact-info">
+          <p>
+            <img src="./assets/images/phone.png" alt="Phone Icon" /> Coffee Shop
+          </p>
+          <p>Kosovo</p>
+          <p>
+            <img src="./assets/images/email.png" alt="Email Icon" />
+            +38344555666
+          </p>
+          <p>
+            <img src="./assets/images/@icon.png" alt="Email Icon" />
+            infocoffee@gmail.com
+          </p>
         </div>
+        <a href="./index.html" class="home-button">Back to Homepage</a>
+      </div>
     </section>
 
     <footer class="footer">
-        <div class="footer-container">
-          <div class="footer-column">
-            <h3>Contact Us</h3>
-            <p>
-              Email:
-              <a href="mailto:infocofffee@gmail.com">infocofffee@gmail.com</a>
-            </p>
-            <p>Phone: <a href="tel:+38344555666">+38344555666</a></p>
-          </div>
-          <div class="footer-column">
-            <h3>Support</h3>
-            <ul>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Shipping & Returns</a></li>
-              <li><a href="#">Frequently Asked Questions</a></li>
-              <li><a href="#">Manage Subscriptions</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h3>About Us</h3>
-            <ul>
-              <li><a href="#">Jobs</a></li>
-              <li><a href="#">Story</a></li>
-              <li><a href="#">Success Stories</a></li>
-              <li><a href="#">Locations</a></li>
-            </ul>
-          </div>
-          <div class="coffee-mug"></div>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <p>
+            Email:
+            <a href="mailto:infocofffee@gmail.com">infocofffee@gmail.com</a>
+          </p>
+          <p>Phone: <a href="tel:+38344555666">+38344555666</a></p>
         </div>
-  
-        <div class="social-links">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <div class="footer-column">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Shipping & Returns</a></li>
+            <li><a href="#">Frequently Asked Questions</a></li>
+            <li><a href="#">Manage Subscriptions</a></li>
+          </ul>
         </div>
-  
-        <div class="footer-bottom">
-          <p>&copy; 2024 Coffee Co. All Rights Reserved</p>
+        <div class="footer-column">
+          <h3>About Us</h3>
+          <ul>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Story</a></li>
+            <li><a href="#">Success Stories</a></li>
+            <li><a href="#">Locations</a></li>
+          </ul>
         </div>
-      </footer>
+        <div class="coffee-mug"></div>
+      </div>
+
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Coffee Co. All Rights Reserved</p>
+      </div>
+    </footer>
+    <script src="./account.js"></script>
     <script src="contact.js"></script>
-</body>
+  </body>
 </html>

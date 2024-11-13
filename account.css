@@ -31,7 +31,6 @@
   font-weight: bold;
   margin-bottom: 10px;
   text-align: center;
- 
 }
 
 #userDetails span {
@@ -126,7 +125,8 @@
   color: #ffe0b2;
 }
 
-#saveChangesBtn, #logoutBtn {
+#saveChangesBtn,
+#logoutBtn {
   margin-top: 20px;
   padding: 10px 20px;
   background-color: #a1887f;
@@ -139,7 +139,8 @@
   transition: background-color 0.3s ease;
 }
 
-#saveChangesBtn:hover, #logoutBtn:hover {
+#saveChangesBtn:hover,
+#logoutBtn:hover {
   background-color: #8d6e63;
 }
 

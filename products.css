@@ -1,13 +1,12 @@
 body {
-  background-color:var(--base-lightbeige);
+  background-color: var(--base-lightbeige);
   font-family: Arial, sans-serif;
 }
-#coffeetypes{
+#coffeetypes {
   background-color: var(--base-lightbeige);
 }
-#nutrition{
+#nutrition {
   background-color: var(--base-lightbeige);
-
 }
 .coffeetypes__wrapper {
   display: flex;
@@ -129,40 +128,40 @@ body {
 .pagination {
   display: flex;
   justify-content: end;
-  align-items: end; 
-  margin: 20px 0; 
+  align-items: end;
+  margin: 20px 0;
 }
 
 .page-number {
-  margin: 0 5px; 
-  padding: 10px 15px; 
-  background-color: #f0f0f0; 
-  border: 1px solid #ccc; 
+  margin: 0 5px;
+  padding: 10px 15px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s; 
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .page-number:hover {
-  background-color: var( --dark-brown); 
-  color: white; 
+  background-color: var(--dark-brown);
+  color: white;
 }
 
 .page-number.active {
   background-color: var(--second-dark);
   color: white;
-  font-weight: bold; 
+  font-weight: bold;
 }
 
 .filter-options {
   position: relative;
   width: 80%;
-  
+
   margin-left: -20px;
 }
 
 .filter-button {
-  background-color:var(--base-brown);
+  background-color: var(--base-brown);
   color: white;
   border: none;
   border-radius: 5px;
@@ -182,19 +181,19 @@ body {
   border-radius: 5px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   padding: 10px;
-  
+
   margin-left: -40px;
   z-index: 1;
-  display: none; 
+  display: none;
   transition: opacity 0.3s ease, visibility 0.3s ease;
   opacity: 0;
-  visibility: hidden; 
+  visibility: hidden;
 }
 
 .filter-options:hover #filterDropdown {
-  display: block; 
+  display: block;
   opacity: 1;
-  visibility: visible; 
+  visibility: visible;
 }
 
 .dropdown-button {
@@ -204,10 +203,9 @@ body {
   padding: 8px 12px;
   cursor: pointer;
   width: 100%;
-  
+
   text-align: left;
   transition: background-color 0.3s ease;
-  
 }
 
 .dropdown-button:hover {
@@ -232,8 +230,8 @@ body {
   color: #5a3921;
   font-size: 48px;
   font-weight: 600;
-  text-shadow: 0 0 10px rgba(223, 218, 191, 0.7), 0 0 20px rgba(255, 215, 0, 0.6);
-  
+  text-shadow: 0 0 10px rgba(223, 218, 191, 0.7),
+    0 0 20px rgba(255, 215, 0, 0.6);
 }
 
 .nutrition__table {
@@ -275,7 +273,6 @@ body {
   }
 }
 
-
 #customized-drink {
   padding: 50px 0;
   background-color: #f4f4f4;
@@ -295,7 +292,7 @@ body {
 h2 {
   margin-bottom: 20px;
   color: #3e2a47;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 1.8em;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -430,7 +427,7 @@ h2 {
   min-height: 200px;
   max-width: 500px;
   border: 2px dashed #b0977d;
-  
+
   font-family: Arial, sans-serif;
   margin-top: 20px;
   padding: 20px;
@@ -456,7 +453,7 @@ input[type="text"] {
 button {
   padding: 10px 20px;
   border-radius: 5px;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   border: none;
 }
@@ -468,7 +465,7 @@ button:hover {
 button:focus {
   outline: none;
 }
-#filterButton{
+#filterButton {
   padding: 10px 30px;
   border-radius: 5px;
   margin-left: -40px;

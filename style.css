@@ -46,7 +46,6 @@ h1, h2, h3,h4,h5,h6,p,a {
   font-family: 'Poppins', sans-serif;
 } */
 
-
 #coffee {
   position: relative;
 }
@@ -145,15 +144,11 @@ body {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-
 .nav-link.active {
   background-color: var(--base-lightbrown);
   color: var(--second-dark);
   transform: scale(1.05);
 }
-
-
-
 
 .nav__links ul li a:hover {
   background-color: var(--base-lightbrown);
@@ -185,7 +180,7 @@ body {
 
 .btn__group button:hover {
   background-color: var(--second-dark);
-  transform: translateY(-1px) scale(1.0);
+  transform: translateY(-1px) scale(1);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4),
     inset 0 -6px 10px rgba(0, 0, 0, 0.3),
     inset 0 6px 8px rgba(255, 255, 255, 0.2);
@@ -410,7 +405,6 @@ body {
   color: var(--base-white);
   text-decoration: none;
   font-weight: bold;
-
 }
 
 .order__btn button {
@@ -594,7 +588,7 @@ body {
 .footer {
   background-color: #3e2723;
   padding: 50px 20px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #f8f3e2;
 }
 
@@ -849,12 +843,12 @@ body {
     0 0 0 40px #eff0d1, 0 50px 0 -15px #3c2415, 40px 30px 0 -15px #3c2415,
     40px 70px 0 -5px #3c2415, 0px 90px 0 -30px #3c2415,
     5px 110px 0 -40px #3c2415;
-  transform: scale(1.1); 
+  transform: scale(1.1);
   transition: transform 0.3s ease-in-out;
 }
 
 .coffee-mug:hover {
-  transform: translateY(-10px) rotate(10deg) scale(1.2); 
+  transform: translateY(-10px) rotate(10deg) scale(1.2);
 }
 
 .coffee-mug::before {

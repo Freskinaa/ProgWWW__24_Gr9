@@ -6,8 +6,10 @@
     <title>Coffee Shop</title>
     <link rel="icon" href="./assets/images/cojlogo.png" type="image/x-icon" />
     <link rel="stylesheet" href="./style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -17,12 +19,14 @@
           <div class="nav__links">
             <img src="./assets/images/logoo.png" alt="logo" />
             <ul>
-              <li><a href="/" class="nav-link" id="homeLink">Home</a></li>
-              <li><a href="/products.html" class="nav-link" id="productsLink">Products</a></li>
-              <li><a href="/gift.html" class="nav-link" id="giftLink">Gift cards</a></li>
-              <li><a href="/about.html" class="nav-link" id="aboutLink">About us</a></li>
-              <li><a href="/contact.html" class="nav-link" id="contactLink">Contact us</a></li>
-              <li id="accountLink"><a href="account.html" class="nav-link">My Account</a></li>
+              <li><a href="/" class="nav-link active">Home</a></li>
+              <li><a href="/products.html" class="nav-link">Products</a></li>
+              <li><a href="/gift.html" class="nav-link">Gift cards</a></li>
+              <li><a href="/about.html" class="nav-link">About us</a></li>
+              <li><a href="/contact.html" class="nav-link">Contact us</a></li>
+              <li id="accountLink">
+                <a href="account.html" class="nav-link">My Account</a>
+              </li>
             </ul>
           </div>
           <div class="btn__group">
@@ -32,8 +36,6 @@
         </div>
       </div>
     </nav>
-    
-    
 
     <section id="hero" class="hero__section">
       <div class="container">
@@ -354,7 +356,6 @@
         <div class="reviews__wrapper">
           <div class="reviews__text">
             <h2>What our customers think about us</h2>
-           
           </div>
           <div class="reviews__cards">
             <button class="arrow left-arrow">&#10094;</button>
@@ -433,38 +434,44 @@
             </div>
             <div class="reviews__card">
               <div class="reviews__img">
-                  <img src="./assets/images/reviews1.jpg" alt="reviews" />
+                <img src="./assets/images/reviews1.jpg" alt="reviews" />
               </div>
               <div class="reviews__user">
-                  <p class="user-name">Daniel Thomas</p>
-                  <p class="user-comment">"Absolutely love the coffee here! Friendly staff and cozy vibe."</p>
+                <p class="user-name">Daniel Thomas</p>
+                <p class="user-comment">
+                  "Absolutely love the coffee here! Friendly staff and cozy
+                  vibe."
+                </p>
               </div>
-          </div>
-          
-          <div class="reviews__card">
+            </div>
+
+            <div class="reviews__card">
               <div class="reviews__img">
-                  <img src="./assets/images/reviews2.jpg" alt="reviews" />
+                <img src="./assets/images/reviews2.jpg" alt="reviews" />
               </div>
               <div class="reviews__user">
-                  <p class="user-name">James Charles</p>
-                  <p class="user-comment">"Best coffee in town. Great service and awesome atmosphere!"</p>
+                <p class="user-name">James Charles</p>
+                <p class="user-comment">
+                  "Best coffee in town. Great service and awesome atmosphere!"
+                </p>
               </div>
-          </div>
-          
-          <div class="reviews__card">
+            </div>
+
+            <div class="reviews__card">
               <div class="reviews__img">
-                  <img src="./assets/images/reviews3.jpg" alt="reviews" />
+                <img src="./assets/images/reviews3.jpg" alt="reviews" />
               </div>
               <div class="reviews__user">
-                  <p class="user-name">Emma Mary</p>
-                  <p class="user-comment">"Fantastic coffee and super friendly baristas. Highly recommend!"</p>
+                <p class="user-name">Emma Mary</p>
+                <p class="user-comment">
+                  "Fantastic coffee and super friendly baristas. Highly
+                  recommend!"
+                </p>
               </div>
-              
+            </div>
+            <button class="arrow right-arrow">&#10095;</button>
           </div>
-          <button class="arrow right-arrow">&#10095;</button>
-          
-          </div>
-         
+
           <div class="carousel-indicators">
             <span class="indicator" data-index="0"></span>
             <span class="indicator" data-index="1"></span>
@@ -518,7 +525,7 @@
     </footer>
 
     <script src="./account.js"></script>
-<script defer src="./navbar.js"></script>
+    <script defer src="./navbar.js"></script>
     <script src="reviews.js"></script>
   </body>
 </html>

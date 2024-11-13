@@ -16,10 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     userNameElement.textContent = user.name;
     userEmailDisplay.textContent = user.email;
-    userPasswordDisplay.textContent = "••••••••"; 
-    userNameDisplay.textContent = user.name; 
+    userPasswordDisplay.textContent = "••••••••";
+    userNameDisplay.textContent = user.name;
 
- 
     editEmailBtn.addEventListener("click", function () {
       const isEditing = userEmailDisplay.isContentEditable;
       if (isEditing) {
@@ -34,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-
     editPasswordBtn.addEventListener("click", function () {
       const isEditing = userPasswordDisplay.isContentEditable;
       if (isEditing) {
@@ -42,17 +40,14 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("loggedInUser", JSON.stringify(user));
         editPasswordBtn.textContent = "Edit";
         userPasswordDisplay.contentEditable = "false";
-        userPasswordDisplay.textContent = "••••••••"; 
+        userPasswordDisplay.textContent = "••••••••";
       } else {
         userPasswordDisplay.contentEditable = "true";
         userPasswordDisplay.focus();
         editPasswordBtn.textContent = "Save";
-        userPasswordDisplay.textContent = ""; 
+        userPasswordDisplay.textContent = "";
       }
     });
-    
-
-
 
     const logoutBtn = document.getElementById("logoutBtn");
     logoutBtn.addEventListener("click", function () {
@@ -60,12 +55,11 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = "index.html";
     });
 
-  
     const saveChangesBtn = document.getElementById("saveChangesBtn");
     saveChangesBtn.addEventListener("click", function () {
       const updatedEmail = userEmailDisplay.textContent;
       const updatedPassword = userPasswordDisplay.textContent;
-  user.name = updatedName;
+      user.name = updatedName;
       user.email = updatedEmail;
       user.password = updatedPassword;
 
