@@ -1,3 +1,14 @@
+body {
+  background-color:var(--base-lightbeige);
+  font-family: Arial, sans-serif;
+}
+#coffeetypes{
+  background-color: var(--base-lightbeige);
+}
+#nutrition{
+  background-color: var(--base-lightbeige);
+
+}
 .coffeetypes__wrapper {
   display: flex;
   flex-direction: column;
@@ -26,7 +37,7 @@
 
 .coffeetypes__search {
   position: relative;
-  text-align: right;
+  text-align: center;
 }
 
 .coffeetypes__search input {
@@ -206,62 +217,62 @@
 .order__btn button {
   color: var(--base-white);
 }
-
 .nutrition__container {
   padding: 60px 50px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .nutrition__title {
   text-align: center;
-  margin-bottom: 60px;
-
+  margin-bottom: 50px;
 }
-.nutrition__title h2{
- color: var(--second-dark);
-  font-size: 50px;
-  text-shadow: 2px 2px 0 var(--base-brown);
+
+.nutrition__title h2 {
+  color: #5a3921;
+  font-size: 48px;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(223, 218, 191, 0.7), 0 0 20px rgba(255, 215, 0, 0.6);
+  
 }
 
 .nutrition__table {
   width: 100%;
-  border-collapse: collapse; 
+  border-collapse: collapse;
+  animation: slideIn 0.6s ease-out forwards;
 }
 
 .nutrition__table th,
 .nutrition__table td {
-  padding: 10px;
-  text-align: left; 
+  padding: 12px;
+  text-align: left;
+  font-size: 16px;
 }
 
 .nutrition__table th {
-  background-color: var(--base-brown);
-  color: white;
+  background-color: #c5ae8d;
+  color: #5a3921;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
 .nutrition__table tr:nth-child(even) {
-  background-color: #f2f2f2; 
+  background-color: #a68d76;
 }
 
 .nutrition__table tr:hover {
-  background-color: #e0e0e0; 
+  background-color: #e2e2d6;
 }
+
 @keyframes slideIn {
   from {
-    transform: translateY(-50px);
+    transform: translateY(-40px);
     opacity: 0;
   }
   to {
     transform: translateY(0);
     opacity: 1;
   }
-}
-
-.nutrition__table {
-  animation: slideIn 0.5s ease-out forwards;
-
 }
 
 
@@ -419,6 +430,8 @@ h2 {
   min-height: 200px;
   max-width: 500px;
   border: 2px dashed #b0977d;
+  
+  font-family: Arial, sans-serif;
   margin-top: 20px;
   padding: 20px;
   background-color: #f4f1e4;

@@ -7,6 +7,33 @@
     <link rel="stylesheet" href="./contact.css" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="icon" href="./assets/images/cojlogo.png" type="image/x-icon" />
+    <style>
+     @font-face {
+    font-family: 'CustomFont';
+    src: url('./assets/fonts/CustomFont-Regular.woff2') format('woff2'),
+         url('./assets/fonts/CustomFont-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'CustomFont', Arial, sans-serif;
+}
+
+.feedback-section h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.submit-button {
+    color: white;
+}
+
+.submit-button:hover {
+    background-color: #55442d;
+}
+
+  </style>
 </head>
 <body>
     <nav class="navbar">
@@ -30,7 +57,7 @@
         </div>
     </nav>
 
-    <section class="feedback-section">
+    <article class="feedback-section">
       <div class="feedback-container">
         <div class="feedback-content">
           <h2>Where did you hear about us?</h2>
@@ -68,39 +95,20 @@
           <img src="./assets/images/feedback.jpg" alt="User engagement" />
         </div>
       </div>
-    </section>
-  
-    <section class="location-section">
-        <div class="container">
-            <div class="text">
-                <h2>Visit Our Coffee Shop</h2>
-                <h3>Look at our location details:</h3>
-            </div>
-            <div class="location-details">
-                <div class="location">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d23473.343417201075!2d21.153345599999998!3d42.657796700000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ssq!2s!4v1728985624032!5m2!1ssq!2s"
-                        width="600"
-                        height="450"
-                        style="border: 0"
-                        allowfullscreen
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                    ></iframe>
-                </div>
-                <div class="location-card">
-                    <div class="card-content">
-                        <h3>Our Location</h3>
-                        <p>123 Brew Street, Coffee Town</p>
-                        <p>Opening Hours: 8 AM - 8 PM</p>
-                        <p>Phone: +38344565858</p>
-                        <p>Email: info@coffeeshop.com</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-  
+    </article>
+
+    <article class="location-section">
+      <h2>Our Location</h2>
+      <p><strong>Address:</strong> 123 Coffee Lane, Pristina, Kosovo</p>
+      <p><strong>Working Hours:</strong> Monday–Friday, 8AM–5PM</p>
+      <p><strong>Contact:</strong> infocoffee@gmail.com | +383 44 555 666 </p>
+      <p><strong>Reviews:</strong> <a href="#">18 Google reviews</a> ★★★★★ 4.9</p>
+      
+      <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?..." allowfullscreen></iframe>
+      </div>
+  </article>
+
     <section class="contact-section">
         <div class="container">
             <h2>Contact Us</h2>
@@ -129,7 +137,6 @@
             <a href="./index.html" class="home-button">Back to Homepage</a>
         </div>
     </section>
-  
 
     <footer class="footer">
         <div class="footer-container">

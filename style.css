@@ -163,31 +163,41 @@ body {
   transform: scale(1.05);
   color: #000;
 }
-
 .btn__group {
   display: flex;
   gap: 10px;
 }
 
 .btn__group button {
-  padding: 8px 12px;
+  padding: 8px 28px;
   font-size: 15px;
   border: none;
-  background-color: #8b5e3c;
+  background-color: #7b5e3e;
   color: #fff;
-  border-radius: 20px;
+  border-radius: 15px;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3), inset 0 -4px 8px rgba(0, 0, 0, 0.2),
+    inset 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+.btn__group button a {
+  color: var(--base-white);
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .btn__group button:hover {
-  background-color: #6d472d;
-  transform: translateY(-2px);
+  background-color: var(--second-dark);
+  transform: translateY(-1px) scale(1.0);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4),
+    inset 0 -6px 10px rgba(0, 0, 0, 0.3),
+    inset 0 6px 8px rgba(255, 255, 255, 0.2);
 }
 
-.btn__group a {
-  color: inherit;
-  text-decoration: none;
+.btn_group button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), inset 0 -2px 5px rgba(0, 0, 0, 0.2),
+    inset 0 2px 4px rgba(255, 255, 255, 0.1);
 }
 
 .hero__section {
@@ -369,7 +379,7 @@ body {
   padding-bottom: 10px;
 }
 .btn_group button.large-btn {
-  background-color: var(--dark-brown);
+  background-color: #7b5e3e;
   padding: 12px 30px;
   border-radius: 10px;
   transition: 0.4s ease-in-out;
@@ -378,6 +388,7 @@ body {
   color: var(--base-white);
   font-size: 18px;
   text-decoration: none;
+  border: none;
 
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3), inset 0 -4px 8px rgba(0, 0, 0, 0.2),
     inset 0 4px 6px rgba(255, 255, 255, 0.1);
@@ -401,27 +412,10 @@ body {
 .btn_group button.large-btn a {
   color: var(--base-white);
   text-decoration: none;
+  font-weight: bold;
+
 }
 
-.btn__group button {
-  background-color: var(--dark-brown);
-  border-radius: 8px;
-  padding: 8px 20px;
-  font-weight: 600;
-  font-size: 16px;
-  transition: background-color 0.4s ease-in-out;
-  cursor: pointer;
-  box-shadow: 3px 3px 4px var(--bg-lightbrown);
-}
-.btn__group button a {
-  color: var(--base-white);
-  text-decoration: none;
-}
-
-.btn__group button:hover {
-  background-color: var(--second-dark);
-  box-shadow: 3px 3px 4px var(--base-brown);
-}
 .order__btn button {
   color: var(--base-white);
 }
