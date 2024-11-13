@@ -2,9 +2,10 @@ const currentUrl = window.location.pathname;
 function setActiveLink() {
   const links = document.querySelectorAll('.nav-link');
   links.forEach(link => {
-    const linkPath = link.getAttribute('href');
+    const linkText = link.textContent.trim().toLowerCase();
+    const pageName = currentUrl === '/' ? 'home' : currentUrl.split('/').pop().split('.')[0].toLowerCase();
 
-    if (currentUrl === linkPath || currentUrl.startsWith(linkPath)) {
+    if (linkText === pageName) {
       link.classList.add('active');
     } else {
       link.classList.remove('active');
