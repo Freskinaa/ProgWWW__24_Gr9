@@ -1,6 +1,5 @@
 body {
   background-color: var(--base-lightbeige);
-  font-family: Arial, sans-serif;
 }
 #coffeetypes {
   background-color: var(--base-lightbeige);
@@ -325,14 +324,16 @@ h2 {
 }
 
 .drink-container {
-  height: 250px;
-  width: 300px;
+  height: 290px;
+  width: 340px;
   border: 2px dashed #b0977d;
   margin-top: 20px;
   padding: 20px;
   background-color: #f4f1e4;
   text-align: center;
   border-radius: 8px;
+  align-items: center;
+  margin-left: 190px;
 }
 
 #drink-customization {
@@ -345,16 +346,26 @@ h2 {
 }
 
 #order-button {
-  background-color: #b07548;
-  margin-top: 30px;
-  display: block;
-  width: 200px;
+  padding: 8px 28px;
+  font-size: 15px;
+  border: none;
+  background-color: #7b5e3e;
+  color: #fff;
+  border-radius: 9px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3), inset 0 -4px 8px rgba(0, 0, 0, 0.2),
+    inset 0 4px 6px rgba(255, 255, 255, 0.1);
   margin-left: auto;
   margin-right: auto;
+  margin-top: 5px;
 }
 
 #order-button:hover {
-  background-color: #8c5b3b;
+  background-color: var(--second-dark);
+  transform: translateY(-1px) scale(1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4),
+    inset 0 -6px 10px rgba(0, 0, 0, 0.3),
+    inset 0 6px 8px rgba(255, 255, 255, 0.2);
 }
 
 #order-summary {
