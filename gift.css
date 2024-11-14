@@ -20,7 +20,7 @@
 
 .gift-section h1 {
   margin-top: 50px;
-  font-size: 64px;
+  font-size: 50px;
   color: #f0e9d8;
   text-transform: uppercase;
   font-weight: 700;
@@ -30,7 +30,7 @@
 }
 
 .gift-section h2 {
-  font-size: 32px;
+  font-size: 25px;
   color: #e7d6c1;
   text-transform: uppercase;
   font-weight: 600;
@@ -40,7 +40,7 @@
 }
 
 .gift-section h3 {
-  font-size: 28px;
+  font-size: 20px;
   color: #e7d6c1;
   text-transform: uppercase;
   font-weight: 500;
@@ -51,24 +51,7 @@
 .gift-bow:hover {
   transform: scale(1.1);
   overflow: hidden;
-}
-
-.gift-bow svg {
-  margin: 0px auto;
-  margin-top: -5px;
-  display: block;
-  width: 450px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.gift-soon {
-  font-size: 24px;
-  color: #3b3b3b;
-  font-weight: 700;
-  margin-top: 30px;
-  text-transform: uppercase;
-  position: relative;
-  text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  cursor: pointer;
 }
 
 @keyframes underlineAnimation {
