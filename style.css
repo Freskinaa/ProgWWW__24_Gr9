@@ -135,7 +135,7 @@ body {
 }
 
 .nav__links ul li a {
-  color: #333;
+  color: var(--second-dark);
   text-decoration: none;
   font-weight: bold;
   font-size: 15px;
@@ -146,14 +146,14 @@ body {
 
 .nav-link.active {
   background-color: var(--base-lightbrown);
-  color: var(--second-dark);
+  color: var(--second-dark2);
   transform: scale(1.05);
 }
 
 .nav__links ul li a:hover {
   background-color: var(--base-lightbrown);
   transform: scale(1.05);
-  color: #000;
+  color: var(--second-dark);
 }
 .btn__group {
   display: flex;
