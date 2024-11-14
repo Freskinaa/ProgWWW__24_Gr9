@@ -12,6 +12,7 @@
   --base-darkbrown3: #4a3a2a;
   --dark-brown: #85593d;
   --dark-brown2: #916143;
+  --dark-brown3: #967058;
   --light2-brown: #f6e3d7;
   --second-dark: #563926;
   --second-dark2: #2c1e14;
@@ -45,44 +46,6 @@
 h1, h2, h3,h4,h5,h6,p,a {
   font-family: 'Poppins', sans-serif;
 } */
-
-#coffee {
-  position: relative;
-}
-
-#coffee-cup {
-  width: 35px;
-  position: relative;
-}
-.coffee-svg .steam {
-  animation: float 3s ease-in-out infinite;
-}
-.coffee__img {
-  align-items: center;
-  overflow: hidden;
-}
-
-.coffee_txt1 {
-  margin-top: -25px;
-  font-size: 16px;
-  color: white;
-  font-weight: bolder;
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  50% {
-    transform: translateY(-10px);
-    opacity: 0.8;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 
 body {
   font-family: "Lexend Deca", sans-serif;
@@ -145,7 +108,7 @@ body {
 }
 
 .nav-link.active {
-  background-color: var(--base-lightbrown);
+  background-color: var(--dark-brown3);
   color: var(--second-dark2);
   transform: scale(1.05);
 }
@@ -202,6 +165,44 @@ body {
   align-items: center;
   justify-content: center;
   padding: 0 20px;
+}
+
+#coffee {
+  position: relative;
+}
+
+#coffee-cup {
+  width: 35px;
+  position: relative;
+}
+.coffee-svg .steam {
+  animation: float 3s ease-in-out infinite;
+}
+.coffee__img {
+  align-items: center;
+  overflow: hidden;
+}
+
+.coffee_txt1 {
+  margin-top: -25px;
+  font-size: 16px;
+  color: white;
+  font-weight: bolder;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-10px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .hero__wrapper {
@@ -505,7 +506,7 @@ body {
 }
 
 .reviews__img img {
-height: 100%;
+  height: 100%;
   transition: transform 0.3s ease;
   margin-left: 0;
 }
