@@ -733,18 +733,25 @@ body {
   border: 2px solid #533c21;
   border-radius: 8px;
   animation: borderGlow 3s ease-in-out infinite alternate;
-  width: 290px;
-  height: 350px;
+  /* width: 300px; */
+  width: 60%;
+  height: auto;
+  max-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
 }
 
 .left-side img {
   width: 100%;
-  height: 350px;
+  height: 100%;
 }
 
 .right-side {
   animation: slideIn 1s ease-in-out;
+  width: 90%;
+  margin-right: auto;
 }
 
 .right-side h1 {
