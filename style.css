@@ -166,8 +166,8 @@ body {
 
 .hero__section {
   background-image: url(./assets/images/b3.jpg);
-  background-size: cover;
-  background-position: center;
+  background-size: cover, auto;
+  background-position: center, top right;
   background-repeat: no-repeat;
   height: 100vh;
   display: flex;
