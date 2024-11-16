@@ -265,10 +265,11 @@ body {
   text-align: center;
 }
 
-.coffee__img {
-  width: auto;
-  text-align: center;
-  transition: all 0.3s ease-in-out;
+.coffee-image-wrapper {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .coffee__img:hover {
@@ -733,7 +734,6 @@ body {
   border: 2px solid #533c21;
   border-radius: 8px;
   animation: borderGlow 3s ease-in-out infinite alternate;
-  /* width: 300px; */
   width: 60%;
   height: auto;
   max-height: 350px;
