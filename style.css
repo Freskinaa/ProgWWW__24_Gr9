@@ -15,7 +15,9 @@
   --dark-brown3: #967058;
   --light2-brown: #f6e3d7;
   --second-dark: #563926;
+  --second-dark1: #432d1e;
   --second-dark2: #2c1e14;
+  --second-dark3: #251810;
   --base-white: #ffffff;
   --base-black: #000000;
   --base-blue: #0068b1;
@@ -113,10 +115,17 @@ body {
   transform: scale(1.05);
 }
 
+
 .nav__links ul li a:hover {
   background-color: var(--base-lightbrown);
   transform: scale(1.05);
   color: var(--second-dark);
+}
+.nav__links ul li a:link {
+  color: var(--second-dark1);
+}
+.nav__links ul li a:link {
+  color: var(--second-dark3);
 }
 .btn__group {
   display: flex;
@@ -211,7 +220,6 @@ body {
   justify-content: space-between;
   flex-direction: column;
   max-width: 600px;
-  background: rgba(255, 255, 255, 0.85);
   padding: 40px;
   border-radius: 10px;
 }
@@ -479,6 +487,7 @@ body {
   gap: 20px;
   background-color: var(--base-white);
   border-radius: 15px;
+  border-width: none;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
