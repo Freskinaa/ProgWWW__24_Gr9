@@ -430,6 +430,16 @@ body {
 .icon-card {
   text-align: center;
   width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-image-wrapper {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .icon-card img {
@@ -441,6 +451,8 @@ body {
   font-size: 16px;
   color: #333;
 }
+
+
 .reviews__container {
   background-color: #f3f0e7;
   padding: 60px 0;
