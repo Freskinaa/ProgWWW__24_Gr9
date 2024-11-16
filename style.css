@@ -115,7 +115,6 @@ body {
   transform: scale(1.05);
 }
 
-
 .nav__links ul li a:hover {
   background-color: var(--base-lightbrown);
   transform: scale(1.05);
@@ -452,7 +451,6 @@ body {
   font-size: 16px;
   color: #333;
 }
-
 
 .reviews__container {
   background-color: #f3f0e7;
