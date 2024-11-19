@@ -208,85 +208,96 @@ body {
   transform: translateY(0);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), inset 0 -2px 5px rgba(0, 0, 0, 0.2),
     inset 0 2px 4px rgba(255, 255, 255, 0.1);
-}
-
-.filter-options {
+}.filter-options {
   width: 40%;
-margin-left: -420px;
-margin-bottom: -45px;
+  margin-left: auto;
+  margin-right: 20px;
+  margin-bottom: -45px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 #filterButton {
-  padding: 14px 33px;
-  border-radius: 15px;
-  margin-left: -40px;
-  margin-bottom: -5px;
-  font-size: 15px;
-  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 18px;
+  color: black;
+  background-color: transparent;
   border: none;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3), inset 0 -4px 8px rgba(0, 0, 0, 0.2),
-  inset 0 4px 6px rgba(255, 255, 255, 0.1);
-}
-
-.filter-button button:active {
-  transform: translateY(0);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), inset 0 -2px 5px rgba(0, 0, 0, 0.2),
-    inset 0 2px 4px rgba(255, 255, 255, 0.1);
-}
-.filter-button {
-  background-color: var(--base-brown);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 20px 15px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
-.filter-button:hover {
-  background-color: var(--second-dark);
-  transform: translateY(-1px) scale(1);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4),
-    inset 0 -6px 10px rgba(0, 0, 0, 0.3),
-    inset 0 6px 8px rgba(255, 255, 255, 0.2);
+#filterButton:hover {
+  transform: scale(1.1);
+}
+
+#sortButton {
+  padding: 10px;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 18px;
+  margin-right: 90px;
+  color: black;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#sortButton:hover {
+  transform: scale(1.1);
 }
 
 .dropdown {
   position: absolute;
+  right: 0;
   background-color: #f9f9f9;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   padding: 10px;
-
-  margin-left: -40px;
-  z-index: 1;
+  margin-top: 5px;
   display: none;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.filter-options:hover #filterDropdown {
-  display: block;
-  opacity: 1;
-  visibility: visible;
+  flex-direction: column;
 }
 
 .dropdown-button {
   background-color: transparent;
   color: #333;
   border: none;
-  padding: 8px 12px;
+  padding: 8px 9px;
   cursor: pointer;
-  width: 100%;
-
   text-align: left;
-  transition: background-color 0.3s ease;
+  width: 100%;
 }
 
 .dropdown-button:hover {
   background-color: #e0e0e0;
+}
+
+#filterButton:hover + #filterDropdown {
+  display: block;
+}
+
+#sortButton:hover + #sortDropdown {
+  display: block;
+}
+
+.filter-options:hover #filterDropdown {
+  display: block;
+}
+
+.filter-options:hover #sortDropdown {
+  display: block;
+}
+
+.filter-options button {
+  margin-left: 10px;
 }
 
 .order__btn button {

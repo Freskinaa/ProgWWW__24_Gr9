@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./products.css" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="icon" href="./assets/images/cojlogo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
   </head>
   <body>
     <nav class="navbar">
@@ -45,17 +47,27 @@
           </div>
           
           <div class="filter-options">
-            <button id="filterButton" class="filter-button">Filter</button>
-            <div id="filterDropdown" class="dropdown hidden">
+            <button id="filterButton" class="filter-button">
+              <i class="fa fa-filter"></i> 
+            </button>
+          
+            <div id="filterDropdown" class="dropdown">
               <button id="filterHot" class="dropdown-button">Hot Coffee</button>
-              <button id="filterCold" class="dropdown-button">
-                Cold Coffee
-              </button>
+              <button id="filterCold" class="dropdown-button">Cold Coffee</button>
               <button id="filterAll" class="dropdown-button">All</button>
-              
             </div>
-           
+          
+            <button id="sortButton" class="sort-button">
+              <i class="fa fa-sort-alpha-asc"></i> 
+            </button>
+          
+            <div id="sortDropdown" class="dropdown">
+              <button id="sortAZ" class="dropdown-button">A-Z</button>
+              <button id="sortZA" class="dropdown-button">Z-A</button>
+            </div>
           </div>
+          
+          
 
           <div class="no-results" style="display: none">
             No products matching your search were found.
@@ -726,6 +738,7 @@
       </div>
     </footer>
 
+    <script src="./sort.js"></script>
     <script src="./account.js"></script>
     <script src="./products.js"></script>
   </body>

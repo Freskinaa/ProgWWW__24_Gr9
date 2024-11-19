@@ -191,3 +191,6 @@ function drop(ev) {
   newElement.textContent = draggedElement.textContent;
   document.getElementById("drink-customization").appendChild(newElement);
 }
+
+
+
