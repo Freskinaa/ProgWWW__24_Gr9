@@ -15,7 +15,9 @@
   --dark-brown3: #967058;
   --light2-brown: #f6e3d7;
   --second-dark: #563926;
+  --second-dark1: #432d1e;
   --second-dark2: #2c1e14;
+  --second-dark3: #251810;
   --base-white: #ffffff;
   --base-black: #000000;
   --base-blue: #0068b1;
@@ -86,8 +88,9 @@ body {
 }
 
 .nav__links img {
-  width: 35px;
+  width: 100px;
   height: auto;
+  margin-left: -35px;
 }
 
 .nav__links ul {
@@ -117,6 +120,10 @@ body {
   background-color: var(--base-lightbrown);
   transform: scale(1.05);
   color: var(--second-dark);
+}
+
+.nav__links ul li a:link {
+  color: var(--second-dark3);
 }
 .btn__group {
   display: flex;
@@ -157,8 +164,8 @@ body {
 
 .hero__section {
   background-image: url(./assets/images/b3.jpg);
-  background-size: cover;
-  background-position: center;
+  background-size: cover, auto;
+  background-position: center, top right;
   background-repeat: no-repeat;
   height: 100vh;
   display: flex;
@@ -183,11 +190,8 @@ body {
   overflow: hidden;
 }
 
-.coffee_txt1 {
-  margin-top: -25px;
-  font-size: 16px;
-  color: white;
-  font-weight: bolder;
+.coffee_txt a {
+ text-decoration: none;
 }
 
 @keyframes float {
@@ -211,7 +215,6 @@ body {
   justify-content: space-between;
   flex-direction: column;
   max-width: 600px;
-  background: rgba(255, 255, 255, 0.85);
   padding: 40px;
   border-radius: 10px;
 }
@@ -257,10 +260,11 @@ body {
   text-align: center;
 }
 
-.coffee__img {
-  width: auto;
-  text-align: center;
-  transition: all 0.3s ease-in-out;
+.coffee-image-wrapper {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .coffee__img:hover {
@@ -422,6 +426,16 @@ body {
 .icon-card {
   text-align: center;
   width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-image-wrapper {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .icon-card img {
@@ -433,6 +447,7 @@ body {
   font-size: 16px;
   color: #333;
 }
+
 .reviews__container {
   background-color: #f3f0e7;
   padding: 60px 0;
@@ -466,10 +481,10 @@ body {
   display: flex;
   gap: 20px;
   justify-content: center;
-  align-items: stretch;
+  align-items: center;
   padding: 0 20px;
   overflow: hidden;
-  scroll-snap-type: x mandatory;
+  /* scroll-snap-type: x mandatory; */
 }
 
 .reviews__card {
@@ -479,6 +494,7 @@ body {
   gap: 20px;
   background-color: var(--base-white);
   border-radius: 15px;
+  border-width: none;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -564,25 +580,28 @@ body {
   justify-content: center;
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;
-  position: absolute;
-  top: 50%;
-
-  transform: translateY(-50%);
   z-index: 10;
+  position: relative;
 }
 
 .left-arrow {
-  left: 110px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .right-arrow {
-  right: 110px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .arrow:hover {
   background-color: var(--second-dark2);
   color: var(--base-white);
-  transform: translateY(-50%) scale(1.1);
+  transform: scale(1.1);
 }
 .footer {
   background-color: #634d3e;
@@ -712,18 +731,24 @@ body {
   border: 2px solid #533c21;
   border-radius: 8px;
   animation: borderGlow 3s ease-in-out infinite alternate;
-  width: 290px;
-  height: 350px;
+  width: 60%;
+  height: auto;
+  max-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
 }
 
 .left-side img {
   width: 100%;
-  height: 350px;
+  height: 100%;
 }
 
 .right-side {
   animation: slideIn 1s ease-in-out;
+  width: 90%;
+  margin-right: auto;
 }
 
 .right-side h1 {
@@ -937,5 +962,88 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+.discover-joy {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 50px;
+  background: #f5ebe0;
+}
+
+.coffee-logo {
+  width: 300px;
+  height: auto;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.text {
+  max-width: 500px;
+  text-align: left;
+}
+
+.text h2 {
+  font-size: 2.5rem;
+  color: #6b4f4f;
+  margin-bottom: 20px;
+  animation: slideInLeft 1.5s ease;
+}
+
+.text p {
+  font-size: 1.2rem;
+  color: #4f3827;
+  margin-bottom: 30px;
+  animation: slideInRight 1.5s ease;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #6b4f4f;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
   }
 }

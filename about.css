@@ -41,14 +41,6 @@
 body {
   background-color: #f3f0e7;
 }
-.main-container {
-  width: 100%;
-  padding: 100px 20px 60px;
-  height: 100vh;
-  text-align: center;
-  animation: fadeIn 1s ease forwards;
-  background-color: #f3f0e7;
-}
 
 .welcome-section h1,
 .welcome-section h2,
