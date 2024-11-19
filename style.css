@@ -121,9 +121,7 @@ body {
   transform: scale(1.05);
   color: var(--second-dark);
 }
-.nav__links ul li a:link {
-  color: var(--second-dark1);
-}
+
 .nav__links ul li a:link {
   color: var(--second-dark3);
 }
@@ -192,11 +190,8 @@ body {
   overflow: hidden;
 }
 
-.coffee_txt1 {
-  margin-top: -25px;
-  font-size: 16px;
-  color: white;
-  font-weight: bolder;
+.coffee_txt a {
+ text-decoration: none;
 }
 
 @keyframes float {
