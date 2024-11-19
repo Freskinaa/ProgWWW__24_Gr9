@@ -41,16 +41,9 @@
         <div class="coffeetypes__wrapper">
           <div class="coffeetypes__header">
             <h2 class="coffeetypes__text">Our Products</h2>
-            <div class="coffeetypes__search">
-              <input
-                type="text"
-                id="searchInput"
-                placeholder="Search for a product..."
-                list="productSuggestions"
-              />
-              <datalist id="productSuggestions"></datalist>
-            </div>
+           
           </div>
+          
           <div class="filter-options">
             <button id="filterButton" class="filter-button">Filter</button>
             <div id="filterDropdown" class="dropdown hidden">
@@ -59,12 +52,23 @@
                 Cold Coffee
               </button>
               <button id="filterAll" class="dropdown-button">All</button>
+              
             </div>
+           
           </div>
 
           <div class="no-results" style="display: none">
             No products matching your search were found.
           </div>
+           <div class="coffeetypes__search">
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="Search for a product..."
+                list="productSuggestions"
+              />
+              <datalist id="productSuggestions"></datalist>
+            </div>
 
           <div class="coffeetypes__cards add hot">
             <div class="coffeetypes__card">
@@ -622,33 +626,21 @@
               <td>1</td>
             </tr>
             <tr>
-              <td>Cappuccino</td>
+              <td>Cappuccino,Macchiato</td>
               <td>120</td>
               <td>10</td>
               <td>7</td>
               <td>4</td>
             </tr>
+          
             <tr>
-              <td>Macchiato</td>
-              <td>80</td>
-              <td>5</td>
-              <td>4</td>
-              <td>3</td>
-            </tr>
-            <tr>
-              <td>Iced Mocha</td>
+              <td>Iced Mocha,Mazagran</td>
               <td>200</td>
               <td>25</td>
               <td>8</td>
               <td>4</td>
             </tr>
-            <tr>
-              <td>Frappe</td>
-              <td>250</td>
-              <td>30</td>
-              <td>10</td>
-              <td>4</td>
-            </tr>
+            
             <tr>
               <td>Cold Brew</td>
               <td>5</td>
@@ -657,7 +649,7 @@
               <td>0</td>
             </tr>
             <tr>
-              <td>Breve</td>
+              <td>Breve,Frappe</td>
               <td>220</td>
               <td>10</td>
               <td>12</td>
@@ -670,15 +662,9 @@
               <td>0</td>
               <td>1</td>
             </tr>
+          
             <tr>
-              <td>Cortado</td>
-              <td>70</td>
-              <td>3</td>
-              <td>3</td>
-              <td>3</td>
-            </tr>
-            <tr>
-              <td>Dalgona</td>
+              <td>Dalgona,Cortado</td>
               <td>200</td>
               <td>20</td>
               <td>5</td>
@@ -691,13 +677,7 @@
               <td>6</td>
               <td>4</td>
             </tr>
-            <tr>
-              <td>Mazagran</td>
-              <td>80</td>
-              <td>6</td>
-              <td>0</td>
-              <td>2</td>
-            </tr>
+            
           </tbody>
         </table>
       </div>
