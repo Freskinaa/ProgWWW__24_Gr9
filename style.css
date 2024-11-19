@@ -449,160 +449,115 @@ body {
 }
 
 .reviews__container {
-  background-color: #f3f0e7;
-  padding: 60px 0;
-  overflow: hidden;
-  position: relative;
+  background-color: rgba(255, 250, 240, 0.85);
+  color: #fff;
+  padding: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.reviews__header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.reviews__header h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--base-brown);
+}
+
+.reviews__header .highlight {
+  color: #2e2113;
 }
 
 .reviews__wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  overflow-x: hidden;
-  animation: fadeIn 1s ease;
-  overflow: hidden;
+  gap: 20px;
 }
-
-.reviews__text {
-  padding-bottom: 30px;
-  color: var(--second-dark2);
-  font-size: 24px;
-  text-align: center;
-  font-weight: bold;
-  animation: slideInUp 1s ease;
-  overflow: hidden;
-}
-
 .reviews__cards {
   display: flex;
   gap: 20px;
   justify-content: center;
-  align-items: center;
-  padding: 0 20px;
-  overflow: hidden;
-  /* scroll-snap-type: x mandatory; */
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .reviews__card {
-  flex: 0 0 auto;
+  background-color: var(--base-darkbrown3);
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  flex: 1 1 300px;
+  max-width: 300px;
+  box-sizing: border-box;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  background-color: var(--base-white);
-  border-radius: 15px;
-  border-width: none;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  scroll-snap-align: center;
-  max-width: 300px;
-  height: 350px;
-  width: 100%;
-  animation: fadeInUp 0.5s ease forwards;
+  align-items: center;
 }
+
 
 .reviews__card:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
+
 .reviews__img {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  border-radius: 100%;
-  margin: 20px auto;
-  width: 150px;
-  height: 150px;
-  animation: fadeIn 1s ease;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 15px;
 }
 
 .reviews__img img {
-  height: 100%;
-  transition: transform 0.3s ease;
-  margin-left: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.reviews__user {
-  margin-top: 10px;
-  text-align: center;
-  animation: fadeInUp 0.5s ease;
+.reviews__img img:hover {
+  transform: scale(1.1);
+}
+
+blockquote {
+  font-size: 16px;
+  font-style: italic;
+  margin: 10px 0;
+  color: #b3b3b3;
 }
 
 .user-name {
   font-weight: bold;
-  padding: 8px 0;
-  color: var(--second-dark2);
-  font-size: 1.1rem;
+  color: #fff;
+  margin-top: 10px;
 }
 
-.user-comment {
-  font-style: italic;
-  padding-bottom: 20px;
-  color: var(--second-dark);
-}
-
-.carousel-indicators {
+.carousel-controls {
   display: flex;
   justify-content: center;
-  margin: 30px 0;
+  gap: 10px;
 }
 
-.indicator {
-  width: 12px;
-  height: 12px;
-  background-color: gray;
+.carousel-controls .indicator {
+  width: 10px;
+  height: 10px;
+  background: #b3b3b3;
   border-radius: 50%;
-  margin: 0 6px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
+  transition: background 0.3s;
 }
 
-.indicator.active {
-  background-color: black;
-  transform: scale(1.2);
+.carousel-controls .indicator:hover {
+  background: #fff;
 }
 
-.arrow {
-  font-size: 24px;
-  color: var(--second-dark2);
-  background-color: var(--base-white);
-  border: 2px solid var(--second-dark2);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  z-index: 10;
-  position: relative;
-}
-
-.left-arrow {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.right-arrow {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.arrow:hover {
-  background-color: var(--second-dark2);
-  color: var(--base-white);
-  transform: scale(1.1);
-}
 .footer {
   background-color: #634d3e;
   padding: 50px 20px;
