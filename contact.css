@@ -150,22 +150,6 @@ body {
   animation: heartbeat 1s infinite;
 }
 
-.home-button {
-  margin-top: 20px;
-  background-color: var(--dark-brown);
-  color: var(--base-white);
-  padding: 8px 16px;
-  border-radius: 20px;
-  text-decoration: none;
-  font-size: 0.8rem;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.home-button:hover {
-  background-color: var(--base-brown);
-  transform: scale(1.05);
-}
-
 @keyframes heartbeat {
   0%,
   100% {
@@ -309,7 +293,6 @@ body {
   padding: 20px;
   width: 22%;
 }
-
 
 .feedback-section {
   display: flex;
