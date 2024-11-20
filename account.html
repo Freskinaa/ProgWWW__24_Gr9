@@ -10,6 +10,40 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <style>
+      #profilePicContainer {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+      }
+
+      #profilePic {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        cursor: pointer;
+        border: 2px solid #ccc;
+      }
+
+      #changeProfilePicBtn {
+        display: none;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 5px 10px;
+        color: #fff;
+        background-color: #000;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      #profilePicContainer.active #changeProfilePicBtn {
+        display: block;
+      }
+    </style>
   </head>
   <body>
     <nav class="navbar">
@@ -48,6 +82,7 @@
               alt="Profile Picture"
               class="profile-icon"
             />
+            <input type="file" id="profilePicInput" accept="image/*" />
           </div>
           <h2>
             Welcome, <em><span id="userName"></span></em>
@@ -69,7 +104,7 @@
 
           <div class="detail-row">
             <label>Password:</label>
-            <span id="userPasswordDisplay"></span>
+            <span id="userPasswordDisplay">••••••••</span>
             <button id="editPasswordBtn" class="edit-btn">Edit</button>
           </div>
 
@@ -84,4 +119,3 @@
     <script src="account.js"></script>
   </body>
 </html>
-\

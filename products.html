@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="./products.css" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="icon" href="./assets/images/cojlogo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
   </head>
   <body>
     <nav class="navbar">
@@ -41,6 +45,8 @@
         <div class="coffeetypes__wrapper">
           <div class="coffeetypes__header">
             <h2 class="coffeetypes__text">Our Products</h2>
+          </div>
+          <div class="coffeetypes__serach-filter">
             <div class="coffeetypes__search">
               <input
                 type="text"
@@ -50,22 +56,36 @@
               />
               <datalist id="productSuggestions"></datalist>
             </div>
-          </div>
-          <div class="filter-options">
-            <button id="filterButton" class="filter-button">Filter</button>
-            <div id="filterDropdown" class="dropdown hidden">
-              <button id="filterHot" class="dropdown-button">Hot Coffee</button>
-              <button id="filterCold" class="dropdown-button">
-                Cold Coffee
+
+            <div class="filter-options">
+              <button id="filterButton" class="filter-button">
+                <i class="fa fa-filter"></i>
               </button>
-              <button id="filterAll" class="dropdown-button">All</button>
+
+              <div id="filterDropdown" class="dropdown">
+                <button id="filterHot" class="dropdown-button">
+                  Hot Coffee
+                </button>
+                <button id="filterCold" class="dropdown-button">
+                  Cold Coffee
+                </button>
+                <button id="filterAll" class="dropdown-button">All</button>
+              </div>
+
+              <button id="sortButton" class="sort-button">
+                <i class="fa fa-sort-alpha-asc"></i>
+              </button>
+
+              <div id="sortDropdown" class="dropdown">
+                <button id="sortAZ" class="dropdown-button">A-Z</button>
+                <button id="sortZA" class="dropdown-button">Z-A</button>
+              </div>
             </div>
           </div>
 
           <div class="no-results" style="display: none">
             No products matching your search were found.
           </div>
-
           <div class="coffeetypes__cards add hot">
             <div class="coffeetypes__card">
               <div class="coffeetypes__img">
@@ -622,33 +642,21 @@
               <td>1</td>
             </tr>
             <tr>
-              <td>Cappuccino</td>
+              <td>Cappuccino,Macchiato</td>
               <td>120</td>
               <td>10</td>
               <td>7</td>
               <td>4</td>
             </tr>
+
             <tr>
-              <td>Macchiato</td>
-              <td>80</td>
-              <td>5</td>
-              <td>4</td>
-              <td>3</td>
-            </tr>
-            <tr>
-              <td>Iced Mocha</td>
+              <td>Iced Mocha,Mazagran</td>
               <td>200</td>
               <td>25</td>
               <td>8</td>
               <td>4</td>
             </tr>
-            <tr>
-              <td>Frappe</td>
-              <td>250</td>
-              <td>30</td>
-              <td>10</td>
-              <td>4</td>
-            </tr>
+
             <tr>
               <td>Cold Brew</td>
               <td>5</td>
@@ -657,7 +665,7 @@
               <td>0</td>
             </tr>
             <tr>
-              <td>Breve</td>
+              <td>Breve,Frappe</td>
               <td>220</td>
               <td>10</td>
               <td>12</td>
@@ -670,15 +678,9 @@
               <td>0</td>
               <td>1</td>
             </tr>
+
             <tr>
-              <td>Cortado</td>
-              <td>70</td>
-              <td>3</td>
-              <td>3</td>
-              <td>3</td>
-            </tr>
-            <tr>
-              <td>Dalgona</td>
+              <td>Dalgona,Cortado</td>
               <td>200</td>
               <td>20</td>
               <td>5</td>
@@ -690,13 +692,6 @@
               <td>15</td>
               <td>6</td>
               <td>4</td>
-            </tr>
-            <tr>
-              <td>Mazagran</td>
-              <td>80</td>
-              <td>6</td>
-              <td>0</td>
-              <td>2</td>
             </tr>
           </tbody>
         </table>
@@ -746,6 +741,7 @@
       </div>
     </footer>
 
+    <script src="./sort.js"></script>
     <script src="./account.js"></script>
     <script src="./products.js"></script>
   </body>

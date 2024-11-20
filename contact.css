@@ -150,22 +150,6 @@ body {
   animation: heartbeat 1s infinite;
 }
 
-.home-button {
-  margin-top: 20px;
-  background-color: var(--dark-brown);
-  color: var(--base-white);
-  padding: 8px 16px;
-  border-radius: 20px;
-  text-decoration: none;
-  font-size: 0.8rem;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.home-button:hover {
-  background-color: var(--base-brown);
-  transform: scale(1.05);
-}
-
 @keyframes heartbeat {
   0%,
   100% {
@@ -259,6 +243,69 @@ body {
   100% {
     background-color: #6f5f5c;
   }
+}
+.multipy-background {
+  background-color: #bcac9e;
+  padding: 70px 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 90px;
+}
+.element {
+  width: 100%;
+  max-width: 350px;
+  height: 380px;
+  background: url(./assets/images/heart.png) no-repeat center center,
+    url(./assets/images/darkbrown.jpg) no-repeat top left;
+  background-blend-mode: overlay;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  transition: all 0.5s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.09);
+}
+
+.element2 {
+  width: 100%;
+  max-width: 350px;
+  height: 380px;
+  background: url(./assets/images/chat.png) no-repeat center center,
+    url(./assets/images/darkbrown.jpg) no-repeat top left;
+  background-blend-mode: overlay;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 100px;
+  margin: 0 auto;
+  transition: all 0.5s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.09);
+}
+
+.element::before,
+.element2::before {
+  content: attr(data-text);
+  font-weight: bold;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.element:hover,
+.element2:hover {
+  transform: scale(0.8) translateY(-15px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.5);
+  filter: brightness(0.9);
 }
 
 .feedback-section {
