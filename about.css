@@ -381,7 +381,11 @@ header {
 #certifications {
   padding: 20px;
   text-align: center;
-  background-color: #d0c9c0;
+  padding: 40px 30px;
+  border-radius: 15px;
+  background: linear-gradient(to bottom right, #f9f5eb, #e8dbc0);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
 }
 #certifications h2 {
   margin: 20px 0;
@@ -397,19 +401,24 @@ table {
 
 th,
 td {
-  padding: 12px;
-  border: 1px solid #f4eded;
+  padding: 10px 15px;
+  font-size: 14px;
   text-align: left;
+  font-family: "Arial", sans-serif;
+  background: #fff;
+  transition: all 0.2s ease;
 }
 
 th {
-  background-color: var(--base-brownlig);
-  color: white;
+  background: linear-gradient(to right, #c5ae8d, #b59876);
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
 }
 
 tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
+  background: #f9ebd2;}
 
 tbody tr:hover {
   background-color: #f1f1f1;
