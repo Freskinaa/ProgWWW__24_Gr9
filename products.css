@@ -41,7 +41,7 @@ body {
   border: 2px solid #d2a679;
   height: 50px;
   border-radius: 25px;
-  width: 450px;
+  width: 650px;
   overflow: hidden;
 }
 
@@ -208,14 +208,11 @@ body {
   transform: translateY(0);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), inset 0 -2px 5px rgba(0, 0, 0, 0.2),
     inset 0 2px 4px rgba(255, 255, 255, 0.1);
-}.filter-options {
-  width: 40%;
-  margin-left: auto;
-  margin-right: 20px;
-  margin-bottom: -45px;
+}
+.filter-options {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
 }
 
 #filterButton {
@@ -238,10 +235,7 @@ body {
 #sortButton {
   padding: 10px;
   border-radius: 50%;
-  margin-left: 10px;
-  margin-right: 10px;
   font-size: 18px;
-  margin-right: 90px;
   color: black;
   background-color: transparent;
   border: none;
@@ -253,17 +247,28 @@ body {
   transform: scale(1.1);
 }
 
+.coffeetypes__serach-filter {
+  width: 100%;
+  padding: 10px 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
 .dropdown {
   position: absolute;
   right: 0;
+  top: 30px;
+  z-index: 1000;
   background-color: #f9f9f9;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   padding: 10px;
-  margin-top: 5px;
   display: none;
   flex-direction: column;
+  min-width: 150px;
 }
 
 .dropdown-button {
@@ -284,20 +289,16 @@ body {
   display: block;
 }
 
+#filterDropdown:hover {
+  display: block;
+}
+
 #sortButton:hover + #sortDropdown {
   display: block;
 }
 
-.filter-options:hover #filterDropdown {
+#sortDropdown:hover {
   display: block;
-}
-
-.filter-options:hover #sortDropdown {
-  display: block;
-}
-
-.filter-options button {
-  margin-left: 10px;
 }
 
 .order__btn button {
