@@ -525,64 +525,34 @@
     <section id="customized-drink">
       <div class="customize-drink-container">
         <h2>Want to Customize Your Drink?</h2>
-
+    
         <div class="customization-options">
-          <div
-            class="option"
-            draggable="true"
-            id="espresso"
-            ondragstart="drag(event)"
-          >
+          <div class="option" draggable="true" id="espresso" ondragstart="drag(event)">
             <p>Espresso</p>
           </div>
-          <div
-            class="option"
-            draggable="true"
-            id="latte"
-            ondragstart="drag(event)"
-          >
+          <div class="option" draggable="true" id="latte" ondragstart="drag(event)">
             <p>Latte</p>
           </div>
-          <div
-            class="option"
-            draggable="true"
-            id="mocha"
-            ondragstart="drag(event)"
-          >
+          <div class="option" draggable="true" id="mocha" ondragstart="drag(event)">
             <p>Mocha</p>
           </div>
-          <div
-            class="option"
-            draggable="true"
-            id="almond"
-            ondragstart="drag(event)"
-          >
+          <div class="option" draggable="true" id="almond" ondragstart="drag(event)">
             <p>Almond Milk</p>
           </div>
-          <div
-            class="option"
-            draggable="true"
-            id="caramel"
-            ondragstart="drag(event)"
-          >
+          <div class="option" draggable="true" id="caramel" ondragstart="drag(event)">
             <p>Caramel</p>
           </div>
         </div>
-
-        <div
-          class="drink-container"
-          ondrop="drop(event)"
-          ondragover="allowDrop(event)"
-        >
+    
+        <div class="drink-container" ondrop="drop(event)" ondragover="allowDrop(event)">
           <p>Drop your choices here!</p>
           <div id="drink-customization"></div>
         </div>
-
-        <button id="order-button" onclick="finalizeOrder()">
-          Finalize Order
-        </button>
+    
+        <button id="order-button" onclick="finalizeOrder()">Finalize Order</button>
       </div>
     </section>
+    
 
     <div id="order-modal" class="modal">
       <div class="modal-content">
