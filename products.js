@@ -1,193 +1,298 @@
 let currentPage = 1;
-const itemsPerPage = 6;
-let selectedFilter = "all";
+const productsPerPage = 6;
 
-const coffeeCards = document.querySelectorAll(".coffeetypes__card");
-const productNames = [
-  "Americano",
-  "Cappuccino",
-  "Macchiato",
-  "Iced Mocha",
-  "Frappe",
-  "Cold brew",
-  "Breve",
-  "Turkish Coffee",
-  "Cortado",
-  "Dalgona",
-  "Dirty Chai",
-  "Mazagran",
+const products = [
+  {
+    name: "Americano",
+    description:
+      "Caffè americano, also known as americano or American, is a type of coffee drink prepared by diluting an espresso shot with hot water.",
+    image: "./assets/images/americane.jpg",
+    price: "5.00$",
+    type: "hot",
+  },
+  {
+    name: "Cappuccino",
+    description:
+      "Cappuccino is an espresso-based coffee drink that is traditionally prepared with steamed milk including a layer of milk foam.",
+    image: "./assets/images/capuccino.jpg",
+    price: "3.50$",
+    type: "hot",
+  },
+  {
+    name: "Macchiato",
+    description:
+      "Macchiato, sometimes called espresso macchiato and often shortened to just macchiato in English.",
+    image: "./assets/images/machiato.jpg",
+    price: "3.75$",
+    type: "hot",
+  },
+  {
+    name: "Iced Mocha",
+    description:
+      "When you order an iced mocha coffee, you'll receive a decadent beverage consisting of mocha sauce, espresso, milk, and ice.",
+    image: "./assets/images/icedmochaa.jpg",
+    price: "4.00$",
+    type: "cold",
+  },
+  {
+    name: "Frappe",
+    description:
+      "If you're a fan of having your coffee blended into a frothy, a frappe might just be the perfect choice for you.",
+    image: "./assets/images/frappe.jpg",
+    price: "2.50$",
+    type: "cold",
+  },
+  {
+    name: "Cold brew",
+    description:
+      "Cold brew also called cold water extraction or cold pressing. We're huge fans of cold brew as a fantastic variant of iced coffee.",
+    image: "./assets/images/coldbrew.jpg",
+    price: "3.00$",
+    type: "cold",
+  },
+  {
+    name: "Breve",
+    description:
+      "Breve coffee isn't just another coffee trend. It's a testament to the art of brewing, a blend of tradition and creativity.",
+    image: "./assets/images/brave.jpg",
+    price: "2.75$",
+    type: "hot",
+  },
+  {
+    name: "Turkish Coffee",
+    description:
+      "Turkish coffee combines special preparation and brewing techniques with a rich communal traditional culture.",
+    image: "./assets/images/turkish.jpg",
+    price: "2.50$",
+    type: "hot",
+  },
+  {
+    name: "Cortado",
+    description:
+      "A cortado is a Spanish beverage consisting of espresso mixed with a roughly equal amount of warm milk to reduce the acidity.",
+    image: "./assets/images/cortado.jpg",
+    price: "3.50$",
+    type: "hot",
+  },
+  {
+    name: "Dalgona",
+    description:
+      "Dalgona Coffee is incredibly easy to make with only 3 ingredients! You’ll have a fluffy and deliciously whipped coffee in no time!",
+    image: "./assets/images/dalgona.jpg",
+    price: "3.50$",
+    type: "cold",
+  },
+  {
+    name: "Dirty Chai",
+    description:
+      "Dirty chai is a popular espresso drink served in coffee shops. It consists of a shot of espresso mixed into 'spiced tea'.",
+    image: "./assets/images/dirtychai.jpg",
+    price: "4.50$",
+    type: "hot",
+  },
+  {
+    name: "Mazagran",
+    description:
+      "Mazagran is a cold, sweetened coffee drink that originated in Algeria. Portuguese may use espresso, lemon, mint and rum.",
+    image: "./assets/images/mazagran.jpg",
+    price: "2.80$",
+    type: "cold",
+  },
+  {
+    name: "Flat white",
+    description:
+      "The flat white originated from Australia, purportedly invented for customers wanting a milky coffee drink.",
+    image: "./assets/images/flatwhite.jpg",
+    price: "2.50$",
+    type: "hot",
+  },
+  {
+    name: "Doppio",
+    description:
+      "A doppio needs little explanation beyond that it’s also known as a double espresso — this makes for a highly concentrated.",
+    image: "./assets/images/doppio.jpg",
+    price: "1.50$",
+    type: "hot",
+  },
+  {
+    name: "Arabica",
+    description:
+      "Arabica is the most popular type of coffee, hands down. Depending on who you ask, many coffee enthusiasts prefer using.",
+    image: "./assets/images/arabica.jpg",
+    price: "2.30$",
+    type: "hot",
+  },
+  {
+    name: "Galão",
+    description:
+      "Originating in Portugal, this hot coffee drink is closely related to the latte and cappuccino. It contains twice as much foamed milk.",
+    image: "./assets/images/galão.jpg",
+    price: "2.00$",
+    type: "hot",
+  },
+  {
+    name: "Bulletproof",
+    description:
+      "Bulletproof coffee is a trendy beverage known for its unique ingredients and potential health benefits.",
+    image: "./assets/images/bulletproof.jpg",
+    price: "2.20$",
+    type: "hot",
+  },
+  {
+    name: "Café au Lait",
+    description:
+      "Mazagran is a cold, sweetened coffee drink that originated in Algeria. Portuguese may use espresso, lemon, mint and rum.",
+    image: "./assets/images/caféaulait.jpg",
+    price: "1.50$",
+    type: "hot",
+  },
+  {
+    name: "Affogato",
+    description:
+      "The name “Affogato” translates to “drowned”, signifying the act of drowning the ice cream in and aromatic espresso.",
+    image: "./assets/images/Aaffogato.jpg",
+    price: "1.80$",
+    type: "cold",
+  },
+  {
+    name: "Ristretto",
+    description:
+      "The ristretto originated in the early 20th century and is believed to be the original espresso. “Ristretto” means ‘restricted’.",
+    image: "./assets/images/ristretto.jpg",
+    price: "3.20$",
+    type: "hot",
+  },
+  {
+    name: "Shakerato",
+    description:
+      "Shakerato, a delightful Italian coffee creation, is crafted by vigorously shaking freshly brewed espresso, ice, and sugar.",
+    image: "./assets/images/shakerato.jpg",
+    price: "1.90$",
+    type: "cold",
+  },
 ];
 
-const searchInput = document.getElementById("searchInput");
-const datalist = document.getElementById("productSuggestions");
+let currentProducts = [...products];
 
-function getFilteredCards() {
-  const query = searchInput.value.toLowerCase();
-  const filteredCards = [];
-
-  coffeeCards.forEach((card) => {
-    const productName = card.querySelector("h3").textContent.toLowerCase();
-    const isHot = card.classList.contains("hot");
-    const isCold = card.classList.contains("cold");
-
-    const matchesQuery = productName.includes(query) || query === "";
-    const matchesFilter =
-      selectedFilter === "all" ||
-      (selectedFilter === "hot" && isHot) ||
-      (selectedFilter === "cold" && isCold);
-
-    if (matchesQuery && matchesFilter) {
-      filteredCards.push(card);
-    }
-  });
-
-  return filteredCards;
+function getPaginatedProducts() {
+  const start = (currentPage - 1) * productsPerPage;
+  const end = currentPage * productsPerPage;
+  return currentProducts.slice(start, end);
 }
 
-function showPage(page) {
-  const filteredCards = getFilteredCards();
-  const totalItems = filteredCards.length;
 
+function searchProducts(searchTerm) {
+  return products.filter((product) =>
+    product.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+}
+
+function filterProducts(type) {
+  return products.filter((product) => product.type === type || type === "all");
+}
+
+function sortProducts(order) {
+  return [...products].sort((a, b) => {
+    if (order === "asc") {
+      return a.name.localeCompare(b.name);
+    } else if (order === "desc") {
+      return b.name.localeCompare(a.name);
+    }
+  });
+}
+
+function onSearch() {
+  const searchTerm = document.getElementById("searchInput").value.toLowerCase();
+  currentProducts = products.filter((product) =>
+    product.name.toLowerCase().includes(searchTerm)
+  );
+  currentPage = 1;
+  updateUI();
+}
+
+function onFilter(filterType) {
+  currentProducts = products.filter((product) => 
+    filterType === "all" || product.type === filterType
+  );
+  currentPage = 1;
+  updateUI();
+}
+
+function onSort(order) {
+  currentProducts.sort((a, b) => {
+    if (order === "asc") {
+      return a.name.localeCompare(b.name);
+    } else if (order === "desc") {
+      return b.name.localeCompare(a.name);
+    }
+  });
+  currentPage = 1;
+  updateUI();
+}
+
+function displayProducts(products) {
+  const productContainer = document.getElementById("product-list");
+  productContainer.innerHTML = "";
+  products.forEach((product) => {
+    const productCard = `
+      <div class="coffeetypes__card">
+        <div class="coffeetypes__img">
+          <img src="${product.image}" alt="${product.name}">
+        </div>
+        <div class="coffeetypes__content">
+                <h3>${product.name}</h3>
+                <p>
+                ${product.description}
+                </p>
+                <div class="shop">
+                  <span>${product.price}</span>
+                  <div class="btn__group order__btn">
+                    <a href="./order.html">
+                      <button>Order now</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+      </div>`;
+    productContainer.innerHTML += productCard;
+  });
+}
+
+function createPaginationControls(totalProducts) {
+  const pageCount = Math.ceil(totalProducts / productsPerPage);
+  const paginationContainer = document.getElementById("pagination-controls");
+  paginationContainer.innerHTML = "";
+
+  for (let i = 1; i <= pageCount; i++) {
+    const pageButton = `<button class="page-number" onclick="goToPage(${i})">${i}</button>`;
+    paginationContainer.innerHTML += pageButton;
+  }
+}
+
+function goToPage(page) {
   currentPage = page;
-
-  coffeeCards.forEach((card) => card.classList.add("hidden"));
-
-  const start = (page - 1) * itemsPerPage;
-  const end = start + itemsPerPage;
-
-  for (let i = start; i < end && i < totalItems; i++) {
-    filteredCards[i].classList.remove("hidden");
-  }
-  document.querySelectorAll(".page-number").forEach((number) => {
-    number.classList.remove("active");
-  });
-  document
-    .querySelector(`.page-number[data-page="${page}"]`)
-    .classList.add("active");
-
-  const noResultsDiv = document.querySelector(".no-results");
-  if (filteredCards.length > 0) {
-    noResultsDiv.style.display = "none";
-    document.getElementById("viewMoreBtn").style.display = "none";
-    document.getElementById("backBtn").style.display = "none";
-  } else {
-    noResultsDiv.style.display = "block";
-    document.getElementById("viewMoreBtn").style.display = "none";
-    document.getElementById("backBtn").style.display = "none";
-  }
+  updateUI();
 }
 
-function updateSuggestions() {
-  const query = searchInput.value.toLowerCase();
-  datalist.innerHTML = "";
+function updateUI() {
+  const paginatedProducts = getPaginatedProducts();
+  displayProducts(paginatedProducts);
+  createPaginationControls(currentProducts.length);
 
-  productNames.forEach((name) => {
-    if (name.toLowerCase().includes(query)) {
-      const option = document.createElement("option");
-      option.value = name;
-      datalist.appendChild(option);
-    }
-  });
+  const noResults = document.querySelector(".no-results");
+  noResults.style.display = currentProducts.length === 0 ? "block" : "none";
 }
 
-function filterProducts() {
-  showPage(1);
-}
 
-searchInput.addEventListener("input", () => {
-  updateSuggestions();
-  filterProducts();
+document.addEventListener("DOMContentLoaded", () => {
+  currentProducts = [...products];
+  updateUI();
 });
 
-document.getElementById("filterHot").addEventListener("click", () => {
-  if (selectedFilter === "hot") {
-    selectedFilter = "all";
-    document.getElementById("filterHot").classList.remove("active");
-  } else {
-    selectedFilter = "hot";
-    document.getElementById("filterHot").classList.add("active");
-    document.getElementById("filterCold").classList.remove("active");
-  }
-  filterProducts();
-});
 
-document.getElementById("filterCold").addEventListener("click", () => {
-  if (selectedFilter === "cold") {
-    selectedFilter = "all";
-    document.getElementById("filterCold").classList.remove("active");
-  } else {
-    selectedFilter = "cold";
-    document.getElementById("filterCold").classList.add("active");
-    document.getElementById("filterHot").classList.remove("active");
-  }
-  filterProducts();
-});
-
-document.getElementById("filterAll").addEventListener("click", () => {
-  selectedFilter = "all";
-  filterProducts();
-
-  document.getElementById("filterHot").classList.remove("active");
-  document.getElementById("filterCold").classList.remove("active");
-});
-
-document.querySelectorAll(".page-number").forEach((number) => {
-  number.addEventListener("click", () => {
-    const page = parseInt(number.dataset.page);
-    showPage(page);
-  });
-});
-
-showPage(1);
-//drag and drop
-function finalizeOrder() {
-  var drink = document.getElementById("drink-customization").innerHTML;
-  var modal = document.getElementById("order-modal");
-
-  if (drink.trim() === "") {
-    alert("Please select your drink options.");
-  } else {
-    document.getElementById(
-      "order-summary"
-    ).innerHTML = `<p><strong>Drink Customization:</strong> ${drink}</p>`;
-    modal.style.display = "block";
-  }
-}
-
-function closeModal() {
-  var modal = document.getElementById("order-modal");
-  modal.style.display = "none";
-}
-
-function submitOrder() {
-  var name = document.getElementById("user-name").value;
-  var location = document.getElementById("location").value;
-  var phone = document.getElementById("phone").value;
-
-  if (name && location && phone) {
-    alert(
-      `Order placed successfully!\nName: ${name}\nLocation: ${location}\nPhone: ${phone}`
-    );
-    closeModal();
-  } else {
-    alert("Please fill in all the fields.");
-  }
-}
-
-function allowDrop(ev) {
-  ev.preventDefault();
-}
-
-function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop(ev) {
-  ev.preventDefault();
-  var data = ev.dataTransfer.getData("text");
-  var draggedElement = document.getElementById(data);
-
-  var newElement = document.createElement("p");
-  newElement.textContent = draggedElement.textContent;
-  document.getElementById("drink-customization").appendChild(newElement);
-}
+document.getElementById("searchInput").addEventListener("input", onSearch);
+document.getElementById("filterAll").addEventListener("click", () => onFilter("all"));
+document.getElementById("filterHot").addEventListener("click", () => onFilter("hot"));
+document.getElementById("filterCold").addEventListener("click", () => onFilter("cold"));
+document.getElementById("sortAZ").addEventListener("click", () => onSort("asc"));
+document.getElementById("sortZA").addEventListener("click", () => onSort("desc"));

@@ -104,11 +104,12 @@ body {
 }
 
 .coffeetypes__cards {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto;
   gap: 30px;
   padding: 20px 0;
   justify-content: center;
-  flex-wrap: wrap;
+
 }
 
 .coffeetypes__card {

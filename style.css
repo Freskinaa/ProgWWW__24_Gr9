@@ -247,9 +247,8 @@ body {
 }
 
 .coffee__cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: auto auto auto;
   width: 100%;
   gap: 20px;
 }
@@ -507,7 +506,8 @@ body {
 }
 
 .reviews__cards {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto;
   gap: 20px;
   justify-content: center;
   align-items: flex-start;
