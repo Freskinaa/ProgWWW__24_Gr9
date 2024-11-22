@@ -180,7 +180,6 @@ function getPaginatedProducts() {
   return currentProducts.slice(start, end);
 }
 
-
 function searchProducts(searchTerm) {
   return products.filter((product) =>
     product.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -211,8 +210,8 @@ function onSearch() {
 }
 
 function onFilter(filterType) {
-  currentProducts = products.filter((product) => 
-    filterType === "all" || product.type === filterType
+  currentProducts = products.filter(
+    (product) => filterType === "all" || product.type === filterType
   );
   currentPage = 1;
   updateUI();
@@ -224,10 +223,24 @@ function onSort(order) {
       return a.name.localeCompare(b.name);
     } else if (order === "desc") {
       return b.name.localeCompare(a.name);
+    } else if (order === "priceLowHigh") {
+      const priceComparison = parsePrice(a.price) - parsePrice(b.price);
+      return priceComparison === 0
+        ? a.name.localeCompare(b.name)
+        : priceComparison;
+    } else if (order === "priceHighLow") {
+      const priceComparison = parsePrice(b.price) - parsePrice(a.price);
+      return priceComparison === 0
+        ? a.name.localeCompare(b.name)
+        : priceComparison;
     }
   });
   currentPage = 1;
   updateUI();
+}
+
+function parsePrice(priceString) {
+  return parseFloat(priceString.replace("$", ""));
 }
 
 function displayProducts(products) {
@@ -283,16 +296,30 @@ function updateUI() {
   noResults.style.display = currentProducts.length === 0 ? "block" : "none";
 }
 
-
 document.addEventListener("DOMContentLoaded", () => {
   currentProducts = [...products];
   updateUI();
 });
 
-
 document.getElementById("searchInput").addEventListener("input", onSearch);
-document.getElementById("filterAll").addEventListener("click", () => onFilter("all"));
-document.getElementById("filterHot").addEventListener("click", () => onFilter("hot"));
-document.getElementById("filterCold").addEventListener("click", () => onFilter("cold"));
-document.getElementById("sortAZ").addEventListener("click", () => onSort("asc"));
-document.getElementById("sortZA").addEventListener("click", () => onSort("desc"));
+document
+  .getElementById("filterAll")
+  .addEventListener("click", () => onFilter("all"));
+document
+  .getElementById("filterHot")
+  .addEventListener("click", () => onFilter("hot"));
+document
+  .getElementById("filterCold")
+  .addEventListener("click", () => onFilter("cold"));
+document
+  .getElementById("sortAZ")
+  .addEventListener("click", () => onSort("asc"));
+document
+  .getElementById("sortZA")
+  .addEventListener("click", () => onSort("desc"));
+document
+  .getElementById("sortPriceLowHigh")
+  .addEventListener("click", () => onSort("priceLowHigh"));
+document
+  .getElementById("sortPriceHighLow")
+  .addEventListener("click", () => onSort("priceHighLow"));
