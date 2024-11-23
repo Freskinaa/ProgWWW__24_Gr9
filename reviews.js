@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".reviews__card");
   const leftArrow = document.querySelector(".prev");
   const rightArrow = document.querySelector(".next");
-  const cardsPerPage = 3; 
+  const cardsPerPage = 3;
   let currentPage = 0;
   function showCards(page) {
     cards.forEach((card, index) => {
@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
     currentPage = page;
   }
 
-  // Event për klikimet te indikatorët
   indicators.forEach((indicator, index) => {
     indicator.addEventListener("click", () => {
       showCards(index);

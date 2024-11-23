@@ -20,10 +20,10 @@ body {
   align-items: center;
 
   width: 100%;
-  padding-top:  45px;
+  padding-top: 45px;
   padding-bottom: 20px;
 }
-.coffeetypes__header h2{
+.coffeetypes__header h2 {
   font-weight: 900;
   font-size: 35px;
 }
@@ -46,7 +46,6 @@ body {
 }
 
 .coffeetypes__search input[type="text"] {
-
   font-size: 15px;
   border: none;
   outline: none;
@@ -85,7 +84,6 @@ body {
   transform: translateY(-50%) scale(0.95);
 }
 
-
 .coffeetypes__search input {
   padding: 12px;
   border: 2px solid var(--base-brown);
@@ -109,7 +107,6 @@ body {
   gap: 30px;
   padding: 20px 0;
   justify-content: center;
-
 }
 
 .coffeetypes__card {
@@ -189,13 +186,13 @@ body {
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3), inset 0 -4px 8px rgba(0, 0, 0, 0.2),
-  inset 0 4px 6px rgba(255, 255, 255, 0.1);
+    inset 0 4px 6px rgba(255, 255, 255, 0.1);
 }
 
 .page-number:hover {
   background-color: var(--dark-brown);
   color: white;
-  
+
   transform: translateY(-1px) scale(1);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4),
     inset 0 -6px 10px rgba(0, 0, 0, 0.3),
@@ -254,7 +251,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 }
 
 .dropdown {
@@ -311,7 +307,6 @@ body {
   background: linear-gradient(to bottom right, #f9f5eb, #e8dbc0);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
- 
 }
 
 .nutrition__title h2 {
@@ -427,7 +422,6 @@ h2 {
   margin: 20px auto;
   padding: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-
 }
 
 #drink-customization {
@@ -467,7 +461,6 @@ button:hover {
   background-color: #6a4b36;
   transform: scale(1.05);
 }
-
 
 #order-summary {
   margin-top: 20px;
