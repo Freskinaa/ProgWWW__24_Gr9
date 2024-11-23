@@ -17,23 +17,27 @@
       <div class="container">
         <div class="navbar__content">
           <div class="nav__links">
-            <a href="./index.html"
-              ><img src="./assets/images/kafelogo1.png" alt="logo"
-            /></a>
+            <a href="./index.html">
+              <img src="./assets/images/kafelogo1.png" alt="logo" />
+            </a>
             <ul>
               <li><a href="/" class="nav-link active">Home</a></li>
               <li><a href="/products.html" class="nav-link">Products</a></li>
               <li><a href="/gift.html" class="nav-link">Gift cards</a></li>
               <li><a href="/about.html" class="nav-link">About us</a></li>
               <li><a href="/contact.html" class="nav-link">Contact us</a></li>
-              <li id="accountLink">
-                <a href="account.html" class="nav-link">My Account</a>
-              </li>
             </ul>
           </div>
           <div class="btn__group">
-            <button><a href="./login.html">Log in</a></button>
-            <button><a href="./register.html">Sign up</a></button>
+            <button id="loginButton"><a href="./login.html">Log in</a></button>
+            <button id="signUpButton"><a href="./register.html">Sign up</a></button>
+            <div class="nav__links">
+              <ul>
+                <li>
+                  <a id="accountLink" href="account.html" class="nav-link" style="display: none;">My Account</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -388,149 +392,21 @@
       </div>
     </section>
 
-    <!-- <section id="reviews" class="reviews__container">
-      <div class="container">
-        <div class="reviews__wrapper">
-          <div class="reviews__text">
-            <h2>What our customers think about us</h2>
-          </div>
-          <div class="reviews__cards">
-            <button class="arrow">
-              <span class="left-arrow">&#10094;</span>
-            </button>
-            <div class="reviews__card">
-              <div class="reviews__img">
-                <img src="./assets/images/reviews4.webp" alt="reviews" />
-              </div>
-              <div class="reviews__user">
-                <p class="user-name">Liam Anderson</p>
-                <p class="user-comment">
-                  "Exceptional service! The coffee quality is unmatched."
-                </p>
-              </div>
-            </div>
-
-            <div class="reviews__card">
-              <div class="reviews__img">
-                <img src="./assets/images/reviews5.jpg" alt="reviews" />
-              </div>
-              <div class="reviews__user">
-                <p class="user-name">Sophia Martinez</p>
-                <p class="user-comment">
-                  "The cozy atmosphere makes it my favorite place to relax."
-                </p>
-              </div>
-            </div>
-
-            <div class="reviews__card">
-              <div class="reviews__img">
-                <img src="./assets/images/reviews6.jpg" alt="reviews" />
-              </div>
-              <div class="reviews__user">
-                <p class="user-name">William Brown</p>
-                <p class="user-comment">
-                  "The taste and aroma are out of this world! Highly recommend."
-                </p>
-              </div>
-            </div>
-
-            <div class="reviews__card">
-              <div class="reviews__img">
-                <img src="./assets/images/reviews7.jpg" alt="reviews" />
-              </div>
-              <div class="reviews__user">
-                <p class="user-name">Emma Clark</p>
-                <p class="user-comment">
-                  "Amazing coffee and great customer service every time!"
-                </p>
-              </div>
-            </div>
-
-            <div class="reviews__card">
-              <div class="reviews__img">
-                <img src="./assets/images/reviews8.jpg" alt="reviews" />
-              </div>
-              <div class="reviews__user">
-                <p class="user-name">Noah Wilson</p>
-                <p class="user-comment">
-                  "I love the variety of flavors. Each cup is unique and
-                  delicious."
-                </p>
-              </div>
-            </div>
-
-            <div class="reviews__card">
-              <div class="reviews__img">
-                <img src="./assets/images/review9.jpg" alt="reviews" />
-              </div>
-              <div class="reviews__user">
-                <p class="user-name">Mia Johnson</p>
-                <p class="user-comment">
-                  "Simply the best coffee in town. The baristas are super
-                  friendly too!"
-                </p>
-              </div>
-            </div>
-            <div class="reviews__card">
-              <div class="reviews__img">
-                <img src="./assets/images/reviews1.jpg" alt="reviews" />
-              </div>
-              <div class="reviews__user">
-                <p class="user-name">Daniel Thomas</p>
-                <p class="user-comment">
-                  "Absolutely love the coffee here! Friendly staff and cozy
-                  vibe."
-                </p>
-              </div>
-            </div>
-
-            <div class="reviews__card">
-              <div class="reviews__img">
-                <img src="./assets/images/reviews2.jpg" alt="reviews" />
-              </div>
-              <div class="reviews__user">
-                <p class="user-name">James Charles</p>
-                <p class="user-comment">
-                  "Best coffee in town. Great service and awesome atmosphere!"
-                </p>
-              </div>
-            </div>
-
-            <div class="reviews__card">
-              <div class="reviews__img">
-                <img src="./assets/images/reviews3.jpg" alt="reviews" />
-              </div>
-              <div class="reviews__user">
-                <p class="user-name">Emma Mary</p>
-                <p class="user-comment">
-                  "Fantastic coffee and super friendly baristas. Highly
-                  recommend!"
-                </p>
-              </div>
-            </div>
-            <button class="arrow">
-              <span class="right-arrow">&#10095;</span>
-            </button>
-          </div>
-
-          <div class="carousel-indicators">
-            <span class="indicator" data-index="0"></span>
-            <span class="indicator" data-index="1"></span>
-            <span class="indicator" data-index="2"></span>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-
     <section id="reviews" class="reviews__container">
       <div class="container">
         <div class="reviews__header">
-          <h2>What the <span class="highlight">BIGGEST CUP OF JOY FANS </span> say about Us!</h2>
+          <h2>
+            What the <span class="highlight">BIGGEST CUP OF JOY FANS </span> say
+            about Us!
+          </h2>
           <p>Take a look at some of our reviews.</p>
         </div>
         <div class="reviews__wrapper">
+          <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
           <div class="reviews__cards">
+            <!-- <button class="arrow">
+              <span class="left-arrow">&#10094;</span>
+            </button> -->
             <div class="reviews__card">
               <div class="reviews__img">
                 <img src="./assets/images/reviews4.webp" alt="User Image" />
@@ -554,10 +430,68 @@
                 <img src="./assets/images/reviews6.jpg" alt="User Image" />
               </div>
               <blockquote>
-                <p>"Fantastic  customer support."</p>
+                <p>"Fantastic customer support."</p>
               </blockquote>
               <p class="user-name">William Brown</p>
             </div>
+            <div class="reviews__card">
+              <div class="reviews__img">
+                <img src="./assets/images/reviews7.jpg" alt="User Image" />
+              </div>
+              <blockquote>
+                <p>"Keep track of the hottest NFTs."</p>
+              </blockquote>
+              <p class="user-name">Liam Anderson</p>
+            </div>
+            <div class="reviews__card">
+              <div class="reviews__img">
+                <img src="./assets/images/reviews8.jpg" alt="User Image" />
+              </div>
+              <blockquote>
+                <p>"Keep track of the hottest NFTs."</p>
+              </blockquote>
+              <p class="user-name">Liam Anderson</p>
+            </div>
+            <div class="reviews__card">
+              <div class="reviews__img">
+                <img src="./assets/images/reviews1.jpg" alt="User Image" />
+              </div>
+              <blockquote>
+                <p>"Keep track of the hottest NFTs."</p>
+              </blockquote>
+              <p class="user-name">Liam Anderson</p>
+            </div>
+            <div class="reviews__card">
+              <div class="reviews__img">
+                <img src="./assets/images/reviews2.jpg" alt="User Image" />
+              </div>
+              <blockquote>
+                <p>"Keep track of the hottest NFTs."</p>
+              </blockquote>
+              <p class="user-name">Liam Anderson</p>
+            </div>
+            <div class="reviews__card">
+              <div class="reviews__img">
+                <img src="./assets/images/reviews3.jpg" alt="User Image" />
+              </div>
+              <blockquote>
+                <p>"Keep track of the hottest NFTs."</p>
+              </blockquote>
+              <p class="user-name">Liam Anderson</p>
+            </div>
+            <div class="reviews__card">
+              <div class="reviews__img">
+                <img src="./assets/images/reviews4.webp" alt="User Image" />
+              </div>
+              <blockquote>
+                <p>"Keep track of the hottest NFTs."</p>
+              </blockquote>
+              <p class="user-name">Liam Anderson</p>
+            </div>
+            <!-- <button class="arrow">
+              <span class="right-arrow">&#10095;</span>
+            </button> -->
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
           </div>
           <div class="carousel-controls">
             <span class="indicator"></span>
@@ -567,7 +501,7 @@
         </div>
       </div>
     </section>
-    
+
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-column">
@@ -610,7 +544,7 @@
         <p>&copy; 2024 Coffee Co. All Rights Reserved</p>
       </div>
     </footer>
-
+    <script src="./logoutVisibility.js"></script> 
     <script src="./account.js"></script>
     <script src="reviews.js"></script>
   </body>

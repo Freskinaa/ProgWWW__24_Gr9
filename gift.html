@@ -13,25 +13,27 @@
       <div class="container">
         <div class="navbar__content">
           <div class="nav__links">
-            <a href="./index.html"
-              ><img src="./assets/images/kafelogo1.png" alt="logo"
-            /></a>
+            <a href="./index.html">
+              <img src="./assets/images/kafelogo1.png" alt="logo" />
+            </a>
             <ul>
               <li><a href="/" class="nav-link">Home</a></li>
               <li><a href="/products.html" class="nav-link">Products</a></li>
-              <li>
-                <a href="/gift.html" class="nav-link active">Gift cards</a>
-              </li>
+              <li><a href="/gift.html" class="nav-link active">Gift cards</a></li>
               <li><a href="/about.html" class="nav-link">About us</a></li>
               <li><a href="/contact.html" class="nav-link">Contact us</a></li>
-              <li id="accountLink">
-                <a href="account.html" class="nav-link">My Account</a>
-              </li>
             </ul>
           </div>
           <div class="btn__group">
-            <button><a href="./login.html">Log in</a></button>
-            <button><a href="./register.html">Sign up</a></button>
+            <button id="loginButton"><a href="./login.html">Log in</a></button>
+            <button id="signUpButton"><a href="./register.html">Sign up</a></button>
+            <div class="nav__links">
+              <ul>
+                <li>
+                  <a id="accountLink" href="account.html" class="nav-link" style="display: none;">My Account</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -284,7 +286,7 @@
         <p>&copy; 2024 Coffee Co. All Rights Reserved</p>
       </div>
     </footer>
-
+    <script src="./logoutVisibility.js"></script> 
     <script src="./account.js"></script>
     <script src="gift.js"></script>
   </body>

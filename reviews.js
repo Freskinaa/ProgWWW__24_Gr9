@@ -1,11 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
   const indicators = document.querySelectorAll(".indicator");
   const cards = document.querySelectorAll(".reviews__card");
-  const leftArrow = document.querySelector(".left-arrow");
-  const rightArrow = document.querySelector(".right-arrow");
+  const leftArrow = document.querySelector(".prev");
+  const rightArrow = document.querySelector(".next");
   const cardsPerPage = 3;
   let currentPage = 0;
-
   function showCards(page) {
     cards.forEach((card, index) => {
       card.style.display =
@@ -32,9 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
       showCards(currentPage - 1);
     }
   });
-
   rightArrow.addEventListener("click", () => {
-    if (currentPage < indicators.length - 1) {
+    if (currentPage < Math.ceil(cards.length / cardsPerPage) - 1) {
       showCards(currentPage + 1);
     }
   });
