@@ -312,7 +312,8 @@ body {
 }
 
 .coffeetypes__cards {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto;
   gap: 30px;
   padding: 20px 0;
   justify-content: center;
@@ -523,7 +524,6 @@ body {
   border-radius: 10px;
   text-align: center;
   padding: 20px;
-  flex: 0 0 300px;
   box-sizing: border-box;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s, box-shadow 0.3s;
