@@ -448,119 +448,179 @@ body {
   font-size: 16px;
   color: #333;
 }
-
-.prev,
-.next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 15px;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  z-index: 10;
-  border-radius: 50%;
-  width: 38px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.prev {
-  left: 8px;
-}
-
-.next {
-  right: 8px;
-}
-.reviews__container {
-  background-color: rgba(255, 250, 240, 0.95);
-  color: #2e2113;
+.clients-reviews {
   padding: 50px 20px;
-  margin: 0 auto;
+  background-color: #f9f9f9;
+  text-align: center;
 }
 
-.reviews__header {
-  text-align: center;
+.section-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.section-description {
+  font-size: 18px;
+  color: #555;
   margin-bottom: 40px;
 }
 
-.reviews__header h2 {
-  font-size: 36px;
-  font-weight: bold;
-  color: #4b2f1f;
-}
-
-.reviews__header .highlight {
-  color: #d4a373;
-}
-
-.reviews__wrapper {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-}
-
-.reviews__cards {
+.reviews-grid {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  justify-content: center;
-  align-items: flex-start;
-  overflow: hidden;
-  width: 100%;
-  position: relative;
+  justify-items: center;
 }
 
-.reviews__card {
-  background-color: #4b2f1f;
+.cards {
+  background-color: white;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
   border-radius: 10px;
   text-align: center;
-  padding: 20px;
-  box-sizing: border-box;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s, box-shadow 0.3s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
-.reviews__img {
-  width: 100px;
-  height: 100px;
+
+.cards:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cards img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.cards .quote {
+  width: 20px;
+  margin: 10px 0;
+}
+
+.cards p {
+  font-size: 16px;
+  color: #666;
   margin-bottom: 15px;
 }
 
-.reviews__img img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.client-details {
+  font-size: 14px;
+  color: #333;
 }
 
-.reviews__img img:hover {
-  transform: scale(1.1);
-}
-blockquote {
-  font-size: 16px;
-  font-style: italic;
-  margin: 10px 0;
-  color: #e8dcc2;
-}
-
-.user-name {
+.client-name {
   font-weight: bold;
-  color: #fff;
-  margin-top: 10px;
+  display: block;
+  margin-bottom: 5px;
 }
+
+
+
+
+.client-address {
+  font-family: var(--font-family-libre);
+  font-weight: bold;
+  color: #4e4e4e;
+  font-size: 0.65rem;
+  text-align: center;
+  display: block;
+  padding-bottom: 0.2rem;
+}
+
+.mySlide {
+  display: none;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  -webkit-transition: 0.6s ease;
+  -o-transition: 0.6s ease;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #dedede;
+  opacity: 0.7;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-transition: background-color 0.6s ease;
+  -o-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+
 .carousel-controls {
   display: flex;
   justify-content: center;

@@ -1,41 +1,65 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const indicators = document.querySelectorAll(".indicator");
-  const cards = document.querySelectorAll(".reviews__card");
-  const leftArrow = document.querySelector(".prev");
-  const rightArrow = document.querySelector(".next");
-  const cardsPerPage = 3;
-  let currentPage = 0;
-  function showCards(page) {
-    cards.forEach((card, index) => {
-      card.style.display =
-        index >= page * cardsPerPage && index < (page + 1) * cardsPerPage
-          ? "block"
-          : "none";
-    });
+let slideIndex = 1;
+showSlides(slideIndex);
 
-    indicators.forEach((indicator, index) => {
-      indicator.classList.toggle("active", index === page);
-    });
+function plusSlides(n) {
+    showSlides((slideIndex += n));
+}
 
-    currentPage = page;
-  }
+function currentSlide(n) {
+    showSlides((slideIndex = n));
+}
 
-  indicators.forEach((indicator, index) => {
-    indicator.addEventListener("click", () => {
-      showCards(index);
-    });
-  });
-
-  leftArrow.addEventListener("click", () => {
-    if (currentPage > 0) {
-      showCards(currentPage - 1);
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {
+        slideIndex = 1;
     }
-  });
-  rightArrow.addEventListener("click", () => {
-    if (currentPage < Math.ceil(cards.length / cardsPerPage) - 1) {
-      showCards(currentPage + 1);
+    if (n < 1) {
+        slideIndex = slides.length;
     }
-  });
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+}
 
-  showCards(currentPage);
-});
+
+
+
+
+let slideIndex2 = 1;
+showSlides2(slideIndex2);
+
+function plusSlides2(n) {
+    showSlides2((slideIndex2 += n));
+}
+
+function currentSlide2(n) {
+    showSlides2((slideIndex2 = n));
+}
+
+function showSlides2(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides2");
+    let dots = document.getElementsByClassName("dot2");
+    if (n > slides.length) {
+        slideIndex2 = 1;
+    }
+    if (n < 1) {
+        slideIndex2 = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex2 - 1].style.display = "block";
+    dots[slideIndex2 - 1].className += " active";
+}
