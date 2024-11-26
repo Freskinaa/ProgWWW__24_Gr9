@@ -1047,18 +1047,20 @@ blockquote {
     align-items: center;
   }
 
-  .logo {
-    align-items: center;
-    
-    display: flex;
-    display: contents;
+  .logo img{
+    width: 80px; 
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 10;
   }
 
   .nav__links {
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    display: none; /* Fsheh menun nga fillimi */
+    display: none; 
   }
 
   .nav__links ul {
@@ -1070,9 +1072,6 @@ blockquote {
     margin: 5px 0;
   }
 
-  .btn__group {
-    margin-top: 20px;
-  }
 
   .hamburger-menu {
     display: flex;
@@ -1085,18 +1084,173 @@ blockquote {
     display: flex;
   }
 }
-
+/* .hero__section */
 @media (max-width: 480px) {
   .navbar {
     padding: 10px 15px;
   }
-
-  .nav__links img {
-    width: 80px;
+  .logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    z-index: 20;
   }
 
-  .btn__group button {
-    padding: 8px 20px;
+  .logo img {
+    width: 80px;
+    height: auto;
+    display: block;
+    z-index: 10; 
+  }
+}
+@media (max-width: 768px) {
+  .hero__section {
+    padding: 40px 15px;
+  }
+
+  .btn_group button {
+    padding: 12px 25px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__section {
+    padding: 20px 10px;
+  }
+
+  .btn_group button {
+    padding: 10px 20px;
     font-size: 14px;
+  }
+}
+/* PRODUCTS */
+@media (max-width: 768px) {
+  .coffeetypes__cards {
+    grid-template-columns: repeat(2, 1fr); /* Dy copa për çdo rresht */
+    gap: 20px;
+  }
+
+  .coffeetypes__text h2 {
+    font-size: 28px;
+  }
+
+  .coffeetypes__content h3 {
+    font-size: 18px;
+  }
+
+  .coffeetypes__content p {
+    font-size: 13px;
+  }
+
+  .shop span {
+    font-size: 16px;
+  }
+
+  .order__btn button {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .coffeetypes__cards {
+    grid-template-columns: 1fr; /* Një kolona për çdo rresht në ekrane të vogla */
+    gap: 15px;
+  }
+
+  .coffeetypes__text h2 {
+    font-size: 24px;
+  }
+
+  .coffeetypes__content h3 {
+    font-size: 16px;
+  }
+
+  .coffeetypes__content p {
+    font-size: 12px;
+  }
+
+  .shop span {
+    font-size: 14px;
+  }
+
+  .order__btn button {
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+}
+
+/* ikonat */
+@media (max-width: 768px) {
+  .icons-section {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px;
+    overflow: hidden;
+  }
+
+  .icon-card p {
+    font-size: 0.65em; 
+  }
+}
+
+@media (max-width: 480px) {
+  .icons-section {
+    gap: 15px;
+  }
+  .icon-card p {
+    font-size: 0.75rem; 
+  }
+}
+
+/* Coffee deal */
+@media (min-width: 768px) {
+  .coffee-deal {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "right-side left-side";
+  }
+
+  .left-side {
+    order: 2;
+  }
+
+  .right-side {
+    order: 1;
+    text-align: left;
+  }
+}
+@media (min-width: 400px) {
+  .coffee-deal {
+    grid-template-columns: 1fr ,1fr;
+    grid-template-areas:
+      "left-side"
+      "right-side";
+  }
+
+  .left-side {
+    order: 1;
+  }
+
+  .right-side {
+    order: 2;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .coffee-deal {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "right-side left-side";
+  }
+
+  .left-side {
+    order: 2;
+  }
+
+  .right-side {
+    order: 1;
+    text-align: left;
   }
 }
