@@ -100,7 +100,7 @@
     <section id="customized-drink">
       <div class="customize-drink-container">
         <h2>Want to Customize Your Drink?</h2>
-
+    
         <div class="customization-options">
           <div
             class="option"
@@ -143,55 +143,45 @@
             <p>Caramel</p>
           </div>
         </div>
-
+    
         <div
           class="drink-container"
           ondrop="drop(event)"
           ondragover="allowDrop(event)"
         >
           <p>Drop your choices here!</p>
-          <div id="drink-customization"></div>
+          <div id="drink-customization">
+            <div class="column" id="column-1"></div>
+            <div class="column" id="column-2"></div>
+          </div>
         </div>
-
-        <button id="order-button" onclick="finalizeOrder()">
-          Finalize Order
-        </button>
+    
+        <button id="order-button" onclick="finalizeOrder()">Finalize Order</button>
       </div>
     </section>
+    
+<div id="order-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-button" onclick="closeModal()">&times;</span>
+    <h2>Complete Your Order</h2>
+    <form id="order-form">
+      <label for="first-name">First Name:</label>
+      <input type="text" id="first-name" name="first-name" placeholder="First Name" required />
 
-    <div id="order-modal" class="modal">
-      <div class="modal-content">
-        <span class="close-btn" onclick="closeModal()">&times;</span>
-        <h2>Order Summary</h2>
-        <div id="order-summary"></div>
+      <label for="last-name">Last Name:</label>
+      <input type="text" id="last-name" name="last-name" placeholder="Last Name" required />
 
-        <label for="user-name">Your Name:</label>
-        <input
-          type="text"
-          id="user-name"
-          placeholder="Enter your name"
-          required
-        />
+      <label for="location">Location:</label>
+      <input type="text" id="location" name="location" placeholder="Location" required />
 
-        <label for="location">Your Location:</label>
-        <input
-          type="text"
-          id="location"
-          placeholder="Enter your location"
-          required
-        />
+      <label for="phone-number">Phone Number:</label>
+      <input type="tel" id="phone-number" name="phone-number" placeholder="Phone Number" required />
 
-        <label for="phone">Your Phone Number:</label>
-        <input
-          type="text"
-          id="phone"
-          placeholder="Enter your phone number"
-          required
-        />
+      <button type="submit">Submit Order</button>
+    </form>
+  </div>
+</div>
 
-        <button onclick="submitOrder()">Submit</button>
-      </div>
-    </div>
 
     <section id="nutrition" class="nutrition__container">
       <div class="container">
