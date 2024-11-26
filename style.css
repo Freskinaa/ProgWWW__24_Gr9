@@ -518,9 +518,6 @@ body {
   margin-bottom: 5px;
 }
 
-
-
-
 .client-address {
   font-family: var(--font-family-libre);
   font-weight: bold;
@@ -618,8 +615,6 @@ body {
     opacity: 1;
   }
 }
-
-
 
 .carousel-controls {
   display: flex;
