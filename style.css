@@ -1116,6 +1116,9 @@ body {
   .nav__links.active {
     display: flex;
   }
+  .btn__group{
+    display: block;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1124,7 +1127,9 @@ body {
     align-items: center;
     justify-content: center;
   }
-
+  .btn__group{
+    display: block;
+  }
   .logo img {
     width: 70px;
     margin-bottom: 10px;
@@ -1179,7 +1184,7 @@ body {
 /* PRODUCTS */
 @media (max-width: 768px) {
   .coffeetypes__cards {
-    grid-template-columns: repeat(2, 1fr); /* Dy copa për çdo rresht */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 20px;
   }
 
