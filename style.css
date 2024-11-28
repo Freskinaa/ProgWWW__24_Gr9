@@ -452,12 +452,15 @@ body {
   background-color: #f3f0e7; 
   color: #fff;
   text-align: center; 
+  height: 87vh;
+
 }
 
 .slideshow-container {
   position: relative;
-  max-width: 100%;
+  max-width: 90%;
   margin-top: -10px;
+  margin-left: 50px;
   height: auto;
   overflow: hidden;
   border-radius: 10px;
@@ -483,6 +486,7 @@ body {
   color: #666;
   font-size: 1.2rem;
   margin-bottom: 20px;
+  padding: 20px 0;
 }
 
 

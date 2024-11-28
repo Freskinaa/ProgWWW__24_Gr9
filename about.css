@@ -41,6 +41,13 @@
 body {
   background-color: #f3f0e7;
 }
+.slideshoww{
+  padding-left: 100px;
+}
+.slideshoww h2{
+  padding-right: 70px;
+}
+
 
 .welcome-section h1,
 .welcome-section h2,
@@ -165,7 +172,7 @@ header {
   text-shadow: rgba(255, 255, 255, 0.5);
 }
 
-.slideshow-container {
+.slideshow1-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -383,7 +390,6 @@ header {
   text-align: center;
   border-radius: 15px;
   background: linear-gradient(to bottom right, #f9f5eb, #e8dbc0);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease-in-out;
 }
 

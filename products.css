@@ -524,21 +524,38 @@ button:hover {
 
 .modal-content {
   background-color: #fff;
-  padding: 20px;
+  padding: 25px 20px 30px;
   border-radius: 10px;
   width: 90%;
   max-width: 400px;
   text-align: center;
+  position: relative;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .close-button {
   font-size: 1.5em;
-  color: #000;
+  color: #333;
   cursor: pointer;
   position: absolute;
   top: 10px;
   right: 15px;
+  background: none;
+  border: none;
+}
+
+.close-footer-button {
+  margin-top: 20px;
+  padding: 10px 45px;
+  background-color: #d39757;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close-footer-button:hover {
+  background-color: #653b31;
 }
 
 label {
@@ -555,7 +572,7 @@ input {
   border-radius: 5px;
 }
 
-button {
+button[type="submit"] {
   margin-top: 20px;
   padding: 10px 20px;
   background-color: #7b5e3e;
@@ -563,6 +580,10 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #654c31;
 }
 
 #drink-customization p {

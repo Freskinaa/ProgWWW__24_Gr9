@@ -411,4 +411,7 @@ document
   
     closeModal();
   });
+  function closeModal() {
+    document.getElementById('order-modal').style.display = 'none';
+  }
   
