@@ -408,3 +408,47 @@ body {
   object-fit: cover;
   border-radius: 10px;
 }
+
+
+@media (min-width: 480px) {
+  .feedback-container {
+    flex-direction: row;
+    width: 400px;
+    height: 250px;
+  }
+
+  .feedback-content {
+    width: 60%;
+  }
+
+  .feedback-image {
+    width: 20%;
+  }
+
+  .feedback-form button {
+    width: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .feedback-container {
+    flex-direction: row;
+    width: 200px;
+    height: 250px;
+  }
+
+  .feedback-content h2 {
+    font-size: 1.8rem;
+  }
+  .feedback-content {
+    width: 60%;
+  }
+
+  .feedback-image {
+    width: 20%;
+  }
+
+  .feedback-form textarea {
+    height: 80px;
+  }
+}
