@@ -379,14 +379,14 @@ header {
   color: var(--dark-brown2);
 }
 #certifications {
-  padding: 20px;
-  text-align: center;
   padding: 40px 30px;
+  text-align: center;
   border-radius: 15px;
   background: linear-gradient(to bottom right, #f9f5eb, #e8dbc0);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
 }
+
 #certifications h2 {
   margin: 20px 0;
   padding-top: 10px;
@@ -423,21 +423,19 @@ tbody tr:nth-child(even) {
 
 tbody tr:hover {
   background-color: #f1f1f1;
-  padding-bottom: 70px;
 }
+
 .texti {
   margin-top: 20px;
-
   color: var(--second-dark2);
 }
+
 .texti h1 {
   color: var(--second-dark);
 }
 
-.slideshow-container {
-  height: 70vh;
-  margin-bottom: 40px;
-}
+
+
 /* }
 .gallery {
   --s: 220px;
