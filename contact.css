@@ -16,10 +16,6 @@ body {
   animation: fadeIn 1.5s ease-out;
 }
 
-.location-section:hover {
-  box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.3);
-  transform: scale(1.05);
-}
 
 .location-section h2 {
   font-size: 2rem;
@@ -110,7 +106,8 @@ body {
 }
 
 .contact-form button {
-  padding: 0.8em;
+  
+  padding: 10px 45px;
   background-color: var(--dark-brown);
   color: var(--base-white);
   border: none;
@@ -358,9 +355,9 @@ body {
 }
 
 .feedback-form textarea {
-  padding: 7px;
-  width: 80%;
-  height: 30px;
+  padding: 10px 30px;
+  width: 70%;
+  height: 40px;
   border: 1px solid #ccc;
   border-radius: 5px;
   resize: none;
@@ -369,7 +366,9 @@ body {
 
 .feedback-form button {
   background-color: #7b5e3e;
-  padding: 8px 22px;
+
+  padding: 10px 45px;
+  text-align: left;
   border-radius: 10px;
   transition: 0.4s ease-in-out;
   cursor: pointer;

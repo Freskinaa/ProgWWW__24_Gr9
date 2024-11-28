@@ -102,3 +102,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   updateTotalPrice();
 });
+document.querySelector('.gift-bow img').addEventListener('click', function(e) {
+  for (let i = 0; i < 10; i++) { 
+    const sparkle = document.createElement('div');
+    sparkle.classList.add('sparkle');
+
+    const rect = e.target.getBoundingClientRect();
+
+    const randomX = Math.random() * rect.width;
+    const randomY = Math.random() * rect.height;
+    sparkle.style.left = `${randomX - 7}px`;
+    sparkle.style.top = `${randomY - 7}px`;
+
+    e.target.parentElement.appendChild(sparkle);
+
+    setTimeout(() => {
+      sparkle.remove();
+    }, 500); 
+  }
+});
