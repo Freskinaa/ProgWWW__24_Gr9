@@ -1,41 +1,19 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const indicators = document.querySelectorAll(".indicator");
-  const cards = document.querySelectorAll(".reviews__card");
-  const leftArrow = document.querySelector(".prev");
-  const rightArrow = document.querySelector(".next");
-  const cardsPerPage = 3;
-  let currentPage = 0;
-  function showCards(page) {
-    cards.forEach((card, index) => {
-      card.style.display =
-        index >= page * cardsPerPage && index < (page + 1) * cardsPerPage
-          ? "block"
-          : "none";
-    });
+let currentIndex = 0;
 
-    indicators.forEach((indicator, index) => {
-      indicator.classList.toggle("active", index === page);
-    });
+function plusSlides(direction) {
+  const reviewsGrid = document.querySelector('.reviews-grid');
+  const cards = document.querySelectorAll('.cards');
+  const cardWidth = cards[0].offsetWidth + 20; 
+  const totalCards = cards.length;
+  const visibleCards = 3;
 
-    currentPage = page;
+  currentIndex += direction;
+
+  if (currentIndex < 0) {
+    currentIndex = totalCards - visibleCards;
+  } else if (currentIndex > totalCards - visibleCards) {
+    currentIndex = 0;
   }
 
-  indicators.forEach((indicator, index) => {
-    indicator.addEventListener("click", () => {
-      showCards(index);
-    });
-  });
-
-  leftArrow.addEventListener("click", () => {
-    if (currentPage > 0) {
-      showCards(currentPage - 1);
-    }
-  });
-  rightArrow.addEventListener("click", () => {
-    if (currentPage < Math.ceil(cards.length / cardsPerPage) - 1) {
-      showCards(currentPage + 1);
-    }
-  });
-
-  showCards(currentPage);
-});
+  reviewsGrid.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+}

@@ -112,3 +112,48 @@ document.getElementById("quantity").addEventListener("input", updateTotalCost);
 document
   .getElementById("coffee-type")
   .addEventListener("change", updateTotalCost);
+
+document.addEventListener("DOMContentLoaded", () => {
+  const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+  const nameSection = document.getElementById("name-section");
+  const nameInput = document.getElementById("name");
+
+  if (loggedInUser) {
+    nameSection.style.display = "block";
+    nameSection.textContent = `Welcome, ${loggedInUser.name}!`;
+    nameInput.style.display = "none";
+  } else {
+    nameSection.style.display = "block";
+    nameSection.textContent = "Enter Your Name";
+    nameInput.style.display = "block";
+  }
+});
+
+function confirmOrder() {
+  const coffeeType = document.getElementById("coffee-type").value;
+  const quantity = document.getElementById("quantity").value;
+  const paymentMethod = document.getElementById("payment-method").value;
+  const address = document.getElementById("address").value;
+  const deliveryMethod = document.getElementById("delivery-method").value;
+
+  const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+  const name = loggedInUser
+    ? loggedInUser.name
+    : document.getElementById("name").value;
+
+  if (!name) {
+    alert("Please provide your name to confirm the order.");
+    return;
+  }
+
+  const totalCost = (coffeePrices[coffeeType] * quantity).toFixed(2);
+
+  alert(`Order confirmed!\n
+        Name: ${name}\n
+        Coffee Type: ${coffeeType}\n
+        Quantity: ${quantity}\n
+        Payment Method: ${paymentMethod}\n
+        Delivery Address: ${address}\n
+        Delivery Method: ${deliveryMethod}\n
+        Total Cost: $${totalCost}`);
+}

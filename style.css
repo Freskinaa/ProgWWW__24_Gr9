@@ -448,119 +448,150 @@ body {
   font-size: 16px;
   color: #333;
 }
-
-.prev,
-.next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 15px;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  z-index: 10;
-  border-radius: 50%;
-  width: 38px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+.clients-reviews {
+  background-color: #f3f0e7; 
+  color: #fff;
+  text-align: center; /* Center text */
 }
 
-.prev {
-  left: 8px;
-}
-
-.next {
-  right: 8px;
-}
-.reviews__container {
-  background-color: rgba(255, 250, 240, 0.95);
-  color: #2e2113;
-  padding: 50px 20px;
-  margin: 0 auto;
-}
-
-.reviews__header {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.reviews__header h2 {
-  font-size: 36px;
-  font-weight: bold;
-  color: #4b2f1f;
-}
-
-.reviews__header .highlight {
-  color: #d4a373;
-}
-
-.reviews__wrapper {
+.slideshow-container {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-}
-
-.reviews__cards {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 20px;
-  justify-content: center;
-  align-items: flex-start;
+  max-width: 100%;
+  margin-top: -10px;
+  height: auto;
   overflow: hidden;
-  width: 100%;
-  position: relative;
+  border-radius: 10px;
+  
 }
 
-.reviews__card {
-  background-color: #4b2f1f;
+.reviews-grid {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+.slideshow-text h2 {
+  text-align: center;
+  color: #333;
+  font-size: 2rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.clients-reviews p {
+  text-align: center;
+  color: #666;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+
+.cards {
+  background-color: white;
+  padding: 20px;
   border-radius: 10px;
   text-align: center;
-  padding: 20px;
-  box-sizing: border-box;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  flex: 0 0 calc(33.333% - 20px);
+  min-width: calc(33.333% - 20px);
   transition: transform 0.3s, box-shadow 0.3s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
-.reviews__img {
-  width: 100px;
-  height: 100px;
+
+.cards:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cards img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.cards .quote {
+  width: 20px;
+  margin: 10px 0;
+}
+
+.cards p {
+  font-size: 16px;
+  color: #666;
   margin-bottom: 15px;
 }
 
-.reviews__img img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.client-details {
+  font-size: 14px;
+  color: #333;
 }
 
-.reviews__img img:hover {
-  transform: scale(1.1);
-}
-blockquote {
-  font-size: 16px;
-  font-style: italic;
-  margin: 10px 0;
-  color: #e8dcc2;
-}
-
-.user-name {
+.client-name {
   font-weight: bold;
-  color: #fff;
-  margin-top: 10px;
+  display: block;
+  margin-bottom: 5px;
 }
+
+.client-address {
+  font-weight: bold;
+  color: #4e4e4e;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  background-color: #ddd;
+  color: #333;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  transform: translateY(-50%);
+  background-color: rgba(221, 221, 221, 0.8); 
+  transition: background-color 0.3s, transform 0.3s, opacity 0.3s; 
+  opacity: 0.7;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(85, 85, 85, 0.9); 
+  color: white;
+  transform: translateY(-50%) scale(1.1);
+  opacity: 1; 
+}
+
+.prev {
+  left: 3px;
+  z-index: 100;
+}
+
+.next {
+  right: 20px;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    flex: 0 0 calc(100% - 20px);
+    min-width: calc(100% - 20px);
+  }
+
+  .prev,
+  .next {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+    padding: 8px;
+  }
+}
+
 .carousel-controls {
   display: flex;
   justify-content: center;
@@ -580,7 +611,7 @@ blockquote {
 }
 
 .footer {
-  background-color: #634d3e;
+  background-color: #584233;
   padding: 50px 20px;
   font-family: "Poppins", sans-serif;
   color: #f8f3e2;
