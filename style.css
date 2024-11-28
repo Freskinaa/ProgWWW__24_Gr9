@@ -1067,6 +1067,8 @@ body {
   width: 25px;
   cursor: pointer;
   transition: all 0.3s ease;
+  z-index: 2000;
+
 }
 
 .hamburger-menu span {
@@ -1074,56 +1076,93 @@ body {
   background-color: #333;
   border-radius: 5px;
   transition: all 0.3s ease;
+  z-index: 2000;
+
 }
 
 /* .navbar */
-
 @media (max-width: 768px) {
   .nav__links {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    display: none;
+    display: none; /* Fshehur fillimisht */
     width: 100%;
     background-color: rgba(255, 250, 240, 0.95);
     padding: 20px 0;
+    position: absolute; /* Pozicionohet mbi përmbajtjen */
+    top: 60px; /* Nën navbar-in kryesor */
+    left: 0;
+    z-index: 1000;
+  }
+
+  .nav__links.active {
+    display: flex; /* Shfaqet kur klikohet */
+  }
+
+  .nav__links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Elementët në kolonë */
+    width: 100%; /* Përshtatet me gjerësinë */
+  }
+
+  .nav__links ul li {
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .nav__links ul li a {
+    font-size: 14px;
+    color: var(--second-dark);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+  }
+
+  .nav__links ul li a:hover {
+    background-color: var(--base-lightbrown); /* Ngjyra e sfondit kur kalon */
+    color: var(--second-dark);
   }
 
   .hamburger-menu {
     display: flex;
     position: absolute;
-    right: 15px;
+        right: 15px;
     top: 10px;
     cursor: pointer;
+    z-index: 1100;
   }
 
-  .nav__links.active {
-    display: flex;
-  }
-}
-
-@media (max-width: 480px) {
   .navbar__content {
     flex-direction: column;
     align-items: center;
   }
+}
+
+@media (max-width: 480px) {
+  .nav__links {
+    top: 50px; /* Pozicioni për ekranet më të vogla */
+    padding: 15px 0;
+    background-color: rgba(255, 250, 240, 1);
+  }
+
+  .nav__links ul li a {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
 
   .logo img {
-    width: 70px;
-  }
-
-  .nav__links ul li {
-    font-size: 14px;
-  }
-
-  .nav__links {
-    position: absolute;
-    top: 60px;
-    width: 100%;
-    background-color: rgba(255, 250, 240, 1);
-    padding: 20px 0;
+    width: 70px; /* Redukto madhësinë e logos */
   }
 }
+
 
 /* .hero__section */
 
