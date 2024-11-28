@@ -448,12 +448,20 @@ body {
   font-size: 16px;
   color: #333;
 }
+.clients-reviews {
+  background-color: #f3f0e7; 
+  color: #fff;
+  text-align: center; /* Center text */
+}
+
 .slideshow-container {
   position: relative;
   max-width: 100%;
   margin-top: -10px;
+  height: auto;
   overflow: hidden;
   border-radius: 10px;
+  
 }
 
 .reviews-grid {
