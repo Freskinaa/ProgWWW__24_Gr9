@@ -1297,7 +1297,7 @@ body {
 
 @media (max-width: 480px) {
   .coffeetypes__cards {
-    grid-template-columns: 1fr; 
+    grid-template-columns: auto; 
     gap: 15px;
   }
 
