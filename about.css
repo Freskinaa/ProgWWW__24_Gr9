@@ -379,60 +379,69 @@ header {
   color: var(--dark-brown2);
 }
 #certifications {
-  padding: 40px 30px;
+  padding: 50px 40px;
   text-align: center;
   border-radius: 15px;
   background: linear-gradient(to bottom right, #f9f5eb, #e8dbc0);
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 #certifications h2 {
-  margin: 20px 0;
-  padding-top: 10px;
-  color: var(--second-dark);
+  margin: 30px 0;
+  color: #5a3e2f;
+  font-size: 2.4em;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
 
 table {
-  width: 80%;
+  width: 85%;
   border-collapse: collapse;
   margin: 40px auto;
 }
 
 th,
 td {
-  padding: 10px 15px;
-  font-size: 14px;
+  padding: 15px 20px;
+  font-size: 16px;
   text-align: left;
-  font-family: "Arial", sans-serif;
-  background: #fff;
-  transition: all 0.2s ease;
+  font-family: 'Arial', sans-serif;
+  background-color: #fff;
+  border: 1px solid #e0d1a1;
+  transition: background-color 0.2s ease, transform 0.3s ease;
 }
 
 th {
   background: linear-gradient(to right, #c5ae8d, #b59876);
-  color: #ffffff;
+  color: #fff;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.5px;
 }
 
 tbody tr:nth-child(even) {
-  background: #f9ebd2;
+  background-color: #faf2d2;
 }
 
 tbody tr:hover {
   background-color: #f1f1f1;
+  transform: translateY(-3px);
 }
 
 .texti {
-  margin-top: 20px;
-  color: var(--second-dark2);
+  margin-top: 30px;
+  color: #5a3e2f;
 }
 
 .texti h1 {
-  color: var(--second-dark);
+  color: #5a3e2f;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
+
 
 
 
