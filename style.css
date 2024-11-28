@@ -1077,51 +1077,28 @@ body {
 }
 
 /* .navbar */
+
 @media (max-width: 768px) {
-  .navbar__content {
-    flex-direction: row;
-    align-items: center;
-    height: 30px;
-  }
-
-  .logo img{
-    width: 80px; 
-    display: block;
-    position: relative;
-    top: 0;
-    left: 0;
-    z-index: 10;
-  }
-
   .nav__links {
     flex-direction: column;
     align-items: center;
-    gap: 15px;
-    display: none; 
+    gap: 20px;
+    display: none;
+    width: 100%;
+    background-color: rgba(255, 250, 240, 0.95);
+    padding: 20px 0;
   }
-
-  .nav__links ul {
-    display: block;
-    text-align: center;
-  }
-
-  .nav__links ul li {
-    margin: 5px 0;
-  }
-
 
   .hamburger-menu {
     display: flex;
     position: absolute;
-    right: 15px; 
-    top: 10px; 
+    right: 15px;
+    top: 10px;
+    cursor: pointer;
   }
 
   .nav__links.active {
     display: flex;
-  }
-  .btn__group{
-    display: block;
   }
 }
 
@@ -1129,36 +1106,22 @@ body {
   .navbar__content {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
   }
-  .btn__group{
-    display: block;
-  }
+
   .logo img {
     width: 70px;
-    margin-bottom: 10px;
-    z-index: 100;
+  }
+
+  .nav__links ul li {
+    font-size: 14px;
   }
 
   .nav__links {
     position: absolute;
-    top: 50px;
+    top: 60px;
     width: 100%;
-    background-color: white;
-    padding: 10px 0;
-    gap: 10px;
-    left: 0;
-    right: 0;
-  }
-
-  .hamburger-menu {
-    top: 10px;
-    right: 10px;
-  }
-
-  .nav__links ul li {
-    font-size: 0.9rem;
-    margin: 8px 0;
+    background-color: rgba(255, 250, 240, 1);
+    padding: 20px 0;
   }
 }
 
@@ -1429,10 +1392,15 @@ body {
 
 /* .reviews */
 @media (max-width: 780px) {
-  .slideshow-container1{
-    padding: 40px 0;
+  .clients-reviews{
+    height: 50vh;
     
-    }
+  }
+  .slideshow-container1{
+  height: 400px;
+  padding-left: -30px;
+  margin-right: 50px;
+}
 
   .cards img {
     width: 70px;
@@ -1458,11 +1426,18 @@ body {
     font-size: 14px;
     padding: 6px;
   }
+  .next{
+    right: 0px;
+  }
 }
 
 @media (max-width: 480px) {
+  .clients-reviews{
+    height: 50vh;
+    
+    }
  .slideshow-container1{
-padding: 40px 0;
+  height: 400px;
 }
   .cards {
     flex: 0 0 100%;

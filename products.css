@@ -636,3 +636,316 @@ button:hover {
 button:focus {
   outline: none;
 }
+
+/* tabela */
+@media screen and (max-width: 480px) {
+  .nutrition__table {
+    width: 100%;
+  }
+.container{
+  width: 70%;
+}
+  .nutrition__table th,
+  .nutrition__table td {
+    font-size: 10px;
+    padding: 6px;
+  }
+
+  .nutrition__container {
+    padding: 20px 15px;
+  }
+
+  .nutrition__title h2 {
+    font-size: 24px;
+  }
+}
+
+
+@media screen and (max-width: 780px) {
+  .nutrition__table {
+    width: 40%;
+    margin-left: -32px;
+  }
+  .container{
+    width: 70%;
+  }
+  .nutrition__table th,
+  .nutrition__table td {
+    font-size: 12px;
+  }
+
+  .nutrition__container {
+    padding: 0px 20px;
+  }
+
+  .nutrition__title h2 {
+    font-size: 30px;
+  }
+}
+/* coffetypes */
+@media (max-width: 780px) {
+  .coffeetypes__wrapper {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .coffeetypes__header h2 {
+    font-size: 28px;
+  }
+
+  .coffeetypes__text {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  .coffeetypes__search {
+    width: 100%;
+    margin: 10px 0;
+    padding: 0 15px;
+  }
+
+  .coffeetypes__search input[type="text"] {
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .coffeetypes__cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .coffeetypes__card {
+    width: 100%;
+    height: auto;
+  }
+
+  .pagination {
+    justify-content: center;
+  }
+
+  .page-number {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .coffeetypes__serach-filter {
+    padding: 10px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .coffeetypes__header h2 {
+    font-size: 24px;
+  }
+
+  .coffeetypes__text {
+    font-size: 18px;
+  }
+
+  .coffeetypes__search {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .coffeetypes__search input[type="text"] {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .coffeetypes__cards {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .coffeetypes__card {
+    width: 100%;
+    height: auto;
+  }
+
+  .pagination {
+    justify-content: center;
+  }
+
+  .page-number {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .coffeetypes__serach-filter {
+    padding: 10px 20px;
+  }
+
+  .shop {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .coffeetypes__search button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
+/* drinkcustomization */
+@media (max-width: 780px) {
+  h2 {
+    font-size: 1.6em;
+    margin-bottom: 12px;
+    color: #3e2a47;
+  }
+
+  .customization-options {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .option {
+    font-size: 1.1em;
+    padding: 12px 22px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #9c7b5f;
+  }
+
+  .drink-container {
+    width: 100%;
+    min-height: 200px;
+    max-width: 450px;
+    border: 2px dashed #b0977d;
+    margin-top: 20px;
+  }
+
+  #drink-customization {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-height: 30px;
+  }
+
+  #drink-customization p {
+    font-size: 15px;
+    padding: 6px;
+    margin: 6px;
+    background-color: #e2d9c3;
+  }
+
+  button {
+    padding: 10px 22px;
+    font-size: 1em;
+  }
+
+  #order-button {
+    font-size: 1em;
+    padding: 12px 28px;
+    margin-top: 12px;
+  }
+
+  .modal-content {
+    padding: 18px;
+    width: 90%;
+    max-width: 380px;
+  }
+
+  .close-button {
+    font-size: 1.3em;
+    right: 12px;
+  }
+
+  input {
+    font-size: 1em;
+  }
+
+  button[type="submit"] {
+    font-size: 1em;
+    padding: 10px 22px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #3e2a47;
+  }
+
+  .customization-options {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .option {
+    font-size: 1em;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #9c7b5f;
+  }
+
+  .drink-container {
+    width: 100%;
+    min-height: 180px;
+    max-width: 400px;
+    border: 2px dashed #b0977d;
+    margin-top: 15px;
+  }
+
+  #drink-customization {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-height: 30px;
+  }
+
+  #drink-customization p {
+    font-size: 14px;
+    padding: 5px;
+    margin: 5px;
+    background-color: #e2d9c3;
+  }
+
+  button {
+    padding: 8px 18px;
+    font-size: 1em;
+  }
+
+  #order-button {
+    font-size: 0.9em;
+    padding: 10px 25px;
+    margin-top: 10px;
+  }
+
+  .modal-content {
+    padding: 15px;
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .close-button {
+    font-size: 1.2em;
+    right: 10px;
+  }
+
+  input {
+    font-size: 0.9em;
+  }
+
+  button[type="submit"] {
+    font-size: 0.9em;
+    padding: 8px 18px;
+  }
+}
+
