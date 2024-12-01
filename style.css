@@ -1057,7 +1057,7 @@ body {
   }
 }
 
-.menu-container {
+.hamburgerMenu-container {
   display: none;
 }
 
@@ -1085,11 +1085,11 @@ body {
   color: #333;
 }
 
-.menu-container.active .hamburger-menu {
+.hamburgerMenu-container.active .hamburger-menu {
   display: none; 
 }
 
-.menu-container.active .close-menu {
+.hamburgerMenu-container.active .close-menu {
   display: block;
 }
 
@@ -1104,7 +1104,7 @@ body {
     display: none;
   }
 
-  .menu-container {
+  .hamburgerMenu-container {
     width: 100%;
     display: flex;
     justify-content: flex-end;
