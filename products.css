@@ -642,9 +642,9 @@ button:focus {
   .nutrition__table {
     width: 100%;
   }
-.container{
-  width: 70%;
-}
+  .container {
+    width: 70%;
+  }
   .nutrition__table th,
   .nutrition__table td {
     font-size: 10px;
@@ -660,13 +660,12 @@ button:focus {
   }
 }
 
-
 @media screen and (max-width: 780px) {
   .nutrition__table {
     width: 40%;
     margin-left: -32px;
   }
-  .container{
+  .container {
     width: 70%;
   }
   .nutrition__table th,
@@ -867,7 +866,6 @@ button:focus {
   }
 }
 
-
 @media (max-width: 480px) {
   h2 {
     font-size: 1.4em;
@@ -948,4 +946,3 @@ button:focus {
     padding: 8px 18px;
   }
 }
-

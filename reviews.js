@@ -1,8 +1,8 @@
 let currentIndex = 0;
 
 function plusSlides(direction) {
-  const reviewsGrid = document.querySelector('.reviews-grid');
-  const cards = document.querySelectorAll('.cards');
+  const reviewsGrid = document.querySelector(".reviews-grid");
+  const cards = document.querySelectorAll(".cards");
   const cardWidth = cards[0].offsetWidth + 20;
   const totalCards = cards.length;
 
@@ -23,6 +23,6 @@ function plusSlides(direction) {
   reviewsGrid.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
 }
 
-window.addEventListener('resize', () => {
+window.addEventListener("resize", () => {
   plusSlides(0);
 });
