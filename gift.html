@@ -12,10 +12,18 @@
     <nav class="navbar">
       <div class="container">
         <div class="navbar__content">
+          <div class="menu-container">
+            <div class="hamburger-menu" id="hamburger-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="close-menu" id="close-menu">
+              <h6>X</h6>
+            </div>
+          </div>          
           <div class="nav__links">
-            <a href="./index.html">
-              <img src="./assets/images/kafelogo1.png" alt="logo" />
-            </a>
+            <a href="/index.html"><img src="./assets/images/kafelogo1.png" alt="logo" style="cursor: pointer;" /></a>
             <ul>
               <li><a href="/" class="nav-link">Home</a></li>
               <li><a href="/products.html" class="nav-link">Products</a></li>
@@ -34,12 +42,11 @@
                 </li>
               </ul>
             </div>
-            <div class="hamburger-menu" id="hamburger-menu" onclick="toggleMenu()">
-              <span></span>
           </div>
         </div>
       </div>
     </nav>
+
     <section id="gift-info">
       <div class="gift-info">
         <div class="gift-section">
@@ -293,5 +300,6 @@
     <script src="./logoutVisibility.js"></script> 
     <script src="./account.js"></script>
     <script src="gift.js"></script>
+    <script src="responsivenavbar.js"></script>
   </body>
 </html>

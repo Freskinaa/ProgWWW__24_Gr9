@@ -19,13 +19,22 @@
         background-color: #f3f0e7;
       }
     </style>
+
     <nav class="navbar">
       <div class="container">
         <div class="navbar__content">
+          <div class="menu-container">
+            <div class="hamburger-menu" id="hamburger-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="close-menu" id="close-menu">
+              <h6>X</h6>
+            </div>
+          </div>          
           <div class="nav__links">
-            <a href="./index.html">
-              <img src="./assets/images/kafelogo1.png" alt="logo" />
-            </a>
+            <a href="/index.html"><img src="./assets/images/kafelogo1.png" alt="logo" style="cursor: pointer;" /></a>
             <ul>
               <li><a href="/" class="nav-link">Home</a></li>
               <li><a href="/products.html" class="nav-link">Products</a></li>
@@ -44,15 +53,11 @@
                 </li>
               </ul>
             </div>
-            <div class="hamburger-menu" id="hamburger-menu" onclick="toggleMenu()">
-              <span></span>
-              <span></span>
-              <span></span>
-
           </div>
         </div>
       </div>
     </nav>
+
 
     <section id="welcome">
       <div class="main-container">
@@ -188,9 +193,7 @@
     </section>
 
     <section class="clients-reviews">
-  
-
-      <div class="container">
+      <div class="container slideshow-container1">
        <div class="slideshow-text">
         <h2 >OUR TEAM</h2>
         <p>
@@ -231,7 +234,7 @@
               </div>
             </div>
             <div class="cards">
-              <img src="assets/images/reviews4.jpg" alt="Client">
+              <img src="assets/images/reviews4.webp" alt="Client">
               <p>
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
               </p>
@@ -240,13 +243,31 @@
                 <span class="client-address">Berlin, Germany</span>
               </div>
             </div>
+            <div class="cards">
+              <img src="assets/images/reviews5.jpg" alt="Client">
+              <p>
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+              </p>
+              <div class="client-details">
+                <span class="client-name">Lena Harris</span>
+                <span class="client-address">London, UK</span>
+              </div>
+            </div>
+            <div class="cards">
+              <img src="assets/images/reviews6.jpg" alt="Client">
+              <p>
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+              </p>
+              <div class="client-details">
+                <span class="client-name">Lukas Muler</span>
+                <span class="client-address">Zurich, Switzerland</span>
+              </div>
+            </div>
           </div>
           <button class="next" onclick="plusSlides(1)">&#10095;</button>
         </div>
- 
       </div>
     </section>
-    
 
     <footer class="footer">
       <div class="footer-container">
