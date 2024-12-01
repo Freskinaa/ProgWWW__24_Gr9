@@ -1363,6 +1363,10 @@ body {
     font-size: 1.2rem;
   }
 
+  .footer-bottom {
+    margin-top: 40px;
+  }
+  
   .footer-bottom p {
     font-size: 0.8rem;
   }
