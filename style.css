@@ -1371,8 +1371,12 @@ body {
     font-size: 1.2rem;
   }
 
-  .footer-bottom {
+  .social-links {
     margin-top: 40px;
+  }
+
+  .footer-bottom {
+    margin-top: 20px;
   }
 
   .footer-bottom p {
