@@ -63,6 +63,7 @@
         </div>
       </div>
     </nav>
+
     <section class="hero">
       <h1>Our Story</h1>
       <p>
@@ -113,13 +114,24 @@
       </div>
     </section>
 
-    <script src="learnmore.js"></script>
-
     <section class="video-section">
       <div class="menu-container">
-        <canvas id="highlightCanvas" width="600" height="100"></canvas>
         <h2 id="menuTitle">Watch Your Coffee Journey</h2>
+        <canvas id="heartCanvas" width="50" height="35"></canvas>
       </div>
+      <script>
+        const canvas = document.getElementById("heartCanvas");
+        const ctx = canvas.getContext("2d");
+  
+        ctx.beginPath();
+        ctx.moveTo(25, 10);
+        ctx.bezierCurveTo(5, -10, -5, 10, 25, 30);
+        ctx.bezierCurveTo(55, 10, 45, -10, 25, 10);
+        ctx.fillStyle = "red";
+        ctx.fill();
+        ctx.stroke();
+      </script>
+  
 
       <div class="video-container">
         <video controls>
@@ -128,6 +140,7 @@
       </div>
     </section>
 
+   
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-column">
@@ -156,7 +169,6 @@
             <li><a href="#">Locations</a></li>
           </ul>
         </div>
-        <div class="coffee-mug"></div>
       </div>
 
       <div class="social-links">
@@ -170,6 +182,7 @@
         <p>&copy; 2024 Coffee Co. All Rights Reserved</p>
       </div>
     </footer>
+
     <script src="./logoutVisibility.js"></script>
     <script src="./account.js"></script>
     <script src="responsivenavbar.js"></script>

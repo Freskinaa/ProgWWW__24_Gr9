@@ -159,11 +159,8 @@ body {
   border-radius: 10px;
 }
 
-#highlightCanvas {
-  height: 40px;
-  border: none;
-  display: block;
-  margin: 0 auto;
+.canvas {
+  padding-bottom: 20px;
 }
 
 .menu-container {
