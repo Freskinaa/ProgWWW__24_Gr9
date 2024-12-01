@@ -577,7 +577,6 @@ body {
 
 @media (max-width: 768px) {
   .cards {
-    flex: 0 0 calc(100% - 20px);
     min-width: calc(100% - 20px);
   }
 
@@ -1235,28 +1234,6 @@ body {
   }
 }
 
-/* ikonat */
-@media (max-width: 768px) {
-  .icons-section {
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 10px;
-    overflow: hidden;
-  }
-
-  .icon-card p {
-    font-size: 0.65em; 
-  }
-}
-
-@media (max-width: 480px) {
-  .icons-section {
-    gap: 15px;
-  }
-  .icon-card p {
-    font-size: 0.75rem; 
-  }
-}
-
 /* Coffee deal */
 @media (max-width: 768px) {
   .both {
@@ -1418,85 +1395,5 @@ body {
   }
   .footer-bottom p {
     font-size: 0.75rem;
-  }
-}
-
-/* .reviews */
-@media (max-width: 780px) {
-  .clients-reviews{
-    height: 50vh;
-    
-  }
-  .slideshow-container1{
-  height: 400px;
-  padding-left: -30px;
-  margin-right: 50px;
-}
-
-  .cards img {
-    width: 70px;
-    height: 70px;
-  }
-
-  .cards .quote {
-    width: 15px;
-  }
-
-  .cards p {
-    font-size: 14px;
-  }
-
-  .client-details {
-    font-size: 12px;
-  }
-
-  .prev,
-  .next {
-    width: 30px;
-    height: 30px;
-    font-size: 14px;
-    padding: 6px;
-  }
-  .next{
-    right: 0px;
-  }
-}
-
-@media (max-width: 480px) {
-  .clients-reviews{
-    height: 50vh;
-    
-    }
- .slideshow-container1{
-  height: 400px;
-}
-  .cards {
-    flex: 0 0 100%;
-    min-width: 100%;
-  }
-
-  .cards img {
-    width: 60px;
-    height: 60px;
-  }
-
-  .cards .quote {
-    width: 12px;
-  }
-
-  .cards p {
-    font-size: 13px;
-  }
-
-  .client-details {
-    font-size: 10px;
-  }
-
-  .prev,
-  .next {
-    width: 25px;
-    height: 25px;
-    font-size: 12px;
-    padding: 5px;
   }
 }
