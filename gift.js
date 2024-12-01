@@ -102,10 +102,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   updateTotalPrice();
 });
-document.querySelector('.gift-bow img').addEventListener('click', function(e) {
-  for (let i = 0; i < 10; i++) { 
-    const sparkle = document.createElement('div');
-    sparkle.classList.add('sparkle');
+document.querySelector(".gift-bow img").addEventListener("click", function (e) {
+  for (let i = 0; i < 10; i++) {
+    const sparkle = document.createElement("div");
+    sparkle.classList.add("sparkle");
 
     const rect = e.target.getBoundingClientRect();
 
@@ -118,6 +118,6 @@ document.querySelector('.gift-bow img').addEventListener('click', function(e) {
 
     setTimeout(() => {
       sparkle.remove();
-    }, 500); 
+    }, 500);
   }
 });

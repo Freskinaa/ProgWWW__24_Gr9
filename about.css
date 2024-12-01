@@ -41,13 +41,12 @@
 body {
   background-color: #f3f0e7;
 }
-.slideshoww{
+.slideshoww {
   padding-left: 100px;
 }
-.slideshoww h2{
+.slideshoww h2 {
   padding-right: 70px;
 }
-
 
 .welcome-section h1,
 .welcome-section h2,
@@ -453,8 +452,6 @@ header {
   }
 }
 
-
-
 /* }
 .gallery {
   --s: 220px;
@@ -541,13 +538,12 @@ header {
     font-size: 18px;
     padding: 20px;
   }
-  #welcome{
+  #welcome {
     height: 70vh;
   }
 
   .welcome-section h1 {
     font-size: 36px;
-
   }
 
   .welcome-section h2 {
@@ -721,8 +717,3 @@ header {
     transform: rotateY(calc(var(--i) * 45deg)) translateZ(150px);
   }
 }
-
-
-
-
-
