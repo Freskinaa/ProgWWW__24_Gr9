@@ -168,7 +168,7 @@ body {
   background-size: cover, auto;
   background-position: center, top right;
   background-repeat: no-repeat;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -314,11 +314,10 @@ body {
 
 .coffeetypes__cards {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   padding: 20px 0;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
 .coffeetypes__card {
@@ -329,8 +328,8 @@ body {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   background-color: var(--base-white);
   text-align: center;
-  width: 300px;
-  height: 400px;
+  max-width: 300px;
+  max-height: 380px;
 }
 .coffeetypes__img {
   width: 100%;
@@ -375,7 +374,6 @@ body {
   height: auto;
   display: block;
   object-fit: cover;
-  padding-bottom: 10px;
 }
 .btn_group button.large-btn {
   background-color: #7b5e3e;
@@ -1093,7 +1091,7 @@ body {
 }
 
 @media (max-width: 1000px) {
-  .btn__group {
+  .navbar__content .btn__group {
     display: none;
   }
 }
@@ -1142,21 +1140,32 @@ body {
     flex-direction: column;
   }
 
+  .hero__wrapper {
+    margin-top: 30px;
+    max-width: 100%;
+  }
+
   .btn__group.active {
     margin-top: 30px;
-  }
-}
-
-/* .hero__section */
-
-@media (max-width: 768px) {
-  .hero__section {
-    height: 98vh;
   }
 
   .btn_group button {
     padding: 12px 25px;
     font-size: 16px;
+  }
+
+  .icons-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-card {
+    margin-bottom: 40px;
+  }
+
+  .icon-card:last-child {
+    margin-bottom: 0;
   }
 }
 
