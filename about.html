@@ -19,15 +19,24 @@
         background-color: #f3f0e7;
       }
     </style>
+
     <nav class="navbar">
       <div class="container">
         <div class="navbar__content">
+          <div class="menu-container">
+            <div class="hamburger-menu" id="hamburger-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="close-menu" id="close-menu">
+              <h6>X</h6>
+            </div>
+          </div>          
           <div class="nav__links">
-           
-              <img src="./assets/images/kafelogo1.png" alt="logo" />
-        
+            <a href="/index.html"><img src="./assets/images/kafelogo1.png" alt="logo" style="cursor: pointer;" /></a>
             <ul>
-              <li><a href="/" class="nav-link ">Home</a></li>
+              <li><a href="/" class="nav-link">Home</a></li>
               <li><a href="/products.html" class="nav-link">Products</a></li>
               <li><a href="/gift.html" class="nav-link">Gift cards</a></li>
               <li><a href="/about.html" class="nav-link active">About us</a></li>
@@ -44,10 +53,6 @@
                 </li>
               </ul>
             </div>
-            <div class="hamburger-menu" id="hamburger-menu" onclick="toggleMenu()">
-              <span></span>
-              <span></span>
-              <span></span>
           </div>
         </div>
       </div>
