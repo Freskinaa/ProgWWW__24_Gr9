@@ -123,7 +123,7 @@ const products = [
     type: "hot",
   },
   {
-    name: "Galão",
+    name: "Galao",
     description:
       "Originating in Portugal, this hot coffee drink is closely related to the latte and cappuccino. It contains twice as much foamed milk.",
     image: "./assets/images/galão.jpg",
@@ -139,7 +139,7 @@ const products = [
     type: "hot",
   },
   {
-    name: "Café au Lait",
+    name: "Cafe au Lait",
     description:
       "Mazagran is a cold, sweetened coffee drink that originated in Algeria. Portuguese may use espresso, lemon, mint and rum.",
     image: "./assets/images/caféaulait.jpg",
@@ -265,7 +265,7 @@ function displayProducts(products) {
                     )})'>Order now</button>
                   </div>
                 </div>
-              </div>
+          </div>
       </div>`;
     productContainer.innerHTML += productCard;
   });
@@ -301,9 +301,17 @@ function updateUI() {
   noResults.style.display = currentProducts.length === 0 ? "block" : "none";
 }
 
+function getRandomProducts() {
+  const shuffledProducts = [...products].sort(() => 0.5 - Math.random());
+  displayProducts(shuffledProducts.slice(0, 6));
+}
+
 document.addEventListener("DOMContentLoaded", () => {
-  currentProducts = [...products];
-  updateUI();
+  if (window.location.pathname === "/products.html") {
+    updateUI();
+  } else {
+    getRandomProducts();
+  }
 });
 
 document.getElementById("searchInput").addEventListener("input", onSearch);
