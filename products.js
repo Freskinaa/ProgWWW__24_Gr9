@@ -260,15 +260,20 @@ function displayProducts(products) {
                 <div class="shop">
                   <span>${product.price}</span>
                   <div class="btn__group order__btn">
-                    <a href="./order.html">
-                      <button>Order now</button>
-                    </a>
+                    <button onclick='saveProductDetails(${JSON.stringify(
+                      JSON.stringify(product)
+                    )})'>Order now</button>
                   </div>
                 </div>
               </div>
       </div>`;
     productContainer.innerHTML += productCard;
   });
+}
+
+function saveProductDetails(productDetails) {
+  localStorage.setItem("selectedProduct", productDetails);
+  window.location.href = "./order.html";
 }
 
 function createPaginationControls(totalProducts) {
