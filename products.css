@@ -320,7 +320,7 @@ body {
 
 .nutrition__table {
   width: 70%;
-  margin-left: 180px;
+  margin: 0 auto;
 }
 
 .nutrition__table th,
@@ -663,7 +663,6 @@ button:focus {
 @media screen and (max-width: 780px) {
   .nutrition__table {
     width: 40%;
-    margin-left: -32px;
   }
   .container {
     width: 70%;
@@ -672,11 +671,7 @@ button:focus {
   .nutrition__table td {
     font-size: 12px;
   }
-
-  .nutrition__container {
-    padding: 0px 20px;
-  }
-
+  
   .nutrition__title h2 {
     font-size: 30px;
   }

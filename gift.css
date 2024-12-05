@@ -2,10 +2,15 @@
   width: 100%;
   padding: 70px 20px 60px;
   text-align: center;
-  height: 110vh;
+  min-height: 100vh;
   animation: fadeIn 1s ease forwards;
   background-color: #483b32;
   overflow: hidden;
+}
+
+.gift-section {
+  width: 65%;
+  margin: 0 auto;
 }
 
 .gift-info h1,
@@ -601,6 +606,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 25px;
+  min-width: 320px;;
 }
 
 th,
@@ -761,6 +767,7 @@ h2 {
   .voucher-content {
     width: 100%;
     text-align: center;
+    margin-left: 0px;
   }
 
   .voucher-details h1 {
@@ -886,6 +893,7 @@ h2 {
   .voucher-content {
     width: 100%;
     text-align: center;
+    margin-left: 0px;
   }
 
   .voucher-details p {
@@ -980,7 +988,11 @@ h2 {
 @media (max-width: 768px) {
   .gift-info {
     padding: 50px 15px 40px;
-    height: 90vh;
+    height: auto;
+  }
+
+  .gift-section {
+    width: 100%;
   }
 
   .gift-section h1 {
@@ -1005,7 +1017,7 @@ h2 {
 @media (max-width: 480px) {
   .gift-info {
     padding: 40px 10px 30px;
-    height: 90vh;
+    height: auto;
   }
 
   .gift-section h1 {

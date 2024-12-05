@@ -539,7 +539,7 @@ header {
     padding: 20px;
   }
   #welcome {
-    height: 70vh;
+    height: auto;
   }
 
   .welcome-section h1 {
