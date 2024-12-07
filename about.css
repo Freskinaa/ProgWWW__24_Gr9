@@ -41,6 +41,51 @@
 body {
   background-color: #f3f0e7;
 }
+#about-us {
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+#about-us h2 {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#about-us ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+#about-us li {
+  margin-bottom: 15px;
+  padding: 15px 25px;
+  background-color: #f7f5f1;
+  border: 1px solid #e0e0e0; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+#about-us li ul {
+  margin-top: 12px;
+  padding-left: 20px;
+}
+
+#about-us li li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #333;
+}
+
+#about-us li li::before {
+  content: "• ";
+  color: #3498db; 
+  font-weight: bold;
+}
+
 .slideshoww {
   padding-left: 100px;
 }
