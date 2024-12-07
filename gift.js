@@ -8,12 +8,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const purchaseModal = document.getElementById("purchase-modal");
   const closeModalBtn = document.getElementById("close-modal");
   const confirmPurchaseBtn = document.getElementById("confirm-purchase");
+  const giftCardModal = document.getElementById("giftCardModal");
+  const openGiftCardModalBtn = document.getElementById("openModalBtn");
+  const closeGiftCardModalBtn = document.querySelector(".close");
+  const giftCardForm = document.getElementById("gift-card-form");
   let currentQuantity = 1;
   let currentPrice = 25;
 
   function updateTotalPrice() {
     const total = currentPrice * currentQuantity;
     priceElement.innerText = `$${total.toFixed(2)}`;
+  }
+
+  // Funksion për të vendosur automatikisht të dhënat e përdoruesit të loguar
+  function populateUserDetails(modalType) {
+    const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+    if (loggedInUser) {
+      const nameField = modalType.querySelector("#name");
+      const emailField = modalType.querySelector("#email");
+
+      if (nameField) nameField.value = loggedInUser.name;
+      if (emailField) emailField.value = loggedInUser.email;
+    }
   }
 
   denominations.forEach((denomination) => {
@@ -40,6 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   addToCartBtn.addEventListener("click", () => {
+    populateUserDetails(purchaseModal);
     purchaseModal.style.display = "flex";
   });
 
@@ -66,11 +83,8 @@ document.addEventListener("DOMContentLoaded", () => {
     purchaseModal.style.display = "none";
   });
 
-  const openGiftCardModalBtn = document.getElementById("openModalBtn");
-  const giftCardModal = document.getElementById("giftCardModal");
-  const closeGiftCardModalBtn = document.querySelector(".close");
-
   openGiftCardModalBtn.addEventListener("click", () => {
+    populateUserDetails(giftCardModal);
     giftCardModal.style.display = "block";
     purchaseModal.style.display = "none";
   });
@@ -85,7 +99,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  const giftCardForm = document.getElementById("gift-card-form");
   giftCardForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -93,6 +106,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const amount = document.getElementById("amount").value;
     const recipientName = document.getElementById("recipient-name").value;
     const giftMessage = document.getElementById("gift-message").value;
+
+    if (recipientName.trim() === "") {
+      alert("Please enter the recipient's name.");
+      return;
+    }
 
     alert(
       `Your order for a ${cardType} gift card of $${amount} to ${recipientName} is confirmed!`
@@ -102,6 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   updateTotalPrice();
 });
+
 document.querySelector(".gift-bow img").addEventListener("click", function (e) {
   for (let i = 0; i < 10; i++) {
     const sparkle = document.createElement("div");
