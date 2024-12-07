@@ -116,6 +116,69 @@ header {
   margin-top: 70px;
 }
 
+#certifications {
+  padding: 40px 30px;
+  text-align: center;
+  background: linear-gradient(to bottom right, #fdfbf7, #ece5d8);
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+#certifications h2 {
+  margin: 20px 0;
+  font-size: 24px;
+  font-family: "Georgia", serif;
+  color: #4a3b31;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+th,
+td {
+  padding: 12px 20px;
+  font-size: 15px;
+  text-align: left;
+  font-family: "Arial", sans-serif;
+  border: none;
+  background: #fff;
+  color: #4a3b31;
+}
+
+th {
+  background: linear-gradient(to right, #d6c9af, #c1b198);
+  color: #fff;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f8f5f1;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+tbody td:first-child {
+  font-weight: 500;
+  color: #4a3b31;
+}
+
+tbody td:last-child {
+  text-align: right;
+  color: #6b5e54;
+}
+
+
+
 .banner {
   background-color: var(--second-dark2);
   padding: 50px 20px;
