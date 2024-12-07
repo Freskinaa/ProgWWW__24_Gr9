@@ -302,150 +302,143 @@ body {
   background-color: rgba(255, 255, 255, 0.5);
   filter: brightness(0.9);
 }
-
 .feedback-section {
   display: flex;
   justify-content: center;
   background: radial-gradient(circle, #eee1c9, #faf2e4);
-  padding-top: 100px;
-  padding-bottom: 50px;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .feedback-container {
   display: flex;
-  width: 90%;
-  max-width: 1200px;
-  height: 80vh;
+  width: 80%;
+  max-width: 1100px;
+  height: 480px;
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
   overflow: hidden;
+  margin: 0 auto;
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .feedback-content {
-  padding: 40px 50px;
+  padding: 30px 40px;
   flex: 1;
   display: flex;
-  border-radius: 25px;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  border-radius: 3px;
 }
 
 .feedback-content h2 {
-  font-size: 2rem;
+  font-size: 1.9rem;
   color: #251a0f;
-  margin-bottom: 1.9rem;
+  margin-bottom: 1.5rem;
   font-weight: bold;
+  animation: fadeInText 1s ease-in-out;
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .feedback-form label {
   display: flex;
   align-items: center;
-  margin: 0.6rem 0;
+  margin: 6px 0;
   font-size: 1.1rem;
   color: #444;
 }
 
-.feedback-form input[type="radio"] {
-  margin-right: 10px;
-}
-
 .feedback-form textarea {
-  padding: 10px 30px;
-  width: 70%;
+  padding: 5px 10px;
+  width: 100%;
   height: 40px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  resize: none;
-  margin-bottom: 5px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease;
+}
+
+.feedback-form textarea:focus {
+  border-color: #7b5e3e;
+  outline: none;
 }
 
 .feedback-form button {
   background-color: #7b5e3e;
-
-  padding: 10px 45px;
-  text-align: left;
+  padding: 12px 40px;
   border-radius: 10px;
-  transition: 0.4s ease-in-out;
+  transition: 0.3s ease;
   cursor: pointer;
-  position: relative;
-  color: var(--base-white);
+  color: #fff;
   font-size: 14px;
-  text-decoration: none;
-  border: none;
   font-weight: bold;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3), inset 0 -4px 8px rgba(0, 0, 0, 0.2),
-    inset 0 4px 6px rgba(255, 255, 255, 0.1);
-  transform: translateY(-2px);
+  border: none;
+  transform: scale(1);
 }
 
 .feedback-form button:hover {
-  background-color: var(--second-dark);
-  transform: translateY(-2px) scale(1);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4),
-    inset 0 -6px 10px rgba(0, 0, 0, 0.3),
-    inset 0 6px 8px rgba(255, 255, 255, 0.2);
-}
-
-.feedback-form button:active {
-  transform: translateY(0);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), inset 0 -2px 5px rgba(0, 0, 0, 0.2),
-    inset 0 2px 4px rgba(255, 255, 255, 0.1);
+  background-color: #5e482c;
+  transform: scale(1.05);
 }
 
 .feedback-image {
   flex: 1;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  background-color: #faf2e4;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.feedback-image:hover {
+  opacity: 1;
 }
 
 .feedback-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px;
+  transition: transform 0.5s ease;
 }
 
-@media (min-width: 480px) {
-  .feedback-container {
-    flex-direction: row;
-    width: 400px;
-    height: 250px;
-  }
-
-  .feedback-content {
-    width: 60%;
-  }
-
-  .feedback-image {
-    width: 20%;
-  }
-
-  .feedback-form button {
-    width: 30px;
-  }
-}
-
-@media (min-width: 768px) {
-  .feedback-container {
-    flex-direction: row;
-    width: 200px;
-    height: 250px;
-  }
-
-  .feedback-content h2 {
-    font-size: 1.8rem;
-  }
-  .feedback-content {
-    width: 60%;
-  }
-
-  .feedback-image {
-    width: 20%;
-  }
-
-  .feedback-form textarea {
-    height: 80px;
-  }
+.feedback-image:hover img {
+  transform: scale(1.05);
 }
