@@ -12,10 +12,23 @@
     <nav class="navbar">
       <div class="container">
         <div class="navbar__content">
+          <div class="hamburgerMenu-container">
+            <div class="hamburger-menu" id="hamburger-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="close-menu" id="close-menu">
+              <h6>X</h6>
+            </div>
+          </div>
           <div class="nav__links">
-            <a href="./index.html">
-              <img src="./assets/images/kafelogo1.png" alt="logo" />
-            </a>
+            <a href="/index.html"
+              ><img
+                src="./assets/images/kafelogo1.png"
+                alt="logo"
+                style="cursor: pointer"
+            /></a>
             <ul>
               <li><a href="/" class="nav-link">Home</a></li>
               <li>
@@ -45,12 +58,6 @@
               </ul>
             </div>
           </div>
-          <div class="hamburger-menu" id="hamburger-menu" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-
-        </div>
         </div>
       </div>
     </nav>
@@ -62,47 +69,40 @@
         </div>
         <div class="card_container">
           <h3 id="name-section">Enter Your Name</h3>
-          <input
-            type="text"
-            id="name"
-            placeholder="Enter your name"
-          
-          />
+          <input type="text" id="name" placeholder="Enter your name" />
           <h3>Select Coffee Type</h3>
           <select id="coffee-type">
             <option value="espresso">Espresso</option>
             <option value="latte">Latte</option>
             <option value="cappuccino">Cappuccino</option>
             <option value="americano">Americano</option>
-            <option value="IcedMocha">Iced Mocha</option>
+            <option value="iced mocha">Iced Mocha</option>
             <option value="frappe">Frappe</option>
-            <option value="coldBrew">Cold Brew</option>
+            <option value="cold brew">Cold Brew</option>
             <option value="breve">Breve</option>
-            <option value="TurkishCoffee">Turkish Coffee</option>
+            <option value="turkish coffee">Turkish Coffee</option>
             <option value="cortado">Cortado</option>
             <option value="dalgona">Dalgona</option>
-            <option value="dirtychai">Dirty Chai</option>
+            <option value="dirty chai">Dirty Chai</option>
             <option value="mazagran">Mazagran</option>
-            <option value="flatWhite">Flat White</option>
-            <option value="dopio">Dopio</option>
+            <option value="flat white">Flat White</option>
+            <option value="doppio">Doppio</option>
             <option value="arabica">Arabica</option>
             <option value="galao">Galao</option>
             <option value="mocha">Mocha</option>
             <option value="macchiato">Macchiato</option>
             <option value="affogato">Affogato</option>
-            <option value="nitroColdBrew">Nitro Cold Brew</option>
-            <option value="IrishCoffee">Irish Coffee</option>
+            <option value="nitro cold brew">Nitro Cold Brew</option>
+            <option value="irish coffee">Irish Coffee</option>
             <option value="decaf">Decaf</option>
+            <option value="bulletproof">Bulletproof</option>
+            <option value="cafe au lait">Cafe au Lait</option>
+            <option value="ristretto">Ristretto</option>
+            <option value="shakerato">Shakerato</option>
           </select>
 
           <h3>Choose Quantity</h3>
-          <input
-            type="number"
-            min="1"
-            value="1"
-            id="quantity"
-            onchange="updateTotalCost()"
-          />
+          <input type="number" min="1" value="1" id="quantity" />
 
           <h3>Payment Method</h3>
           <select id="payment-method">
@@ -174,8 +174,8 @@
       </div>
     </footer>
     <script src="./order.js"></script>
-    
-    <script src="./logoutVisibility.js"></script> 
+
+    <script src="./logoutVisibility.js"></script>
     <script src="account.js"></script>
     <script src="responsivenavbar.js"></script>
   </body>

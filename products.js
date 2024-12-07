@@ -123,7 +123,7 @@ const products = [
     type: "hot",
   },
   {
-    name: "Galão",
+    name: "Galao",
     description:
       "Originating in Portugal, this hot coffee drink is closely related to the latte and cappuccino. It contains twice as much foamed milk.",
     image: "./assets/images/galão.jpg",
@@ -139,7 +139,7 @@ const products = [
     type: "hot",
   },
   {
-    name: "Café au Lait",
+    name: "Cafe au Lait",
     description:
       "Mazagran is a cold, sweetened coffee drink that originated in Algeria. Portuguese may use espresso, lemon, mint and rum.",
     image: "./assets/images/caféaulait.jpg",
@@ -260,15 +260,20 @@ function displayProducts(products) {
                 <div class="shop">
                   <span>${product.price}</span>
                   <div class="btn__group order__btn">
-                    <a href="./order.html">
-                      <button>Order now</button>
-                    </a>
+                    <button onclick='saveProductDetails(${JSON.stringify(
+                      JSON.stringify(product)
+                    )})'>Order now</button>
                   </div>
                 </div>
-              </div>
+          </div>
       </div>`;
     productContainer.innerHTML += productCard;
   });
+}
+
+function saveProductDetails(productDetails) {
+  localStorage.setItem("selectedProduct", productDetails);
+  window.location.href = "./order.html";
 }
 
 function createPaginationControls(totalProducts) {
@@ -296,9 +301,17 @@ function updateUI() {
   noResults.style.display = currentProducts.length === 0 ? "block" : "none";
 }
 
+function getRandomProducts() {
+  const shuffledProducts = [...products].sort(() => 0.5 - Math.random());
+  displayProducts(shuffledProducts.slice(0, 6));
+}
+
 document.addEventListener("DOMContentLoaded", () => {
-  currentProducts = [...products];
-  updateUI();
+  if (window.location.pathname === "/products.html") {
+    updateUI();
+  } else {
+    getRandomProducts();
+  }
 });
 
 document.getElementById("searchInput").addEventListener("input", onSearch);
@@ -323,95 +336,96 @@ document
 document
   .getElementById("sortPriceHighLow")
   .addEventListener("click", () => onSort("priceHighLow"));
-  function allowDrop(event) {
-    event.preventDefault();
-  }
-  
-  function drag(event) {
-    event.dataTransfer.setData("text", event.target.id);
-  }
-  
-  function drop(event) {
-    event.preventDefault();
-    const data = event.dataTransfer.getData("text");
-    const draggedElement = document.getElementById(data);
-    const column1 = document.getElementById("column-1");
-    const column2 = document.getElementById("column-2");
-    const clone = draggedElement.cloneNode(true);
-    clone.id = data + "-" + Math.random().toString(36).substr(2, 9);
-  
-    const totalItems = column1.children.length + column2.children.length;
-  
-    if (totalItems < 12) {
-      if (column1.children.length < 6) {
-        column1.appendChild(clone);
-      } else {
-        column2.appendChild(clone);
-      }
+function allowDrop(event) {
+  event.preventDefault();
+}
+
+function drag(event) {
+  event.dataTransfer.setData("text", event.target.id);
+}
+
+function drop(event) {
+  event.preventDefault();
+  const data = event.dataTransfer.getData("text");
+  const draggedElement = document.getElementById(data);
+  const column1 = document.getElementById("column-1");
+  const column2 = document.getElementById("column-2");
+  const clone = draggedElement.cloneNode(true);
+  clone.id = data + "-" + Math.random().toString(36).substr(2, 9);
+
+  const totalItems = column1.children.length + column2.children.length;
+
+  if (totalItems < 12) {
+    if (column1.children.length < 6) {
+      column1.appendChild(clone);
     } else {
-      alert("You can only add up to 12 items!");
+      column2.appendChild(clone);
     }
+  } else {
+    alert("You can only add up to 12 items!");
   }
-  
-  function finalizeOrder() {
-    const column1 = Array.from(document.getElementById("column-1").children).map(
-      (child) => child.textContent.trim()
-    );
-    const column2 = Array.from(document.getElementById("column-2").children).map(
-      (child) => child.textContent.trim()
-    );
-    const selectedOptions = column1.concat(column2);
-  
-    if (selectedOptions.length > 0) {
-      alert("Your drink has been customized with: " + selectedOptions.join(", "));
-    } else {
-      alert("Please select at least one option to customize your drink.");
-    }
+}
+
+function finalizeOrder() {
+  const column1 = Array.from(document.getElementById("column-1").children).map(
+    (child) => child.textContent.trim()
+  );
+  const column2 = Array.from(document.getElementById("column-2").children).map(
+    (child) => child.textContent.trim()
+  );
+  const selectedOptions = column1.concat(column2);
+
+  if (selectedOptions.length > 0) {
+    alert("Your drink has been customized with: " + selectedOptions.join(", "));
+  } else {
+    alert("Please select at least one option to customize your drink.");
   }
-  const loggedInUser = {
-    firstName: loggedInUser.firstName,
-    lastName: "Gashi",
-  };
-  
-  function finalizeOrder() {
-    const modal = document.getElementById("order-modal");
-    modal.style.display = "flex";
-  
-    if (loggedInUser) {
-      document.getElementById("first-name").value = loggedInUser.firstName;
-      document.getElementById("last-name").value = loggedInUser.lastName;
-    } else {
-      document.getElementById("first-name").value = "";
-      document.getElementById("last-name").value = "";
-    }
+}
+const loggedInUser = {
+  firstName: loggedInUser.firstName,
+  lastName: "Gashi",
+};
+
+function finalizeOrder() {
+  const modal = document.getElementById("order-modal");
+  modal.style.display = "flex";
+
+  if (loggedInUser) {
+    document.getElementById("first-name").value = loggedInUser.firstName;
+    document.getElementById("last-name").value = loggedInUser.lastName;
+  } else {
+    document.getElementById("first-name").value = "";
+    document.getElementById("last-name").value = "";
   }
-  
-  function closeModal() {
-    const modal = document.getElementById("order-modal");
+}
+
+function closeModal() {
+  const modal = document.getElementById("order-modal");
+  modal.style.display = "none";
+}
+
+window.onclick = function (event) {
+  const modal = document.getElementById("order-modal");
+  if (event.target === modal) {
     modal.style.display = "none";
   }
-  
-  window.onclick = function (event) {
-    const modal = document.getElementById("order-modal");
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
-  };
-  
-  document.getElementById("order-form").addEventListener("submit", function (event) {
+};
+
+document
+  .getElementById("order-form")
+  .addEventListener("submit", function (event) {
     event.preventDefault();
     const firstName = document.getElementById("first-name").value;
     const lastName = document.getElementById("last-name").value;
     const location = document.getElementById("location").value;
     const phoneNumber = document.getElementById("phone-number").value;
-  
+
     alert(
       `Porosia u finalizua për: ${firstName} ${lastName}\nLokacioni: ${location}\nTelefoni: ${phoneNumber}`
     );
-  
+
     closeModal();
   });
-  function closeModal() {
-    document.getElementById('order-modal').style.display = 'none';
-  }
-  
+function closeModal() {
+  document.getElementById("order-modal").style.display = "none";
+}

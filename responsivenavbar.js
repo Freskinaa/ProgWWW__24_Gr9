@@ -1,8 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const hamburgerMenu = document.querySelector('.hamburger-menu');
-  const navLinks = document.querySelector('.nav__links');
-  const accountLink = document.getElementById("accountLink");
+  const menuContainer = document.querySelector(".hamburgerMenu-container");
+  const navLinks = document.querySelector(".nav__links");
+  const btnGroup = document.querySelector(".btn__group");
+  const navbarContent = document.querySelector(".navbar__content");
 
-hamburgerMenu.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
+  menuContainer.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    btnGroup.classList.toggle("active");
+    navbarContent.classList.toggle("active");
+    menuContainer.classList.toggle("active");
+  });
 });
