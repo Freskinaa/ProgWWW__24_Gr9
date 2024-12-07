@@ -20,15 +20,16 @@ document.addEventListener("DOMContentLoaded", () => {
     priceElement.innerText = `$${total.toFixed(2)}`;
   }
 
-  // Funksion për të vendosur automatikisht të dhënat e përdoruesit të loguar
   function populateUserDetails(modalType) {
     const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
     if (loggedInUser) {
       const nameField = modalType.querySelector("#name");
       const emailField = modalType.querySelector("#email");
+      const recipientNameField = modalType.querySelector("#recipient-name");
 
       if (nameField) nameField.value = loggedInUser.name;
       if (emailField) emailField.value = loggedInUser.email;
+      if (recipientNameField) recipientNameField.value = loggedInUser.name;
     }
   }
 
