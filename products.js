@@ -307,7 +307,7 @@ function getRandomProducts() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  if (window.location.pathname === "/products.html") {
+  if (window.location.pathname.includes("products")) {
     updateUI();
   } else {
     getRandomProducts();
