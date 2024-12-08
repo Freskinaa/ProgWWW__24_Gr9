@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const nameField = modalType.querySelector("#name");
       const emailField = modalType.querySelector("#email");
       const recipientNameField = modalType.querySelector("#recipient-name");
-  
+
       if (nameField) {
         nameField.value = loggedInUser.name;
         nameField.disabled = true;
@@ -43,7 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (emailField) emailField.disabled = false;
     }
   }
-  
 
   denominations.forEach((denomination) => {
     denomination.addEventListener("click", () => {
@@ -142,7 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const giftCardTypeField = document.getElementById("gift-card-type");
 
   form.addEventListener("submit", (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
     try {
       if (!nameField.value.trim()) {
         throw new Error("Name field cannot be empty.");

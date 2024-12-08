@@ -474,7 +474,6 @@ body {
   color: #5a5a5a; 
 } */
 
-
 @media (max-width: 780px) {
   .feedback-container {
     flex-direction: column;
@@ -500,7 +499,6 @@ body {
 @media (max-width: 480px) {
   .feedback-image {
     height: auto;
-  
   }
 
   .feedback-content h2 {

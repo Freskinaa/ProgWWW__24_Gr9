@@ -32,7 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
     coffeeTypeElement.value = productType;
     coffeeTypeElement.disabled = true;
   } else {
-    console.error(`Type '${selectedProduct.name}' not found in coffee options.`);
+    console.error(
+      `Type '${selectedProduct.name}' not found in coffee options.`
+    );
   }
 
   const price = parseFloat(selectedProduct.price.replace("$", ""));

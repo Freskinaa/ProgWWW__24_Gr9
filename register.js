@@ -18,9 +18,15 @@ signInButton.addEventListener("click", () => {
 signUpForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const name = signUpForm.querySelector('input[placeholder="Name"]').value.trim();
-  const email = signUpForm.querySelector('input[placeholder="Email"]').value.trim();
-  const password = signUpForm.querySelector('input[placeholder="Password"]').value;
+  const name = signUpForm
+    .querySelector('input[placeholder="Name"]')
+    .value.trim();
+  const email = signUpForm
+    .querySelector('input[placeholder="Email"]')
+    .value.trim();
+  const password = signUpForm.querySelector(
+    'input[placeholder="Password"]'
+  ).value;
 
   if (!name || !email || !password) {
     alert("Please fill in all fields!");
@@ -33,7 +39,9 @@ signUpForm.addEventListener("submit", (e) => {
   }
 
   if (!passwordRegex.test(password)) {
-    alert("Password must be at least 8 characters long and include at least one letter and one number.");
+    alert(
+      "Password must be at least 8 characters long and include at least one letter and one number."
+    );
     return;
   }
 
@@ -56,8 +64,12 @@ signUpForm.addEventListener("submit", (e) => {
 signInForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const email = signInForm.querySelector('input[placeholder="Email"]').value.trim();
-  const password = signInForm.querySelector('input[placeholder="Password"]').value;
+  const email = signInForm
+    .querySelector('input[placeholder="Email"]')
+    .value.trim();
+  const password = signInForm.querySelector(
+    'input[placeholder="Password"]'
+  ).value;
 
   if (!email || !password) {
     alert("Please fill in both fields!");
@@ -70,7 +82,9 @@ signInForm.addEventListener("submit", (e) => {
   }
 
   if (!passwordRegex.test(password)) {
-    alert("Invalid password format. Password must include at least one letter and one number.");
+    alert(
+      "Invalid password format. Password must include at least one letter and one number."
+    );
     return;
   }
 

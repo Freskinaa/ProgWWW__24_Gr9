@@ -1,20 +1,29 @@
 $(document).ready(function () {
+  const feedbackWorker = new Worker("feedbackWorker.js");
+
+  feedbackWorker.onmessage = function (event) {
+    const response = event.data;
+    console.log(response.message); // Feedback from the worker
+
+    // Display confirmation message
+    $("#confirmationMessage").text(response.message).show();
+    setTimeout(function () {
+      $("#confirmationMessage").fadeOut();
+    }, 3000);
+  };
+
   $("#feedbackForm").on("submit", function (event) {
     event.preventDefault();
     var source = $("input[name='source']:checked").val();
     var subscribe = $("input[name='subscribe']:checked").val();
     var comments = $("textarea[name='comments']").val();
-    var feedbackData = {
+
+    // Send data to the worker
+    feedbackWorker.postMessage({
       source: source,
       subscribe: subscribe,
       comments: comments,
-    };
-
-    console.log(feedbackData);
-    $("#confirmationMessage").text("Thank you for your feedback!").show();
-    setTimeout(function () {
-      $("#confirmationMessage").fadeOut();
-    }, 3000);
+    });
   });
 
   $(".contact-form").on("submit", function (event) {
