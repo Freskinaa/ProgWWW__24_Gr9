@@ -250,9 +250,8 @@ tbody td:last-child {
 
 .banner h2 {
   margin-top: 10px;
-  font-weight: 300;
-  color: #4a3a2a;
-  font-weight: bolder;
+  color: white;
+  font-size: 16px;
 }
 
 .early-bird-button {
