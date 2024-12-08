@@ -1,31 +1,44 @@
 $(document).ready(function () {
   $("#feedbackForm").on("submit", function (event) {
     event.preventDefault();
+    var source = $("input[name='source']:checked").val();
+    var subscribe = $("input[name='subscribe']:checked").val();
+    var comments = $("textarea[name='comments']").val();
+    var feedbackData = {
+      source: source,
+      subscribe: subscribe,
+      comments: comments,
+    };
 
-    const source = $('input[name="source"]:checked').val();
-    const comments = $('textarea[name="comments"]').val();
+    console.log(feedbackData);
+    $("#confirmationMessage").text("Thank you for your feedback!").show();
+    setTimeout(function () {
+      $("#confirmationMessage").fadeOut();
+    }, 3000);
+  });
 
-    if (source) {
-      const $confirmationMessage = $("#confirmationMessage");
-      const $formFields = $("textarea, input[type='radio']");
+  $(".contact-form").on("submit", function (event) {
+    event.preventDefault();
+    var name = $("input[type='text']").val();
+    var email = $("input[type='email']").val();
+    var message = $("textarea").val();
 
-      $confirmationMessage
-        .hide()
-        .text("Thank you for your feedback!")
-        .show(500, function () {
-          $confirmationMessage.fadeOut(1000, function () {
-            $confirmationMessage.fadeIn(1000, function () {
-              setTimeout(() => {
-                $confirmationMessage.slideUp(500);
-              }, 3000);
-            });
-          });
-        });
+    var contactData = {
+      name: name,
+      email: email,
+      message: message,
+    };
 
-      $formFields.animate({ opacity: 0.5 }, 500, function () {
-        $formFields.val("");
-        $formFields.animate({ opacity: 1 }, 500);
-      });
-    }
+    console.log(contactData);
+
+    $("#contactConfirmation")
+      .text("Thank you for reaching out! We will get back to you soon.")
+      .show();
+
+    $(".contact-form input, .contact-form textarea").val("");
+
+    setTimeout(function () {
+      $("#contactConfirmation").fadeOut();
+    }, 3000);
   });
 });
