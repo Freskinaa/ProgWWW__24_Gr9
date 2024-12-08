@@ -170,12 +170,16 @@
 #saveChangesBtn {
   margin-left: 65px;
 }
+@media (max-width: 780px) {
+  .main-container {
+    padding: 80px 15px 40px;
+    text-align: center;
+  }
 
-
-@media (max-width: 768px) {
   #userInfo {
     padding: 20px;
-    
+    width: 90%;
+    margin: 50px auto;
   }
 
   .allprofile {
@@ -185,7 +189,8 @@
 
   #userInfoContent {
     width: 100%;
-    height: 260px;  }
+    height: auto;
+  }
 
   #userDetails input {
     width: 100%;
@@ -193,59 +198,57 @@
 
   #userDetails h1 {
     padding-left: 0;
+    font-size: 20px;
   }
 
-  .custom-file-upload {
-    margin-top: 60px;
-    padding: 10px 15px;
-    font-size: 14px;
-}
-}
-
-
-
-@media (max-width: 480px) {
-  #userInfo {
-    padding: 20px;
-    width: 90%;
-
-  }
-
-  .allprofile {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  #userInfoContent {
-    width: 100%;
-    height: 260px;
-  }
-
-  #userDetails input {
-    width: 100%;
-    padding: 8px;
-  }
-  #saveChangesBtn{
-    margin-left: 0px;
-  }
-  #logoutBtn {
-    margin-left: 0px;
-
-  }
   #saveChangesBtn,
   #logoutBtn {
+    margin-left: 0;
     width: 100%;
-   justify-content: center;
-   align-items: center;
     font-size: 14px;
   }
 
   .custom-file-upload {
+    margin-top: 20px;
     padding: 10px 15px;
     font-size: 14px;
   }
 
   .edit-btn {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-container {
+    padding: 60px 10px 30px;
+  }
+
+  #userInfo {
+    padding: 15px;
+    width: 100%;
+    margin: 30px auto;
+  }
+
+  .allprofile {
+    gap: 10px;
+  }
+
+  #userInfoContent {
+    height: auto;
+  }
+
+  #userDetails input {
+    padding: 8px;
+  }
+
+  #saveChangesBtn,
+  #logoutBtn {
+    font-size: 12px;
+  }
+
+  .custom-file-upload {
+    padding: 8px 10px;
+    font-size: 12px;
   }
 }

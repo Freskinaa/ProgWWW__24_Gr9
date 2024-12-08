@@ -3,15 +3,15 @@ const popupModal = document.getElementById("popupModal");
 const closePopupBtn = document.getElementById("closePopup");
 
 reserveBtn.addEventListener("click", () => {
-  popupModal.style.display = "flex";  
+  popupModal.style.display = "flex";
 
   const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 
   const currentDate = new Date();
 
-  const formattedDate = currentDate.toISOString().split('T')[0];
+  const formattedDate = currentDate.toISOString().split("T")[0];
 
-  document.getElementById("date").setAttribute("min", formattedDate); 
+  document.getElementById("date").setAttribute("min", formattedDate);
   document.getElementById("date").value = formattedDate;
 
   if (loggedInUser) {
@@ -20,19 +20,19 @@ reserveBtn.addEventListener("click", () => {
 
     document.getElementById("name").value = userName;
     document.getElementById("email").value = userEmail;
-    
+
     document.getElementById("name").disabled = true;
     document.getElementById("email").disabled = true;
   }
 });
 
 closePopupBtn.addEventListener("click", () => {
-  popupModal.style.display = "none"; 
+  popupModal.style.display = "none";
 });
 
 window.addEventListener("click", (e) => {
   if (e.target === popupModal) {
-    popupModal.style.display = "none"; 
+    popupModal.style.display = "none";
   }
 });
 
@@ -48,10 +48,9 @@ reserveForm.addEventListener("submit", (e) => {
   const guests = document.getElementById("guests").value;
 
   const currentDateTime = new Date();
-  currentDateTime.setMinutes(currentDateTime.getMinutes() );
-  
-  const selectedDateTime = new Date(date + 'T' + time);
+  currentDateTime.setMinutes(currentDateTime.getMinutes());
 
+  const selectedDateTime = new Date(date + "T" + time);
 
   if (selectedDateTime < currentDateTime) {
     alert("The selected time has already passed. Please choose a future time.");
@@ -59,9 +58,9 @@ reserveForm.addEventListener("submit", (e) => {
   }
 
   const minTime = new Date(currentDateTime);
-  minTime.setMinutes(minTime.getMinutes() + 60); 
+  minTime.setMinutes(minTime.getMinutes() + 60);
 
-  console.log("Minimum Allowed Time: ", minTime);  
+  console.log("Minimum Allowed Time: ", minTime);
 
   if (selectedDateTime < minTime) {
     alert("You cannot make a reservation less than 1 hour from now.");
@@ -76,7 +75,7 @@ reserveForm.addEventListener("submit", (e) => {
     Time: ${time}
     Number of Guests: ${guests}
   `;
-  
+
   alert(alertMessage);
 
   popupModal.style.display = "none";

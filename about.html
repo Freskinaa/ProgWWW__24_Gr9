@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
-    <link rel="stylesheet" href="./about.css" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/about.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <link rel="icon" href="./assets/images/cojlogo.png" type="image/x-icon" />
     <link
       rel="stylesheet"
@@ -109,26 +109,25 @@
           <form id="reserveForm">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required />
-        
+
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required />
-        
+
             <label for="date">Date:</label>
-            <input type="date" id="date" name="date" required />        
+            <input type="date" id="date" name="date" required />
             <label for="time">Time:</label>
             <input type="time" id="time" name="time" required />
-        
+
             <label for="guests">Number of Guests:</label>
             <input type="number" id="guests" name="guests" min="1" required />
-        
+
             <button type="submit" class="coffee-btn">Submit</button>
           </form>
           <button class="popup-close" id="closePopup">Close</button>
         </div>
       </div>
-      
     </header>
-    
+
     <section class="texti">
       <h1>Take a look at our coffee shop</h1>
     </section>
@@ -176,44 +175,48 @@
       </div>
     </section>
 
-    <section id="certifications">
-      <h2>Our Certifications</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Certification</th>
-            <th>Issued By</th>
-            <th>Date Awarded</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Quality Excellence Award</td>
-            <td>Food Standards Agency</td>
-            <td>March 2023</td>
-            <td>
-              Awarded for outstanding quality in food safety and hygiene
-              practices.
-            </td>
-          </tr>
-          <tr>
-            <td>Best Customer Service</td>
-            <td>Local Business Association</td>
-            <td>July 2022</td>
-            <td>Recognized for excellent customer service and satisfaction.</td>
-          </tr>
-          <tr>
-            <td>Green Sustainability Certification</td>
-            <td>Environmental Trust</td>
-            <td>April 2021</td>
-            <td>
-              Certified for sustainable practices in sourcing and waste
-              reduction.
-            </td>
-          </tr>
-        </tbody>
-      </table>
+    <section id=" certifications">
+      <div class="container wrapper">
+        <h2>Our Certifications</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Certification</th>
+              <th>Issued By</th>
+              <th>Date Awarded</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Quality Excellence Award</td>
+              <td>Food Standards Agency</td>
+              <td>March 2023</td>
+              <td>
+                Awarded for outstanding quality in food safety and hygiene
+                practices.
+              </td>
+            </tr>
+            <tr>
+              <td>Best Customer Service</td>
+              <td>Local Business Association</td>
+              <td>July 2022</td>
+              <td>
+                Recognized for excellent customer service and satisfaction.
+              </td>
+            </tr>
+            <tr>
+              <td>Green Sustainability Certification</td>
+              <td>Environmental Trust</td>
+              <td>April 2021</td>
+              <td>
+                Certified for sustainable practices in sourcing and waste
+                reduction.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
     <section class="audio-section">
       <h2>The amazing sound of pouring coffee!</h2>
@@ -409,10 +412,10 @@
         <p>&copy; 2024 Coffee Co. All Rights Reserved</p>
       </div>
     </footer>
-    <script src="./logoutVisibility.js"></script>
-    <script src="./account.js"></script>
-    <script src="./reviews.js"></script>
-    <script src="./about.js"></script>
-    <script src="responsivenavbar.js"></script>
+    <script src="./js/logoutVisibility.js"></script>
+    <script src="./js/account.js"></script>
+    <script src="./js/reviews.js"></script>
+    <script src="./js/about.js"></script>
+    <script src="./js/responsivenavbar.js"></script>
   </body>
 </html>

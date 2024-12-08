@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   if (user) {
-    const userNameElement = document.getElementById("userName");
     const userNameDisplay = document.getElementById("userNameDisplay");
     const userEmailDisplay = document.getElementById("userEmailDisplay");
     const userPasswordDisplay = document.getElementById("userPasswordDisplay");
@@ -17,33 +16,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const profilePic = document.getElementById("profilePic");
     const saveChangesBtn = document.getElementById("saveChangesBtn");
     const logoutBtn = document.getElementById("logoutBtn");
-    const profilePicContainer = document.getElementById("profilePicContainer");
     const profilePicInput = document.getElementById("profilePicInput");
-    const changeProfilePicBtn = document.getElementById("changeProfilePicBtn");
 
-    userNameElement.textContent = user.name;
     userNameDisplay.textContent = user.name;
     userEmailDisplay.textContent = user.email;
     userPasswordDisplay.textContent = "••••••••";
     profilePic.src = user.profilePic || "./assets/images/profileicon.webp";
-
-    profilePic.addEventListener("mouseenter", function () {
-      if (!profilePicContainer.classList.contains("active")) {
-        changeProfilePicBtn.style.display = "block";
-      }
-    });
-
-    profilePic.addEventListener("mouseleave", function () {
-      if (!profilePicContainer.classList.contains("active")) {
-        changeProfilePicBtn.style.display = "none";
-      }
-    });
-
-    profilePic.addEventListener("click", function () {
-      profilePicContainer.classList.toggle("active");
-      changeProfilePicBtn.style.display =
-        profilePicContainer.classList.contains("active") ? "block" : "none";
-    });
 
     profilePicInput.addEventListener("change", function () {
       if (profilePicInput.files.length > 0) {
@@ -56,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         reader.readAsDataURL(profilePicInput.files[0]);
       }
     });
+
     editNameBtn.addEventListener("click", function () {
       const isEditing = userNameDisplay.isContentEditable;
       if (isEditing) {

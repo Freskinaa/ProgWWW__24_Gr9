@@ -681,13 +681,11 @@ button:focus {
   .nutrition__table td {
     font-size: 10px;
     padding: 6px;
-
   }
 
   .nutrition__container {
     padding: 20px 15px;
     border-radius: 10px;
-
   }
 
   .nutrition__title h2 {
@@ -699,21 +697,18 @@ button:focus {
   .nutrition__table {
     width: 40%;
     border-radius: 10px;
-
   }
   .container {
     width: 70%;
     border-radius: 10px;
-
   }
   .nutrition__table th,
   .nutrition__table td {
     font-size: 12px;
   }
-  
+
   .nutrition__title h2 {
     font-size: 30px;
-    
   }
 }
 /* coffetypes */

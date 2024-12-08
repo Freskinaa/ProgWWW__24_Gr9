@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Account</title>
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="account.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/account.css" />
+    <link rel="icon" href="./assets/images/cojlogo.png" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -20,6 +21,7 @@
         width: 150px;
         height: 150px;
         margin: 0 auto;
+        height: auto;
       }
 
       #profilePic {
@@ -116,17 +118,14 @@
               "
                 class="profile-icon"
               />
+
+              <input type="file" id="profilePicInput" accept="image/*" />
+
+              <input type="file" id="profilePicInput" accept="image/*" />
               <label for="profilePicInput" class="custom-file-upload">
                 Edit Profile Pic
               </label>
-              <input type="file" id="profilePicInput" accept="image/*" />
-
-              <input type="file" id="profilePicInput" accept="image/*" />
             </div>
-
-            <h2>
-              Welcome, <em><span id="userName"></span></em>
-            </h2>
           </div>
           <div id="userDetails">
             <h1>Profile Details</h1>
@@ -200,10 +199,9 @@
       </div>
     </footer>
 
-    <script src="./logoutVisibility.js"></script>
-    <script src="account.js"></script>
-    <script src="responsivenavbar.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+    <script src="./js/logoutVisibility.js"></script>
+    <script src="./js/account.js"></script>
+    <script src="./js/responsivenavbar.js"></script>
+    <script src="./js/https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </body>
 </html>

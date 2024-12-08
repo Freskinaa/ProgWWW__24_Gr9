@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meet Our Team & Contact Us</title>
-    <link rel="stylesheet" href="./contact.css" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/contact.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <link rel="icon" href="./assets/images/cojlogo.png" type="image/x-icon" />
     <link
       rel="stylesheet"
@@ -22,10 +22,6 @@
         font-style: normal;
       }
 
-      body {
-        font-family: "CustomFont", Arial, sans-serif;
-      }
-
       .feedback-section h2 {
         font-size: 24px;
         color: #333;
@@ -38,7 +34,56 @@
       .submit-button:hover {
         background-color: #55442d;
       }
+
+      .map-container {
+        height: 400px;
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      #user-location {
+        margin-top: 10px;
+        font-size: 16px;
+        color: #333;
+      }
+
+      .map-link {
+        margin-top: 10px;
+        display: block;
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      .map-link:hover {
+        text-decoration: underline;
+      }
     </style>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(
+            function (position) {
+              var latitude = position.coords.latitude;
+              var longitude = position.coords.longitude;
+              document.getElementById("user-location").textContent =
+                "Latitude: " + latitude + ", Longitude: " + longitude;
+              var userLocationLink =
+                document.getElementById("user-location-link");
+              userLocationLink.href =
+                "https://www.google.com/maps?q=" + latitude + "," + longitude;
+            },
+            function (error) {
+              document.getElementById("user-location").textContent =
+                "Unable to retrieve your location";
+            }
+          );
+        } else {
+          document.getElementById("user-location").textContent =
+            "Geolocation is not supported by this browser";
+        }
+      });
+    </script>
   </head>
   <body>
     <nav class="navbar">
@@ -127,7 +172,7 @@
               <input type="checkbox" name="subscribe" value="newsletter" />
               Subscribe to our newsletter
             </label>
-            
+
             <textarea
               name="comments"
               placeholder="Leave a comment"
@@ -155,10 +200,23 @@
         <strong>Reviews:</strong> <a href="#">18 Google reviews</a> ★★★★★ 4.9
       </p>
 
+      <p>
+        <strong>Your Current Location:</strong>
+        <span id="user-location">Loading...</span>
+      </p>
+      <a id="user-location-link" href="#" class="map-link" target="_blank"
+        >View your location on Google Maps</a
+      >
+
       <div class="map-container">
         <iframe
-          src="https://www.google.com/maps/embed?..."
-          allowfullscreen
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d733.5686143207835!2d21.16075854868044!3d42.65553899999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549ee89061f4f3%3A0xa9c97aaf8e94e5c9!2sm9%20Eqrem%20%C3%87abej%2C%20Prishtina%2010000!5e0!3m2!1sen!2s!4v1733681256947!5m2!1sen!2s"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
     </article>
@@ -174,28 +232,30 @@
           <button type="submit">Send</button>
         </form>
 
-       <div class="contact-info">
-  <dl>
-    <dt><img src="./assets/images/@icon.png" alt="Phone Icon" /> Coffee Shop</dt>
-    <dd>Kosovo</dd>
-    
-    <dt><img src="./assets/images/phone..png" alt="Phone Icon" /> Phone</dt>
-    <dd>+38344555666</dd>
-    
-    <dt><img src="./assets/images/email.png" alt="Email Icon" /> Email</dt>
-    <dd>infocoffee@gmail.com</dd>
-  </dl>
-</div>
+        <div
+          id="contactConfirmation"
+          style="display: none; color: green; padding-top: 15px"
+        ></div>
 
+        <div class="contact-info">
+          <dl>
+            <dt>
+              <img src="./assets/images/@icon.png" alt="Phone Icon" /> Coffee
+              Shop
+            </dt>
+            <dd>Kosovo</dd>
+            <dt>
+              <img src="./assets/images/phone..png" alt="Phone Icon" /> Phone
+            </dt>
+            <dd>+38344555666</dd>
+            <dt>
+              <img src="./assets/images/email.png" alt="Email Icon" /> Email
+            </dt>
+            <dd>infocoffee@gmail.com</dd>
+          </dl>
+        </div>
       </div>
     </section>
-    <section class="multipy-background">
-      <div class="grid-container">
-        <div class="element" data-text="We're Here to Help You!"></div>
-        <div class="element2" data-text="Get in Touch Anytime!"></div>
-      </div>
-    </section>
-    
 
     <footer class="footer">
       <div class="footer-container">
@@ -232,16 +292,14 @@
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-twitter"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2024 Coffee Co. All Rights Reserved</p>
+        <a href="#"><i class="fab fa-youtube"></i></a>
       </div>
     </footer>
-    <script src="./logoutVisibility.js"></script>
-    <script src="./account.js"></script>
-    <script src="contact.js"></script>
-    <script src="responsivenavbar.js"></script>
+    <script src="./js/feedbackWorker.js"></script>
+    <script src="./js/contact.js"></script>
+    <script src="./js/responsivenavbar.js"></script>
+    <script src="./js/logoutVisibility.js"></script>
+    <script src="./js/account.js"></script>
+   
   </body>
 </html>
