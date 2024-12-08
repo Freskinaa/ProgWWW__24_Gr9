@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   const selectedProduct = JSON.parse(localStorage.getItem("selectedProduct"));
 
-  if (!selectedProduct) {
-    window.location.href = "/products.html";
-  }
+  // if (!selectedProduct) {
+  //   window.location.href = "/products.html";
+  // }
 
   const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
   const nameSection = document.getElementById("name-section");
