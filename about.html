@@ -17,7 +17,6 @@
       .main-container {
         width: 100%;
         padding: 100px 20px 60px;
-        height: 100vh;
         text-align: center;
         animation: fadeIn 1s ease forwards;
         background-color: #f3f0e7;
@@ -38,15 +37,19 @@
             </div>
           </div>
           <div class="nav__links">
-            <a href="/index.html"
-            id="navlinkk" ><img
+            <a href="/index.html" id="navlinkk"
+              ><img
                 src="./assets/images/kafelogo1.png"
                 alt="logo"
                 style="cursor: pointer"
             /></a>
             <ul>
               <li><a href="/" class="nav-link" id="navlinkk">Home</a></li>
-              <li><a href="/products.html" class="nav-link" id="navlinkk">Products</a></li>
+              <li>
+                <a href="/products.html" class="nav-link" id="navlinkk"
+                  >Products</a
+                >
+              </li>
               <li><a href="/gift.html" class="nav-link">Gift cards</a></li>
               <li>
                 <a href="/about.html" class="nav-link active">About us</a>
@@ -99,31 +102,33 @@
       <h1>SEE YOU AT CUP OF JOY</h1>
       <h2>Enjoy the Best Brews and Sweet Treats in Town!</h2>
       <button class="early-bird-button" id="reserveBtn">RESERVE A TABLE</button>
+
       <div class="popup" id="popupModal">
         <div class="popup-content">
           <h2>Reserve a Table</h2>
           <form id="reserveForm">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required />
-
+        
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required />
-
+        
             <label for="date">Date:</label>
-            <input type="date" id="date" name="date" required />
-
+            <input type="date" id="date" name="date" required />        
             <label for="time">Time:</label>
             <input type="time" id="time" name="time" required />
-
+        
             <label for="guests">Number of Guests:</label>
             <input type="number" id="guests" name="guests" min="1" required />
-
+        
             <button type="submit" class="coffee-btn">Submit</button>
           </form>
           <button class="popup-close" id="closePopup">Close</button>
         </div>
       </div>
+      
     </header>
+    
     <section class="texti">
       <h1>Take a look at our coffee shop</h1>
     </section>
@@ -211,44 +216,52 @@
       </table>
     </section>
     <section class="audio-section">
-       <h2>The amazing sound of pouring coffee!
-      </h2>
+      <h2>The amazing sound of pouring coffee!</h2>
       <div class="audio-card">
         <div class="video-container1">
-          <img src="./assets/gif/coffeep.gif" alt="coffee pouring" class="audio-image">
+          <img
+            src="./assets/gif/coffeep.gif"
+            alt="coffee pouring"
+            class="audio-image"
+          />
           <div class="audio-container">
             <audio controls>
               <source src="./assets/audio/coffee-pour.mp3" type="audio/mp3" />
             </audio>
             <audio controls>
-              <source src="./assets/audio/coffee-machine-noise-218424.mp3" type="audio/mp3" />
+              <source
+                src="./assets/audio/coffee-machine-noise-218424.mp3"
+                type="audio/mp3"
+              />
             </audio>
           </div>
         </div>
         <p class="welcome-text">
           Hearing the sound of the machine making coffee is music to our ears!
         </p>
-        <h2> &#128522;</h2>
-
+        <h2>&#128522;</h2>
       </div>
     </section>
-    
+
     <section id="about-us">
-      <h2> More About Us</h2>
+      <h2>More About Us</h2>
       <ul>
-        <li>Our History
+        <li>
+          Our History
           <ul>
             <li>Founded in 2020 by passionate coffee lovers.</li>
             <li>Grew from a small local café to a popular community hub.</li>
           </ul>
         </li>
-        <li>Our Mission
+        <li>
+          Our Mission
           <ul>
             <li>To serve premium-quality coffee to every customer.</li>
             <li>To create a welcoming and comfortable space.</li>
           </ul>
         </li>
-        <li>Our Values
+        <li>
+          Our Values
           <ul>
             <li>Commitment to sustainability and ethical sourcing.</li>
             <li>Customer satisfaction and community involvement.</li>
@@ -256,42 +269,61 @@
         </li>
       </ul>
     </section>
-    
+
     <section class="clients-reviews">
       <div class="container slideshow-container1">
         <div class="slideshow-text">
           <h2>OUR TEAM</h2>
           <p>We have great staff that is always there to help you.</p>
-
         </div>
         <div class="slideshow-container">
           <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
           <div class="reviews-grid">
             <div class="cards">
               <img src="assets/images/reviews1.jpg" alt="Client" />
-  
-                <p>Anëtarët tanë të ekipit janë të përkushtuar për të ofruar shërbim të shkëlqyer dhe kafe të shijshme për çdo vizitor.</p>
+
+              <p>
+                Anëtarët tanë të ekipit janë të përkushtuar për të ofruar
+                shërbim të shkëlqyer dhe kafe të shijshme për çdo vizitor.
+              </p>
               <div class="client-details">
-                <span class="client-name">John Smith- Barista dhe Krijues i Recetave</span>
+                <span class="client-name"
+                  >John Smith- Barista dhe Krijues i Recetave</span
+                >
                 <span class="client-address">London, UK</span>
               </div>
             </div>
             <div class="cards">
               <img src="assets/images/reviews2.jpg" alt="Client" />
-              <p>&Ccedil;lirimi është baristi ynë i talentuar, i cili përgatit kafenë më të shijshme në qytet. Ai është gjithmonë i gatshëm të ndajë njohuritë e tij dhe të krijojë recetat më unike për të kënaqur shijet e klientëve.</p>
+              <p>
+                &Ccedil;lirimi është baristi ynë i talentuar, i cili përgatit
+                kafenë më të shijshme në qytet. Ai është gjithmonë i gatshëm të
+                ndajë njohuritë e tij dhe të krijojë recetat më unike për të
+                kënaqur shijet e klientëve.
+              </p>
 
               <div class="client-details">
-                <span class="client-name">  <li>&Ccedil;lirimi - Barista dhe Krijues i Recetave</li>
+                <span class="client-name">
+                  <li>&Ccedil;lirimi - Barista dhe Krijues i Recetave</li>
                 </span>
                 <span class="client-address">New York, America</span>
               </div>
             </div>
             <div class="cards">
               <img src="assets/images/reviews3.jpg" alt="Client" />
-              <p>&Euml;njgj&euml;llusha është menaxherja jonë e marketingut dhe shitjeve. Ajo ka një pasion për të sjellë klientët e rinj dhe për të siguruar që ata të kenë një përvojë të paharrueshme në dyqanin tonë.</p>
+              <p>
+                &Euml;njgj&euml;llusha është menaxherja jonë e marketingut dhe
+                shitjeve. Ajo ka një pasion për të sjellë klientët e rinj dhe
+                për të siguruar që ata të kenë një përvojë të paharrueshme në
+                dyqanin tonë.
+              </p>
 
               <div class="client-details">
-                <span class="client-name">  <li>&Euml;njgj&euml;llusha Dini - Menaxhere e Shitjeve dhe Marketingut</li>
+                <span class="client-name">
+                  <li>
+                    &Euml;njgj&euml;llusha Dini - Menaxhere e Shitjeve dhe
+                    Marketingut
+                  </li>
                 </span>
                 <span class="client-address">Tokyo, Japan</span>
               </div>
@@ -334,8 +366,7 @@
         </div>
       </div>
     </section>
-  
-    
+
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-column">

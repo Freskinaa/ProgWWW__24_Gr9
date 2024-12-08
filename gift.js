@@ -26,12 +26,24 @@ document.addEventListener("DOMContentLoaded", () => {
       const nameField = modalType.querySelector("#name");
       const emailField = modalType.querySelector("#email");
       const recipientNameField = modalType.querySelector("#recipient-name");
-
-      if (nameField) nameField.value = loggedInUser.name;
-      if (emailField) emailField.value = loggedInUser.email;
+  
+      if (nameField) {
+        nameField.value = loggedInUser.name;
+        nameField.disabled = true;
+      }
+      if (emailField) {
+        emailField.value = loggedInUser.email;
+        emailField.disabled = true;
+      }
       if (recipientNameField) recipientNameField.value = loggedInUser.name;
+    } else {
+      const nameField = modalType.querySelector("#name");
+      const emailField = modalType.querySelector("#email");
+      if (nameField) nameField.disabled = false;
+      if (emailField) emailField.disabled = false;
     }
   }
+  
 
   denominations.forEach((denomination) => {
     denomination.addEventListener("click", () => {
