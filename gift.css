@@ -701,6 +701,10 @@ h2 {
     padding: 25px;
   }
 
+  .gift-info {
+    min-height: 0;
+  }
+
   h2 {
     font-size: 2em;
     margin-bottom: 25px;

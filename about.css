@@ -95,12 +95,15 @@ body {
   font-weight: bold;
 }
 
-
 .slideshoww {
   padding-left: 100px;
 }
 .slideshoww h2 {
   padding-right: 70px;
+}
+.welcome-section {
+  width: 65%;
+  margin: auto auto;
 }
 
 .welcome-section h1,
@@ -115,7 +118,8 @@ body {
 }
 
 .welcome-section h1 {
-  font-size: 64px;
+  font-size: 55px;
+  padding-top: 50px;
   color: #4b3d2b;
   text-transform: uppercase;
   font-weight: 700;
@@ -143,11 +147,10 @@ body {
 }
 
 .coming-soon {
-  font-size: 24px;
+  font-size: 19px;
   color: #3b3b3b;
   font-weight: 700;
   margin-top: 30px;
-  text-transform: uppercase;
   position: relative;
   text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
@@ -208,7 +211,7 @@ th {
   color: #fff;
   font-weight: 600;
   text-transform: capitalize;
-  background-color: #5b493c; 
+  background-color: #5b493c;
 
   letter-spacing: 0.5px;
 }
@@ -230,8 +233,6 @@ tbody td:last-child {
   text-align: right;
   color: #6b5e54;
 }
-
-
 
 .banner {
   background-color: var(--second-dark2);
@@ -451,12 +452,11 @@ tbody td:last-child {
   box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
 }
 
-.video-container{
+.video-container {
   position: relative;
   overflow: hidden;
   border-radius: 15px 15px 0 0;
 }
-
 
 .video-container video {
   width: 100%;
@@ -466,7 +466,7 @@ tbody td:last-child {
 .audio-section {
   text-align: center;
   padding: 30px;
-  
+
   background-color: var(--second-dark2);
   border-top: 2px solid #d4c4b1;
   animation: fadeIn 1s ease;
@@ -485,7 +485,7 @@ tbody td:last-child {
 }
 
 .audio-card {
-  background-color: rgba(255, 255, 255, 0.5); 
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -510,8 +510,6 @@ tbody td:last-child {
   justify-content: center;
   margin-top: 20px;
 }
-
-
 
 .audio-container audio {
   margin: 0 15px;
@@ -722,6 +720,10 @@ tbody td:last-child {
     height: auto;
   }
 
+  .welcome-section {
+    width: 100%;
+  }
+
   .welcome-section h1 {
     font-size: 36px;
   }
@@ -739,7 +741,7 @@ tbody td:last-child {
   }
 
   .coming-soon {
-    font-size: 16px;
+    font-size: 12px;
   }
 
   header {
@@ -804,10 +806,11 @@ tbody td:last-child {
 }
 
 @media (max-width: 480px) {
+  .welcome-section {
+    height: auto;
+  }
   .welcome-section h1 {
     font-size: 28px;
-    align-items: center;
-    justify-content: space-around;
   }
 
   .welcome-section h2 {
@@ -903,13 +906,12 @@ tbody td:last-child {
   .audio-card {
     width: 70%;
   }
-    
-.audio-image {
-  border-radius: 10px;
-  width: 250px;
-}
-}
 
+  .audio-image {
+    border-radius: 10px;
+    width: 250px;
+  }
+}
 
 @media (max-width: 480px) {
   .audio-section {
@@ -920,12 +922,11 @@ tbody td:last-child {
     width: 100%;
     padding: 15px;
   }
-  
-.audio-image {
-  border-radius: 10px;
-  width: 250px;
-}
 
+  .audio-image {
+    border-radius: 10px;
+    width: 250px;
+  }
 
   .audio-container audio {
     margin: 0 10px;
