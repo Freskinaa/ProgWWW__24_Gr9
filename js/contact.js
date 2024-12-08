@@ -1,11 +1,10 @@
 $(document).ready(function () {
-  const feedbackWorker = new Worker("feedbackWorker.js");
+  const feedbackWorker = new Worker("./js/feedbackWorker.js");
 
   feedbackWorker.onmessage = function (event) {
     const response = event.data;
-    console.log(response.message); // Feedback from the worker
+    console.log(response.message); 
 
-    // Display confirmation message
     $("#confirmationMessage").text(response.message).show();
     setTimeout(function () {
       $("#confirmationMessage").fadeOut();
@@ -18,7 +17,6 @@ $(document).ready(function () {
     var subscribe = $("input[name='subscribe']:checked").val();
     var comments = $("textarea[name='comments']").val();
 
-    // Send data to the worker
     feedbackWorker.postMessage({
       source: source,
       subscribe: subscribe,
