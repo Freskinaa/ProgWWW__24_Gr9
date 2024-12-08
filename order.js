@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const selectedProduct = localStorage.getItem("selectedProduct");
+  const selectedProduct = JSON.parse(localStorage.getItem("selectedProduct"));
 
   if (!selectedProduct) {
     window.location.href = "/products.html";
@@ -19,12 +19,11 @@ document.addEventListener("DOMContentLoaded", () => {
     nameInput.style.display = "block";
   }
 
-  const parsedProduct = JSON.parse(selectedProduct);
   const coffeeTypeElement = document.getElementById("coffee-type");
   const quantityElement = document.getElementById("quantity");
   const totalCostElement = document.getElementById("total-cost");
 
-  const productType = parsedProduct.name.toLowerCase();
+  const productType = selectedProduct.name.toLowerCase();
   const optionExists = Array.from(coffeeTypeElement.options).some(
     (option) => option.value.toLowerCase() === productType
   );
@@ -33,10 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
     coffeeTypeElement.value = productType;
     coffeeTypeElement.disabled = true;
   } else {
-    console.error(`Type '${parsedProduct.name}' not found in coffee options.`);
+    console.error(`Type '${selectedProduct.name}' not found in coffee options.`);
   }
 
-  const price = parseFloat(parsedProduct.price.replace("$", ""));
+  const price = parseFloat(selectedProduct.price.replace("$", ""));
   const updateTotalCost = () => {
     const quantity = parseInt(quantityElement.value, 10) || 1;
     const totalCost = (price * quantity).toFixed(2);

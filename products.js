@@ -29,7 +29,7 @@ const products = [
   {
     name: "Iced Mocha",
     description:
-      "When you order an iced mocha coffee, you'll receive a decadent beverage consisting of mocha sauce, espresso, milk, and ice.",
+      "When you order an iced mocha coffee, you will receive a decadent beverage consisting of mocha sauce, espresso, milk, and ice.",
     image: "./assets/images/icedmochaa.jpg",
     price: "4.00$",
     type: "cold",
@@ -37,7 +37,7 @@ const products = [
   {
     name: "Frappe",
     description:
-      "If you're a fan of having your coffee blended into a frothy, a frappe might just be the perfect choice for you.",
+      "If you are a fan of having your coffee blended into a frothy, a frappe might just be the perfect choice for you.",
     image: "./assets/images/frappe.jpg",
     price: "2.50$",
     type: "cold",
@@ -45,7 +45,7 @@ const products = [
   {
     name: "Cold brew",
     description:
-      "Cold brew also called cold water extraction or cold pressing. We're huge fans of cold brew as a fantastic variant of iced coffee.",
+      "Cold brew also called cold water extraction or cold pressing. We are huge fans of cold brew as a fantastic variant of iced coffee.",
     image: "./assets/images/coldbrew.jpg",
     price: "3.00$",
     type: "cold",
@@ -53,7 +53,7 @@ const products = [
   {
     name: "Breve",
     description:
-      "Breve coffee isn't just another coffee trend. It's a testament to the art of brewing, a blend of tradition and creativity.",
+      "Breve coffee is not just another coffee trend. It is a testament to the art of brewing, a blend of tradition and creativity.",
     image: "./assets/images/brave.jpg",
     price: "2.75$",
     type: "hot",
@@ -85,7 +85,7 @@ const products = [
   {
     name: "Dirty Chai",
     description:
-      "Dirty chai is a popular espresso drink served in coffee shops. It consists of a shot of espresso mixed into 'spiced tea'.",
+      "Dirty chai is a popular espresso drink served in coffee shops. It consists of a shot of espresso mixed into spiced tea.",
     image: "./assets/images/dirtychai.jpg",
     price: "4.50$",
     type: "hot",
@@ -253,26 +253,32 @@ function displayProducts(products) {
           <img src="${product.image}" alt="${product.name}">
         </div>
         <div class="coffeetypes__content">
-                <h3>${product.name}</h3>
-                <p>
-                ${product.description}
-                </p>
-                <div class="shop">
-                  <span>${product.price}</span>
-                  <div class="btn__group order__btn">
-                    <button onclick='saveProductDetails(${JSON.stringify(
-                      JSON.stringify(product)
-                    )})'>Order now</button>
-                  </div>
-                </div>
+          <h3>${product.name}</h3>
+          <p>${product.description}</p>
+          <div class="shop">
+            <span>${product.price}</span>
+            <div class="btn__group order__btn">
+              <button class="order-btn" data-product='${JSON.stringify(
+                product
+              )}'>Order now</button>
+            </div>
           </div>
+        </div>
       </div>`;
     productContainer.innerHTML += productCard;
   });
 }
 
+document.addEventListener("click", function (event) {
+  if (event.target && event.target.classList.contains("order-btn")) {
+    const productData = event.target.getAttribute("data-product");
+    const productDetails = JSON.parse(productData);
+    saveProductDetails(productDetails);
+  }
+});
+
 function saveProductDetails(productDetails) {
-  localStorage.setItem("selectedProduct", productDetails);
+  localStorage.setItem("selectedProduct", JSON.stringify(productDetails));
   window.location.href = "./order.html";
 }
 
@@ -366,66 +372,50 @@ function drop(event) {
   }
 }
 
-function finalizeOrder() {
-  const column1 = Array.from(document.getElementById("column-1").children).map(
-    (child) => child.textContent.trim()
-  );
-  const column2 = Array.from(document.getElementById("column-2").children).map(
-    (child) => child.textContent.trim()
-  );
-  const selectedOptions = column1.concat(column2);
+const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 
-  if (selectedOptions.length > 0) {
-    alert("Your drink has been customized with: " + selectedOptions.join(", "));
-  } else {
-    alert("Please select at least one option to customize your drink.");
+function finalizeOrder() {
+  const column1 = document.getElementById("column-1");
+  const column2 = document.getElementById("column-2");
+
+  if (column1.children.length === 0 && column2.children.length === 0) {
+    alert("Please add at least one product to customize your drink before.");
+    return;
   }
-}
-const loggedInUser = {
-  firstName: loggedInUser.firstName,
-  lastName: "Gashi",
-};
 
-function finalizeOrder() {
   const modal = document.getElementById("order-modal");
   modal.style.display = "flex";
 
   if (loggedInUser) {
-    document.getElementById("first-name").value = loggedInUser.firstName;
-    document.getElementById("last-name").value = loggedInUser.lastName;
+    document.getElementById("name").value = loggedInUser.name;
   } else {
-    document.getElementById("first-name").value = "";
-    document.getElementById("last-name").value = "";
+    document.getElementById("name").value = "";
   }
 }
-
-function closeModal() {
-  const modal = document.getElementById("order-modal");
-  modal.style.display = "none";
-}
-
-window.onclick = function (event) {
-  const modal = document.getElementById("order-modal");
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
-};
 
 document
   .getElementById("order-form")
   .addEventListener("submit", function (event) {
     event.preventDefault();
-    const firstName = document.getElementById("first-name").value;
-    const lastName = document.getElementById("last-name").value;
+    const name = document.getElementById("name").value;
     const location = document.getElementById("location").value;
     const phoneNumber = document.getElementById("phone-number").value;
 
     alert(
-      `Porosia u finalizua për: ${firstName} ${lastName}\nLokacioni: ${location}\nTelefoni: ${phoneNumber}`
+      `Porosia u finalizua për: ${name}\nLokacioni: ${location}\nTelefoni: ${phoneNumber}`
     );
 
     closeModal();
   });
+
 function closeModal() {
   document.getElementById("order-modal").style.display = "none";
+  const column1 = document.getElementById("column-1");
+  const column2 = document.getElementById("column-2");
+
+  column1.innerHTML = "";
+  column2.innerHTML = "";
+
+  document.getElementById("location").value = "";
+  document.getElementById("phone-number").value = "";
 }
