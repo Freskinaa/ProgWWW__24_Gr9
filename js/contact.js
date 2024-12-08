@@ -36,7 +36,7 @@ $(document).ready(function () {
       message: message,
     };
 
-    console.log(contactData);
+  
 
     $("#contactConfirmation")
       .text("Thank you for reaching out! We will get back to you soon.")
