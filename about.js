@@ -2,6 +2,7 @@ const reserveBtn = document.getElementById("reserveBtn");
 const popupModal = document.getElementById("popupModal");
 const closePopupBtn = document.getElementById("closePopup");
 
+
 reserveBtn.addEventListener("click", () => {
   popupModal.style.display = "flex";  
 
