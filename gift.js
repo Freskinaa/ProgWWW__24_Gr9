@@ -121,23 +121,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
   updateTotalPrice();
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("feedbackForm");
+  const nameField = document.getElementById("name");
+  const emailField = document.getElementById("email");
+  const recipientNameField = document.getElementById("recipient-name");
+  const amountField = document.getElementById("amount");
+  const giftCardTypeField = document.getElementById("gift-card-type");
 
-document.querySelector(".gift-bow img").addEventListener("click", function (e) {
-  for (let i = 0; i < 10; i++) {
-    const sparkle = document.createElement("div");
-    sparkle.classList.add("sparkle");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault(); 
+    try {
+      if (!nameField.value.trim()) {
+        throw new Error("Name field cannot be empty.");
+      }
 
-    const rect = e.target.getBoundingClientRect();
+      if (!emailField.value.trim()) {
+        throw new Error("Email field cannot be empty.");
+      }
 
-    const randomX = Math.random() * rect.width;
-    const randomY = Math.random() * rect.height;
-    sparkle.style.left = `${randomX - 7}px`;
-    sparkle.style.top = `${randomY - 7}px`;
+      if (!recipientNameField.value.trim()) {
+        throw new Error("Recipient name field cannot be empty.");
+      }
 
-    e.target.parentElement.appendChild(sparkle);
+      if (isNaN(amountField.value) || parseFloat(amountField.value) <= 0) {
+        throw new Error("Amount must be a positive number.");
+      }
 
-    setTimeout(() => {
-      sparkle.remove();
-    }, 500);
-  }
+      if (!giftCardTypeField.value) {
+        throw new Error("Please select a gift card type.");
+      }
+
+      alert("Form submitted successfully!");
+      form.submit();
+    } catch (error) {
+      console.error("Validation error:", error.message);
+      alert(`Validation Error: ${error.message}`);
+    }
+  });
 });

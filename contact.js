@@ -1,29 +1,31 @@
-document
-  .getElementById("feedbackForm")
-  .addEventListener("submit", function (event) {
+$(document).ready(function () {
+  $("#feedbackForm").on("submit", function (event) {
     event.preventDefault();
 
-    const source = document.querySelector('input[name="source"]:checked');
-    const comments = document.querySelector('textarea[name="comments"]').value;
+    const source = $('input[name="source"]:checked').val();
+    const comments = $('textarea[name="comments"]').val();
 
     if (source) {
-      const feedbackData = {
-        source: source.value,
-        comments: comments,
-      };
+      const $confirmationMessage = $("#confirmationMessage");
+      const $formFields = $("textarea, input[type='radio']");
 
-      console.log("Feedback Submitted:", feedbackData);
+      $confirmationMessage
+        .hide()
+        .text("Thank you for your feedback!")
+        .show(500, function () {
+          $confirmationMessage.fadeOut(1000, function () {
+            $confirmationMessage.fadeIn(1000, function () {
+              setTimeout(() => {
+                $confirmationMessage.slideUp(500);
+              }, 3000);
+            });
+          });
+        });
 
-      const confirmationMessage = document.getElementById(
-        "confirmationMessage"
-      );
-      confirmationMessage.innerText = "Thank you for your feedback!";
-      confirmationMessage.style.display = "block";
-
-      setTimeout(() => {
-        confirmationMessage.style.display = "none";
-      }, 3000);
-
-      this.reset();
+      $formFields.animate({ opacity: 0.5 }, 500, function () {
+        $formFields.val("");
+        $formFields.animate({ opacity: 1 }, 500);
+      });
     }
   });
+});
