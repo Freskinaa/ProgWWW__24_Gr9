@@ -803,6 +803,8 @@ tbody td:last-child {
 @media (max-width: 480px) {
   .welcome-section h1 {
     font-size: 28px;
+    align-items: center;
+    justify-content: space-around;
   }
 
   .welcome-section h2 {
@@ -892,5 +894,46 @@ tbody td:last-child {
 
   .gallery span {
     transform: rotateY(calc(var(--i) * 45deg)) translateZ(150px);
+  }
+}
+@media (max-width: 768px) {
+  .audio-card {
+    width: 70%;
+  }
+    
+.audio-image {
+  border-radius: 10px;
+  width: 250px;
+}
+}
+
+
+@media (max-width: 480px) {
+  .audio-section {
+    padding: 20px;
+  }
+
+  .audio-card {
+    width: 100%;
+    padding: 15px;
+  }
+  
+.audio-image {
+  border-radius: 10px;
+  width: 250px;
+}
+
+
+  .audio-container audio {
+    margin: 0 10px;
+    width: 90%;
+  }
+
+  .audio-section h2 {
+    font-size: 2rem;
+  }
+
+  .audio-card h2 {
+    font-size: 1.5rem;
   }
 }
