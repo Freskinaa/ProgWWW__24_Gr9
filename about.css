@@ -45,12 +45,11 @@ body {
   padding: 40px;
   border-radius: 12px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  background-color: rgba(249, 244, 244, 0.9);
 }
 
 #about-us h2 {
   font-size: 2.2rem;
-  color: #2c3e50;
+  color: #413023;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -64,7 +63,7 @@ body {
 #about-us li {
   margin-bottom: 15px;
   padding: 15px 25px;
-  background-color: rgba(247, 245, 241, 0.8);
+  background-color: rgba(248, 245, 240, 0.8);
   border: 1px solid rgba(224, 224, 224, 0.8);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
