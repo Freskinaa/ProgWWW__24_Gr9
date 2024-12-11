@@ -39,8 +39,8 @@ $(document).ready(function () {
       message: message,
     };
 
-    emailjs.send("service_kunjxcj", "template_x9g2zqh", templateParams)
-      .then(function (response) {
+    emailjs.send("service_kunjxcj", "template_x9g2zqh", templateParams).then(
+      function (response) {
         console.log("SUCCESS!", response.status, response.text);
 
         $("#contactConfirmation")
@@ -52,7 +52,8 @@ $(document).ready(function () {
         setTimeout(function () {
           $("#contactConfirmation").fadeOut();
         }, 3000);
-      }, function (error) {
+      },
+      function (error) {
         console.log("FAILED...", error);
 
         $("#contactConfirmation")
@@ -62,6 +63,7 @@ $(document).ready(function () {
         setTimeout(function () {
           $("#contactConfirmation").fadeOut();
         }, 3000);
-      });
+      }
+    );
   });
 });
